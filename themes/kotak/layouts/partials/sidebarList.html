@@ -1,0 +1,16 @@
+{{- $sidebar := false }}
+{{- if eq .Kind "home" -}}
+	{{ $sidebar = (default .Site.Params.sidebar.home .Params.sidebar) }}
+{{- else if eq .Kind "page" -}}
+	{{ $sidebar = (default .Site.Params.sidebar.single .Params.sidebar) }}
+{{- else -}}
+	{{ $sidebar = (default .Site.Params.sidebar.list .Params.sidebar) }}
+{{ end }}
+
+{{- if $sidebar -}}
+<aside class="sidebar sidebarSingle">
+	{{- partial "post_toc.html" . -}}
+{{- else }}
+	<p class="sidebar__warning"><strong>{{ T "sidebar_warning" }}:</strong><br>{{ T "sidebar_recommendation" }}</p>
+</aside>
+{{- end }}

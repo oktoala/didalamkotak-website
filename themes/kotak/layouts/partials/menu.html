@@ -1,0 +1,29 @@
+{{- if .Site.Menus.main }}
+<script async defer src="{{ "js/menuBar.js" | relURL }}"></script>
+<nav class="menu">
+	<ul class="menu__list">
+		{{- $currentNode := . }}
+		{{- range .Site.Menus.main }}
+		{{- if .Name }}
+		<li class="menu__item{{ if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }} menu__item--active{{ end }}">
+			<a class="menu__link" href="{{ .URL }}">
+				{{ .Name }}
+				<!-- {{ .Pre }}
+				<span class="menu__text">{{ .Name }}</span>
+				{{ .Post }} -->
+			</a>
+		</li>
+		{{- end }}
+		{{- end }}
+	</ul>
+	<div class="burger">
+		<input type="checkbox">
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+
+</nav>
+{{ else -}}
+<div class="divider"></div>
+{{- end }}

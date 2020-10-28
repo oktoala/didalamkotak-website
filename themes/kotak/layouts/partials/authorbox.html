@@ -1,0 +1,46 @@
+{{- if .Param "authorbox" }}
+<div class="authorbox clearfix">
+	{{- if and (not .Site.Author.avatar) (not .Site.Author.name) (not .Site.Author.bio) }}
+	<p class="authorbox__warning">
+		<strong>WARNING:</strong> Authorbox is activated, but [Author] parameters are not specified.
+	</p>
+	{{- end }}
+	{{- with .Site.Author.avatar }}
+	<figure class="authorbox__avatar" data-tilt="" >
+		<img alt="{{ $.Site.Author.name }} avatar" src="{{ $.Site.Author.avatar | relURL }}" class="avatar" height="140" width="140">
+	</figure>
+	{{- end }}
+	{{- with .Site.Author.name }}
+	<div class="authorbox__header">
+		<span class="authorbox__ditulis">DITULIS OLEH</span>
+		<p class="authorbox__name">Oktavian Yoga</p>
+	</div>
+	{{- end }}
+	{{- with .Site.Author.bio }}
+	<div class="authorbox__description">
+		{{ . | markdownify }}
+	</div>
+	{{- end }}
+	{{- with .Site.Params.widgets.social.github }}
+	<div class="widget-social__item social_item">
+		<a class="widget-social__link widget__link btn" title="GitHub" rel="noopener noreferrer" href="https://github.com/{{ . }}" target="_blank">
+			{{ partial "svg/github.svg" (dict "class" "widget-social__link-icon") }}
+		</a>
+	</div>
+	{{- end }}
+	{{- with .Site.Params.widgets.social.twitter }}
+	<div class="widget-social__item social_item">
+		<a class="widget-social__link widget__link btn" title="Twitter" rel="noopener noreferrer" href="https://twitter.com/{{ . }}" target="_blank">
+			{{ partial "svg/twitter.svg" (dict "class" "widget-social__link-icon") }}
+		</a>
+	</div>
+	{{- end }}
+	{{- with .Site.Params.widgets.social.instagram }}
+	<div class="widget-social__item social_item">
+		<a class="widget-social__link widget__link btn" title="Instagram" rel="noopener noreferrer" href="https://www.instagram.com/{{ . }}" target="_blank">
+			{{ partial "svg/instagram.svg" (dict "class" "widget-social__link-icon") }}
+		</a>
+	</div>
+	{{- end }}
+</div>
+{{- end }}
