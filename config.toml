@@ -5,7 +5,7 @@ title = "Di Dalam Kotak"
 themesDir   = "themes"
 theme       = "kotak"
 enableEmoji = true
-disqusShortname = "didalamkotak-netlify-app.disqus.com"
+disqusShortname = "didalamkotak-netlify-app"
 
 [menu]
   [[menu.main]]
