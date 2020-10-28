@@ -13,7 +13,7 @@ Kita akan membahas bagaiman cara menjalankan rpm di Debian dan Arch.
 
 ![merubah-rpm-ke-deb-ke-arch](/img/thumbnail/merubah-rpm-ke-deb-lalu-ke-arch.png)
 
-Kelas Saya ada mata kuliah basis data dan dosen meminta kelas saya untuk menginstall {{< linkBlank "Oracle Data Modeler" `https://www.oracle.com/tools/downloads/sql-data-modeler-downloads.html` >}}.
+Kelas Saya ada mata kuliah basis data dan dosen meminta kelas saya untuk menginstall {{< linkBlank "Oracle Data Modeler" "https://www.oracle.com/tools/downloads/sql-data-modeler-downloads.html" >}}.
 
 Oke, karena Saya pakai Arch Linux harusnya packagenya ada di Package Manager ataupun di AUR.
 
@@ -50,13 +50,13 @@ Jadi pertama kalian harus menginstall beberapa aplikasi.
 + **debtap**
 
 Kalau kalian memakai Debian/Ubuntu based cukup install **alien** saja. Install dpkg untuk memasang packagenya nanti.
-{{< scCode `#d70751` `Debian/Ubuntu` cp1 >}}
+{{< scCode "#d70751" "Debian/Ubuntu" cp1 >}}
 sudo apt alien dpkg-dev
 {{< /scCode >}}
 
 Dan jika kalian memakai Arch based, kalian harus install dua-duanya. Keduanya ada di AUR.
 
-{{< scCode `#1793d1` `Arch Based` cp2 >}}
+{{< scCode "#1793d1" `Arch Based` cp2 >}}
 yay -S alien_package_converter debtap
 {{< /scCode >}}
 
@@ -84,13 +84,13 @@ Jika sudah, kalian bisa mengecek file **.deb** kalian.
 
 Jika kalian di Debian/Ubuntu, kalian bisa install langsung menggunakan dpkg.
 
-{{< scCode `#d70751` `Debian/Ubuntu` cp4 >}}
+{{< scCode "#d70751" "Debian/Ubuntu" cp4 >}}
 sudo dpkg -i datamodeler_20.2.0.167.1538-2_all.deb
 {{< /scCode >}}
 
 Tapi jika kalian di Arch, maka kalian harus convert lagi.
 
-{{< scCode `#1793d1` `Arch Based` cp5 >}}
+{{< scCode "#1793d1" "Arch Based" cp5 >}}
 debtap datamodeler_20.2.0.167.1538-2_all.deb
 {{< /scCode >}}
 
@@ -102,7 +102,7 @@ Kalian bisa cek apakah sudah terconvert atau tidak.
 
 Sekarang kalian sudah bisa menginstall package tersebut dengan _pacman_.
 
-{{< scCode `#1793d1` `Arch Based` cp6 >}}
+{{< scCode "#1793d1" "Arch Based" cp6 >}}
 sudo pacman -U datamodeler-20.2.0.167.1538-1-any.pkg.tar.zst
 {{< /scCode >}}
 
