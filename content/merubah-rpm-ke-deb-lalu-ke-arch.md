@@ -13,7 +13,7 @@ Kita akan membahas bagaiman cara menjalankan rpm di Debian dan Arch.
 
 ![merubah-rpm-ke-deb-ke-arch](/img/thumbnail/merubah-rpm-ke-deb-lalu-ke-arch.png)
 
-Kelas Saya ada mata kuliah basis data dan dosen meminta kelas saya untuk menginstall {{< linkBlank `Oracle Data Modeler` `https://www.oracle.com/tools/downloads/sql-data-modeler-downloads.html` >}}.
+Kelas Saya ada mata kuliah basis data dan dosen meminta kelas saya untuk menginstall {{< linkBlank "Oracle Data Modeler" `https://www.oracle.com/tools/downloads/sql-data-modeler-downloads.html` >}}.
 
 Oke, karena Saya pakai Arch Linux harusnya packagenya ada di Package Manager ataupun di AUR.
 
@@ -60,7 +60,7 @@ Dan jika kalian memakai Arch based, kalian harus install dua-duanya. Keduanya ad
 yay -S alien_package_converter debtap
 {{< /scCode >}}
 
-Kita akan pakai Oracle Data Modeler sebagai contohnya. Kalian bisa download {{< linkBlank `disini` `https://www.oracle.com/tools/downloads/sql-data-modeler-downloads.html` >}}
+Kita akan pakai Oracle Data Modeler sebagai contohnya. Kalian bisa download {{< linkBlank "disini" `https://www.oracle.com/tools/downloads/sql-data-modeler-downloads.html` >}}
 
 ## Konfigurasi
 
