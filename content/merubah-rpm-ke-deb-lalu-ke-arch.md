@@ -60,7 +60,7 @@ Dan jika kalian memakai Arch based, kalian harus install dua-duanya. Keduanya ad
 yay -S alien_package_converter debtap
 {{< /scCode >}}
 
-Kita akan pakai Oracle Data Modeler sebagai contohnya. Kalian bisa download {{< linkBlank "disini" `https://www.oracle.com/tools/downloads/sql-data-modeler-downloads.html` >}}
+Kita akan pakai Oracle Data Modeler sebagai contohnya. Kalian bisa download {{< linkBlank "disini" "https://www.oracle.com/tools/downloads/sql-data-modeler-downloads.html" >}}.
 
 ## Konfigurasi
 
@@ -72,7 +72,7 @@ Saya menyimpannya di folder Downloads. Kalian bisa simpan dimanapun kalian suka.
 
 ![SS-odm-place.png](/img/SS-odm-place.png)
 
-{{< scCode `#13fb17` `Terminal` cp3 >}}
+{{< scCode "#13fb17" "Terminal" cp3 >}}
 sudo alien datamodeler-20.2.0.167.1538-noarch.rpm
 {{< /scCode >}}
 
@@ -122,6 +122,8 @@ Selamat! Kalian telah menginstall **.rpm** di dua distro yang berbeda :+1:
 
 Walaupun aplikasinya tersedia untuk Linux, belum tentu bisa langsung terinstall di OS kita.
 
-Untungnya sudah aplikasi yang bisa kita pakai untuk mengconvertnya.
+Untungnya sudah ada aplikasi yang bisa kita pakai untuk _converting_-nya.
 
 Jika tidak, sudah pasti kita akan mencari alternatifnya atau menjalankannya dengan virtualisasi.
+
+Jadi, sudahkah kalian menginstall .rpm di Debian dan Arch?
