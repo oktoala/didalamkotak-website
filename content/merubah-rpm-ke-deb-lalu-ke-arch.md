@@ -56,7 +56,7 @@ sudo apt alien dpkg-dev
 
 Dan jika kalian memakai Arch based, kalian harus install dua-duanya. Keduanya ada di AUR.
 
-{{< scCode "#1793d1" `Arch Based` cp2 >}}
+{{< scCode "#1793d1" "Arch Based" cp2 >}}
 yay -S alien_package_converter debtap
 {{< /scCode >}}
 

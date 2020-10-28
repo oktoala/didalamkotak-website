@@ -36,7 +36,7 @@ Jika Windows kalian memenuhi syarat diatas, maka kalian bisa mengikuti cara beri
 + Lalu pilih **Windows Poweshell (Admin)**
 + Copy perintah di bawah ini
 
-	{{< scCode `#012456` Powershell cp0 >}}
+	{{< scCode "#012456" Powershell cp0 >}}
 	Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 	{{< /scCode>}}
 
@@ -48,7 +48,7 @@ Jika Windows kalian memenuhi syarat diatas, maka kalian bisa mengikuti cara beri
 
 Jika kalian bingung mau ngapain, ketikan perintah ini:
 
-{{< scCode `#012456` Powershell cp1 >}}
+{{< scCode "#012456" Powershell cp1 >}}
 choco ?
  {{< /scCode >}}
 
@@ -57,12 +57,12 @@ choco ?
  Ketikan perintah `choco install <nama package>` untuk memasang sebuah package.
 
  Misal saya ingin install spotify.
-{{< scCode `#012456` Powershell cp2 >}}
+{{< scCode "#012456" Powershell cp2 >}}
 choco install spotify
  {{< /scCode >}}
 
  Kalian juga menginstall banyak package sekaligus.
-  {{< scCode `#012456` Powershell cp3 >}}
+  {{< scCode "#012456" Powershell cp3 >}}
 choco install spotify openshell notepadplusplus
  {{< /scCode >}}
 
@@ -79,12 +79,12 @@ choco install spotify openshell notepadplusplus
  Ketikan perintah `choco uninstall <nama package>` untuk mengapus sebuah package.
 
  Misal saya ingin uninstall spotify.
- {{< scCode `#012456` Powershell cp4 >}}
+ {{< scCode "#012456" Powershell cp4 >}}
 choco uninstall spotify
  {{< /scCode >}}
 
  Kalian juga bisa uninstall banyak package sekaligus
-  {{< scCode `#012456` Powershell cp5>}}
+  {{< scCode "#012456" Powershell cp5>}}
 choco install spotify openshell notepadplusplus <br>
  {{< /scCode >}}
 
@@ -92,7 +92,7 @@ choco install spotify openshell notepadplusplus <br>
 
 Kalian bisa update semua package kalian dengan satu perintah.
 
- {{< scCode `#012456` Powershell cp6>}}
+ {{< scCode "#012456" Powershell cp6>}}
 choco update
  {{< /scCode >}}
 
@@ -103,7 +103,7 @@ Semua cara di atas mengharuskan kita untuk mengetik perintah di Powershell.
 Bagaimana cara mengatur semua aplikasi tersebut tanpa harus mengetikan perintah? Tenang, Chocolatey memiliki GUI untuk itu.
 
 Ketikan perintah ini ke Powershell.
- {{< scCode `#012456` Powershell cp7>}}
+ {{< scCode "#012456" Powershell cp7>}}
 choco install chocolateygui
  {{< /scCode >}}
 
