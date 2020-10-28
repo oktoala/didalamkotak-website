@@ -1,6 +1,7 @@
 ---
 title: "Merubah Rpm Ke Deb Lalu Ke Arch"
 date: 2020-10-17T02:01:17+08:00
+comments: true
 draft: false
 author: "Yoga"
 toc: true

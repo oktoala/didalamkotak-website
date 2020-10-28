@@ -1,6 +1,7 @@
 ---
 title: "WINE Bukan Emulator"
 date: 2020-10-06T18:52:03+08:00
+comments: true
 draft: false
 thumbnail: img/thumbnail/wine-bukan-emulator.png
 author: "Yoga"

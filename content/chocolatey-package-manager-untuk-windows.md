@@ -1,6 +1,7 @@
 ---
 title: "Chocolatey, Package Manager Untuk Windows"
 date: 2020-09-20T23:32:59+08:00
+comments: true
 draft: false
 author: "Yoga"
 thumbnail: "img/thumbnail/choco.png"

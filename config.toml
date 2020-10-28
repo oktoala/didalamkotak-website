@@ -1,9 +1,11 @@
-baseURL = "http://iansyahteck.is/"
+baseURL = "http://didalamkotak.netlify.app"
 languageCode = "en-us"
+title = "Di Dalam Kotak"
 # title = "Ian Syah"
 themesDir   = "themes"
 theme       = "kotak"
 enableEmoji = true
+disqusShortname = "Ian Syah"
 
 [menu]
   [[menu.main]]

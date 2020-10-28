@@ -1,6 +1,7 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
+comments: true
 draft: false
 author: "Yoga"
 toc: true

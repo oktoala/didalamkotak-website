@@ -1,6 +1,7 @@
 ---
 title: "Alasan Menggunakan Linux"
 date: 2020-09-19T22:03:17+08:00
+comments: true
 draft: false
 author: "Yoga"
 thumbnail : "img/thumbnail/TNail2.png"
