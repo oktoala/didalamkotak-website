@@ -77,7 +77,7 @@ WINEARCH=win32 WINEPREFIX=~/direktoriLain wine aplikasiWindows.exe
 
 ## Testing
 
-Mari kita coba intall game Windows yang gratisan yaitu {{< linkBlank  `Deltarune` `https://www.deltarune.com/` >}}.
+Mari kita coba intall game Windows yang gratisan yaitu {{< linkBlank  "Deltarune" "https://www.deltarune.com/" >}}.
 
 Pastikan kalian unduh yang untuk Windows dan juga pastikan kalian sudah main Undertale. :smile:
 
