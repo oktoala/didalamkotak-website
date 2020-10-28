@@ -1,6 +1,5 @@
 
 var prevScrollpos = window.pageYOffset;
-document.querySelector(".homepage-header").remove();
 window.onscroll = function() {
 	var navbar = document.querySelector('.header__container');
 	var toc_click = document.querySelector('.toc_class a');
