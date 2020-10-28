@@ -66,7 +66,7 @@ choco install spotify
 choco install spotify openshell notepadplusplus
  {{< /scCode >}}
 
- Kalian bisa melihat nama-nama packagenya di  {{< linkBlank `https://chocolatey.org/packages` `https://chocolatey.org/packages`>}}
+ Kalian bisa melihat nama-nama packagenya di  {{< linkBlank "https://chocolatey.org/packages" "https://chocolatey.org/packages">}}
 
  Untuk yang bertanya-tanya kenapa disebut _package_ bukan aplikasi, karena sebuah package manager akan menginstall semua kebutuhan untuk aplikasi tersebut.
 
