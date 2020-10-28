@@ -43,13 +43,13 @@ Karena Wine bukanlah emulator, jadi tidak ada _performance/memory penalties_ yan
 
 ### Debian/Ubuntu Based
 
-{{< scCode `#13fb17` Terminal cp1 >}}
+{{< scCode "#13fb17" Terminal cp1 >}}
 sudo apt install wine
 {{< /scCode >}}
 
 ### Arch Based
 
-{{< scCode `#13fb17` Terminal cp2 >}}
+{{< scCode "#13fb17" Terminal cp2 >}}
 sudo pacman -S wine
 {{< /scCode >}}
 
@@ -63,7 +63,7 @@ Wine akan menaruh file konfigurasinya di {{< dir "~/.wine" >}} secara default. D
 
 Tapi kalian bisa menaruhnya di direktori lain dengan `WINEPREFIX=~/direktoriLain` pada environment variabelnya.
 
-{{< scCode `#13fb17` Terminal cp3 >}}
+{{< scCode "#13fb17" Terminal cp3 >}}
 WINEPREFIX=~/direktoriLain wine aplikasiWindows.exe
 {{< /scCode >}}
 
@@ -71,7 +71,7 @@ WINEPREFIX=~/direktoriLain wine aplikasiWindows.exe
 
 Wine akan memulai aplikasi dengan 64-bit environment secara default. Tapi kalian bisa mengubahnya menjadi `WINEARCH=win32` atau `WINEARCH=win64` pada environment variabelnya.
 
-{{< scCode `#13fb17` Terminal cp4 >}}
+{{< scCode "#13fb17" Terminal cp4 >}}
 WINEARCH=win32 WINEPREFIX=~/direktoriLain wine aplikasiWindows.exe
 {{< /scCode >}}
 
@@ -83,7 +83,7 @@ Pastikan kalian unduh yang untuk Windows dan juga pastikan kalian sudah main Und
 
 Saya menyimpan filenya di folder Download dengan nama deltarune.exe.
 
-{{< scCode `#13fb17` Terminal cp5 >}}
+{{< scCode "#13fb17" Terminal cp5 >}}
 WINEARCH=win32 WINEPREFIX=~/deltarune wine deltarune.exe
 {{< /scCode >}}
 
