@@ -122,6 +122,10 @@ body {
 	min-width: 0;
 }
 
+.homepage-content{
+	margin-top: 19px;
+}
+
 .sidebar {
 	-webkit-flex: 1 0 31.66%;
 	flex: 1 0 31.66%;

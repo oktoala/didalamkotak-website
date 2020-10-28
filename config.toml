@@ -5,7 +5,7 @@ title = "Di Dalam Kotak"
 themesDir   = "themes"
 theme       = "kotak"
 enableEmoji = true
-disqusShortname = "Ian Syah"
+disqusShortname = "didalamkotak-netlify-app.disqus.com"
 
 [menu]
   [[menu.main]]
@@ -35,6 +35,7 @@ disqusShortname = "Ian Syah"
     avatar  = "img/MyAvatar.png"
 
 [Params]
+    subtitle = ""
     copyright   = "All rights reserved"
     opengraph   = true
     schema      = true

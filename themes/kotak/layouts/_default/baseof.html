@@ -56,12 +56,12 @@
 		{{ partial "header.html" . }}
 		<div class="wrapper flex">
 			<div class="primary">
-			{{ block "main" . }}
-				{{ with .Content }}
-				<div class="content main__content clearfix">
-					{{ .Summary }}
-				</div>
-				{{ end }}
+				{{ block "main" . }}
+					{{ with .Content }}
+					<div class="content main__content clearfix">
+						{{ . }}
+					</div>
+					{{ end }}
 			{{ end }}
 			</div>
 			{{ partial "sidebar.html" . }}
