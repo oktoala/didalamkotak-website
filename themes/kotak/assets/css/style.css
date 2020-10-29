@@ -1452,6 +1452,8 @@ textarea {
 		float: none;
 		width: 100%;
 		margin: 0;
+		visibility: hidden;
+
 	}
 
 	.logo__link{
@@ -1459,7 +1461,7 @@ textarea {
 	}
 
 	.sidebar {
-		margin-top: 20px;
+		margin-top: 0px;
 	}
 
 	.toc_class{
@@ -1475,9 +1477,11 @@ textarea {
 		width: 88%;
 	}
 
-	.sidebar{
+	/* .sidebar{
+		float: none;
+		width: 100%;
 		visibility: hidden;
-	}
+	} */
 
 	.meta__item {
 		display: block;
