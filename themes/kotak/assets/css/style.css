@@ -1475,6 +1475,10 @@ textarea {
 		width: 88%;
 	}
 
+	.sidebar{
+		visibility: hidden;
+	}
+
 	.meta__item {
 		display: block;
 		margin-left: 0;
@@ -1519,6 +1523,9 @@ textarea {
 		max-width: 80px;
 	}
 
+	.list__thumbnail img {
+		max-width: 100%;
+	}
 	.list__title {
 		font-size: 16px;
 		font-size: 1rem;

@@ -5,14 +5,12 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>{{ block "title" . }}{{ if not .IsHome }}{{ .Title }}{{ end }}{{ .Site.Title }}{{ end }}</title>
+	<title>{{ block "title" . }}{{ if not .IsHome }}{{ .Title }} - {{ end }}{{ .Site.Title }}{{ end }}</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script async defer src="{{ "js/headerHide.js" | relURL }}"></script>
 	<script async defer src="{{ "js/tilt.jquery.js" | relURL }}"></script>
 	<script async defer src="{{ "js/clip.js" | relURL }}"></script>
-	<script async defer src="{{ "js/home.js" | relURL }}"></script>
-
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
 	<!-- <script async defer src="{{ "js/clipboard.js-master/dist/clipboard.min.js" | relURL }}"></script> -->
 	<script async defer src="{{ "js/copy.js" | relURL }}"></script>

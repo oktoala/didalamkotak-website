@@ -1,4 +1,3 @@
-  new ClipboardJS('.fa-copy');
   function snackFunc() {
   var x = document.getElementById("snackbar");
   x.className = "show";
