@@ -69,9 +69,9 @@
 	</div>
 {{ range .Site.Params.customJS -}}
 <script src="{{ . | relURL }}"></script>
-<script async defer src="{{ "js/tilt.jquery.js" | relURL }}"></script>
-
 {{- end }}
 {{- partial "mathjax.html" . -}}
+<script async defer src="{{ "js/tilt.jquery.js" | relURL }}"></script>
+<script async defer src="{{ "js/home.js" | relURL }}"></script>
 </body>
 </html>
