@@ -1,6 +1,6 @@
 baseURL = "http://didalamkotak.netlify.app"
 languageCode = "en-us"
-title = "Di Dalam Kotak"
+title = "B-lowBox"
 # title = "Ian Syah"
 themesDir   = "themes"
 theme       = "kotak"
@@ -58,7 +58,7 @@ disqusShortname = "didalamkotak-netlify-app"
 
 [Params.logo]
   image = "img/logoBaru.png" # Logo image. Path relative to "static"
-  title = "Di Dalam Kotak" # Logo title, otherwise will use site title
+  title = "B-Low Box" # Logo title, otherwise will use site title
   #subtitle = "College Documentation"
 
 [Params.style.vars]
