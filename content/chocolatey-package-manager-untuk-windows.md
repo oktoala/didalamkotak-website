@@ -28,17 +28,18 @@ Salah satu dari package manager di Windows adalah chocolatey. Sebenarnya ada jug
 ## Installasi
 
 Minimum Spesifikasi sebelum installasi:
+
 + Windows 7+ / Windows Server 2003+
 + Powershell v2+
 + .NET Framework 4+
 
 Jika Windows kalian memenuhi syarat diatas, maka kalian bisa mengikuti cara berikut:
+
 + Klik kanan pada logo {{< scIcon class="fa fa-windows" >}}
 + Lalu pilih **Windows Poweshell (Admin)**
 + Copy perintah di bawah ini
 
-	{{< scCode "#012456" "Powershell" cp0 >}}Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-	{{< /scCode >}}
+{{< scCode "#012456" "Powershell" cp0 >}}Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1')){{< /scCode >}}
 
 + Paste ke Poweshell kalian.
 + Tunggu sampai selesai.

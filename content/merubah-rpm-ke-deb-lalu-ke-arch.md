@@ -47,6 +47,7 @@ Hingga pada akhirnya saya menemukan caranya!
 ## Installasi
 
 Jadi pertama kalian harus menginstall beberapa aplikasi.
+
 + **alien**
 + **debtap**
 

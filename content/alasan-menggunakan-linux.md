@@ -5,7 +5,6 @@ comments: true
 draft: false
 author: "Yoga"
 thumbnail : "img/thumbnail/TNail2.png"
-tags: ["linux", "pengalaman"]
 toc: true
 categories: ["Linux", "Pengalaman"]
 ---
@@ -47,17 +46,20 @@ Linux adalah tempat yang bagus untuk belajar. Untuk menginstall Linux di laptop/
 partitioning, dan berbagai macam file sistem.
 
 Setelah terinstall, kalian akan dihadapkan lagi dengan hal-hal ini:
+
 + Terminal
 + Systemd
 + Package manager
 + Display server, dll.
 
 Jika kalian ingin mengubah tampilan dekstop secara keseluruhan, kalian akan dihadapkan lagi dengan hal-hal ini:
+
 + Desktop environment
 + Display manager
 + Window manager, dll.
 
 Meskipun begitu, masih banyak juga hal yang belum saya ketahui, seperti:
+
 + Bagaimana cara compile kernel sendiri?
 + Bagaimana cara membuat mirrorlist?
 + Bagaimana membuat distro sendiri?, dll.
@@ -72,6 +74,7 @@ untuk mencari uang. Tapi tetap, hal itu tidak bisa dibenarkan.
 Setelah saya memakai Linux, semua software bajakan itu tidak bisa berjalan di Linux. Alhasil, saya harus mencari alternatifnya.
 
 Dan saya pun menemukan beberapa alternatif yang tidak kalah dengan saya pakai di Windows, seperti:
+
 + Libre Office
 + Gimp
 + Inkscape
