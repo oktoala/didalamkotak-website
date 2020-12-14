@@ -50,7 +50,7 @@ Jika Windows kalian memenuhi syarat diatas, maka kalian bisa mengikuti cara beri
 Jika kalian bingung mau ngapain, ketikan perintah ini:
 
 {{< scCode "#012456" Powershell cp1 >}}
-choco ?
+choco -?
  {{< /scCode >}}
 
 ### 1. Install Package
