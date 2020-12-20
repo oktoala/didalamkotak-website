@@ -51,6 +51,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body data-spy="scroll" data-target="#toc" class="body">
+	<!-- <div id="loader"></div> -->
 	<div class="container container--outer">
 		{{ partial "header.html" . }}
 		<div class="wrapper flex">
@@ -73,5 +74,12 @@
 {{- partial "mathjax.html" . -}}
 <script async defer src="{{ "js/tilt.jquery.js" | relURL }}"></script>
 <script async defer src="{{ "js/home.js" | relURL }}"></script>
+<script async defer src="{{ "js/js-splash/dist/js-splash-2.0.min.js" | relURL }}">
+	var splash = new Splash({background: 'rgba(0, 0, 0, 0.7)'}, {
+					use: true,
+					start: FancyAnimation.moveIn,
+					end: FancyAnimation.rubberBand
+	});
+</script>
 </body>
 </html>
