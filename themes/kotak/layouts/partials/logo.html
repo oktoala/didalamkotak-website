@@ -10,7 +10,8 @@
 		<a class="logo__link" href="{{ "" | relLangURL }}"{{ with $logoTitle }} title="{{ . }}"{{ end }} rel="home">
 			{{ with $logoImage -}}
 				<div class="logo__item logo__imagebox " data-tilt="">
-					<img class="logo__img" src="{{ . | relURL }}">
+					{{ partial "svg/logoInOfBox2.svg" (dict "class" "logo__img" ) }}
+					<!-- <img class="logo__img" src="{{ . | relURL }}"> -->
 				</div>
 			{{- end -}}
 			{{ with $logoTitle -}}

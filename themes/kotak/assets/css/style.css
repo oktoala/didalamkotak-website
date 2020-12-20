@@ -494,6 +494,17 @@ select {
 	max-height: 150px;
 }
 
+.logo--mixed svg{
+	width: 40px;
+	height: 40px;
+	vertical-align: bottom;
+	fill: #89d0e1;
+}
+
+.logo--mixed svg:hover{
+	fill: #b2e2ebff;
+}
+
 .logo--mixed .logo__text {
 	padding: 0 1rem;
 }
