@@ -12,5 +12,5 @@ I also make the shell script to push the project. But firstly, you have to confi
 If Your commit more than one word
 
 ```bash
-./gitPush First\ Commit\ Again
+./gitPush ":emoji: Your Commit"
 ```

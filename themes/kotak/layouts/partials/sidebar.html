@@ -12,7 +12,6 @@
 	{{- $root := . }}
 	{{- if eq .Kind "page" -}}
 		{{- partial "post_toc.html" . -}}
-
 	{{- else }}
 		{{- if eq .Kind "home"}}
 			{{- with (default .Site.Params.sidebar.widgets .Params.widgets) -}}

@@ -1743,18 +1743,44 @@ img[alt=wine-hq-logo], [alt=wine-layer]{
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: {{ $hitamGelap }} ;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background: {{ $hitamGelap }};
 }
 
 .loader > svg {
 	width: 100px;
 	height: 100px;
+	fill: #b6b4b4;
+}
+
+.loader > svg:hover{
 	fill: #fff;
 }
 
 .loader.hidden{
 	visibility: hidden;
+}
+
+/* Back To Top Button */
+
+.nav_arrow{
+	display: none;
+	justify-content: space-evenly;
+	align-items: center;
+	font-size: 25px;
+	/* -webkit-animation: fadein 0.5s, fadeout 0.5s; */
+	animation: fadein 0.5s;
+
+}
+
+.nav_arrow > .fa-arrow-circle-up,
+.fa-arrow-circle-down {
+	color: #b6b4b4
+}
+
+.nav_arrow > .fa-arrow-circle-up:hover,
+.fa-arrow-circle-down:hover {
+	color: #fff
 }

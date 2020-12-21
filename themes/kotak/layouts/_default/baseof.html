@@ -8,7 +8,7 @@
 	<title>{{ block "title" . }}{{ if not .IsHome }}{{ .Title }} - {{ end }}{{ .Site.Title }}{{ end }}</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script async defer src="{{ "js/headerHide.js" | relURL }}"></script>
+	<script async defer src="{{ "js/main.js" | relURL }}"></script>
 	<script async defer src="{{ "js/clip.js" | relURL }}"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
 	<!-- <script async defer src="{{ "js/clipboard.js-master/dist/clipboard.min.js" | relURL }}"></script> -->
@@ -75,19 +75,7 @@
 {{- end }}
 {{- partial "mathjax.html" . -}}
 <script async defer src="{{ "js/tilt.jquery.js" | relURL }}"></script>
-<script async defer src="{{ "js/home.js" | relURL }}"></script>
+<!-- <script async defer src="{{ "js/home.js" | relURL }}"></script> -->
 <script async defer src="{{ "js/loading.js" | relURL }}"></script>
-<!-- <script async defer src="{{ "js/js-splash/dist/js-splash-2.0.min.js" | relURL }}">
-	var splash = new Splash({background: 'rgba(0, 0, 0, 0.7)'}, {
-					use: true,
-					start: FancyAnimation.moveIn,
-					end: FancyAnimation.rubberBand
-	});
-
-	splash.fromText("SPLASH SCREEN", 5000, {
-        color: 'red',
-        'font-family': 'fantasy'
-	});
-</script> -->
 </body>
 </html>
