@@ -39,11 +39,3 @@ function buttonScroll(directions){
 		document.querySelector(".container").scrollIntoView(false);
 	}
 }
-
-function topScroll() {
-		document.querySelector(".container").scrollIntoView(true);
-}
-
-function bottomScroll(){
-	document.querySelector(".container").scrollIntoView(false);
-}

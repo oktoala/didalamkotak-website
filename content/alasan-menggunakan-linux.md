@@ -7,6 +7,7 @@ author: "Yoga"
 thumbnail : "img/thumbnail/TNail2.png"
 toc: true
 categories: ["Linux", "Pengalaman"]
+pager: true
 ---
 
 Kali ini saya akan membagikan alasan kenapa saya menggunakan Linux.
