@@ -1,14 +1,14 @@
 <nav class="pager">
 	{{ with .Prev }}
 	<div class="pager__item pager__item--prev">
-		<a class="pager__link" href="{{ .Permalink }}" rel="prev">
+		<a class="pager__link" href="{{ .Permalink }}" rel="next">
 			<span class="fa fa-arrow-circle-left" title={{ .Title }}></span>
 		</a>
 	</div>
 	{{- end }}
 	{{ with .Next }}
 	<div class="pager__item pager__item--next">
-		<a class="pager__link" href="{{ .Permalink }}" rel="next">
+		<a class="pager__link" href="{{ .Permalink }}" rel="prev">
 			<span class="fa fa-arrow-circle-right" title={{ .Title }}></span>
 		</a>
 	</div>
