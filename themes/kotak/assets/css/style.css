@@ -1134,6 +1134,15 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 	display: block;
 }
 
+.pager__link > .fa{
+	color: #b6b4b4;
+	font-size: 25px;
+}
+
+.pager__link > .fa:hover{
+	color: #fff;
+}
+
 /* Images / Video */
 img {
 	width: auto\9; /* ie8 */
