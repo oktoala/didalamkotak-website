@@ -25,7 +25,7 @@ window.onscroll = function() {
 
 		} else {
 			mybutton.style.display = "none";
-			mybutton.style.animation = "animation: fadein 0.5s";
+			mybutton.style.animation = "fadein 0.5s";
 		}
 	} catch (e) {
 	}
