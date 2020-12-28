@@ -1141,6 +1141,7 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 
 .pager__link > .fa:hover{
 	color: #fff;
+
 }
 
 /* Images / Video */

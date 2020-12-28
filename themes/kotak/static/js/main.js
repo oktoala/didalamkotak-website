@@ -1,4 +1,4 @@
-var head = document.querySelector(".homepage-header");
+var head = document.querySelector("header.homepage-header");
 
 
 try {
