@@ -1,22 +1,16 @@
-{{- if or (.PrevInSection) (.NextInSection) }}
-<nav class="pager flex">
-	{{- if .PrevInSection }}
+<nav class="pager">
+	{{ with .PrevInSection }}
 	<div class="pager__item pager__item--prev">
-		<a class="pager__link" href="{{ .PrevInSection.RelPermalink }}" rel="prev">
-			<span class="fa fa-arrow-circle-left" title={{ .PrevInSection.Title }}></span>
-			<!-- <span>&thinsp;{{ .PrevInSection.Title }}</span> -->
-
-			<!-- <span class="pager__subtitle">«&thinsp;{{ .PrevInSection.Title }}</span> -->
+		<a class="pager__link" href="{{ .Permalink }}" rel="prev">
+			<span class="fa fa-arrow-circle-left" title={{ .Title }}></span>
 		</a>
 	</div>
 	{{- end }}
-	{{- if .NextInSection }}
+	{{ with .NextInSection }}
 	<div class="pager__item pager__item--next">
-		<a class="pager__link" href="{{ .NextInSection.RelPermalink }}" rel="next">
-			<!-- <span>{{ .NextInSection.Title }}&thinsp;</span> -->
-			<span class="fa fa-arrow-circle-right" title={{ .NextInSection.Title }}></span>
+		<a class="pager__link" href="{{ .Permalink }}" rel="next">
+			<span class="fa fa-arrow-circle-right" title={{ .Title }}></span>
 		</a>
 	</div>
 	{{- end }}
 </nav>
-{{- end }}
