@@ -1,6 +1,5 @@
 var head = document.querySelector("header.homepage-header");
 
-
 try {
 	head.remove();
 } catch (e) {
