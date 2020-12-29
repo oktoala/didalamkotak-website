@@ -79,6 +79,10 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 
+.body.loading{
+	overflow-y: hidden;
+}
+
 ::-moz-selection{
 	color: white;
 	background-color: {{ $highlightColor}};
