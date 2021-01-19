@@ -942,12 +942,30 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 	margin-top: 1px;
 	position: fixed;
 	font-weight: 700;
- padding-left: 20px;
+ 	padding-left: 20px;
 
 }
 
-.nav-ul li.active > a{
-	color: red;
+.toc-marker {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	
+}
+.toc-marker > path {
+  transition: all 0.3s ease;
+}
+
+.nav-ul li.visible > a{
+	transform: translate( 5px );
+	color: {{ $biruFire }};
+}
+
+.nav-ul li.visible > a:hover{
+	color: {{ $highlightColor }};
 }
 
 .toc_class div a{
@@ -956,7 +974,7 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 
 .toc_class  a{
 	transition: all 50ms ease-in-out;
-	color: {{ $biruFire}};
+	color: #5e8890
 }
 
 .toc_class a:hover{
@@ -1798,3 +1816,5 @@ img[alt=wine-hq-logo], [alt=wine-layer]{
 .fa-arrow-circle-down:hover {
 	color: #fff
 }
+
+

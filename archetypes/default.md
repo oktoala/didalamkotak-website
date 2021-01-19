@@ -5,9 +5,9 @@ comments: true
 draft: false
 author: "Yoga"
 toc: true
-thumbnail: /img/thumbnail/{{ .Name }}.png
+thumbnail: /img/thumbnail/{{ .Name }}.jpeg
 ---
 
 <!--more-->
 
-![{{ .Name }}](/img/thumbnail{{ .Name }}.png)
+![{{ .Name }}](/img/thumbnail{{ .Name }}.jpeg)

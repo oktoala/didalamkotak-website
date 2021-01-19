@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html class="no-js" lang="{{ .Site.Language.Lang }}">
-<head>
+<head class="che">
 
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,7 +11,7 @@
 	<script async defer src="{{ "js/clip.js" | relURL }}"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
 	<!-- <script async defer src="{{ "js/clipboard.js-master/dist/clipboard.min.js" | relURL }}"></script> -->
-	<script async defer src="{{ "js/copy.js" | relURL }}"></script>
+	<!-- <script async defer src="{{ "js/copy.js" | relURL }}"></script> -->
 	<meta name="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Params.Description }}{{ end }}">
 
 	{{- if .Site.Params.opengraph }}

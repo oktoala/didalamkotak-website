@@ -1,242 +1,124 @@
-﻿/*!
- * Scrollspy Plugin
- * Author: r3plica
- * Licensed under the MIT license
- */
-; (function ($, window, document, undefined) {
+﻿var toc = document.querySelector( '.toc_class' );
+var tocPath = document.querySelector( '.toc-marker path' );
+var tocItems;
 
-    // Add our plugin to fn
-    $.fn.extend({
+// Factor of screen size that the element must cross
+// before it's considered visible
+var TOP_MARGIN = 0.1,
+    BOTTOM_MARGIN = 0.2;
 
-        // Scrollspy is the name of the plugin
-        scrollspy: function (options) {
+var pathLength;
 
-            // Define our defaults
-            var defaults = {
-                namespace: 'scrollspy',
-                activeClass: 'active',
-                animate: false,
-                duration: 1000,
-                offset: 0,
-                container: window,
-                replaceState: false
-            };
+var lastPathStart,
+		lastPathEnd;
 
-            // Add any overriden options to a new object
-            options = $.extend({}, defaults, options);
+window.addEventListener( 'resize', drawPath, false );
+window.addEventListener( 'scroll', sync, false );
 
-            // Adds two numbers together
-            var add = function (ex1, ex2) {
-                return parseInt(ex1, 10) + parseInt(ex2, 10);
-            }
+drawPath();
 
-            // Find our elements
-            var findElements = function (links) {
+function drawPath() {
+  
+  tocItems = [].slice.call( toc.querySelectorAll( 'li' ) );
 
-                // Declare our array
-                var elements = [];
+  // Cache element references and measurements
+  tocItems = tocItems.map( function( item ) {
+    var anchor = item.querySelector( 'a' );
+    var target = document.getElementById( anchor.getAttribute( 'href' ).slice( 1 ) );
 
-                // Loop through the links
-                for (var i = 0; i < links.length; i++) {
+    return {
+      listItem: item,
+      anchor: anchor,
+      target: target
+    };
+  } );
 
-                    // Get our current link
-                    var link = links[i];
+  // Remove missing targets
+  tocItems = tocItems.filter( function( item ) {
+    return !!item.target;
+  } );
 
-                    // Get our hash
-                    var hash = $(link).attr("href");
+  var path = [];
+  var pathIndent;
 
-                    // Store our has as an element
-                    var element = $(hash);
+  tocItems.forEach( function( item, i ) {
 
-                    // If we have an element matching the hash
-                    if (element.length > 0) {
+    var x = item.anchor.offsetLeft - 5,
+        y = item.anchor.offsetTop,
+        height = item.anchor.offsetHeight;
 
-                        // Get our offset
-                        var top = Math.floor(element.offset().top),
-                            bottom = top + Math.floor(element.outerHeight());
+    if( i === 0 ) {
+      path.push( 'M', x, y, 'L', x, y + height );
+      item.pathStart = 0;
+    }
+    else {
+      // Draw an additional line when there's a change in
+      // indent levels
+      if( pathIndent !== x ) path.push( 'L', pathIndent, y );
 
-                        // Add to our array
-                        elements.push({ element: element, hash: hash, top: top, bottom: bottom });
-                    }                    
-                }
+      path.push( 'L', x, y );
+      
+      // Set the current path so that we can measure it
+      tocPath.setAttribute( 'd', path.join( ' ' ) );
+      item.pathStart = tocPath.getTotalLength() || 0;
+      
+      path.push( 'L', x, y + height );
+    }
+    
+    pathIndent = x;
+    
+    tocPath.setAttribute( 'd', path.join( ' ' ) );
+    item.pathEnd = tocPath.getTotalLength();
 
-                // Return our elements
-                return elements;
-            };
+  } );
+  
+  pathLength = tocPath.getTotalLength();
+  
+  sync();
+  
+}
 
-            // Find our link from a hash
-            var findLink = function (links, hash) {
+function sync() {
+  
+  var windowHeight = window.innerHeight;
+  
+  var pathStart = pathLength,
+      pathEnd = 0;
+  
+  var visibleItems = 0;
+  
+  tocItems.forEach( function( item ) {
 
-                // For each link
-                for (var i = 0; i < links.length; i++) {
+    var targetBounds = item.target.getBoundingClientRect();
+    
+    if( targetBounds.bottom > windowHeight * TOP_MARGIN && targetBounds.top < windowHeight * ( 1 - BOTTOM_MARGIN ) ) {
+      pathStart = Math.min( item.pathStart, pathStart );
+      pathEnd = Math.max( item.pathEnd, pathEnd );
+      
+      visibleItems += 1;
+      
+      item.listItem.classList.add( 'visible' );
+    }
+    else {
+      item.listItem.classList.remove( 'visible' );
+    }
+    
+  } );
+  
+  // Specify the visible path or hide the path altogether
+  // if there are no visible items
+  if( visibleItems > 0 && pathStart < pathEnd ) {
+    if( pathStart !== lastPathStart || pathEnd !== lastPathEnd ) {
+      tocPath.setAttribute( 'stroke-dashoffset', '1' );
+      tocPath.setAttribute( 'stroke-dasharray', '1, '+ pathStart +', '+ ( pathEnd - pathStart ) +', ' + pathLength );
+      tocPath.setAttribute( 'opacity', 1 );
+    }
+  }
+  else {
+    tocPath.setAttribute( 'opacity', 0 );
+  }
+  
+  lastPathStart = pathStart;
+  lastPathEnd = pathEnd;
 
-                    // Get our current link
-                    var link = $(links[i]);
-
-                    // If our hash matches the link href
-                    if (link.attr("href") === hash) {
-
-                        // Return the link
-                        return link;
-                    }
-                }
-            };
-
-            // Reset classes on our elements
-            var resetClasses = function (links) {
-
-                // For each link
-                for (var i = 0; i < links.length; i++) {
-
-                    // Get our current link
-                    var link = $(links[i]);
-
-                    // Remove the active class
-                    link.parent().removeClass(options.activeClass);
-                }
-            };
-
-            // Store last fired scroll event
-            var scrollArea = '';
-
-            // For each scrollspy instance
-            return this.each(function () {
-
-                // Declare our global variables
-                var element = this,
-                    container = $(options.container);
-
-                // Get our objects
-                var links = $(element).find('a');
-
-                // Loop through our links
-                for (var i = 0; i < links.length; i++) {
-
-                    // Get our current link
-                    var link = links[i];
-
-                    // Bind the click event
-                    $(link).on("click", function (e) {
-                        
-                        // Get our target
-                        var target = $(this).attr("href"),
-                            $target = $(target);
-
-                        // If we have the element
-                        if ($target.length > 0) {
-
-                            // Get it's scroll position
-                            var top = add($target.offset().top, options.offset);
-                            
-                            // If animation is on
-                            if (options.animate) {
-
-                                // Animate our scroll
-                                $('html, body').animate({ scrollTop: top }, options.duration);
-                            } else {
-
-                                // Scroll to our position
-                                window.scrollTo(0, top);
-                            }
-                            
-                            // Prevent our link
-                            e.preventDefault();
-                        }
-                    });
-                }
-
-                // Set links
-                resetClasses(links);
-
-                // Get our elements
-                var elements = findElements(links);
-
-                var trackChanged = function() {
-
-                    // Get the position and store in an object
-                    var position = {
-                        top: add($(this).scrollTop(), Math.abs(options.offset)),
-                        left: $(this).scrollLeft()
-                    };
-
-                    // Create a variable for our link
-                    var link;
-
-                    // Loop through our elements
-                    for (var i = 0; i < elements.length; i++) {
-
-                        // Get our current item
-                        var current = elements[i];
-
-                        // If we are within the boundaries of our element
-                        if (position.top >= current.top && position.top < current.bottom) {
-
-                            // get our element
-                            var hash = current.hash;
-
-                            // Get the link
-                            link = findLink(links, hash);
-
-                            // If we have a link
-                            if (link) {
-                                // If we have an onChange function
-                                if (options.onChange && (scrollArea !== hash)) {
-
-                                    // Fire our onChange function
-                                    options.onChange(current.element, $(element), position);
-
-                                    // set scrollArea
-                                    scrollArea = hash;
-
-                                }
-
-                                // Update url
-                                if (options.replaceState) {
-                                    history.replaceState( {}, '', '/' + hash )
-                                }
-
-                                // Reset the classes on all other link
-                                resetClasses(links);
-
-                                // Add our active link to our parent
-                                link.parent().addClass(options.activeClass);
-
-                                // break our loop
-                                break;
-                            }
-                        }
-                    }
-
-                    // If we don't have a link and we have a exit function
-                    if (!link && (scrollArea !== 'exit') && options.onExit) {
-
-                        // Fire our onChange function
-                        options.onExit($(element), position);
-
-                        // Reset the classes on all other link
-                        resetClasses(links);
-
-                        // set scrollArea
-                        scrollArea = 'exit';
-
-                        // Update url
-                        if (options.replaceState) {
-                            history.replaceState( {}, '', '/' )
-                        }
-
-                    }
-                }
-
-                // Add a listener to the window
-                container.bind('scroll.' + options.namespace, function () {
-                    trackChanged();
-                });
-
-                $( document ).ready(function (e) {
-                    trackChanged();
-                })
-
-            });
-        }
-    });
-})(jQuery, window, document, undefined);
+}
