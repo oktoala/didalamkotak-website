@@ -23,7 +23,7 @@ terinstall.
 
 Tapi akan lain ceritanya jika kalian memakai Wine.
 
- ## Pendahuluan
+## Pendahuluan
 
 Saya pikir dulu Wine merupakan singkatan dari **Win**dows **E**mulator. Tapi ternyata saya salah.
 
