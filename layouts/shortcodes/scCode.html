@@ -1,8 +1,13 @@
 <div class="snackBar" id="snackbar">Sudah Dicopy!!!</div>
 <div class="chroma">
-	<div style="border-left-color:{{.Get 0}};" class="code-header">
-		<span class="code-title"> {{.Get 1}} </span>
-			<span class="fa fa-copy" onclick="snackFunc()" aria-label="Hahhah" data-clipboard-target="#{{.Get 2}}" id="cpButton" title="Copy ke clipboard"></span>
+	<div class="code-header {{.Get 0}}">
+		<span class="code-title"> {{.Get 0}} </span>
+			<span class="fa fa-copy" onclick="snackFunc()" aria-label="Hahhah" data-clipboard-target="#{{.Get 1}}" id="cpButton" title="Copy ke clipboard"></span>
 	</div>
-	<blockquote style="border-color: {{.Get 0}}; " class="bC" id="{{.Get 2}}">{{.Inner}}</blockquote>
+	<blockquote class="bC {{.Get 0}}" id="{{.Get 1}}">{{.Inner}}</blockquote>
 </div>
+{{/*  <pre class="bC language-{{.Get 0}}">
+	<code id="{{.Get 1}}" class="language-{{.Get 0}}" data-lang="{{.Get 0}}">
+		{{.Inner}}
+	</code>
+</pre>  */}}
