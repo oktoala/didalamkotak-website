@@ -452,7 +452,7 @@ select {
 	display: flex;
 	align-items: center;
 	border-bottom: 2px solid;
-	border-image: linear-gradient(to right, {{ $biruFire }}, #1500ff );
+	border-image: linear-gradient(to right, {{ $biruFire }}, #5e8890 , {{ $biruFire }});
 	border-image-slice: 10;
 	border-width: 4px;
 	transition: all 0.3s;
@@ -713,6 +713,10 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 
 	.body.scroll-disabled{
 		overflow-y: hidden;
+	}
+
+	.loader{
+		display: none;
 	}
 }
 
@@ -1509,6 +1513,10 @@ textarea {
 
 	.toc_class{
 		display: none;
+	}
+
+	.loader{
+		visibility: hidden;
 	}
 }
 

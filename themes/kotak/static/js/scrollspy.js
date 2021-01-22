@@ -5,7 +5,7 @@ var tocItems;
 // Factor of screen size that the element must cross
 // before it's considered visible
 var TOP_MARGIN = 0.1,
-    BOTTOM_MARGIN = 0.2;
+    BOTTOM_MARGIN = 0.1;
 
 var pathLength;
 
@@ -90,24 +90,28 @@ function sync() {
   tocItems.forEach( function( item ) {
 
     var targetBounds = item.target.getBoundingClientRect();
-    
-    if( targetBounds.bottom > windowHeight * TOP_MARGIN && targetBounds.top < windowHeight * ( 1 - BOTTOM_MARGIN ) ) {
+    // console.log(targetBounds.bottom);
+    // console.error(targetBounds.top);
+    // wHTM = 94,101
+    // whBM = 846.9
+
+    //476 & 1108
+    // ( targetBounds.bottom >= windowHeight * TOP_MARGIN && targetBounds.top <= windowHeight * ( 1 - BOTTOM_MARGIN ))
+    if( targetBounds.bottom <= 100 && targetBounds.top >= -950) {
       pathStart = Math.min( item.pathStart, pathStart );
       pathEnd = Math.max( item.pathEnd, pathEnd );
       
       visibleItems += 1;
       
       item.listItem.classList.add( 'visible' );
-    }
+    } 
     else {
       item.listItem.classList.remove( 'visible' );
     }
-    
   } );
-  
   // Specify the visible path or hide the path altogether
   // if there are no visible items
-  if( visibleItems > 0 && pathStart < pathEnd ) {
+  if( visibleItems > 0 && pathStart <= pathEnd ) {
     if( pathStart !== lastPathStart || pathEnd !== lastPathEnd ) {
       tocPath.setAttribute( 'stroke-dashoffset', '1' );
       tocPath.setAttribute( 'stroke-dasharray', '1, '+ pathStart +', '+ ( pathEnd - pathStart ) +', ' + pathLength );
