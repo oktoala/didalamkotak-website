@@ -1644,7 +1644,15 @@ textarea {
 	}
 
 	.code-header.Terminal, .bC.Terminal{
-		border-left-color: 
+		border-left-color: #13fb17;
+	}
+
+	.code-header.Ubuntu, .bC.Ubuntu{
+		border-left-color: #b43c12;
+	}
+
+	.code-header.Arch, .bC.Arch{
+		border-left-color: #1793d1;
 	}
 
 	.bC::-webkit-scrollbar{
