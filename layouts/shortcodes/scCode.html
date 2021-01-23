@@ -5,9 +5,7 @@
 		<span class="code-title"> {{.Get 0}} </span>
 			<span class="fa fa-copy" onclick="snackFunc()" aria-label="Hahhah" data-clipboard-target="#{{.Get 1}}" id="cpButton" title="Copy ke clipboard"></span>
 	</div>
-	<pre class="bC {{.Get 0}}">
-		<code class="bC language-{{.Get 0}}" data-lang="{{.Get 0}}" id="{{.Get 1}}">{{ .Inner }}</code>
-</pre>
+	<pre class="bC {{.Get 0}}"><code class="bC language-{{.Get 0}}" data-lang="{{.Get 0}}" id="{{.Get 1}}">{{ .Inner }}</code></pre>
 </div>
 {{/*  <blockquote class="bC {{.Get 0}}" id="{{.Get 1}}">
 	{{.Inner}}
