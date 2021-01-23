@@ -52,13 +52,14 @@ Jadi pertama kalian harus menginstall beberapa aplikasi.
 + **debtap**
 
 Kalau kalian memakai Ubuntu based cukup install **alien** saja. Install dpkg untuk memasang packagenya nanti.
-{{< scCode "Ubuntu" cp1 >}}
+
+{{< scCode "Bash" cp1 >}}
 sudo apt alien dpkg-dev
 {{< /scCode >}}
 
 Dan jika kalian memakai Arch based, kalian harus install dua-duanya. Keduanya ada di AUR.
 
-{{< scCode "Arch" cp2 >}}
+{{< scCode "Bash" cp2 >}}
 yay -S alien_package_converter debtap
 {{< /scCode >}}
 
@@ -74,7 +75,7 @@ Saya menyimpannya di folder Downloads. Kalian bisa simpan dimanapun kalian suka.
 
 ![SS-odm-place.png](/img/SS-odm-place.png)
 
-{{< scCode "Terminal" cp3 >}}
+{{< scCode "Bash" cp3 >}}
 sudo alien datamodeler-20.2.0.167.1538-noarch.rpm
 {{< /scCode >}}
 
@@ -86,13 +87,13 @@ Jika sudah, kalian bisa mengecek file **.deb** kalian.
 
 Jika kalian di Ubuntu, kalian bisa install langsung menggunakan dpkg.
 
-{{< scCode "Ubuntu" cp4 >}}
+{{< scCode "Bash" cp4 >}}
 sudo dpkg -i datamodeler_20.2.0.167.1538-2_all.deb
 {{< /scCode >}}
 
 Tapi jika kalian di Arch, maka kalian harus convert lagi.
 
-{{< scCode "Arch" cp5 >}}
+{{< scCode "Bash" cp5 >}}
 debtap datamodeler_20.2.0.167.1538-2_all.deb
 {{< /scCode >}}
 
@@ -104,8 +105,7 @@ Kalian bisa cek apakah sudah terconvert atau tidak.
 
 Sekarang kalian sudah bisa menginstall package tersebut dengan _pacman_.
 
-{{< scCode "Arch" cp6 >}}
-
+{{< scCode "Bash" cp6 >}}
 sudo pacman -U datamodeler-20.2.0.167.1538-1-any.pkg.tar.zst
 {{< /scCode >}}
 

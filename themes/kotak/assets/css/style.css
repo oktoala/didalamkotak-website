@@ -337,7 +337,7 @@ code {
 
 code {
 	padding: 4px;
-	color: #c33;
+	color: #fff400;
 }
 
 pre {
@@ -474,8 +474,6 @@ select {
 	top : -10em;
 	transition: top, 0.3s;
 }
-
-
 
 .logo {
 	padding-left: 23px;
@@ -1619,40 +1617,34 @@ textarea {
 
  /*scCode.html*/
 
-	.bc > pre{
-		padding: 1px;
-	}
-
- 	.bC{
-		overflow-x: auto;
-		transition: 0.1s;
-		font-family: monospace;
-		white-space: nowrap;
-		color: #fff;
-		width: 100%;
-		padding-right: 2px;
-		margin: 0 10px 0 0;
-		padding: 10px 2px 10px 15px;
+	pre.bC{
+		margin: 0;
+		padding: 0;
+		line-height: 1.5;
+		white-space: inherit;
 		border: 0;
 		border-left: 5px solid;
-		background-color: #272c34;
 	}
 
+	code.bC{
+		margin: 0;
+		padding: 0 0 20px 15px;
+		white-space: pre;
+		
+	}
+
+
 	/* Border color */
-	.code-header.Powershell, .bC.Powershell{
+	.code-header.Powershell, pre.bC.Powershell{
 		border-left-color: #012456;
 	}
 
-	.code-header.Terminal, .bC.Terminal{
-		border-left-color: #13fb17;
+	.code-header.Bash, pre.bC.Bash{
+		border-left-color: #3e474a;
 	}
 
-	.code-header.Ubuntu, .bC.Ubuntu{
-		border-left-color: #b43c12;
-	}
-
-	.code-header.Arch, .bC.Arch{
-		border-left-color: #1793d1;
+	.code-header.Python, pre.bC.Python{
+		border-left-color: green;
 	}
 
 	.bC::-webkit-scrollbar{
@@ -1666,7 +1658,7 @@ textarea {
 	}
 
 	.bC:hover::-webkit-scrollbar-track{
-		background: #272c34;
+		background: #011627;
 
 }
 	.bC:hover::-webkit-scrollbar-thumb{
@@ -1715,11 +1707,11 @@ textarea {
 	}
 
 	.chroma .bC{
-		scrollbar-color: #272c34 #272c34;
+		scrollbar-color: #011627 #011627;
 	}
 
 	.chroma:hover .bC{
-		scrollbar-color: #1a1e22 #272c34;
+		scrollbar-color: #1a1e22 #011627;
 	}
 
 	/* snackBar */
@@ -1766,6 +1758,8 @@ textarea {
 	from {top: 0; opacity: 1;}
 	to {top: 0; opacity: 0;}
 }
+
+/* Breadcrump */
 
 ul.breadcrumb {
 	margin-bottom: 40px;

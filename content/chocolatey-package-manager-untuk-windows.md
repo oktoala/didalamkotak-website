@@ -39,7 +39,9 @@ Jika Windows kalian memenuhi syarat diatas, maka kalian bisa mengikuti cara beri
 + Lalu pilih **Windows Poweshell (Admin)**
 + Copy perintah di bawah ini
 
-{{< scCode "Powershell" cp0 >}}Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1')){{< /scCode >}}
+{{< scCode "Powershell" cp0 >}}
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+{{< /scCode >}}
 
 + Paste ke Poweshell kalian.
 + Tunggu sampai selesai.
@@ -49,31 +51,31 @@ Jika Windows kalian memenuhi syarat diatas, maka kalian bisa mengikuti cara beri
 
 Jika kalian bingung mau ngapain, ketikan perintah ini:
 
-{{< scCode Powershell cp1 >}}
+{{< scCode "Powershell" cp1 >}}
 choco -?
- {{< /scCode >}}
+{{< /scCode >}}
 
 ### 1. Install Package
 
  Ketikan perintah `choco install <nama package>` untuk memasang sebuah package.
 
 Misal saya ingin install spotify.
-{{< scCode Powershell cp2 >}}
+{{< scCode "Powershell" cp2 >}}
 choco install spotify
 {{< /scCode >}}
 
- Kalian juga menginstall banyak package sekaligus.
-  {{< scCode Powershell cp3 >}}
+Kalian juga menginstall banyak package sekaligus.
+{{< scCode "Powershell" cp3 >}}
 choco install spotify openshell notepadplusplus
- {{< /scCode >}}
+{{< /scCode >}}
 
- Kalian bisa melihat nama-nama packagenya di  {{< linkBlank "https://chocolatey.org/packages" "https://chocolatey.org/packages">}}
+Kalian bisa melihat nama-nama packagenya di  {{< linkBlank "https://chocolatey.org/packages" "https://chocolatey.org/packages">}}
 
- Untuk yang bertanya-tanya kenapa disebut _package_ bukan aplikasi, karena sebuah package manager akan menginstall semua kebutuhan untuk aplikasi tersebut.
+Untuk yang bertanya-tanya kenapa disebut _package_ bukan aplikasi, karena sebuah package manager akan menginstall semua kebutuhan untuk aplikasi tersebut.
 
- Jadi kalau misalnya aplikasi kalian butuh Python 3.x, maka dia akan menginstallnya juga.
+Jadi kalau misalnya aplikasi kalian butuh Python 3.x, maka dia akan menginstallnya juga.
 
- Jadi kalian gak perlu mencari semua kebutuhan aplikasi tersebut.
+Jadi kalian gak perlu mencari semua kebutuhan aplikasi tersebut.
 
 ### 2. Uninstall Package
 
@@ -86,7 +88,7 @@ choco uninstall spotify
 
 Kalian juga bisa uninstall banyak package sekaligus
 {{< scCode Powershell cp5>}}
-choco install spotify openshell notepadplusplus <br>
+choco install spotify openshell notepadplusplus
 {{< /scCode >}}
 
 ### 3. Update Package
