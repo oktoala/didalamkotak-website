@@ -3,7 +3,6 @@ var copyButton = document.querySelectorAll(".fa-copy");
 var tooltiptexts = document.querySelectorAll('.tooltiptext');
 var cB = "code-box";
 var i;
-console.log(codeText.length)
 for ( i=0;  i<copyButton.length; i-=-1){
   codeText[i].id = cB + i;
   copyButton[i].setAttribute('data-clipboard-target', '#'+cB+i);
@@ -12,11 +11,16 @@ for ( i=0;  i<copyButton.length; i-=-1){
 }
 
 function snackFunc(ids) {
-  console.log(ids);
-  var tooltip = document.getElementById(ids);
-  tooltip.textContent = "Copied"
+  var getArray = ids.split('');
+  var getNumber = getArray[getArray.length - 1];
+  var idToolTip = "tooltiptext" + getNumber;
+  var tooltip = document.getElementById(idToolTip);
+  tooltip.innerHTML = "Berhasil!";
 }
 function outFunc(ids) {
-  var tooltip = document.getElementById(ids);
-  tooltip.textContent = "Copy ke Clipboard"
+  var getArray = ids.split('');
+  var getNumber = getArray[getArray.length - 1];
+  var idToolTip = "tooltiptext" + getNumber;
+  var tooltip = document.getElementById(idToolTip);
+  tooltip.innerHTML = "Copy ke clipboard";
 }

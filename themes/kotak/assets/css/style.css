@@ -99,8 +99,8 @@ body {
 }
 
 ::selection{
-	color: black;
-	background-color: {{ $highlightColor}};
+	background-color: #fff;
+	color: {{ $hitamGelap }};
 }
 
 .container {
@@ -1741,6 +1741,7 @@ textarea {
 		margin: 0 0 0 6px;
 		padding: 7px 15px 0 0;
 		transition: 0.1s;
+		color: #b6b4b4;
 	}
 
 	.chroma:hover .fa-copy{
@@ -1748,7 +1749,7 @@ textarea {
 	}
 
 	.fa-copy:hover{
-		color: #58ff04;
+		color: #fff;
 	}
 
 	.fa-copy:active{
@@ -1761,6 +1762,11 @@ textarea {
 
 	.chroma:hover .bC{
 		scrollbar-color: #1a1e22 #011627;
+	}
+
+	.chroma .bC::selection{
+		color: #011627;
+		background-color: #fff;
 	}
 
 	/* snackBar */
