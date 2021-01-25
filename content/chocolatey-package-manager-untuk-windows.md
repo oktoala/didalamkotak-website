@@ -39,7 +39,7 @@ Jika Windows kalian memenuhi syarat diatas, maka kalian bisa mengikuti cara beri
 + Lalu pilih **Windows Poweshell (Admin)**
 + Copy perintah di bawah ini
 
-{{< scCode "Powershell" cp0 >}}Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1')){{< /scCode >}}
+{{< scCode "Powershell" >}}Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1')){{< /scCode >}}
 
 + Paste ke Poweshell kalian.
 + Tunggu sampai selesai.
@@ -49,7 +49,7 @@ Jika Windows kalian memenuhi syarat diatas, maka kalian bisa mengikuti cara beri
 
 Jika kalian bingung mau ngapain, ketikan perintah ini:
 
-{{< scCode "Powershell" cp1 >}}choco -?{{< /scCode >}}
+{{< scCode "Powershell" >}}choco -?{{< /scCode >}}
 
 ### 1. Install Package
 
@@ -57,10 +57,10 @@ Jika kalian bingung mau ngapain, ketikan perintah ini:
 
 Misal saya ingin install spotify.
 
-{{< scCode "Powershell" cp2 >}}choco install spotify{{< /scCode >}}
+{{< scCode "Powershell" >}}choco install spotify{{< /scCode >}}
 
 Kalian juga menginstall banyak package sekaligus.
-{{< scCode "Powershell" cp3 >}}choco install spotify openshell notepadplusplus{{< /scCode >}}
+{{< scCode "Powershell" >}}choco install spotify openshell notepadplusplus{{< /scCode >}}
 
 Kalian bisa melihat nama-nama packagenya di  {{< linkBlank "https://chocolatey.org/packages" "https://chocolatey.org/packages">}}
 
@@ -75,16 +75,16 @@ Jadi kalian gak perlu mencari semua kebutuhan aplikasi tersebut.
  Ketikan perintah `choco uninstall <nama package>` untuk mengapus sebuah package.
 
 Misal saya ingin uninstall spotify.
-{{< scCode Powershell cp4 >}}choco uninstall spotify{{< /scCode >}}
+{{< scCode Powershell >}}choco uninstall spotify{{< /scCode >}}
 
 Kalian juga bisa uninstall banyak package sekaligus
-{{< scCode Powershell cp5>}}choco install spotify openshell notepadplusplus{{< /scCode >}}
+{{< scCode Powershell>}}choco install spotify openshell notepadplusplus{{< /scCode >}}
 
 ### 3. Update Package
 
 Kalian bisa update semua package kalian dengan satu perintah.
 
-{{< scCode Powershell cp6>}}choco update{{< /scCode >}}
+{{< scCode Powershell>}}choco update{{< /scCode >}}
 
 ### 4. Chocolatey GUI
 
@@ -93,7 +93,7 @@ Semua cara di atas mengharuskan kita untuk mengetik perintah di Powershell.
 Bagaimana cara mengatur semua aplikasi tersebut tanpa harus mengetikan perintah? Tenang, Chocolatey memiliki GUI untuk itu.
 
 Ketikan perintah ini ke Powershell.
-{{< scCode Powershell cp7>}}choco install chocolateygui{{< /scCode >}}
+{{< scCode Powershell>}}choco install chocolateygui{{< /scCode >}}
 
 ## Penutup
 Dengan adanya chocolatey, kita bisa mengatur aplikasi kita dalam satu tempat.

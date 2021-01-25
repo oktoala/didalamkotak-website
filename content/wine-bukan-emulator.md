@@ -44,11 +44,11 @@ Karena Wine bukanlah emulator, jadi tidak ada _performance/memory penalties_ yan
 
 ### Debian/Ubuntu Based
 
-{{< scCode "Bash" cp1 >}}sudo apt install wine{{< /scCode >}}
+{{< scCode "Bash" >}}sudo apt install wine{{< /scCode >}}
 
 ### Arch Based
 
-{{< scCode "Bash" cp2 >}}sudo pacman -S wine{{< /scCode >}}
+{{< scCode "Bash" >}}sudo pacman -S wine{{< /scCode >}}
 
 ## Konfigurasi
 
@@ -60,13 +60,13 @@ Wine akan menaruh file konfigurasinya di {{< dir "~/.wine" >}} secara default. D
 
 Tapi kalian bisa menaruhnya di direktori lain dengan `WINEPREFIX=~/direktoriLain` pada environment variabelnya.
 
-{{< scCode "Bash" cp3 >}}WINEPREFIX=~/direktoriLain wine aplikasiWindows.exe{{< /scCode >}}
+{{< scCode "Bash" >}}WINEPREFIX=~/direktoriLain wine aplikasiWindows.exe{{< /scCode >}}
 
 ### WINEARCH
 
 Wine akan memulai aplikasi dengan 64-bit environment secara default. Tapi kalian bisa mengubahnya menjadi `WINEARCH=win32` atau `WINEARCH=win64` pada environment variabelnya.
 
-{{< scCode "Bash" cp4 >}}WINEARCH=win32 WINEPREFIX=~/direktoriLain wine aplikasiWindows.exe{{< /scCode >}}
+{{< scCode "Bash" >}}WINEARCH=win32 WINEPREFIX=~/direktoriLain wine aplikasiWindows.exe{{< /scCode >}}
 
 ## Testing
 
@@ -76,7 +76,7 @@ Pastikan kalian unduh yang untuk Windows dan juga pastikan kalian sudah main Und
 
 Saya menyimpan filenya di folder Download dengan nama deltarune.exe.
 
-{{< scCode "Bash" cp5 >}}WINEARCH=win32 WINEPREFIX=~/deltarune wine deltarune.exe{{< /scCode >}}
+{{< scCode "Bash" >}}WINEARCH=win32 WINEPREFIX=~/deltarune wine deltarune.exe{{< /scCode >}}
 
 Saya pakai 32-bit, karena Deltarune bisa berjalan pada 32-bit dan juga karena versi yang 32-bit lebih stabil.
 

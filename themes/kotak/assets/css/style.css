@@ -233,6 +233,8 @@ h1 {
 h2 {
 	font-size: 24px;
 	font-size: 1.5rem;
+	font-weight: 400;
+	border-bottom: 1px solid #fff;
 }
 
 h3 {
@@ -967,12 +969,12 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
   transition: all 0.3s ease;
 }
 
-.nav-ul li.visible > a{
+li.visible > a{
 	transform: translate( 5px );
 	color: {{ $biruFire }};
 }
 
-.nav-ul li.visible > a:hover{
+li.visible > a:hover{
 	color: {{ $highlightColor }};
 }
 
@@ -1631,6 +1633,47 @@ textarea {
 		padding: 20px 0 20px 15px;
 		white-space: pre;
 		
+	}
+
+	/* Tooltip */
+
+	.tooltip {
+		position: relative;
+		display: inline-block;
+		float: right;
+	  }
+	  
+	.tooltip .tooltiptext {
+		visibility: hidden;
+		width: 140px;
+		background-color: #555;
+		color: #fff;
+		text-align: center;
+		border-radius: 6px;
+		padding: 3px;
+		position: absolute;
+		z-index: 1;
+		bottom: 2;
+		left: -100;
+		margin-left: -150px;
+		opacity: 0;
+		transition: opacity 0.3s;
+	}
+	
+	.tooltip .tooltiptext::after {
+		content: "";
+		position: absolute;
+		top: 35%;
+		left: 100%;
+		margin-left: 0px;
+		border-width: 5px;
+		border-style: solid;
+		border-color:  transparent transparent transparent #555;
+	}
+	
+	.tooltip:hover .tooltiptext {
+		visibility: visible;
+		opacity: 1;
 	}
 
 

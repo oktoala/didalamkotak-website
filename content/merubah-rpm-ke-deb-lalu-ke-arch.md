@@ -53,11 +53,11 @@ Jadi pertama kalian harus menginstall beberapa aplikasi.
 
 Kalau kalian memakai Ubuntu based cukup install **alien** saja. Install dpkg untuk memasang packagenya nanti.
 
-{{< scCode "Bash" cp1 >}}sudo apt alien dpkg-dev{{< /scCode >}}
+{{< scCode "Bash" >}}sudo apt alien dpkg-dev{{< /scCode >}}
 
 Dan jika kalian memakai Arch based, kalian harus install dua-duanya. Keduanya ada di AUR.
 
-{{< scCode "Bash" cp2 >}}yay -S alien_package_converter debtap{{< /scCode >}}
+{{< scCode "Bash" >}}yay -S alien_package_converter debtap{{< /scCode >}}
 
 Kita akan pakai Oracle Data Modeler sebagai contohnya. Kalian bisa download {{< linkBlank "disini" "https://www.oracle.com/tools/downloads/sql-data-modeler-downloads.html" >}}.
 
@@ -71,7 +71,7 @@ Saya menyimpannya di folder Downloads. Kalian bisa simpan dimanapun kalian suka.
 
 ![SS-odm-place.png](/img/SS-odm-place.png)
 
-{{< scCode "Bash" cp3 >}}sudo alien datamodeler-20.2.0.167.1538-noarch.rpm{{< /scCode >}}
+{{< scCode "Bash" >}}sudo alien datamodeler-20.2.0.167.1538-noarch.rpm{{< /scCode >}}
 
 Tunggu sampai proses converting selesai.
 
@@ -81,11 +81,11 @@ Jika sudah, kalian bisa mengecek file **.deb** kalian.
 
 Jika kalian di Ubuntu, kalian bisa install langsung menggunakan dpkg.
 
-{{< scCode "Bash" cp4 >}}sudo dpkg -i datamodeler_20.2.0.167.1538-2_all.deb{{< /scCode >}}
+{{< scCode "Bash" >}}sudo dpkg -i datamodeler_20.2.0.167.1538-2_all.deb{{< /scCode >}}
 
 Tapi jika kalian di Arch, maka kalian harus convert lagi.
 
-{{< scCode "Bash" cp5 >}}debtap datamodeler_20.2.0.167.1538-2_all.deb{{< /scCode >}}
+{{< scCode "Bash" >}}debtap datamodeler_20.2.0.167.1538-2_all.deb{{< /scCode >}}
 
 Kalian bisa isi nama package dan lisensinya sesuka kalian, sisanya kalian bisa tekan _enter_ aja.
 
@@ -95,7 +95,7 @@ Kalian bisa cek apakah sudah terconvert atau tidak.
 
 Sekarang kalian sudah bisa menginstall package tersebut dengan _pacman_.
 
-{{< scCode "Bash" cp6 >}}sudo pacman -U datamodeler-20.2.0.167.1538-1-any.pkg.tar.zst{{< /scCode >}}
+{{< scCode "Bash" >}}sudo pacman -U datamodeler-20.2.0.167.1538-1-any.pkg.tar.zst{{< /scCode >}}
 
 Sekarang kalian bisa cek di **start menu**.
 
