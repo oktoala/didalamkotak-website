@@ -60,7 +60,7 @@ Kalian juga bisa menggabungkannya menggunakan angka:
 + `9$` untuk kursor bergerak ke akhir baris ke sembilan dari kursor berada.
 + `0`  untuk kursor bergerak awal baris.
 
-## Keluar dari VIM dan Menyimpan
+## Keluar dan Menyimpan
 
 Kalian bisa keluar dari vim dengan menekan tombol `esc` lalu ketikan perintah-perintah berikut:
 
@@ -155,7 +155,7 @@ Dan untuk *paste*, kalian bisa menggunakan `p` atau *[put](#put-dan-replace)*.
 + `Ctrl+O` untuk kembali ke tempat dimana kalian mulai. Tekan terus untuk kembali ke belakang.
 + `Ctrl+I` sama seperti `Ctrl+O`, hanya berbeda arahnya.
 
-### Lokasi Kursor & Tanda Kurung
+### Lokasi Kursor & Kurung
 
 + `Ctrl+G` untuk melihat lokasi kursor dan status file,
 + `G` untuk ke baris paling akhir dari file,
