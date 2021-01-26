@@ -3,4 +3,4 @@ window.addEventListener("load", function(){
   loader.className += " hidden";
   let body = document.querySelector(".body");
   body.classList.remove("loading");
-})
+});
