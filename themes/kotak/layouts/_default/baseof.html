@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html class="no-js" lang="{{ .Site.Language.Lang }}">
 <head class="che">
-
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +9,6 @@
 	<!-- <script async defer src="{{ "js/clipboard.js-master/dist/clipboard.min.js" | relURL }}"></script> -->
 	<!-- <script async defer src="{{ "js/copy.js" | relURL }}"></script> -->
 	<meta name="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Params.Description }}{{ end }}">
-
 	{{- if .Site.Params.opengraph }}
 		{{ template "_internal/opengraph.html" . }}
 	{{- end }}
@@ -20,7 +18,6 @@
 	{{- if .Site.Params.twitter_cards }}
 		{{ template "_internal/twitter_cards.html" . }}
 	{{- end }}
-
 	{{- $googleFontsLink := .Site.Params.googleFontsLink | default "https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" }}
 	{{- if hasPrefix $googleFontsLink "https://fonts.googleapis.com/" }}
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -70,16 +67,10 @@
 {{ range .Site.Params.customJS -}}
 <script src="{{ . | relURL }}"></script>
 {{- end }}
-{{- partial "mathjax.html" . -}}
+{{/*  {{- partial "mathjax.html" . -}}  */}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script async defer src="{{ "js/tilt.jquery.js" | relURL }}"></script>
 <script async defer src="{{ "js/main.js" | relURL }}"></script>
 <script async defer src="{{ "js/loading.js" | relURL }}"></script>
-<!-- <script async defer src="{{ "js/highlight.pack.js" | relURL }}"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/powershell.min.js"></script>
-<script>
-	hljs.initHighlightingOnLoad();
-</script>
 </body>
 </html>

@@ -35,10 +35,13 @@
 {{ partial "comments.html" . }}
 <!-- <script async defer src="{{ "js/upAndDown.js" | relURL }}"></script> -->
 <script async defer src="{{ "js/clip.js" | relURL }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/powershell.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
 <script async defer src="{{ "js/scrollspy.js" | relURL }}"></script>
 <script>
 	new ClipboardJS('.fa-copy');
 	clip();
+	hljs.initHighlightingOnLoad();
 </script>
 {{ end }}
