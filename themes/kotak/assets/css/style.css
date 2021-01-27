@@ -943,10 +943,13 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 }
 
 .toc_class ul li{
- list-style: none;
- padding-left: 30px;
- font-size: 14px;
+	list-style: none;
+	font-size: 14px;
 
+}
+
+#TableOfContents{
+	padding-left: 30px;
 }
 
 .toc_class{
@@ -1006,7 +1009,7 @@ li.visible > a:hover{
 } */
 
 .toc__title {
-	padding-left: 59px;
+	padding-left: 30px;
 	font-size: 16px;
 	-webkit-user-select: none;
 	-moz-user-select: none;
@@ -1810,22 +1813,23 @@ textarea {
 
 ul.breadcrumb {
 	margin-bottom: 40px;
-  padding: 4px 20px 6px;
-  list-style: none;
+	padding: 4px 20px 6px;
+	list-style: none;
 	margin-top: 20px;
 	background-color: var(--header-color);
 	border-radius: 3px;
 }
+
 ul.breadcrumb li {
-  display: inline;
+	display: inline;
 	align-items: center;
-  font-size: 16px;
+	font-size: 16px;
 	font-weight: 900;
 }
 ul.breadcrumb li+li:before {
-  padding: 8px;
-  color: var(--highlight-color) ;
-  content: "/\00a0";
+	padding: 8px;
+	color: var(--highlight-color) ;
+	content: "/\00a0";
 }
 
 ul.breadcrumb .is-active{
@@ -1833,12 +1837,12 @@ ul.breadcrumb .is-active{
 }
 
 ul.breadcrumb li a {
-  color: var(--highlight-color) ;
-  text-decoration: none;
+	color: var(--highlight-color) ;
+	text-decoration: none;
 }
 ul.breadcrumb li a:hover {
-  color: var(--heading-color) ;
-  text-decoration: underline;
+	color: var(--heading-color) ;
+	text-decoration: underline;
 }
 
 /* Image postingan */
