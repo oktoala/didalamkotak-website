@@ -942,15 +942,16 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 	margin-top: 30px;
 }
 
-.toc_class ul li{
+.toc_class li{
 	list-style: none;
 	font-size: 14px;
-
-}
-
-#TableOfContents{
 	padding-left: 30px;
+
 }
+
+/* #TableOfContents{
+	padding-left: 30px;
+} */
 
 .toc_class{
 	margin-top: 1px;

@@ -11,7 +11,6 @@ function clip() {
 	  tooltiptexts[i].id = "tooltiptext" + i;
 	}
 }
-  
 
 function snackFunc(ids) {
 	const getArray = ids.split('');
