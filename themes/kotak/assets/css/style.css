@@ -945,13 +945,9 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 .toc_class li{
 	list-style: none;
 	font-size: 14px;
-	padding-left: 30px;
+	padding-left: 15px;
 
 }
-
-/* #TableOfContents{
-	padding-left: 30px;
-} */
 
 .toc_class{
 	margin-top: 1px;
