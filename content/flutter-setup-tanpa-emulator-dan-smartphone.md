@@ -64,7 +64,7 @@ $ flutter doctor -v
 ! Doctor found issues in 1 category.
 ```
 
-Tapi, jika saya jalankan di VS Code menggunakan ``Flutter: Run Flutter Doctor`` di Command Palette, outputnya begini.
+Tapi, jika saya jalankan di VS Code menggunakan ``Flutter: Run Flutter Doctor`` di Command Palette, maka outputnya jadi begini.
 
 ```Bash
 [flutter] flutter doctor -v
@@ -99,11 +99,13 @@ exit code 0
 
 Dan akhirnya saya pusing sendiri.
 
+Sampai pada akhirnya saya menemukan caranya.
+
 ## Setup Flutter
 
 Pastikan kalian sudah menambahkan flutter ke path.
 
-Cukup tambahkan teks di bawah ke `.bashrc` jika kalian menggunkan bash atau `.zshrc` jika kalian menggunakan zsh.
+Cukup tambahkan teks di bawah ke `.bashrc` jika kalian menggunakan bash atau `.zshrc` jika kalian menggunakan zsh.
 
 {{<scCode "Bash">}}export PATH="${PATH}:/pathToFlutterSDK/flutter/bin"{{</scCode>}}
 

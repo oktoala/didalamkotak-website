@@ -6,7 +6,7 @@ themesDir   = "themes"
 theme       = "kotak"
 enableEmoji = true
 disqusShortname = "didalamkotak-netlify-app"
-paginate = "2"
+paginate = "4"
 
 [menu]
   [[menu.main]]
@@ -31,9 +31,9 @@ paginate = "2"
     weight = -110
 
 [Author]
-    name    = "Oktavian Yoga"
+    name    = "Oktoala"
     bio     = "Ordinary Student"
-    avatar  = "img/MyAvatar.png"
+    avatar  = "img/codoala.png"
 
 [Params]
     subtitle = ""

@@ -15,11 +15,11 @@ Kita akan belajar tentang vim.
 
 ## Pendahuluan
 
-[Vim](https://en.wikipedia.org/wiki/Vim_(text_editor)) adalah sebuah _terminal text editor_ dan merupakan versi pembaharuan dari [vi](https://en.wikipedia.org/wiki/Vi) 
+[Vim](https://en.wikipedia.org/wiki/Vim_(text_editor)) adalah sebuah teks editor terminal dan merupakan versi pembaharuan dari [vi](https://en.wikipedia.org/wiki/Vi) 
 
-Memiliki beberapa fitur tambahan, seperti _syntax highlighting_, _native scripting_ (vimscript), _visual mode_ untuk seleksi text, vimdiff untuk membandingkan file, dll.
+Memiliki beberapa fitur tambahan, seperti syntax highlighting, native scripting (vimscript), visual mode untuk seleksi teks, vimdiff untuk membandingkan file, dll.
 
-Alasan saya membuat tulisan ini karena saya juga sedang belajar *vim*.
+Alasan saya membuat tulisan ini karena saya juga sedang belajar vim.
 
 Jadi, daripada saya nanti lupa, lebih baik saya tulis.
 
@@ -27,7 +27,7 @@ Jadi, daripada saya nanti lupa, lebih baik saya tulis.
 
 Kalian bisa mendownload untuk Windows, Mac, dan Linux di [https://www.vim.org/download.php](https://www.vim.org/download.php).
 
-Jika kalian gak mau ribet, kalian bisa install di Windows menggunakan [chocolatey](/chocolatey-package-manager-untuk-windows), menggunakan Mac menggunakan [brew](https://brew.sh/), dan menggunakan _package manager_ di masing-masing distro Linux.
+Jika kalian gak mau ribet, kalian bisa install di Windows menggunakan [chocolatey](/chocolatey-package-manager-untuk-windows), menggunakan Mac menggunakan [brew](https://brew.sh/), dan menggunakan package manager di masing-masing distro Linux.
 
 ## Navigasi Dasar
 
@@ -51,7 +51,7 @@ Kalian juga bisa navigasi menggunakan:
 + `e` untuk kursor bergerak ke huruf terakhir dari kata selanjutnya.
 + `$` untuk bergerak ke akhir baris.
 
-Perintah diatas bisa digabungkan dengan perintah seperti *[delete](#menghapus-teks)*, *[change operator](#change-operator)*, dan *[copy and paste](#copy-dan-paste)*.
+Perintah diatas bisa digabungkan dengan perintah seperti [delete](#menghapus-teks), [change operator](#change-operator), dan [copy and paste](#copy-dan-paste).
 
 Kalian juga bisa menggabungkannya menggunakan angka:
 
@@ -73,11 +73,11 @@ Lalu tekan enter.
 Kalian juga bisa menyimpan teks dengan perintah:
 
 + `:w` untuk menyimpan
-+ `:w namaFile` untuk menyimpan dengan nama file lain. Mirip *Save as*.
++ `:w namaFile` untuk menyimpan dengan nama file lain. Mirip Save as.
 
 ## Editing
 
-### Memasukkan text
+### Memasukkan teks
 
 Kalian akan masuk ke mode `--INSERT--` jika menekan huruf-huruf ini:
 
@@ -86,11 +86,11 @@ Kalian akan masuk ke mode `--INSERT--` jika menekan huruf-huruf ini:
 + `o` untuk menambah teks di baris baru di bawah kursor.
 + `O` untuk menambah teks di baris baru di atas kursor.
 
-`o` dan `O` disebut **Open Command**.
+`o` dan `O` disebut open command.
 
-### Menghapus Text
+### Menghapus Teks
 
-Kalian bisa menghapus text dengan cara-cara berikut:
+Kalian bisa menghapus teks dengan cara-cara berikut:
 
 + `x` untuk menghapus satu huruf pada kursor.
 + `dw` untuk menghapus satu kata dari kursor sampai huruf terakhir kata tersebut.
@@ -100,7 +100,7 @@ Kalian bisa menghapus text dengan cara-cara berikut:
 
 Yang berbeda dari `dw` dan `de` hanyalah letak kursor setelah menghapus. Jika `dw`, kursor akan berada di huruf pertama kata selanjutnya, sedangkan `de`, kursor akan berada sebelum huruf pertama kata selanjutnya.
 
-Semua text yang terhapus dengan cara-cara diatas, akan tersimpan di vim register. Kalian bisa memakainya ulang dengan perintah [put](#put-dan-replace).
+Semua teks yang terhapus dengan cara-cara diatas, akan tersimpan di vim register. Kalian bisa memakainya ulang dengan perintah [put](#put-dan-replace).
 
 ### Merging File
 
@@ -131,22 +131,22 @@ Hal yang sama juga berlaku seperti `cw`, `ce`, dan `c$`.
 ### *Substitute*
 
 + `:s/old/new/g` untuk mengganti semua kata/kalimat pada baris.
-+ `:#,#s/old/new/g` untuk mengganti semua kata/kalimat dengan *range* #,#.
++ `:#,#s/old/new/g` untuk mengganti semua kata/kalimat dengan range #,#.
 + `:%s/old/new/g` untuk mengganti semua kata/kalimat pada file.
 + `:%s/old/new/gc` untuk mengganti semua kata/kalimat pada file dengan konfirmasi.
 
 ### *Copy* dan *Paste*
 
-+ `y` untuk meng*copy* satu karakter.
-+ `yy` untuk meng*copy* satu baris.
++ `y` untuk mengcopy satu karakter.
++ `yy` untuk mengcopy satu baris.
 
-Kalian bisa menggabungkannya dengan *[motion](#motion)* dan *[visual mode](#seleksi-teks--visual-mode)*.
+Kalian bisa menggabungkannya dengan [motion](#motion) dan [visual mode](#seleksi-teks--visual-mode).
 
-Dan untuk *paste*, kalian bisa menggunakan `p` atau *[put](#put-dan-replace)*.
+Dan untuk *paste*, kalian bisa menggunakan `p` atau [put](#put-dan-replace).
 
 ## Navigasi Kursor
 
-### *Searching*
+### Searching
 
 + Di mode `--NORMAL--`, tekan `/`, lalu ketikan kata ingin kalian cari
 + `n` untuk mencari kalimat yang sama, tekan,
@@ -166,11 +166,11 @@ Untuk mengetahui pasangan kurung, tekan `%`.
 
 ## Eksekusi Command
 
-Kalian bisa mengeksekusi perintah *shell* seperti `ls`, `dir`, `cd`, dll.
+Kalian bisa mengeksekusi perintah shell seperti `ls`, `dir`, `cd`, dll.
 
-Cukup tekan `:!` lalu diikuti dengan perintah *shell* atau *cmd*.
+Cukup tekan `:!` lalu diikuti dengan perintah shell atau cmd.
 
-Setelah mengeksekusi perintah, tekan *enter* untuk kembali ke vim.
+Setelah mengeksekusi perintah, tekan enter untuk kembali ke vim.
 
 ## Seleksi Teks / *Visual Mode*
 
@@ -184,8 +184,8 @@ Lalu ketikan perintah seperti `dd` untuk menghapus, `w namaFile` untuk menyimpan
 
 ## Penutup
 
-Mungkin itu aja dulu perintah-perintah **vim** yang bisa tuliskan untuk kali ini.
+Mungkin itu aja dulu perintah-perintah vim yang bisa tuliskan untuk kali ini.
 
-Sebenarnya masih ada banyak lagi yang bisa dibahas, seperti **recording**, **vimrc**, dll.
+Sebenarnya masih ada banyak lagi yang bisa dibahas, seperti recording, vimrc, dll.
 
 Jika ada yang kalian bingungkan, silahkan komentar dibawah.
