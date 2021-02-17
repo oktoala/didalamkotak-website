@@ -4,7 +4,7 @@ date: 2020-09-19T22:03:17+08:00
 comments: true
 draft: false
 author: "Yoga"
-thumbnail : "img/thumbnail/TNail2.png"
+thumbnail : "img/thumbnail/TNail2.jpg"
 toc: true
 categories: ["Linux", "Pengalaman"]
 pager: true
@@ -13,7 +13,7 @@ pager: true
 Kali ini saya akan membagikan alasan kenapa saya menggunakan Linux.
 <!--more-->
 
-![](/img/thumbnail/TNail2.png)
+![](/img/thumbnail/TNail2.jpg)
 
 ## Pendahuluan
 

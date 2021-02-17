@@ -6,6 +6,7 @@ themesDir   = "themes"
 theme       = "kotak"
 enableEmoji = true
 disqusShortname = "didalamkotak-netlify-app"
+paginate = "2"
 
 [menu]
   [[menu.main]]

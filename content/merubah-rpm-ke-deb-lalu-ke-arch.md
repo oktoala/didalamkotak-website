@@ -5,14 +5,14 @@ comments: true
 draft: false
 author: "Yoga"
 toc: true
-thumbnail: /img/thumbnail/merubah-rpm-ke-deb-lalu-ke-arch.png
+thumbnail: /img/thumbnail/merubah-rpm-ke-deb-lalu-ke-arch.jpg
 categories: ["Linux"]
 ---
 
 Kita akan membahas bagaiman cara menjalankan rpm di Debian dan Arch.
 <!--more-->
 
-![merubah-rpm-ke-deb-ke-arch](/img/thumbnail/merubah-rpm-ke-deb-lalu-ke-arch.png)
+![merubah-rpm-ke-deb-ke-arch](/img/thumbnail/merubah-rpm-ke-deb-lalu-ke-arch.jpg)
 
 Kelas Saya ada mata kuliah basis data dan dosen meminta kelas saya untuk menginstall {{< linkBlank "Oracle Data Modeler" "https://www.oracle.com/tools/downloads/sql-data-modeler-downloads.html" >}}.
 

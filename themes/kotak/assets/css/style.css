@@ -238,8 +238,8 @@ h1 {
 h2 {
 	font-size: 24px;
 	font-size: 1.5rem;
-	font-weight: 400;
-	border-bottom: 1px solid #fff;
+	font-weight: 700;
+	
 }
 
 h3 {
@@ -1675,6 +1675,10 @@ textarea {
 		border-left-color: #012456;
 	}
 
+	.code-header.Shell, pre.bC.Shell{
+		border-left-color: #3e474a;
+	}
+	
 	.code-header.Bash, pre.bC.Bash{
 		border-left-color: #3e474a;
 	}
@@ -1901,3 +1905,42 @@ img[alt=wine-hq-logo], [alt=wine-layer]{
 }
 
 
+/* Highlight.js */
+
+.highlight > pre {
+	padding: 0;
+	scrollbar-color: #011627 #011627;
+}
+
+.highlight > pre:hover{
+	scrollbar-color: #1a1e22 #011627;
+}
+
+.chroma .bC::selection{
+	color: #011627;
+	background-color: #fff;
+}
+
+.highlight > pre::-webkit-scrollbar{
+	visibility: hidden;
+	width: 100%;
+}
+
+.highlight > pre::-webkit-scrollbar-thumb{
+	background: #011627;
+	transition: 0.2s;
+}
+
+.highlight > pre:hover::-webkit-scrollbar{
+	
+	visibility: visible;
+	width: 100%;
+}
+
+.highlight > pre:hover::-webkit-scrollbar-track{
+	background: #011627;
+
+}
+.highlight > pre:hover::-webkit-scrollbar-thumb{
+	background: #1a1e22;
+}

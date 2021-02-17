@@ -4,7 +4,7 @@ date: 2020-09-20T23:32:59+08:00
 comments: true
 draft: false
 author: "Yoga"
-thumbnail: "img/thumbnail/choco.png"
+thumbnail: "img/thumbnail/choco.jpg"
 categories: ["Windows"]
 toc: true
 ---
@@ -12,7 +12,7 @@ toc: true
 Kali ini saya akan membahas tentang Chocolatey, package manager untuk Windows.
 <!--more-->
 
-![](/img/thumbnail/choco.png)
+![](/img/thumbnail/choco.jpg)
 
 ## Pendahuluan
 
