@@ -1907,12 +1907,12 @@ img[alt=wine-hq-logo], [alt=wine-layer]{
 
 /* Highlight.js */
 
-.highlight > pre {
+pre {
 	padding: 0;
 	scrollbar-color: #011627 #011627;
 }
 
-.highlight > pre:hover{
+pre:hover{
 	scrollbar-color: #1a1e22 #011627;
 }
 
@@ -1921,26 +1921,26 @@ img[alt=wine-hq-logo], [alt=wine-layer]{
 	background-color: #fff;
 }
 
-.highlight > pre::-webkit-scrollbar{
+pre::-webkit-scrollbar{
 	visibility: hidden;
 	width: 100%;
 }
 
-.highlight > pre::-webkit-scrollbar-thumb{
+pre::-webkit-scrollbar-thumb{
 	background: #011627;
 	transition: 0.2s;
 }
 
-.highlight > pre:hover::-webkit-scrollbar{
+pre:hover::-webkit-scrollbar{
 	
 	visibility: visible;
 	width: 100%;
 }
 
-.highlight > pre:hover::-webkit-scrollbar-track{
+pre:hover::-webkit-scrollbar-track{
 	background: #011627;
 
 }
-.highlight > pre:hover::-webkit-scrollbar-thumb{
+pre:hover::-webkit-scrollbar-thumb{
 	background: #1a1e22;
 }
