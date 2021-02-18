@@ -42,7 +42,6 @@ Mungkin seperti ini gambarannya
 
 ![vim-keyboard](/img/vim-keyboard.jpg)
 
-
 ### Motion
 
 Kalian juga bisa navigasi menggunakan:

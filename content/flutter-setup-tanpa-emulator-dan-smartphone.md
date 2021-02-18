@@ -1,6 +1,6 @@
 ---
 title: "Flutter Setup Tanpa Emulator dan Smartphone"
-date: 2021-02-17T10:15:26+08:00
+date: 2021-02-18T09:15:26+08:00
 comments: true
 draft: false
 author: "Yoga"
@@ -36,11 +36,11 @@ Dan jika saya jalankan ``flutter doctor -v`` di terminal, maka outputnya begini.
 
 ```Bash
 $ flutter doctor -v
-[✓] Flutter (Channel master, 1.27.0-2.0.pre.103, on Linux, locale en_US.UTF-8)
-    • Flutter version 1.27.0-2.0.pre.103 at /home/iansyah/.flutter/flutter
-    • Framework revision f49956598b (22 hours ago), 2021-02-16 00:56:06 -0500
-    • Engine revision 1d537824d6
-    • Dart version 2.13.0 (build 2.13.0-30.0.dev)
+[✓] Flutter (Channel stable, 1.22.6, on Linux, locale en_US.UTF-8)
+    • Flutter version 1.22.6 at /home/iansyah/.flutter/flutter
+    • Framework revision 9b2d32b605 (4 weeks ago), 2021-01-22 14:36:39 -0800
+    • Engine revision 2f0af37152
+    • Dart version 2.10.5
 
 [✓] Android toolchain - develop for Android devices (Android SDK version 30.0.3)
     • Android SDK at /home/iansyah/Android/sdk
@@ -50,50 +50,47 @@ $ flutter doctor -v
     • Java version OpenJDK Runtime Environment (build 1.8.0_242-release-1644-b3-6222593)
     • All Android licenses accepted.
 
-[✓] Android Studio
+[!] Android Studio
     • Android Studio at /opt/android-studio
-    • Flutter plugin can be installed from:
-      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
-    • Dart plugin can be installed from:
-      🔨 https://plugins.jetbrains.com/plugin/6351-dart
-    • Java version OpenJDK Runtime Environment (build 1.8.0_242-release-1644-b3-6222593)
-
-[!] Connected device
-    ! No devices available
-
-! Doctor found issues in 1 category.
-```
-
-Tapi, jika saya jalankan di VS Code menggunakan ``Flutter: Run Flutter Doctor`` di Command Palette, maka outputnya jadi begini.
-
-```Bash
-[flutter] flutter doctor -v
-[✓] Flutter (Channel master, 1.27.0-2.0.pre.103, on Linux, locale en_US.UTF-8)
-    • Flutter version 1.27.0-2.0.pre.103 at /home/iansyah/.flutter/flutter
-    • Framework revision f49956598b (22 hours ago), 2021-02-16 00:56:06 -0500
-    • Engine revision 1d537824d6
-    • Dart version 2.13.0 (build 2.13.0-30.0.dev)
-
-[✗] Android toolchain - develop for Android devices
-    ✗ Unable to locate Android SDK.
-      Install Android Studio from: https://developer.android.com/studio/index.html
-      On first launch it will assist you in installing the Android SDK components.
-      (or visit https://flutter.dev/docs/get-started/install/linux#android-setup for detailed instructions).
-      If the Android SDK has been installed to a custom location, please update to that location.
-
-
-[✓] Android Studio
-    • Android Studio at /opt/android-studio
-    • Flutter plugin can be installed from:
-      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
-    • Dart plugin can be installed from:
-      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    ✗ Flutter plugin not installed; this adds Flutter specific functionality.
+    ✗ Dart plugin not installed; this adds Dart specific functionality.
     • Java version OpenJDK Runtime Environment (build 1.8.0_242-release-1644-b3-6222593)
 
 [!] Connected device
     ! No devices available
 
 ! Doctor found issues in 2 categories.
+```
+
+Tapi, jika saya jalankan di VS Code menggunakan ``Flutter: Run Flutter Doctor`` di Command Palette, maka outputnya jadi begini.
+
+```Bash
+[flutter] flutter doctor -v
+[✓] Flutter (Channel stable, 1.22.6, on Linux, locale en_US.UTF-8)
+    • Flutter version 1.22.6 at /home/iansyah/.flutter/flutter
+    • Framework revision 9b2d32b605 (4 weeks ago), 2021-01-22 14:36:39 -0800
+    • Engine revision 2f0af37152
+    • Dart version 2.10.5
+
+[✗] Android toolchain - develop for Android devices
+    ✗ Unable to locate Android SDK.
+      Install Android Studio from: https://developer.android.com/studio/index.html
+      On first launch it will assist you in installing the Android SDK components.
+      (or visit https://flutter.dev/docs/get-started/install/linux#android-setup for detailed instructions).
+      If the Android SDK has been installed to a custom location, set ANDROID_SDK_ROOT to that location.
+      You may also want to add it to your PATH environment variable.
+
+
+[!] Android Studio
+    • Android Studio at /opt/android-studio
+    ✗ Flutter plugin not installed; this adds Flutter specific functionality.
+    ✗ Dart plugin not installed; this adds Dart specific functionality.
+    • Java version OpenJDK Runtime Environment (build 1.8.0_242-release-1644-b3-6222593)
+
+[!] Connected device
+    ! No devices available
+
+! Doctor found issues in 3 categories.
 exit code 0
 ```
 
@@ -129,9 +126,7 @@ Jika kalian mendapat masalah cukup pindah ke channel lain.
 
 ### 2. Mengupgrade Flutter
 
-Karena kita sudah ada di channel master, maka update dari flutter akan lebih sering terjadi.
-
-Sekarang kita harus mengupgrade flutter dengan perintah di bawah.
+Karena kita sudah ada di channel master, maka kita harus mengupgrade flutternya.
 
 {{<scCode "Shell">}}flutter upgrade{{</scCode>}}
 
@@ -167,10 +162,10 @@ Sekarang mari cek ``Flutter: Run Flutter Doctor`` dari Command Palette.
 
 ```Shell
 [flutter] flutter doctor -v
-[✓] Flutter (Channel master, 1.27.0-2.0.pre.126, on Linux, locale en_US.UTF-8)
-    • Flutter version 1.27.0-2.0.pre.126 at /home/iansyah/.flutter/flutter
-    • Framework revision 50897c98fc (2 hours ago), 2021-02-16 20:13:53 -0800
-    • Engine revision 9bcb3bfb0e
+[✓] Flutter (Channel master, 1.27.0-5.0.pre.40, on Linux, locale en_US.UTF-8)
+    • Flutter version 1.27.0-5.0.pre.40 at /home/iansyah/.flutter/flutter
+    • Framework revision db1e9f053f (29 minutes ago), 2021-02-17 17:33:56 -0800
+    • Engine revision 6993cb229b
     • Dart version 2.13.0 (build 2.13.0-30.0.dev)
 
 [✓] Android toolchain - develop for Android devices (Android SDK version 30.0.3)
@@ -179,6 +174,9 @@ Sekarang mari cek ``Flutter: Run Flutter Doctor`` dari Command Palette.
     • Java binary at: /opt/android-studio/jre/bin/java
     • Java version OpenJDK Runtime Environment (build 1.8.0_242-release-1644-b3-6222593)
     • All Android licenses accepted.
+
+[✗] Chrome - develop for the web (Cannot find Chrome executable at google-chrome)
+    ! Cannot find Chrome. Try setting CHROME_EXECUTABLE to a Chrome executable.
 
 [✓] Linux toolchain - develop for Linux desktop
     • clang version 11.0.1
@@ -197,7 +195,7 @@ Sekarang mari cek ``Flutter: Run Flutter Doctor`` dari Command Palette.
 [✓] Connected device (1 available)
     • Linux (desktop) • linux • linux-x64 • Linux
 
-• No issues found!
+! Doctor found issues in 1 category.
 exit code 0
 ```
 
