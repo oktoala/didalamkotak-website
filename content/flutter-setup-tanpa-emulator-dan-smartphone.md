@@ -110,7 +110,7 @@ Ganti "pathToFlutterSDK" dengan folder dimana kalian menyimpan flutter SDK kalia
 
 Sebagai contoh, saya menyimpannya di folder {{<dir "/home/iansyah/.flutter/">}} seperti contoh yang bisa kalian bisa di atas.
 
-### 1. Mengubah channel dari Flutter
+### 1. Mengubah channel Flutter
 
 Flutter memiliki beberapa channel atau bisa juga disebut branch kalau di git.
 

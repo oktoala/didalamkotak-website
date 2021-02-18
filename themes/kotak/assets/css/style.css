@@ -16,6 +16,9 @@
 	--primary-pure-color: #000;
 	--btn-color: #2a2a2a;
 	--figcaption-color: #666;
+	--code-header-color: #1a1e22;
+	--icon-fill-color: #b6b4b4;
+	--tooltiptext-color: #555;
 
 	
 	/* One */
@@ -26,6 +29,9 @@
 	--code-color: #fff400;
 	--toc-a-color: #5e8890;
 	--toc-stroke-color: #f0ff00;
+	--direktori-bg-color: #404245;
+	--breadcrumb-text-color: #bdbdbd;
+	--logo-hover-color: #b2e2ebff;
 	
 	--highlight-color: {{ $highlightColor }};
 	
@@ -39,21 +45,29 @@
 }
 :root.light-theme{
 	--body-color: #f0f0f0;
-	--header-color: #f8f7f9;
+	--header-color: #f3f3f3;
 	--wrapper-color: #ffffff;
 	--heading-color: #c30d23;
 	--scrollbar-thumb: #272c34;
 	--scrollbar-track: #909090;
 	--primary-text-color: #000;
-	--primary-pure-color: #000;
+	--primary-pure-color: rgb(226, 226, 226);
 	--btn-color: #fff;
 	--figcaption-color: #666;
-
+	--code-header-color: #d3d3d3;
+	--icon-fill-color: #727272;
+	--tooltiptext-color: rgb(255, 255, 255);
+	
 	/* One */
+	--highlight-color: #ff3c01;
 	--toc-a-color: #b86770;
-	--toc-stroke-color: #22be03;
+	--toc-stroke-color: var(--highlight-color);
+	--code-color: var(--highlight-color);
+	--direktori-bg-color: #c4c4c4;
+	--breadcrumb-text-color: #7c7c7c;
+	--logo-hover-color: #ec122c;
 
-	--highlight-color: #20a506;
+	
 }
 
 *,
@@ -553,10 +567,11 @@ select {
 	height: 40px;
 	vertical-align: bottom;
 	fill: var(--heading-color);
+	cursor: help;
 }
 
 .logo--mixed svg:hover{
-	fill: #b2e2ebff;
+	fill: var(--logo-hover-color);
 }
 
 .logo--mixed .logo__text {
@@ -1208,7 +1223,7 @@ li.visible > a:hover{
 }
 
 .pager__link > .fa{
-	color: #b6b4b4;
+	color: var(--icon-fill-color);
 	font-size: 25px;
 }
 
@@ -1431,7 +1446,7 @@ textarea {
 .widget-social__link-icon {
 	margin: 15px 10px 0 0;
 	vertical-align: middle;
-	fill: #b6b4b4;
+	fill: var(--icon-fill-color);
 }
 
 
@@ -1646,7 +1661,7 @@ textarea {
 	/* dir.html */
 
 	.direktori{
-		background-color: #404245;
+		background-color: var(--direktori-bg-color);
 		border-radius: 3px;
 		padding: 0 2px 2px 2px;
 }
@@ -1679,7 +1694,7 @@ textarea {
 	.tooltip .tooltiptext {
 		visibility: hidden;
 		width: 140px;
-		background-color: #555;
+		background-color: var(--tooltiptext-color);
 		color: var(--primary-text-color);
 		text-align: center;
 		border-radius: 6px;
@@ -1701,7 +1716,7 @@ textarea {
 		margin-left: 0px;
 		border-width: 5px;
 		border-style: solid;
-		border-color:  transparent transparent transparent #555;
+		border-color:  transparent transparent transparent var(--tooltiptext-color);
 	}
 	
 	.tooltip:hover .tooltiptext {
@@ -1748,13 +1763,13 @@ textarea {
 
 	}
 	.bC:hover::-webkit-scrollbar-thumb{
-		background: #1a1e22;
+		background: var(--code-header-color);
 	}
 
 	.code-header {
 		height: 30px;
 		display: block;
-		background-color: #1a1e22;
+		background-color: var(--code-header-color);
 		border-left: 5px solid;
 	}
 
@@ -1777,7 +1792,7 @@ textarea {
 		margin: 0 0 0 6px;
 		padding: 7px 15px 0 0;
 		transition: 0.1s;
-		color: #b6b4b4;
+		color: var(--icon-fill-color);
 	}
 
 	.chroma:hover .fa-copy{
@@ -1797,7 +1812,7 @@ textarea {
 	}
 
 	.chroma:hover .bC{
-		scrollbar-color: #1a1e22 #011627;
+		scrollbar-color: var(--code-header-color) #011627;
 	}
 
 	.chroma .bC::selection{
@@ -1874,7 +1889,7 @@ ul.breadcrumb li+li:before {
 }
 
 ul.breadcrumb .is-active{
-	color: #bdbdbd;
+	color: var(--breadcrumb-text-color);
 }
 
 ul.breadcrumb li a {
@@ -1911,7 +1926,7 @@ img[alt=wine-hq-logo], [alt=wine-layer]{
 .loader > svg {
 	width: 100px;
 	height: 100px;
-	fill: #b6b4b4;
+	fill: var(--icon-fill-color);
 }
 
 .loader > svg:hover{
@@ -1936,7 +1951,7 @@ img[alt=wine-hq-logo], [alt=wine-layer]{
 
 .nav_arrow > .fa-arrow-circle-up,
 .fa-arrow-circle-down {
-	color: #b6b4b4
+	color: var(--icon-fill-color)
 }
 
 .nav_arrow > .fa-arrow-circle-up:hover,
@@ -1953,7 +1968,7 @@ pre {
 }
 
 pre:hover{
-	scrollbar-color: #1a1e22 #011627;
+	scrollbar-color: var(--code-header-color) #011627;
 }
 
 .chroma .bC::selection{
@@ -1982,5 +1997,5 @@ pre:hover::-webkit-scrollbar-track{
 
 }
 pre:hover::-webkit-scrollbar-thumb{
-	background: #1a1e22;
+	background: var(--code-header-color);
 }
