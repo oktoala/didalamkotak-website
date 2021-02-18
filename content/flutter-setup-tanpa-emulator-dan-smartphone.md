@@ -144,7 +144,43 @@ Jika kalian memakai Windows atau MacOS, cukup ganti kata 'linux' jadi 'windows' 
 
 Kalian bisa mengecek confignya dengan perintah `flutter config`.
 
-### 4. Konfigurasi Android SDK
+### 4. Konfigurasi pakai browser
+
+Kalian juga bisa menggunakan browser untuk menjalankan flutter.
+
+Tapi fitur hot reload tidak lebih cepat jika dibandingkan dengan cara no.3 di atas.
+
+Kalian cukup jalankan perintah ini.
+
+{{<scCode "Shell">}}flutter config --enable-web{{</scCode>}}
+
+Jika kalian memakai Arch Linux, maka kalian akan mendapatkan masalah menjalankan `flutter doctor -v` seperti di bawah.
+
+```Shell
+[✗] Chrome - develop for the web (Cannot find chrome executable at google-chrome) ! Cannot find Chrome. 
+Try setting CHROME_EXECUTABLE to a Chrome executable.
+```
+
+Karena google-chrome tidak tersedia di pacman dan harus diunduh dari AUR.
+
+Dan saat diunduh dari AUR, binary dari programnya akan bernama **google-chrome-stable** bukan **google-chrome**.
+
+Sebenarnya ada beberapa cara dalam mengatasinya.
+
+1. Menambahkan CHROME_EXECUTEABLE ke `.bashrc` atau `.zshrc`.
+
+    {{<scCode "Bash">}}export CHROME_EXECUTEABLE='/usr/bin'{{</scCode>}}
+
+2. Mengubah nama google-chrome-stable menjadi google-chrome.
+
+    {{<scCode "Shell">}}sudo mv /bin/google-chrome-stable /bin/google-chrome{{</scCode>}}
+
+3. Membuat symbolic link. Biasanya dari /usr/bin ke /usr/local/bin.
+
+    {{<scCode "Shell">}}sudo ln -s /usr/bin/google-chrome-stable /usr/local/bin/google-chrome{{</scCode>}}
+
+Kalau saya pakai pilih cara no.3 karena lebih gampang:smile:.
+### 5. Konfigurasi Android SDK
 
 Untuk saya sendiri, cara diatas sudah bisa mengatasi flutter VSCode untuk mendeteksi Android SDK.
 
@@ -164,19 +200,20 @@ Sekarang mari cek ``Flutter: Run Flutter Doctor`` dari Command Palette.
 [flutter] flutter doctor -v
 [✓] Flutter (Channel master, 1.27.0-5.0.pre.40, on Linux, locale en_US.UTF-8)
     • Flutter version 1.27.0-5.0.pre.40 at /home/iansyah/.flutter/flutter
-    • Framework revision db1e9f053f (29 minutes ago), 2021-02-17 17:33:56 -0800
+    • Framework revision db1e9f053f (8 hours ago), 2021-02-17 17:33:56 -0800
     • Engine revision 6993cb229b
     • Dart version 2.13.0 (build 2.13.0-30.0.dev)
 
 [✓] Android toolchain - develop for Android devices (Android SDK version 30.0.3)
     • Android SDK at /home/iansyah/Android/sdk
     • Platform android-29, build-tools 30.0.3
+    • ANDROID_SDK_ROOT = /home/iansyah/Android/sdk
     • Java binary at: /opt/android-studio/jre/bin/java
     • Java version OpenJDK Runtime Environment (build 1.8.0_242-release-1644-b3-6222593)
     • All Android licenses accepted.
 
-[✗] Chrome - develop for the web (Cannot find Chrome executable at google-chrome)
-    ! Cannot find Chrome. Try setting CHROME_EXECUTABLE to a Chrome executable.
+[✓] Chrome - develop for the web
+    • Chrome at google-chrome
 
 [✓] Linux toolchain - develop for Linux desktop
     • clang version 11.0.1
@@ -192,10 +229,11 @@ Sekarang mari cek ``Flutter: Run Flutter Doctor`` dari Command Palette.
       🔨 https://plugins.jetbrains.com/plugin/6351-dart
     • Java version OpenJDK Runtime Environment (build 1.8.0_242-release-1644-b3-6222593)
 
-[✓] Connected device (1 available)
-    • Linux (desktop) • linux • linux-x64 • Linux
+[✓] Connected device (2 available)
+    • Linux (desktop) • linux  • linux-x64      • Linux
+    • Chrome (web)    • chrome • web-javascript • Google Chrome 88.0.4324.150
 
-! Doctor found issues in 1 category.
+• No issues found!
 exit code 0
 ```
 
