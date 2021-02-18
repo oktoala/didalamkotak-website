@@ -1,4 +1,24 @@
-var head = document.querySelector("header.homepage-header");
+/* Logo Theme */
+const logo_images = document.querySelector(".logo__imagebox");
+const bodies = document.querySelector(":root");
+const curr_themes = localStorage.getItem("theme");
+
+if (curr_themes == "light"){
+	bodies.classList.add('light-theme');
+}
+function logo_theme(){
+	bodies.classList.toggle('light-theme');
+	
+	let theme = "dark";
+	
+	if (bodies.classList.contains("light-theme")){
+		theme = "light"
+	}
+	
+	localStorage.setItem("theme", theme);
+
+}
+
 
 /* Slider Sidebar */
 const slider = document.querySelector(".switch > input");
@@ -8,18 +28,18 @@ const curr_slider = localStorage.getItem("sliderStorage");
 
 if (curr_sidebar == "hidden"){
 	sidebar.classList.add('hidden');
-	console.log("Hahah");
+	// console.log("Hahah");
 	slider.checked = false;
 } else {
 	slider.checked = true;
 }
 
-slider.addEventListener('click', () => {
+function slider_sidebar(){
 	sidebar.classList.toggle("hidden");
-
+	
 	let sidebar_class = "show";
 	let slider_class = "checked";
-
+	
 	if (sidebar.classList.contains("hidden")){
 		slider.checked = false;
 		sidebar_class = "hidden";
@@ -29,11 +49,8 @@ slider.addEventListener('click', () => {
 	}
 	localStorage.setItem("sidebarStorage", sidebar_class);
 	localStorage.setItem("sliderStorage", slider_class);
-});
-	
 
-
-
+}
 
 
 var prevScrollpos = window.pageYOffset;

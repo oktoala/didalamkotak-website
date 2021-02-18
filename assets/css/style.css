@@ -19,6 +19,7 @@
 	--code-header-color: #1a1e22;
 	--icon-fill-color: #b6b4b4;
 	--tooltiptext-color: #555;
+	--bC-color:#011627;
 
 	
 	/* One */
@@ -46,7 +47,7 @@
 :root.light-theme{
 	--body-color: #f0f0f0;
 	--header-color: #f3f3f3;
-	--wrapper-color: #ffffff;
+	--wrapper-color: #eeecec;
 	--heading-color: #c30d23;
 	--scrollbar-thumb: #272c34;
 	--scrollbar-track: #909090;
@@ -57,6 +58,8 @@
 	--code-header-color: #d3d3d3;
 	--icon-fill-color: #727272;
 	--tooltiptext-color: rgb(255, 255, 255);
+	--bC-color:#e7e7e7;
+
 	
 	/* One */
 	--highlight-color: #ff3c01;
@@ -106,8 +109,8 @@ section {
 	color: transparent;
 }
 
-header.homepage-header{
-	visibility: hidden;
+header.homepage-header, .homepage-content{
+	/* visibility: hidden; */
 	display: none;
 }
 
@@ -631,9 +634,9 @@ select {
 	height: 0;
   }
 
-  .slider:hover {
+  /* .slider:hover {
 	  filter: brightness(1.2);
-  }
+  } */
   
   /* The slider */
   .slider {
@@ -1196,7 +1199,7 @@ li.visible > a:hover{
 
 /* List content */
 .list__item {
-	padding-bottom: 20px;
+	padding: 10px 0 1.25rem;
 	padding-bottom: 1.25rem;
 	margin-bottom: 5px;
 	/* border-bottom: 1px solid #ebebeb; */
@@ -1620,6 +1623,10 @@ textarea {
 
 @media screen and (max-width: 767px) {
 
+	.switch{
+		display: none;
+	}
+
 	.wrapper {
 		display: block;
 		padding-right: 20px;
@@ -1627,6 +1634,7 @@ textarea {
 
 	.container .header__container{
 		height: 54px;
+		justify-content: center;
 	}
 	.sidebar {
 		display: none;
@@ -1826,7 +1834,7 @@ textarea {
 	}
 
 	.bC::-webkit-scrollbar-thumb{
-		background: #011627;
+		background: var(--bC-color);
 		transition: 0.2s;
 	}
 
@@ -1837,7 +1845,7 @@ textarea {
 	}
 
 	.bC:hover::-webkit-scrollbar-track{
-		background: #011627;
+		background: var(--bC-color);
 
 	}
 	.bC:hover::-webkit-scrollbar-thumb{
@@ -1886,15 +1894,15 @@ textarea {
 	}
 
 	.chroma .bC{
-		scrollbar-color: #011627 #011627;
+		scrollbar-color: var(--bC-color) var(--bC-color);
 	}
 
 	.chroma:hover .bC{
-		scrollbar-color: var(--code-header-color) #011627;
+		scrollbar-color: var(--code-header-color) var(--bC-color);
 	}
 
 	.chroma .bC::selection{
-		color: #011627;
+		color: var(--bC-color);
 		background-color: var(--primary-text-color);
 	}
 
@@ -2042,15 +2050,15 @@ img[alt=wine-hq-logo], [alt=wine-layer]{
 
 pre {
 	padding: 0;
-	scrollbar-color: #011627 #011627;
+	scrollbar-color: var(--bC-color) var(--bC-color);
 }
 
 pre:hover{
-	scrollbar-color: var(--code-header-color) #011627;
+	scrollbar-color: var(--code-header-color) var(--bC-color);
 }
 
 .chroma .bC::selection{
-	color: #011627;
+	color: var(--bC-color);
 	background-color: var(--primary-text-color);
 }
 
@@ -2060,7 +2068,7 @@ pre::-webkit-scrollbar{
 }
 
 pre::-webkit-scrollbar-thumb{
-	background: #011627;
+	background: var(--bC-color);
 	transition: 0.2s;
 }
 
@@ -2071,7 +2079,7 @@ pre:hover::-webkit-scrollbar{
 }
 
 pre:hover::-webkit-scrollbar-track{
-	background: #011627;
+	background: var(--bC-color);
 
 }
 pre:hover::-webkit-scrollbar-thumb{

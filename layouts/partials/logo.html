@@ -8,7 +8,7 @@
 
 	<div class="logo{{ with $logoMix }} logo--mixed{{ end }}">
 		{{ with $logoImage -}}
-			<div class="logo__item logo__imagebox ">
+			<div class="logo__item logo__imagebox " onclick="logo_theme()">
 				{{ partial "svg/logoInOfBox2.svg" (dict "class" "logo__img" ) }}
 				<!-- <img class="logo__img" src="{{ . | relURL }}"> -->
 			</div>
@@ -26,23 +26,5 @@
 {{- end }}
 
 <script>
-	const logo_image = document.querySelector(".logo__imagebox");
-	const body = document.querySelector(":root");
-	const curr_theme = localStorage.getItem("theme");
 
-	if (curr_theme == "light"){
-		body.classList.add('light-theme');
-	}
-
-	logo_image.addEventListener('click', () =>{
-		body.classList.toggle('light-theme');
-
-		let theme = "dark";
-
-		if (body.classList.contains("light-theme")){
-			theme = "light"
-		}
-
-		localStorage.setItem("theme", theme);
-	});
 </script>
