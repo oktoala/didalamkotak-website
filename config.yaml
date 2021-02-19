@@ -1,8 +1,6 @@
 baseURL: 'http://didalamkotak.netlify.app'
 languageCode: en-us
 title: DalamKotak
-themesDir: themes
-theme: kotak
 enableEmoji: true
 disqusShortname: didalamkotak-netlify-app
 paginate: 6
