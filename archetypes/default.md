@@ -5,6 +5,7 @@ comments: true
 draft: false
 author: "Yoga"
 toc: true
+type:
 thumbnail: /img/thumbnail/{{ .Name }}.jpg
 ---
 
