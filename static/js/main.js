@@ -10,11 +10,9 @@ function logo_theme(){
 	bodies.classList.toggle('light-theme');
 	
 	let theme = "dark";
-	
 	if (bodies.classList.contains("light-theme")){
 		theme = "light"
 	}
-	
 	localStorage.setItem("theme", theme);
 
 }
