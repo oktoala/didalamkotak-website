@@ -4,6 +4,7 @@ title: DalamKotak
 enableEmoji: true
 disqusShortname: didalamkotak-netlify-app
 paginate: 6
+enableRobotsTXT: true
 menu:
   main:
     - identifier: home

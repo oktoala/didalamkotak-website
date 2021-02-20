@@ -1,0 +1,7 @@
+User-agent: *
+
+{{range .Data.Pages}}
+Disallow: /about
+Disallow: /categories
+{{end}}
+
