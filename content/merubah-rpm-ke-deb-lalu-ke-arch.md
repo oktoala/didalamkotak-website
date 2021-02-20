@@ -7,6 +7,7 @@ author: "Yoga"
 toc: true
 thumbnail: /img/thumbnail/merubah-rpm-ke-deb-lalu-ke-arch.jpg
 categories: ["Linux"]
+description: "Ini adalah cara merubah rpm ke deb ke pacman"
 ---
 
 Kita akan membahas bagaiman cara menjalankan rpm di Debian dan Arch.

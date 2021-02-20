@@ -7,6 +7,8 @@ thumbnail: img/thumbnail/wine-bukan-emulator.jpg
 author: "Yoga"
 categories: ["Virtualisasi", "Linux"]
 toc: true
+description: "Wine bukan emulator"
+
 ---
 
 Kali ini saya akan membahas WINE.

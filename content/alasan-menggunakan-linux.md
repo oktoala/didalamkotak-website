@@ -6,8 +6,9 @@ draft: false
 author: "Yoga"
 thumbnail : "img/thumbnail/TNail2.jpg"
 toc: true
-categories: ["Linux", "Pengalaman"]
+categories: "Linux"
 pager: true
+description: "Alasan-alasan kenapa saya menggunakan GNU/Linux"
 ---
 
 Kali ini saya akan membagikan alasan kenapa saya menggunakan Linux.

@@ -1,4 +1,4 @@
-baseURL: 'http://didalamkotak.netlify.app'
+baseURL: 'http://dalamkotak.netlify.app'
 languageCode: en-us
 title: DalamKotak
 enableEmoji: true
@@ -29,7 +29,6 @@ Params:
   subtitle: ''
   copyright: All rights reserved
   opengraph: true
-  schema: true
   readmore: false
   authorbox: true
   toc: true

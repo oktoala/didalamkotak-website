@@ -6,6 +6,8 @@ draft: false
 author: "Yoga"
 toc: true
 thumbnail: /img/thumbnail/belajar-vi-improved.jpg
+description: "Belajar perintah-perintah dalam teks editor vim"
+
 ---
 
 Kita akan belajar tentang vim.

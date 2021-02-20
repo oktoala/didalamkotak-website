@@ -6,6 +6,9 @@ draft: false
 author: "Yoga"
 toc: true
 thumbnail: /img/thumbnail/flutter.jpg
+description: "Setup Flutter tanpa emulator dan smartphone"
+categories: "Programming"
+
 ---
 
 Kali ini kita akan membahas cara setup flutter tanpa emulator/smartphone.
