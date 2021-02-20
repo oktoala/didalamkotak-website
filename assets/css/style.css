@@ -621,7 +621,7 @@ select {
 /* Navigatiaon */
 
 .navigation {
-	
+	padding-right: 25px;
 }
 
 .nav-item  {
@@ -629,7 +629,7 @@ select {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 0 1rem;
+	padding-left: 2em;
 }
 
 .navbar-nav {
@@ -646,28 +646,28 @@ select {
 
 .icon-button svg{
 	width: 30px;
-	/* height: 40px; */
 	vertical-align: bottom;
-	fill: var(--heading-color);
-	stroke: red;
-	/* cursor: help; */
-	
-}
-
-.icon-button svg:hover{
 	fill: var(--header-color);
 	stroke: var(--heading-color);
 	stroke-width: 50px;
+	
+	
 }
 
 .icon-button {
 	border-radius: 50%;
-padding: 5px;
-margin: 2px;
-display: flex;
-align-items: center;
-justify-content: center;
-transition: filter 300ms;
+	padding: 5px;
+	margin: 2px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: filter 300ms;
+}
+
+.icon-button.current svg{
+	fill: var(--heading-color);
+	stroke-width: 0px;
+
 }
 
 
@@ -678,7 +678,6 @@ transition: filter 300ms;
 	display: inline-block;
 	width: 54px;
 	height: 28px;
-	margin-right: 20px;
   }
   
   /* Hide default HTML checkbox */
@@ -706,6 +705,10 @@ transition: filter 300ms;
 	transition: .4s;
   }
   
+  .switch input:disabled ~ .slider{
+	  cursor: default;
+  }
+
   .slider:before {
 	position: absolute;
 	content: "";
@@ -1677,7 +1680,7 @@ textarea {
 
 @media screen and (max-width: 767px) {
 
-	.switch{
+	.navigation {
 		display: none;
 	}
 
@@ -2010,7 +2013,7 @@ textarea {
 
 ul.breadcrumb {
 	margin-bottom: 40px;
-	padding: 4px 20px 6px;
+	padding: 4px 0 6px 20px;
 	list-style: none;
 	margin-top: 20px;
 	background-color: var(--header-color);

@@ -17,19 +17,27 @@ function logo_theme(){
 
 }
 
-
 /* Slider Sidebar */
 const slider = document.querySelector(".switch > input");
 const sidebar = document.querySelector(".sidebar");
 const curr_sidebar = localStorage.getItem("sidebarStorage");
 const curr_slider = localStorage.getItem("sliderStorage");
 
-if (curr_sidebar == "hidden"){
-	sidebar.classList.add('hidden');
-	// console.log("Hahah");
-	slider.checked = false;
+
+if (sidebar !=null){
+	if (curr_sidebar == "hidden"){
+		sidebar.classList.add('hidden');
+		// console.log("Hahah");
+		slider.checked = false;
+	} else {
+		slider.checked = true;
+	}
+
 } else {
-	slider.checked = true;
+	console.log("hahha");
+	slider.checked = false;
+	slider.disabled = true;
+
 }
 
 function slider_sidebar(){
@@ -84,3 +92,18 @@ function buttonScroll(directions){
 	}
 }
 
+
+/* Hightlight Current Page */
+const links = document.querySelectorAll("a.icon-button");
+// console.log(links);
+const curr_link = document.location.href;
+
+for (let i = 0; i < links.length; i++) {
+	const link = links[i];
+	// console.log(`${link} dan ${curr_link}`)
+	if (link == curr_link){
+		links[i].classList.toggle("current");
+		break;
+	}
+	
+}
