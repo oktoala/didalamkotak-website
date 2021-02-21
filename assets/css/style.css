@@ -12,10 +12,10 @@
 	--heading-color: #8bd3e1;
 	--scrollbar-thumb: #272c34;
 	--scrollbar-track: #909090;
-	--primary-text-color: #fff;
+	--primary-text-color: #fafafa;
 	--primary-pure-color: #000;
 	--btn-color: #2a2a2a;
-	--figcaption-color: #666;
+	--figcaption-color: rgb(187, 187, 187);
 	--code-header-color: #1a1e22;
 	--icon-fill-color: #b6b4b4;
 	--tooltiptext-color: #555;
@@ -52,7 +52,7 @@
 	--heading-color: #c30d23;
 	--scrollbar-thumb: #272c34;
 	--scrollbar-track: #909090;
-	--primary-text-color: #000;
+	--primary-text-color: #0a0a0a;
 	--primary-pure-color: rgb(226, 226, 226);
 	--btn-color: #fff;
 	--figcaption-color: #666;
