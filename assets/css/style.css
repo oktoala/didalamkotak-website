@@ -35,16 +35,17 @@
 	--logo-hover-color: #b2e2ebff;
 	
 	--highlight-color: {{ $highlightColor }};
-	
-	
+
 	/* Font */
 	--fontSans: {{ $fontSans }};
 	--fontMono: {{ $fontMono }};
 	--fontFamilyPrimary: {{ $fontFamilyPrimary }};
 	--fontFamilySecondary: {{ $fontFamilySecondary }};
-	
 }
-:root.light-theme{
+
+
+
+.body.light-theme {
 	--body-color: #f0f0f0;
 	--header-color: #f3f3f3;
 	--wrapper-color: #eeecec;
@@ -59,18 +60,27 @@
 	--icon-fill-color: #727272;
 	--tooltiptext-color: rgb(255, 255, 255);
 	--bC-color:#e7e7e7;
-
+	
 	
 	/* One */
-	--highlight-color: #ff3c01;
+	--hr-color: #dadada;
+	--mark-color: #fd5;
+	--blockquote-border-color: #42474a; 
+	--code-border-color: #44444d;
+	--code-color: var(--highlight-color);
 	--toc-a-color: #b86770;
 	--toc-stroke-color: var(--highlight-color);
-	--code-color: var(--highlight-color);
 	--direktori-bg-color: #c4c4c4;
 	--breadcrumb-text-color: #7c7c7c;
 	--logo-hover-color: #ec122c;
-
 	
+	--highlight-color: #ff3c01;
+	
+	--fontSans: {{ $fontSans }};
+	--fontMono: {{ $fontMono }};
+	--fontFamilyPrimary: {{ $fontFamilyPrimary }};
+	--fontFamilySecondary: {{ $fontFamilySecondary }};
+
 }
 
 *,
@@ -1953,6 +1963,7 @@ textarea {
 
 	.chroma .bC{
 		scrollbar-color: var(--bC-color) var(--bC-color);
+		border-radius: 0;
 	}
 
 	.chroma:hover .bC{
@@ -2081,7 +2092,82 @@ img[alt=wine-hq-logo], [alt=wine-layer]{
 	visibility: hidden;
 }
 
-/* Back To Top Button */
+#Body {
+	--xAxis: 60px;
+	--yAxix: 100px;
+	z-index: 5;
+	stroke: var(--header-color);
+	stroke-width: 20px;
+}
+
+#body-left {
+	animation: bodyMoveRight .5s infinite alternate;
+}
+
+#back-right {
+	animation: moveLeft .5s infinite alternate;
+}
+#back-left {
+	animation: moveRight .5s infinite alternate;
+}
+#front-left {
+	animation: diaRight .5s infinite alternate;
+}
+#front-right {
+	animation: diaLeft .5s infinite alternate;
+}
+
+@keyframes bodyMoveRight {
+	0% {
+		transform: translateX(var(--moveRange));
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes moveLeft {
+	0% {
+		transform: translateX(-100px);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes moveRight {
+	0% {
+		transform: translateX(100px);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}
+@keyframes diaRight {
+	0% {
+		transform:  translate(100px ,-100px);
+	}
+
+	100% {
+		
+		transform:  translate(0, 0);
+	}
+}
+
+@keyframes diaLeft {
+	0% {
+		transform:  translate(-100px ,-100px);
+	}
+
+	100% {
+		
+		transform: translate(0, 0);
+	}
+}
+
 
 .nav_arrow{
 	display: none;

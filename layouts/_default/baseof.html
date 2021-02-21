@@ -44,9 +44,9 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/night-owl.min.css">
 	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/vs.min.css" /> -->
 </head>
-<body data-spy="scroll" data-target="#toc" class="body loading">
+<body  data-spy="scroll" data-target="#toc" class="body loading">
 	<div class="loader">
-		{{ partial "svg/logoInOfBox2.svg" (dict "data-tilt" "") -}}
+		{{ partial "svg/plainLogo1.svg" (dict "data-tilt" "") -}}
 	</div>
 	<div class="container container--outer">
 		{{ partial "header.html" . }}
@@ -70,7 +70,7 @@
 {{/*  {{- partial "mathjax.html" . -}}  */}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script async defer src="{{ "js/tilt.jquery.js" | relURL }}"></script>
-<script async defer src="{{ "js/main.js" | relURL }}"></script>
 <script async defer src="{{ "js/loading.js" | relURL }}"></script>
+<script async defer src="{{ "js/main.js" | relURL }}"></script>
 </body>
 </html>

@@ -1,11 +1,22 @@
-/* Logo Theme */
-const logo_images = document.querySelector(".logo__imagebox");
-const bodies = document.querySelector(":root");
-const curr_themes = localStorage.getItem("theme");
 
+const curr_themes = localStorage.getItem("theme");
+const body = document.querySelector(".body");
 if (curr_themes == "light"){
-	bodies.classList.add('light-theme');
+	console.log("sini");
+	body.classList.add('light-theme');
 }
+window.addEventListener("load", () => {
+	const loader = document.querySelector(".loader");
+	loader.classList.add("hidden");
+	body.classList.remove("loading");
+	console.log("sana");
+});
+
+  /* Logo Theme */
+  
+const logo_images = document.querySelector(".logo__imagebox");
+const bodies = document.querySelector("body");
+	  
 function logo_theme(){
 	bodies.classList.toggle('light-theme');
 	
