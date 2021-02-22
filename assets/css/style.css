@@ -2081,11 +2081,11 @@ img[alt=wine-hq-logo], [alt=wine-layer]{
 .loader > svg {
 	width: 100px;
 	height: 100px;
-	fill: var(--icon-fill-color);
+	fill: var(--heading-color);
 }
 
 .loader > svg:hover{
-	fill: var(--primary-text-color);
+	fill: var(--logo-hover-color);
 }
 
 .loader.hidden{

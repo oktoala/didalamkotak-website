@@ -75,7 +75,7 @@ untuk mencari uang. Tapi tetap, hal itu tidak bisa dibenarkan.
 
 Setelah saya memakai Linux, semua software bajakan itu tidak bisa berjalan di Linux. Alhasil, saya harus mencari alternatifnya.
 
-Dan saya pun menemukan beberapa alternatif yang tidak kalah dengan saya pakai di Windows, seperti:
+Dan saya pun menemukan beberapa alternatif yang tidak kalah bagusnya dengan saya pakai di Windows, seperti:
 
 + Libre Office
 + Gimp
