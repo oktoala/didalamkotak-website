@@ -2,7 +2,7 @@
 title: "Flutter Setup Tanpa Emulator dan Smartphone"
 date: 2021-02-18T09:15:26+08:00
 comments: true
-draft: false
+draft: true
 author: "Yoga"
 toc: true
 thumbnail: /img/thumbnail/flutter.jpg

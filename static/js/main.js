@@ -2,14 +2,12 @@
 const curr_themes = localStorage.getItem("theme");
 const body = document.querySelector(".body");
 if (curr_themes == "light"){
-	console.log("sini");
 	body.classList.add('light-theme');
 }
 window.addEventListener("load", () => {
 	const loader = document.querySelector(".loader");
 	loader.classList.add("hidden");
 	body.classList.remove("loading");
-	console.log("sana");
 });
 
   /* Logo Theme */
@@ -38,14 +36,12 @@ const curr_slider = localStorage.getItem("sliderStorage");
 if (sidebar !=null){
 	if (curr_sidebar == "hidden"){
 		sidebar.classList.add('hidden');
-		// console.log("Hahah");
 		slider.checked = false;
 	} else {
 		slider.checked = true;
 	}
 
 } else {
-	console.log("hahha");
 	slider.checked = false;
 	slider.disabled = true;
 
@@ -103,18 +99,15 @@ function buttonScroll(directions){
 	}
 }
 
-
 /* Hightlight Current Page */
 const links = document.querySelectorAll("a.icon-button");
-// console.log(links);
 const curr_link = document.location.href;
 
 for (let i = 0; i < links.length; i++) {
 	const link = links[i];
-	// console.log(`${link} dan ${curr_link}`)
 	if (link == curr_link){
 		links[i].classList.toggle("current");
 		break;
 	}
-	
 }
+	
