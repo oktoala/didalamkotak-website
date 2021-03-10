@@ -1314,7 +1314,33 @@ li.visible > a:hover{
 
 /* Pagination */
 .pagination {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	margin-top: 20px;
+	list-style: none;
+	background-color: var(--header-color);
+	margin-bottom: 20px;
+	height: 40px;
+}
+
+
+.pagination li {
+	font-size: 18px;
+	font-weight: 700;
+	padding: 0 10px;
+}
+
+.pagination li > a{
+	color: var(--icon-fill-color);
+}
+.pagination li.active > a{
+	text-decoration: double underline;
+	color: var(--heading-color);
+}
+.pagination li > a:hover{
+	text-decoration: underline;
+	color: var(--highlight-color);
 }
 
 .pagination__item {
@@ -1328,7 +1354,7 @@ li.visible > a:hover{
 .pagination__item:hover,
 .pagination__item--current {
 	color: var(--primary-text-color);
-	background: var(--highlight-color);
+	background: #fff;
 }
 
 /* Pager (prev/next links) navigation */
