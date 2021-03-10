@@ -10,7 +10,6 @@ for ( i=0;  i<copyButton.length; i-=-1){
 	tooltiptexts[i].id = "tooltiptext" + i;
 }
 
-
 function snackFunc(ids) {
 	const getArray = ids.split('');
 	const getNumber = getArray[getArray.length - 1];
