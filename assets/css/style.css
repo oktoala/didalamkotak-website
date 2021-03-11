@@ -5,45 +5,6 @@
 {{- $fontFamilyPrimary := .Site.Params.style.vars.fontFamilyPrimary | default $fontSans -}}
 {{- $fontFamilySecondary := .Site.Params.style.vars.fontFamilySecondary | default $fontMono -}}
 
-:root{
-	--body-color: #232324;
-	--header-color: #252627;
-	--wrapper-color: #292a2d;
-	--heading-color: #8bd3e1;
-	--scrollbar-thumb: #272c34;
-	--scrollbar-track: #909090;
-	--primary-text-color: #fafafa;
-	--primary-pure-color: #000;
-	--btn-color: #2a2a2a;
-	--figcaption-color: rgb(187, 187, 187);
-	--code-header-color: #1a1e22;
-	--icon-fill-color: #b6b4b4;
-	--tooltiptext-color: #555;
-	--bC-color:#011627;
-
-	
-	/* One */
-	--hr-color: #dadada;
-	--mark-color: #fd5;
-	--blockquote-border-color: #42474a; 
-	--code-border-color: #44444d;
-	--code-color: #fff400;
-	--toc-a-color: #5e8890;
-	--toc-stroke-color: #f0ff00;
-	--direktori-bg-color: #404245;
-	--breadcrumb-text-color: #bdbdbd;
-	--logo-hover-color: #b2e2ebff;
-	
-	--highlight-color: {{ $highlightColor }};
-
-	/* Font */
-	--fontSans: {{ $fontSans }};
-	--fontMono: {{ $fontMono }};
-	--fontFamilyPrimary: {{ $fontFamilyPrimary }};
-	--fontFamilySecondary: {{ $fontFamilySecondary }};
-}
-
-
 
 .body.light-theme {
 	--body-color: #f0f0f0;
@@ -81,6 +42,44 @@
 	--fontFamilyPrimary: {{ $fontFamilyPrimary }};
 	--fontFamilySecondary: {{ $fontFamilySecondary }};
 
+}
+
+:root{
+	--body-color: #232324;
+	--header-color: #252627;
+	--wrapper-color: #292a2d;
+	--heading-color: #8bd3e1;
+	--scrollbar-thumb: #272c34;
+	--scrollbar-track: #909090;
+	--primary-text-color: #fafafa;
+	--primary-pure-color: #000;
+	--btn-color: #2a2a2a;
+	--figcaption-color: rgb(187, 187, 187);
+	--code-header-color: #1a1e22;
+	--icon-fill-color: #b6b4b4;
+	--tooltiptext-color: #555;
+	--bC-color:#011627;
+
+	
+	/* One */
+	--hr-color: #dadada;
+	--mark-color: #fd5;
+	--blockquote-border-color: #42474a; 
+	--code-border-color: #44444d;
+	--code-color: #fff400;
+	--toc-a-color: #5e8890;
+	--toc-stroke-color: #f0ff00;
+	--direktori-bg-color: #404245;
+	--breadcrumb-text-color: #bdbdbd;
+	--logo-hover-color: #b2e2ebff;
+	
+	--highlight-color: {{ $highlightColor }};
+
+	/* Font */
+	--fontSans: {{ $fontSans }};
+	--fontMono: {{ $fontMono }};
+	--fontFamilyPrimary: {{ $fontFamilyPrimary }};
+	--fontFamilySecondary: {{ $fontFamilySecondary }};
 }
 
 *,
@@ -1860,6 +1859,7 @@ textarea {
 		margin: 0;
 		padding: 20px 0 20px 15px;
 		white-space: pre;
+		font-family: "Cascadia Code";
 		
 	}
 
@@ -1905,7 +1905,7 @@ textarea {
 	}
 
 
-	/* Border color */
+	/*-------------------------- Border color --------------------------*/
 	.code-header.Powershell, pre.bC.Powershell{
 		border-left-color: #012456;
 	}
@@ -1913,7 +1913,7 @@ textarea {
 	.code-header.Shell, pre.bC.Shell{
 		border-left-color: #3e474a;
 	}
-	
+
 	.code-header.Bash, pre.bC.Bash{
 		border-left-color: #3e474a;
 	}
@@ -1921,6 +1921,8 @@ textarea {
 	.code-header.Python, pre.bC.Python{
 		border-left-color: green;
 	}
+
+	/* -------------------------------------------------------------------- */
 
 	.bC::-webkit-scrollbar{
 		visibility: hidden;

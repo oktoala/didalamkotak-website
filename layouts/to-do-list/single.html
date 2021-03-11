@@ -1,0 +1,45 @@
+{{ define "main" }}
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			{{- with .Params.lead }}
+			<p class="post__lead">{{ . }}</p>
+			{{- end }}
+			<br>
+			<h1 style="text-decoration:underline;" class="post__title">{{ .Title }}</h1>
+			<br>
+		</header>
+		{{- if .Params.thumbnail }}
+		<figure class="post__thumbnail">
+			<!-- <img src="{{ .Params.thumbnail | relURL }}" alt="{{ .Title }}"> -->
+		</figure>
+		{{- end }}
+		<!-- {{ partial "post_toc" . }} -->
+		<div class="content post__content clearfix">
+			{{ .Content | emojify }}
+		</div>
+		{{- if .Params.tags }}
+		<footer class="post__footer">
+			{{ partial "post_tags.html" . }}
+		</footer>
+		{{- end }}
+	</article>
+</main>
+<!-- <script async defer src="{{ "js/upAndDown.js" | relURL }}"></script> -->
+<script async defer src="{{ "js/clip.js" | relURL }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/powershell.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/languages/dart.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/languages/shell.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
+<!-- <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>  
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script> -->
+<script>
+	new ClipboardJS('.fa-copy');
+	hljs.initHighlightingOnLoad();
+	// document.querySelector(".switch").style.display = "none";
+</script>
+<script>
+	
+</script>
+{{ end }}
