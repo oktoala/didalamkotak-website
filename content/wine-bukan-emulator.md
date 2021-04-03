@@ -5,7 +5,7 @@ comments: true
 draft: false
 thumbnail: img/thumbnail/wine-bukan-emulator.jpg
 author: "Yoga"
-categories: ["Virtualisasi", "Linux"]
+categories: ["Wine", "Linux"]
 toc: true
 description: "Wine bukan emulator"
 

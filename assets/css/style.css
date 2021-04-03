@@ -344,6 +344,11 @@ a:hover {
 	color: var(--highlight-color);
 }
 
+svg > polygon{
+	
+	fill: var(--highlight-color);
+}
+
 hr {
 	margin: 0 0 20px;
 	border: 0;
@@ -393,6 +398,8 @@ figcaption {
 	margin-top: 4px;
 	margin-top: .25rem;
 	color: var(--figcaption-color);
+	font-style: italic;
+	text-align: center;
 }
 
 figcaption h4 {
@@ -990,10 +997,7 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 
 .post__meta {
 	padding: 5px 0;
-	/* margin-top: 10px; */
-	/* margin-top: .625rem; */
-	/* border-top: 1px dotted #ebebeb; */
-	/* border-bottom: 1px dotted #ebebeb; */
+
 }
 
 .post__lead {
@@ -1853,6 +1857,8 @@ textarea {
 		white-space: inherit;
 		border: 0;
 		border-left: 5px solid;
+		width: auto;
+		
 	}
 
 	code.bC{
@@ -1860,7 +1866,10 @@ textarea {
 		padding: 20px 0 20px 15px;
 		white-space: pre;
 		font-family: "Cascadia Code";
-		
+		max-height: 400px;
+		overflow: auto;
+		/* overflow: scroll; */
+
 	}
 
 	/* Tooltip */
@@ -1935,9 +1944,8 @@ textarea {
 	}
 
 	.bC:hover::-webkit-scrollbar{
-		
 		visibility: visible;
-		width: 100%;
+		
 	}
 
 	.bC:hover::-webkit-scrollbar-track{

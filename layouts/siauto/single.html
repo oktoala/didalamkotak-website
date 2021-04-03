@@ -20,7 +20,7 @@
 			<div class="mols">
 				<input type="email" name="" id="" placeholder="NIM">
 				<input type="password" name="" id="password" placeholder="Password">
-				<button type="submit"></button>
+				<button type="submit" onclick="mols()"></button>
 			</div>
 		</div>
 		{{- if .Params.tags }}
@@ -42,5 +42,12 @@
 		width: 14em;
 	}
 </style>
+<script>
+	function mols() {
+		
+		window.open("https://www.google.com");
+		alert("Hahah");
+	}
+</script>
 {{ end }}
 
