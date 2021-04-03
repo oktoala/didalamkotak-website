@@ -1,6 +1,6 @@
 {
-    "name": "Techformist",
-    "short_name": "techformist",
+    "name": "DalamKotak",
+    "short_name": "dalamkotak",
     "icons": [
         {
             "src": "/appicons/favicon-128.png",
@@ -21,16 +21,11 @@
             "src": "/appicons/favicon-196x196.png",
             "sizes": "196x196",
             "type": "image/png"
-        },
-        {
-            "src": "/appicons/splash.png",
-            "sizes": "512x512",
-            "type": "image/png"
         }
     ],
     "start_url": "/",
     "display": "standalone",
     "orientation": "portrait",
-    "background_color": "#FFFFFF",
-    "theme_color": "#FFFFFF"
+    "background_color": "#292a2d",
+    "theme_color": "#292a2d"
 }
