@@ -1,4 +1,4 @@
-{{ define "main" . }}
+{{ define "main" }}
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
@@ -21,7 +21,7 @@
 		{{- end }}
 	</article>
 </main>
-<script async defer src="{{ 'js/clip.js' | relURL }}"></script>
+<script async defer src='{{ "js/clip.js" | relURL }}'></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/powershell.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/languages/dart.min.js"></script>

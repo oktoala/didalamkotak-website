@@ -1,4 +1,4 @@
-{{ define "main" . }}
+{{ define "main" }}
     <main class="main">
         {{ $paginator := .Paginate (where .Pages "Type" "page") }}
         {{ range $paginator.Pages}}
