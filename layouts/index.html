@@ -1,11 +1,10 @@
-{{ define "main" }}
+{{ define "main" . }}
     <main class="main">
         <!-- Note that the content for index.html, as a sort of list page, will pull from content/_index.md -->
         {{ $paginator := .Paginate (where .Pages "Type" "page") }}
         {{ range $paginator.Pages}}
             {{ .Render "summary"}}
         {{ end }}
-      
     </main>
     {{ partial "pagination.html" . }}
 {{ end }}
