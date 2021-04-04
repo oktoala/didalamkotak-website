@@ -1,25 +1,5 @@
 <header class="header">
 	<div class="container header__container" id="navbar">
-		{{ partial "logo.html" . }}  <!-- {{ partial "menu.html" . }} -->
-		<nav class="navigation">
-			<ul class="navbar-nav">
-				<li class="nav-item" title="Home">
-					<a class="icon-button" href="/">
-						{{ partial "svg/home.svg" (dict "class" "logo__img" ) }}
-					</a>
-				</li>
-				<li class="nav-item" title="About">
-					<a class="icon-button" href="/about/">
-						{{ partial "svg/about.svg" (dict "class" "logo__img" ) }}
-					</a>
-				</li>
-				<li class="nav-item">
-					<label class="switch" title="Toggle-Sidebar">
-						<input type="checkbox" onclick="slider_sidebar()">
-						<span class="slider round"></span>
-					</label>
-				</li>
-			</ul>
-		</nav>
+		{{ partial "logo.html" . }}  {{ partial "menu.html" . }}
 	</div>
 </header>

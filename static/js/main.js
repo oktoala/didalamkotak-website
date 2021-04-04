@@ -1,4 +1,3 @@
-
 const curr_themes = localStorage.getItem("theme");
 const body = document.querySelector(".body");
 if (curr_themes == "light"){
@@ -44,7 +43,7 @@ if (sidebar !=null){
 } else {
 	slider.checked = false;
 	slider.disabled = true;
-
+	document.getElementById("slider_sidebar").attributes["custom-title"].value = "Tidak Bisa";
 }
 
 function slider_sidebar(){
@@ -101,12 +100,14 @@ function buttonScroll(directions){
 
 /* Hightlight Current Page */
 const links = document.querySelectorAll("a.icon-button");
+const nav_item = document.querySelectorAll(".nav-item");
 const curr_link = document.location.href;
 
 for (let i = 0; i < links.length; i++) {
 	const link = links[i];
 	if (link == curr_link){
-		links[i].classList.toggle("current");
+		link.classList.toggle("current");
+		nav_item[i].classList.toggle("current");
 		break;
 	}
 }
