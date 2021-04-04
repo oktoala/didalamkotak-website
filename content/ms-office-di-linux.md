@@ -6,6 +6,7 @@ draft: false
 author: "Yoga"
 toc: true
 categories: ["Wine", "Linux"]
+description: "Ini adalah cara menginstall MS Office di Arch Linux menggunakan PlayOnLinux"
 thumbnail: /img/thumbnail/ms-office-di-linux.jpg
 ---
 

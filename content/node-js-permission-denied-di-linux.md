@@ -6,7 +6,8 @@ draft: false
 author: "Yoga"
 toc: true
 sidebar: false
-categories: 'Programming'
+description: "Ini adalah cara saya untuk mengatasi NPM EACCSES Permission Denied"
+categories: ['Programming', 'Short']
 thumbnail: /img/thumbnail/node-js-permission-denied-di-linux.jpg
 ---
 
@@ -28,7 +29,7 @@ Sebenarnya cara ini tidak pernah saya coba karena saya memakai cara kedua.
 
 ## Mengubah Manual Npm Default Directory
 
-Cara ini lebih aman daripada harus menggunakan sudo saat menginstall packagenya. Karena saya sebelumnya menggunkan sudo :smile:
+Cara ini lebih aman daripada harus menggunakan sudo saat menginstall packagenya. Karena saya sebelumnya menggunakan sudo :smile:
 
 + Buatlah folder bernama {{<dir ".node-global">}} di home kalian.
 

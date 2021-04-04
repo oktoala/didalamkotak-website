@@ -8,7 +8,6 @@ author: "Yoga"
 categories: ["Wine", "Linux"]
 toc: true
 description: "Wine bukan emulator"
-
 ---
 
 Kali ini saya akan membahas WINE.

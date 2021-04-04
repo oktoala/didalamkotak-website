@@ -5,8 +5,9 @@ comments: true
 draft: false
 author: "Yoga"
 toc: true
-type:
+categories: []
 thumbnail: /img/thumbnail/{{ .Name }}.jpg
+description: "{{ replace .Name "-" " " | title }}"
 ---
 
 <!--more-->
