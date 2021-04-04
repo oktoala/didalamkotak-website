@@ -1,5 +1,8 @@
 {{ if and .Site.DisqusShortname (index .Params "comments" | default "true") (not .Site.IsServer) }}
 <section class="comments">
+	<script>
+		disqusLoader( '.disqus', { scriptUrl: '//username.disqus.com/embed.js' });
+	</script>
 	{{ template "_internal/disqus.html" . }}
 </section>
 {{ end }}
