@@ -7,7 +7,7 @@
 	{{- end }}
 	{{- with .Site.Author.avatar }}
 	<figure class="authorbox__avatar" data-tilt>
-		<img alt="{{ $.Site.Author.name }} avatar" src="{{ $.Site.Author.avatar | relURL }}" class="avatar" height="140" width="140">
+		<img loading="lazy" alt="{{ $.Site.Author.name }} avatar" src="{{ $.Site.Author.avatar | relURL }}" class="avatar" height="140" width="140">
 	</figure>
 	{{- end }}
 	{{- with .Site.Author.name }}
