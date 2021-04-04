@@ -219,13 +219,14 @@ body {
 	order: 2;
 	min-width: 0;
 	margin: 0 0 0 2.5%;
-	transition: all, 1s;
+	
 }
 
 .sidebar.hidden {
 	display: none;
-	transition: all, 1s;
 }
+
+
 
 .sidebar--left {
 	-webkit-order: 0;

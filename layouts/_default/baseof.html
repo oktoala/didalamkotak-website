@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html class="no-js" lang="{{ .Site.Language.Lang }}">
+
 <head class="">
 	<link rel="manifest" href="/manifest.json">
 	<meta charset="UTF-8">
 	<meta name="description"
 		content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Params.Description }}{{ end }}">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="theme-color" content="#292a2d"/>
+	<meta name="theme-color" content="#292a2d" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes"> 
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="DalamKotak">
 	<title>{{ block "title" . }}{{ if not .IsHome }}{{ .Title }} - {{ end }}{{ .Site.Title }}{{ end }}</title>
 	<script>(function (d, e) { d[e] = d[e].replace("no-js", "js"); })(document.documentElement, "className");</script>
 	{{- if .Site.Params.schema }}
@@ -26,7 +33,7 @@
 	{{ printf `
 	<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
 	{{- end }}
-	<link rel="apple-touch-icon" href="{{ "favicon.ico" | relURL }}">
+	<link rel="apple-touch-icon" href="{{ " favicon.ico" | relURL }}">
 	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/appicons/apple-touch-icon-57x57.png" />
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/appicons/apple-touch-icon-114x114.png" />
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/appicons/apple-touch-icon-72x72.png" />
@@ -41,8 +48,9 @@
 	{{- end }}
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/night-owl.min.css">
-	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/vs.min.css" /> -->
+	<link rel="stylesheet" href="/add-to-homescreen/style/addtohomescreen.css">
 </head>
+
 <body data-spy="scroll" data-target="#toc" class="body loading">
 	<div class="loader">
 		{{ partial "svg/plainLogo1.svg" (dict "data-tilt" "") -}}
@@ -70,5 +78,11 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script async defer src='{{ "js/tilt.jquery.js" | relURL }}'></script>
 	<script async defer src='{{ "js/main.js" | relURL }}'></script>
+	<script src="/add-to-homescreen/src/addtohomescreen.js"></script>
+	<script>
+		if ((("standalone" in window.navigator) && !window.navigator.standalone) || (!window.matchMedia('(display-mode: standalone)').matches)) {
+			addToHomescreen();
+		}
+	</script>
 </body>
 </html>
