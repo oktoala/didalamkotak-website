@@ -25,7 +25,7 @@ Di linux sudah ada beberapa seperti Libre Office, Only Office, dan WPS Office.
 
 Tapi permasalahannya adalah **`kolaborasi`**
 
-## Pendahulian
+## Pendahuluan
 
 Karena kebanyakan tugas dikerjakan secara berkelompok, maka kolaborasi itu penting.
 
@@ -103,7 +103,7 @@ Jalankan winetricks lagi, lalu pilih **Install a font** > **corefont**.
 
 {{<webm "/webm/winetricks-font.webm">}}
 
-Untuk mengatasi masalah font yang kurang smooth, copy script di bawah ini
+<!-- Untuk mengatasi masalah font yang kurang smooth, copy script di bawah ini
 ke sebuah file.sh, beri saja namanya `smooth.sh`
 
 {{<scCode "Bash">}}WINE=${WINE:-wine}
@@ -190,7 +190,7 @@ Lalu jalankan file `smooth.sh` tadi dengan argumen winebottle kalian.
 
 {{<webm "/webm/font-smooth.webm">}}
 
-Script di atas bisa kalian baca lebih lanjut {{<linkBlank "disini" "https://askubuntu.com/questions/219791/improve-gui-appearance-of-wine-applications">}}
+Script di atas bisa kalian baca lebih lanjut {{<linkBlank "disini" "https://askubuntu.com/questions/219791/improve-gui-appearance-of-wine-applications">}} -->
 
 ## Penutup
 

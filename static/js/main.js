@@ -46,7 +46,7 @@ if (sidebar !=null){
 	document.getElementById("slider_sidebar").attributes["custom-title"].value = "Tidak Bisa";
 }
 
-function slider_sidebar(){
+slider.addEventListener("click", () => {
 	sidebar.classList.toggle("hidden");
 	
 	let sidebar_class = "show";
@@ -62,7 +62,7 @@ function slider_sidebar(){
 	localStorage.setItem("sidebarStorage", sidebar_class);
 	localStorage.setItem("sliderStorage", slider_class);
 
-}
+});
 
 
 var prevScrollpos = window.pageYOffset;

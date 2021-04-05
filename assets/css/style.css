@@ -129,8 +129,6 @@ html {
 	font-size: 100%;
 	scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
 	scroll-behavior: smooth;
-	-ms-text-size-adjust: none;
-	-webkit-text-size-adjust: none;
 }
 
 html::-webkit-scrollbar{
@@ -554,7 +552,7 @@ select {
 	border-image: linear-gradient(to right, var(--heading-color), var(--heading-color));
 	border-image-slice: 10;
 	border-width: 4px;
-	transition: all 0.3s;
+	transition: top 0.3s;
 	background-color: var(--header-color);
 
 }
@@ -1712,7 +1710,8 @@ textarea {
 		right: -200%;
 		width: 100%;
 		background-color: var(--header-color);
-		margin-top: 10px;
+		/* margin-top: 10px; */
+		padding: 10px 0;
 		transition: all .5s;
 		opacity: 0;
 	}
