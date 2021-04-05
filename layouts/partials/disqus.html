@@ -1,7 +1,16 @@
-
 <div id="disqus_thread"></div>
-<script src="/js/disqusLoader.js" type="text/javascript">
-    let disqusShortName = '{{ .Site.DisqusShortname }}';
-    disqusLoader( '.disqus_thread', { scriptUrl: '//didalamkotak-netlify-app.disqus.com/embed.js' });
+<script src="/js/disqusLoader.js"></script>
+<script>
+    const disqusShortName = '{{ .Site.DisqusShortname }}';
+    let options = {
+        scriptUrl: '//' + disqusShortName + '.disqus.com/embed.js',
+        lazyness: 1,
+        throttle: 250,
+        disqusConfig: function () {
+            this.page.title = '{{ .Params.Title }}';
+            this.page.url = '{{ .Params.URL }}';
+            this.page.identifier = '{{ .Params.Title }}';
+        }
+    };
+    disqusLoader('.disqus_thread', options);
 </script>
-
