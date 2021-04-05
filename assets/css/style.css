@@ -227,7 +227,6 @@ body {
 }
 
 
-
 .sidebar--left {
 	-webkit-order: 0;
 	order: 0;
@@ -1134,7 +1133,7 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 .toc_class li{
 	list-style: none;
 	font-size: 14px;
-	padding-left: 30px;
+	padding-left: 15px;
 
 }
 
@@ -1196,7 +1195,7 @@ li.visible > a:hover{
 } */
 
 .toc__title {
-	padding-left: 30px;
+	padding-left: 15px;
 	font-size: 16px;
 	-webkit-user-select: none;
 	-moz-user-select: none;
