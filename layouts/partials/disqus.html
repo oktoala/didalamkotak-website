@@ -4,7 +4,7 @@
     const disqusShortName = '{{ .Site.DisqusShortname }}';
     let options = {
         scriptUrl: '//' + disqusShortName + '.disqus.com/embed.js',
-        lazyness: 4,
+        lazyness: 10,
         throttle: 500,
         disqusConfig: function () {
             this.page.title = '{{ .Params.Title }}';

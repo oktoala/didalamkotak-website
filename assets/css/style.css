@@ -4,7 +4,7 @@
 {{- $fontMono := `SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace` -}}
 {{- $fontFamilyPrimary := .Site.Params.style.vars.fontFamilyPrimary | default $fontSans -}}
 {{- $fontFamilySecondary := .Site.Params.style.vars.fontFamilySecondary | default $fontMono -}}
-
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 
 .body.light-theme {
 	--body-color: #f0f0f0;
@@ -299,6 +299,7 @@ h6 {
 	font-weight: 700;
 	line-height: 1.3;
 	color: var(--heading-color) ;
+	font-family: Quicksand;
 }
 
 h1 {
@@ -315,7 +316,8 @@ h2 {
 
 h3 {
 	font-size: 20px;
-	font-size: 1.25rem;
+	font-size: 1.15rem;
+	color: var(--primary-text-color);
 }
 
 h4 {
@@ -924,11 +926,10 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 }
 
 
-
 .main__title {
 	font-size: 28px;
 	font-size: 1.75rem;
-	margin: 20px 0 20px 7rem;
+	margin: 20px 0;
 }
 
 .main__content {
@@ -2288,3 +2289,4 @@ pre:hover::-webkit-scrollbar-track{
 pre:hover::-webkit-scrollbar-thumb{
 	background: var(--code-header-color);
 }
+

@@ -45,7 +45,7 @@ Params:
     - news
   sidebar:
     home: right
-    list: right
+    list: false
     single: true
     widgets:
       - languages
@@ -56,7 +56,7 @@ Params:
   style:
     vars:
       highlightColor: '#fff400'
-      fontFamilyPrimary: "Quicksand, Roboto, Helvetica, Arial, sans-serif"
+      fontFamilyPrimary: "'Merriweather', Quicksand, Roboto, Helvetica, Arial, sans-serif"
       fontFamilySecondary: "Domine, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace"
   widgets:
     recent_num: 5

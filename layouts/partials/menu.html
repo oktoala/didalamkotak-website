@@ -3,18 +3,18 @@
 <nav class="navigation">
 	<ul class="navbar-nav">
 		<li class="nav-item " custom-title="Home">
-			<a class="icon-button" href="/">
+			<a class="icon-button" href="{{.Site.BaseURL}}">
 				{{ partial "svg/home.svg" (dict "class" "logo__img" ) }}
 			</a>
 		</li>
 		<li class="nav-item" custom-title="About">
-			<a class="icon-button" href="/about/">
+			<a class="icon-button" href="{{.Site.BaseURL}}about/">
 				{{ partial "svg/about.svg" (dict "class" "logo__img" ) }}
 			</a>
 		</li>
 		<li id="slider_sidebar" class="nav-item" custom-title="Toggle-Sidebar">
-			<label class="switch" >
-				<input type="checkbox" label="">
+			<label class="switch">
+				<input type="checkbox">
 				<span class="slider round"></span>
 			</label>
 		</li>

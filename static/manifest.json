@@ -1,6 +1,7 @@
 {
     "name": "DalamKotak",
     "short_name": "dalamkotak",
+    "description": "Website Suka-suka",
     "icons": [
         {
             "src": "/appicons/favicon-128.png",
