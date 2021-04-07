@@ -22,8 +22,8 @@
 	{{- end }}
 	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css">
-
-	{{ $style := resources.Get "css/_style.scss" | resources.ExecuteAsTemplate "css/style.css" . -}}
+	
+	{{ $style := resources.Get "css/style.css" | resources.ExecuteAsTemplate "css/style.css" . -}}
 	<link rel="stylesheet" href="{{ $style.RelPermalink }}">
 	{{ range .Site.Params.customCSS -}}
 	<link rel="stylesheet" href="{{ . | relURL }}">
@@ -50,19 +50,14 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/night-owl.min.css">
 	<!-- <link rel="stylesheet" href="/add-to-homescreen/style/addtohomescreen.css"> -->
 </head>
-
 <body data-spy="scroll" data-target="#toc" class="body loading">
 	<div class="loader">
 		{{ partial "svg/plainLogo1.svg" (dict "data-tilt" "") -}}
 	</div>
-	<div class="modal">
-		<div class="modal-bg">
-
-		</div>
-	</div>
 	<div class="container container--outer">
 		{{ partial "header.html" . }}
 		<div class="wrapper flex">
+			{{ partial "search.html" . }}
 			<div class="primary">
 				{{ block "main" . }}
 				{{ with .Content }}
@@ -79,8 +74,9 @@
 	{{ range .Site.Params.customJS -}}
 	<script src="{{ . | relURL }}"></script>
 	{{- end }}
-	{{/* {{- partial "mathjax.html" . -}} */}}
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://unpkg.com/lunr/lunr.js"></script>
+	<script async defer src='{{ "js/search.js" | relURL }}'></script>
 	<script async defer src='{{ "js/tilt.jquery.js" | relURL }}'></script>
 	<script async defer src='{{ "js/main.js" | relURL }}'></script>
 </body>

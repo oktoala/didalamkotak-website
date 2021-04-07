@@ -4,7 +4,7 @@
 {{- $fontFamilyPrimary := .Site.Params.style.vars.fontFamilyPrimary | default $fontSans -}}
 {{- $fontFamilySecondary := .Site.Params.style.vars.fontFamilySecondary | default $fontMono -}}
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
-@import 'search';
+
 
 .body.light-theme {
 	--body-color: #f0f0f0;
@@ -2294,3 +2294,40 @@ pre:hover::-webkit-scrollbar-thumb{
 	background: var(--code-header-color);
 }
 
+/* ------------ Search -------- */
+
+div[role="search"]{
+	/* display: none; */
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: -100%;
+	background-color: var(--wrapper-color);
+	transition: top 0.4s ease;
+}
+div[role="search"].active{
+	/* display: block; */
+	top: 1%;
+	transition: top 0.4s ease;
+	/* background-color: red; */
+}
+
+div[role="search"] > .close {
+	height: 20px;
+}
+
+.close > svg {
+	fill: white;
+}
+
+form.search {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 20px;
+}
+
+.search-results > li {
+	list-style: none;
+}

@@ -3,17 +3,16 @@ const body = document.querySelector(".body");
 if (curr_themes == "light"){
 	body.classList.add('light-theme');
 }
-window.addEventListener("load", () => {
+window.addEventListener("DOMContentLoaded", () => {
 	const loader = document.querySelector(".loader");
 	loader.classList.add("hidden");
 	body.classList.remove("loading");
 });
 
   /* Logo Theme */
-  
 const logo_images = document.querySelector(".logo__imagebox");
 const bodies = document.querySelector("body");
-	  
+
 function logo_theme(){
 	bodies.classList.toggle('light-theme');
 	
