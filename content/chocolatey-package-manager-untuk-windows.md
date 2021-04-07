@@ -7,6 +7,7 @@ author: "Yoga"
 thumbnail: "img/thumbnail/choco.jpg"
 categories: ["Windows"]
 toc: true
+type: post
 description: "Cara menggunakan package manager dengan menggunakan chocolatey"
 
 ---

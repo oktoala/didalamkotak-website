@@ -5,6 +5,7 @@ comments: true
 draft: false
 author: "Yoga"
 toc: true
+type: post
 thumbnail: /img/thumbnail/merubah-rpm-ke-deb-lalu-ke-arch.jpg
 categories: ["Linux"]
 description: "Ini adalah cara merubah rpm ke deb ke pacman"

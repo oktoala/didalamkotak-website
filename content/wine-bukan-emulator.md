@@ -7,6 +7,7 @@ thumbnail: img/thumbnail/wine-bukan-emulator.jpg
 author: "Yoga"
 categories: ["Wine", "Linux"]
 toc: true
+type: post
 description: "Wine bukan emulator"
 ---
 

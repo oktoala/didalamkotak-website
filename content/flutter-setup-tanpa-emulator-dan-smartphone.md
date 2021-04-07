@@ -5,6 +5,7 @@ comments: true
 draft: false
 author: "Yoga"
 toc: true
+type: post
 thumbnail: /img/thumbnail/flutter.jpg
 description: "Setup Flutter untuk Arch"
 categories: "Programming"

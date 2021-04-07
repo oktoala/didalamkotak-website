@@ -5,6 +5,7 @@ comments: true
 draft: false
 author: "Yoga"
 toc: true
+type: post
 thumbnail: /img/thumbnail/belajar-vi-improved.jpg
 description: "Belajar perintah-perintah dalam teks editor vim"
 

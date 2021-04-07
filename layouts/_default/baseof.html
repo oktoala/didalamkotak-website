@@ -10,9 +10,9 @@
 	<meta name="theme-color" content="#292a2d" />
 	<meta content="IE=edge">
 	<meta name="mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-capable" content="yes"> 
-	<meta name="apple-mobile-web-app-capable" content="yes"/>
-	<meta name="mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<meta name="apple-mobile-web-app-title" content="DalamKotak">
 	<title>{{ block "title" . }}{{ if not .IsHome }}{{ .Title }} - {{ end }}{{ .Site.Title }}{{ end }}</title>
@@ -23,7 +23,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css">
 
-	{{ $style := resources.Get "css/style.css" | resources.ExecuteAsTemplate "css/style.css" . -}}
+	{{ $style := resources.Get "css/_style.scss" | resources.ExecuteAsTemplate "css/style.css" . -}}
 	<link rel="stylesheet" href="{{ $style.RelPermalink }}">
 	{{ range .Site.Params.customCSS -}}
 	<link rel="stylesheet" href="{{ . | relURL }}">
@@ -83,11 +83,6 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script async defer src='{{ "js/tilt.jquery.js" | relURL }}'></script>
 	<script async defer src='{{ "js/main.js" | relURL }}'></script>
-	<!-- <script src="/add-to-homescreen/src/addtohomescreen.js"></script>
-	<script>
-		if ((("standalone" in window.navigator) && !window.navigator.standalone) || (!window.matchMedia('(display-mode: standalone)').matches)) {
-			addToHomescreen();
-		}
-	</script> -->
 </body>
+
 </html>

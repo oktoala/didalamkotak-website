@@ -8,6 +8,7 @@ thumbnail : "img/thumbnail/TNail2.jpg"
 toc: true
 categories: "Linux"
 pager: true
+type: post
 description: "Alasan-alasan kenapa saya menggunakan GNU/Linux"
 ---
 

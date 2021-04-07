@@ -8,6 +8,7 @@ toc: true
 sidebar: false
 description: "Ini adalah cara saya untuk mengatasi NPM EACCSES Permission Denied"
 categories: ['Programming', 'Short']
+type: post
 thumbnail: /img/thumbnail/node-js-permission-denied-di-linux.jpg
 ---
 
