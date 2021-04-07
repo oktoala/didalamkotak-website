@@ -1,8 +1,10 @@
-// document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
     let searchResults = [];
     const searchWrapper = document.querySelector("div[role=search]");
     const searchResultElement = searchWrapper.querySelector(".search-results");
     const searchInput = searchWrapper.querySelector("input");
+    const bodye = document.querySelector("body");
+    const search_button = document.querySelector(".icon-button.toggle-search");
 
     const toggleSearch = (searchWrapper, searchInput) => {
         if (searchWrapper.classList.contains("active")) {
@@ -11,6 +13,7 @@
                 searchWrapper.classList.remove("visible");
             }, 300);
             searchWrapper.classList.remove("active");
+            
         } else {
             searchWrapper.classList.add("active");
             searchInput.focus();
@@ -18,9 +21,10 @@
     }
 
 
-    document.querySelector(".icon-button.toggle-search").addEventListener('click', () => {
+    search_button.addEventListener('click', () => {
         console.log("Hahah");
         toggleSearch(searchWrapper, searchInput);
+        search_button.classList.toggle("active");
     });
 
 
@@ -35,6 +39,7 @@
         if (e.ctrlKey && e.shiftKey && e.key == "F" && !searchWrapper.classList.contains("active")) {
             e.preventDefault();
             toggleSearch(searchWrapper, searchInput);
+            
         }
     });
 
@@ -125,8 +130,6 @@
                             "<p class='tags' title='field: tag'>" + tags(item.tag, searchString) + "</p>" +
                             "</li>";
                     }).join("");
-                } else if(searchResults.length == 0){
-                    searchResultElement.innerHTML = "<li><p class='no-result'>Mau cari apa?</p></li>";
                 } else {
                     searchResultElement.innerHTML = "<li><p class='no-result'>No results found</p></li>";
                 }
@@ -135,4 +138,4 @@
         .catch(err => {
             console.error(err);
         });
-// });
+});

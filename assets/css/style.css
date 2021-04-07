@@ -546,7 +546,7 @@ select {
 	position: fixed;
 	justify-content: space-between;
 	top: 0px;
-	z-index: 1;
+	z-index: 3;
 	height: 54px;
 	display: flex;
 	align-items: center;
@@ -1141,6 +1141,7 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 	position: fixed;
 	font-weight: 700;
  	padding-left: 20px;
+	z-index: 0;
 
 }
 
@@ -1463,7 +1464,7 @@ input[type=reset] {
 	min-width: 150px;
 	padding: 10px 15px;
 	font-weight: 700;
-	color: var(--primary-text-color);
+	color: var(--heading-color);
 	text-transform: uppercase;
 	cursor: pointer;
 	background: var(--btn-color);
@@ -2297,21 +2298,27 @@ pre:hover::-webkit-scrollbar-thumb{
 /* ------------ Search -------- */
 
 div[role="search"]{
-	/* display: none; */
-	width: 100%;
+	width: 52.97em;
 	height: 100%;
-	position: absolute;
-	left: 0;
+	position: fixed;
+	z-index: 2;
 	top: -100%;
+	margin: 0;
+	padding-top: 50px;
 	background-color: var(--wrapper-color);
 	transition: top 0.4s ease;
+	overflow-y: visible;
+	
 }
 div[role="search"].active{
-	/* display: block; */
-	top: 1%;
+	top: 0%;
 	transition: top 0.4s ease;
-	/* background-color: red; */
 }
+
+.icon-button.toggle-search.active svg {
+	fill: var(--heading-color);
+}
+
 
 div[role="search"] > .close {
 	height: 20px;
@@ -2328,6 +2335,23 @@ form.search {
 	margin: 20px;
 }
 
+.search input{
+	width: 100%;
+	border-radius: 10px;
+
+}
+.search input:active{
+	margin: 0 20px;
+	width: 100%;
+	border-radius: 10px;
+
+}
+
 .search-results > li {
+	margin: 0 20px;
 	list-style: none;
+}
+
+.search-results a {
+	color: var(--heading-color);
 }

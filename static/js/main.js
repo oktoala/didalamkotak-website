@@ -3,7 +3,8 @@ const body = document.querySelector(".body");
 if (curr_themes == "light"){
 	body.classList.add('light-theme');
 }
-window.addEventListener("DOMContentLoaded", () => {
+
+window.addEventListener("load", () => {
 	const loader = document.querySelector(".loader");
 	loader.classList.add("hidden");
 	body.classList.remove("loading");
