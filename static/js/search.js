@@ -3,9 +3,24 @@ document.addEventListener("DOMContentLoaded", () => {
     const searchWrapper = document.querySelector("div[role=search]");
     const searchResultElement = searchWrapper.querySelector(".search-results");
     const searchInput = searchWrapper.querySelector("input");
-    const bodye = document.querySelector("body");
     const search_button = document.querySelector(".icon-button.toggle-search");
+    const burger = document.querySelector('.burger input');
+	const nav = document.querySelector('.navigation');
+    const nav_items = document.querySelectorAll(".nav-item");
 
+    
+    const index_nav_items = (function test(){
+        for (let i = 0; i< nav_items.length; i-=-1){
+            if (nav_items[i].classList.contains("current")){
+                return i;
+            }
+        }
+    })();
+
+    /* Make burger always unchecked if reload */
+    burger.checked = false;
+
+    /* Toggle For Search Button */
     const toggleSearch = (searchWrapper, searchInput) => {
         if (searchWrapper.classList.contains("active")) {
             searchWrapper.classList.add("visible");
@@ -20,20 +35,26 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    /* Toggle For Search Button */
     search_button.addEventListener('click', () => {
         toggleSearch(searchWrapper, searchInput);
         search_button.classList.toggle("active");
+        nav_items[index_nav_items].classList.toggle("current");
+        if (searchWrapper.classList.contains("active")){
+            searchResultElement.innerHTML = "";
+            searchInput.value = null;
+        }
     });
 
+    /* Make input for search can't press enter */
     document.querySelector("form.search").addEventListener("keypress", (event)=>{
         if (event.key == "Enter"){
             event.preventDefault();
         }
     });
 
-    const burger = document.querySelector('.burger input');
-	const nav = document.querySelector('.navigation');
 
+    /* Clode Search Field when burger button pressed */
 	burger.addEventListener('click', function(){
 		nav.classList.toggle('show');
         if (searchWrapper.classList.contains("active")){
@@ -42,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 	});
 
-
+    /* Shortcut for Escape and open the search field */
     window.addEventListener("keydown", e => {
         // dismiss search on  ESC
         if (e.key == "Escape" && searchWrapper.classList.contains("active")) {

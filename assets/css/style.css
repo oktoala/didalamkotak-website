@@ -1436,10 +1436,9 @@ input {
 	padding: 0 0 3px 15px;
 	color: var(--primary-text-color);
 	font-size: 16px;
-	/*vertical-align: middle;*/
 	background: #1c2022;
-	border: 2px solid var(--heading-color);
 	transition: all .25s ease-in-out;
+	border: none;
 }
 
 input[type=text],
@@ -2303,7 +2302,6 @@ pre:hover::-webkit-scrollbar-thumb{
 /* ------------ Search -------- */
 
 div[role="search"]{
-	/* width: 52.97em; */
 	width: 100%;
 	max-width: 900px;
 	height: 100%;
@@ -2343,14 +2341,14 @@ form.search {
 
 .search input{
 	width: 100%;
+	/* border-radius: 10px; */
 	border-radius: 10px;
-
+	
 }
-.search input:active{
+.search input:focus{
 	margin: 0 20px;
 	width: 100%;
-	border-radius: 10px;
-
+	border-color: red;
 }
 
 .search-results > li {
@@ -2360,4 +2358,10 @@ form.search {
 
 .search-results a {
 	color: var(--heading-color);
+}
+.search-results a:hover {
+	color: var(--highlight-color)
+}
+.search-results a:hover mark {
+	background-color: var(--highlight-color);
 }

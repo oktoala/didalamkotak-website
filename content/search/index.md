@@ -1,6 +1,5 @@
 ---
 title: search
 type: data
-build:
-    list: never
+draft: true
 ---
