@@ -69,7 +69,9 @@ var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
 	var navbar = document.querySelector('.header__container');
 	var currentScrollPos = window.pageYOffset;
-	if (prevScrollpos > currentScrollPos) {
+	if (document.querySelector("div[role=search]").classList.contains("active")){
+		
+	}else if (prevScrollpos > currentScrollPos) {
 			navbar.classList.remove('hide');
 	} else {
 			navbar.classList.add('hide');

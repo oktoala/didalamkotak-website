@@ -20,12 +20,27 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-
     search_button.addEventListener('click', () => {
-        console.log("Hahah");
         toggleSearch(searchWrapper, searchInput);
         search_button.classList.toggle("active");
     });
+
+    document.querySelector("form.search").addEventListener("keypress", (event)=>{
+        if (event.key == "Enter"){
+            event.preventDefault();
+        }
+    });
+
+    const burger = document.querySelector('.burger input');
+	const nav = document.querySelector('.navigation');
+
+	burger.addEventListener('click', function(){
+		nav.classList.toggle('show');
+        if (searchWrapper.classList.contains("active")){
+            toggleSearch(searchWrapper, searchInput);
+            search_button.classList.toggle("active");
+        }
+	});
 
 
     window.addEventListener("keydown", e => {
@@ -33,12 +48,16 @@ document.addEventListener("DOMContentLoaded", () => {
         if (e.key == "Escape" && searchWrapper.classList.contains("active")) {
             e.preventDefault();
             toggleSearch(searchWrapper, searchInput);
+            search_button.classList.toggle("active");
+
         }
 
         // open search on CTRL+SHIFT+F
         if (e.ctrlKey && e.shiftKey && e.key == "F" && !searchWrapper.classList.contains("active")) {
             e.preventDefault();
             toggleSearch(searchWrapper, searchInput);
+            search_button.classList.toggle("active");
+
             
         }
     });

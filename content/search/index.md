@@ -1,6 +1,6 @@
 ---
 title: search
 type: data
-_build:
+build:
     list: never
 ---

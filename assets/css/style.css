@@ -5,7 +5,6 @@
 {{- $fontFamilySecondary := .Site.Params.style.vars.fontFamilySecondary | default $fontMono -}}
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 
-
 .body.light-theme {
 	--body-color: #f0f0f0;
 	--header-color: #f3f3f3;
@@ -25,7 +24,7 @@
 	
 	/* One */
 	--hr-color: #dadada;
-	--mark-color: #fd5;
+	--mark-color: var(--heading-color);
 	--blockquote-border-color: #42474a; 
 	--code-border-color: #44444d;
 	--code-color: var(--highlight-color);
@@ -63,7 +62,7 @@
 	
 	/* One */
 	--hr-color: #dadada;
-	--mark-color: #fd5;
+	--mark-color: var(--heading-color);
 	--blockquote-border-color: #42474a; 
 	--code-border-color: #44444d;
 	--code-color: #fff400;
@@ -560,7 +559,7 @@ select {
 }
 
 .header__container.hide{
-	top : -10em;
+	top : -50em;
 	transition: top, 0.3s;
 }
 
@@ -1781,6 +1780,12 @@ textarea {
 	.body.scroll-disabled{
 		overflow-y: hidden;
 	}
+
+	div[role="search"].active{
+		/* width: 52.97em; */
+		padding-top: 200px;
+	}
+
 }
 
 @media screen and (max-width: 620px) {
@@ -2298,7 +2303,9 @@ pre:hover::-webkit-scrollbar-thumb{
 /* ------------ Search -------- */
 
 div[role="search"]{
-	width: 52.97em;
+	/* width: 52.97em; */
+	width: 100%;
+	max-width: 900px;
 	height: 100%;
 	position: fixed;
 	z-index: 2;
@@ -2307,8 +2314,7 @@ div[role="search"]{
 	padding-top: 50px;
 	background-color: var(--wrapper-color);
 	transition: top 0.4s ease;
-	overflow-y: visible;
-	
+	overflow-y: auto;
 }
 div[role="search"].active{
 	top: 0%;
