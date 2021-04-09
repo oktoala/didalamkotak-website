@@ -8,14 +8,21 @@ document.addEventListener("DOMContentLoaded", () => {
 	const nav = document.querySelector('.navigation');
     const nav_items = document.querySelectorAll(".nav-item");
 
-    
     const index_nav_items = (function test(){
-        for (let i = 0; i< nav_items.length; i-=-1){
+        for (let i = 0; i < nav_items.length; i-=-1){
             if (nav_items[i].classList.contains("current")){
                 return i;
             }
         }
     })();
+
+    const toggleAllSearchItem = () => {
+        toggleSearch(searchWrapper, searchInput);
+        search_button.classList.toggle("active");
+        if (index_nav_items !== undefined){
+            nav_items[index_nav_items].classList.toggle("current");
+        }
+    }
 
     /* Make burger always unchecked if reload */
     burger.checked = false;
@@ -35,11 +42,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    /* Toggle For Search Button */
+    /* Toggle For Search Button and change the color of focus icon*/
     search_button.addEventListener('click', () => {
-        toggleSearch(searchWrapper, searchInput);
-        search_button.classList.toggle("active");
-        nav_items[index_nav_items].classList.toggle("current");
+        toggleAllSearchItem();
         if (searchWrapper.classList.contains("active")){
             searchResultElement.innerHTML = "";
             searchInput.value = null;
@@ -54,12 +59,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-    /* Clode Search Field when burger button pressed */
+    /* Close Search Field when burger button pressed */
 	burger.addEventListener('click', function(){
 		nav.classList.toggle('show');
         if (searchWrapper.classList.contains("active")){
-            toggleSearch(searchWrapper, searchInput);
-            search_button.classList.toggle("active");
+            toggleAllSearchItem();
         }
 	});
 
@@ -68,18 +72,15 @@ document.addEventListener("DOMContentLoaded", () => {
         // dismiss search on  ESC
         if (e.key == "Escape" && searchWrapper.classList.contains("active")) {
             e.preventDefault();
-            toggleSearch(searchWrapper, searchInput);
-            search_button.classList.toggle("active");
-
+            toggleAllSearchItem();
         }
 
         // open search on CTRL+SHIFT+F
         if (e.ctrlKey && e.shiftKey && e.key == "F" && !searchWrapper.classList.contains("active")) {
             e.preventDefault();
-            toggleSearch(searchWrapper, searchInput);
-            search_button.classList.toggle("active");
-
-            
+            toggleAllSearchItem();
+            document.querySelector(".navigation").classList.add("show");
+            burger.checked = true;
         }
     });
 

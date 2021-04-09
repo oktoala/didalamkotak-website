@@ -6,10 +6,11 @@ draft: false
 author: "Yoga"
 toc: true
 categories: []
-thumbnail: /img/thumbnail/{{ .Name }}.jpg
+type: post
+thumbnail: /img/thumbnail/{{ .Name }}.webp
 description: "{{ replace .Name "-" " " | title }}"
 ---
 
 <!--more-->
 
-![{{ .Name }}](/img/thumbnail/{{ .Name }}.jpg)
+![{{ .Name }}](/img/thumbnail/{{ .Name }}.webp)

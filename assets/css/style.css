@@ -1963,6 +1963,10 @@ textarea {
 	.code-header.Python, pre.bC.Python{
 		border-left-color: green;
 	}
+	
+	.code-header.TOML, pre.bC.TOML{
+		border-left-color: #9c4221;
+	}
 
 	/* -------------------------------------------------------------------- */
 

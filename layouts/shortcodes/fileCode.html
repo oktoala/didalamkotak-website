@@ -1,0 +1,10 @@
+<div class="chroma">
+	<div class="code-header {{.Get 0}}">
+		<span class="code-title"> {{.Get 1}}</span>
+		<div class="tooltip">
+			<span id="" class="fa fa-copy" onclick="snackFunc(this.id)" onmouseout="outFunc(this.id)"></span>
+			<span class="tooltiptext">Copy ke clipboard</span>
+		</div>
+	</div>
+	<pre class="bC {{.Get 0}}"><code class="bC language-{{.Get 0}}" data-lang="{{.Get 0}}">{{ .Inner }}</code></pre>
+</div>
