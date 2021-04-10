@@ -32,7 +32,7 @@
 	--toc-a-color: #b86770;
 	--toc-stroke-color: var(--highlight-color);
 	--direktori-bg-color: #c4c4c4;
-	--breadcrumb-text-color: #4e4e4e;
+	--breadcrumb-text-color: #7c7c7c;
 	--logo-hover-color: #ec122c;
 	
 	--highlight-color: #ff3c01;
@@ -70,7 +70,7 @@
 	--toc-a-color: #5e8890;
 	--toc-stroke-color: #f0ff00;
 	--direktori-bg-color: #404245;
-	--breadcrumb-text-color: #bdbdbd;
+	--breadcrumb-text-color: #8a8a8a;
 	--logo-hover-color: #b2e2ebff;
 	
 	--highlight-color: {{ $highlightColor }};
@@ -1188,14 +1188,15 @@ li.visible > a:hover{
 	margin: 20px 20px;
 	border: none;
 	border-radius: 10px;
-	/* max-height: 300.35px; */
 	background-color: var(--header-color);
-	/* border-bottom: 1px solid #ebebeb; */
-	/* display: flex; */
+	transition: all .4s ease;
+	max-height: 363px;
 }
 
 .list__item:hover {
-	margin-bottom: 1em auto;
+	max-height: 353px;
+	margin: 10px 20px 20px;
+	transition: all .3s ease;
 }
 
 .list__item .flex-box{
@@ -1213,7 +1214,6 @@ li.visible > a:hover{
 
 
 .list__thumbnail {
-	/* margin: 0 20px 0 0; */
 	align-self: center;
 }
 

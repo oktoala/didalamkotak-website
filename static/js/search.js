@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const burger = document.querySelector('.burger input');
 	const nav = document.querySelector('.navigation');
     const nav_items = document.querySelectorAll(".nav-item");
+    const search_text = document.querySelector(".nav-item.show-search");
 
     const index_nav_items = (function test(){
         for (let i = 0; i < nav_items.length; i-=-1){
@@ -19,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const toggleAllSearchItem = () => {
         toggleSearch(searchWrapper, searchInput);
         search_button.classList.toggle("active");
+        search_text.classList.toggle("current");
         if (index_nav_items !== undefined){
             nav_items[index_nav_items].classList.toggle("current");
         }
