@@ -5,6 +5,8 @@ enableEmoji: true
 disqusShortname: didalamkotak-netlify-app
 paginate: 6
 enableRobotsTXT: true
+hasCJKLanguage: true
+summaryLength: 2
 menu:
   main:
     - identifier: home
@@ -44,7 +46,7 @@ Params:
     - blog
     - news
   sidebar:
-    home: right
+    home: false
     list: false
     single: true
     widgets:

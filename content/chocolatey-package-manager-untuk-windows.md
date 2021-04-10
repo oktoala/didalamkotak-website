@@ -9,13 +9,13 @@ categories: ["Windows"]
 toc: true
 type: post
 description: "Cara menggunakan package manager dengan menggunakan chocolatey"
-
 ---
 
 Kali ini saya akan membahas tentang Chocolatey, package manager untuk Windows.
+
 <!--more-->
 
-![](/img/thumbnail/choco.jpg)
+![chocolatey](/img/thumbnail/choco.jpg)
 
 ## Pendahuluan
 
