@@ -28,39 +28,49 @@ function logo_theme(){
 /* Slider Sidebar */
 const slider = document.querySelector(".switch > input");
 const sidebar = document.querySelector(".sidebar");
+const primary = document.querySelector(".primary");
 const curr_sidebar = localStorage.getItem("sidebarStorage");
 const curr_slider = localStorage.getItem("sliderStorage");
+const curr_primary = localStorage.getItem("primaryStorage");
 
 
 if (sidebar !=null){
 	if (curr_sidebar == "hidden"){
 		sidebar.classList.add('hidden');
 		slider.checked = false;
+		primary.classList.add("full");
 	} else {
 		slider.checked = true;
 	}
-
+	
 } else {
 	slider.checked = false;
 	slider.disabled = true;
+	primary.classList.add("full");
 	document.getElementById("slider_sidebar").attributes["custom-title"].value = "Tidak Bisa";
 }
 
 slider.addEventListener("click", () => {
-	sidebar.classList.toggle("hidden");
+	primary.classList.toggle("full");
+	
 	
 	let sidebar_class = "show";
 	let slider_class = "checked";
+	let primary_class = "unfull";
 	
+	sidebar.classList.toggle("hidden");
 	if (sidebar.classList.contains("hidden")){
 		slider.checked = false;
 		sidebar_class = "hidden";
 		slider_class = "unchecked";
+		primary_class = "full";
 	} else {
 		slider.checked = true;
 	}
 	localStorage.setItem("sidebarStorage", sidebar_class);
 	localStorage.setItem("sliderStorage", slider_class);
+	localStorage.setItem("primaryStorage", primary_class);
+	// sidebar.classList.remove("visible");
 
 });
 
