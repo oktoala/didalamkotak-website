@@ -1191,15 +1191,19 @@ li.visible > a:hover{
 	background-color: var(--header-color);
 	transition: all .4s ease;
 	max-height: 363px;
+	max-width: 810px;
+	min-width: 390px;
 }
 
 .list__item:hover {
+	box-shadow: 0 10px 10px 10px var(--body-color);
 	max-height: 353px;
 	margin: 10px 20px 20px;
 	transition: all .3s ease;
 }
 
 .list__item .flex-box{
+	box-shadow: none;
 	margin: 20px;
 	display: flex;
 	flex-direction: column;
