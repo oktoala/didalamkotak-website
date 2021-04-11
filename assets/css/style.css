@@ -905,7 +905,8 @@ select {
 }
 
 .post__meta {
-	padding: 5px 0;
+	padding: 10px 0;
+	margin-bottom: 20px;
 
 }
 
@@ -1189,7 +1190,7 @@ li.visible > a:hover{
 	border: none;
 	border-radius: 10px;
 	background-color: var(--header-color);
-	transition: all .2s linear;
+	transition: all .1s ease;
 	max-height: 363px;
 	max-width: 810px;
 }
@@ -1198,7 +1199,7 @@ li.visible > a:hover{
 	box-shadow: 0 10px 10px 10px var(--body-color);
 	max-height: 353px;
 	margin: 10px 15px 20px;
-	transition: all .2s ease;
+	transition: all .1s ease;
 }
 
 .list__item .flex-box{
@@ -1215,6 +1216,7 @@ li.visible > a:hover{
 }
 
 .list__thumbnail {
+	margin: 0;
 	align-self: center;
 }
 
@@ -1232,7 +1234,11 @@ li.visible > a:hover{
 	align-self: center;
 }
 
-.post__content.clearfix > p {
+.list__thumbnail figure {
+	/* margin: 0; */
+}
+
+.post__content.clearfix > p, .post__content.clearfix {
 	color: var(--breadcrumb-text-color);
 	width: 350px;
 	/* width: 100%; */
