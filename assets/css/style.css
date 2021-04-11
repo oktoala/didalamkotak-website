@@ -1178,7 +1178,7 @@ li.visible > a:hover{
 	color: var(--primary-text-color);
 }
 
-/* List content */
+/* ------------ List content --------------*/
 
 .main.page {
 	display: grid;
@@ -1247,12 +1247,17 @@ li.visible > a:hover{
 	overflow: hidden;
 	text-align: center;
 }
-/* ----------------------- */
-
 .list__footer-readmore {
 	float: right;
 	margin-top: 10px;
 }
+/* ----------- Categories ------------ */
+
+.main.list {
+	display: grid;
+	grid-template-rows: auto;
+}
+
 
 /* Pagination */
 .pagination {

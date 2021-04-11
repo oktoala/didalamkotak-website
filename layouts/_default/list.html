@@ -5,14 +5,18 @@
 		<h1 class="main__title">{{ . }}</h1>
 	</header>
 	{{- end }}
-	{{- with .Content }}
-	<div class="content main__content clearfix">
-		{{ . }}
+	<!-- {{- $root := . }}
+	{{- with (default .Site.Params.sidebar.widgets .Params.widgets) -}}
+		{{- range $widget := . }}
+			{{- $p := printf "widgets/%s.html" $widget }}
+			{{- partial $p $root }}
+		{{- end }}
+	{{- end}} -->
+	<div class="main page">
+		{{- range .Paginator.Pages }}
+			{{- .Render "summary" }}
+		{{- end }}
 	</div>
-	{{- end }}
-	{{- range .Paginator.Pages }}
-		{{- .Render "summary" }}
-	{{- end }}
 </main>
 {{ partial "pagination.html" . }}
 {{ end }}
