@@ -3,7 +3,7 @@
 		{{- if .Params.thumbnail }}
 		<figure class="list__thumbnail">
 			<a href="{{ .Permalink }}">
-				<img loading="lazy" src="{{ .Params.thumbnail | relURL }}" alt="{{ .Title }}" />
+				<img src="{{ .Params.thumbnail | relURL }}" alt="{{ .Title }}" />
 			</a>
 		</figure>
 		{{- end }}
