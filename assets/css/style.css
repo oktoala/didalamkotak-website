@@ -285,7 +285,7 @@ textarea {
 	font-weight: 700;
 	color: var(--primary-text-color);
 	white-space: pre-line;
-	background: var(--btn-color);
+	background: var(--wrapper-color);
 }
 
 .btn:hover {
@@ -693,9 +693,7 @@ select {
 	height: 100%;
 	display: flex;
 	justify-content: space-between;
-}
-
-.navbar-nav {
+	transition: all .3s ease;
 	list-style: none;
 }
 
@@ -742,20 +740,21 @@ select {
   }
 
   .slider {
-	--slider-round: 20px;
+	--slider-round: 18px;
 	position: absolute;
 	cursor: pointer;
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-color: #ccc;
+	background-color: var(--header-color);
 	-webkit-transition: .4s;
 	transition: .4s;
+	border: solid 2px var(--heading-color);
   }
   
   .switch input:disabled ~ .slider{
-	  cursor: default;
+	  cursor: not-allowed;
   }
 
   .slider:before {
@@ -764,7 +763,8 @@ select {
 	height: var(--slider-round);
 	width: var(--slider-round);
 	left: 8px;
-	bottom: 4px;
+	bottom: 4.3px;
+	border: solid 1px var(--heading-color);
 	background-color: var(--header-color);
 	-webkit-transition: .4s;
 	transition: .4s;
@@ -786,6 +786,8 @@ select {
 
 .slider.round {
 	border-radius: 34px;
+	border: solid 2px var(--heading-color);
+
   }
   
   .slider.round:before {
@@ -1204,7 +1206,6 @@ li.visible > a:hover{
 
 .list__item .flex-box{
 	box-shadow: none;
-	margin: 20px;
 	display: flex;
 	flex-direction: column;
 	/* border-bottom: 1px solid var(--primary-text-color); */
@@ -1267,11 +1268,12 @@ li.visible > a:hover{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin-top: 20px;
+	margin: 20px 15px;
 	list-style: none;
 	background-color: var(--header-color);
-	margin-bottom: 20px;
 	height: 40px;
+	border: none;
+	border-radius: 10px;
 }
 
 
@@ -1482,7 +1484,7 @@ textarea {
 	font-size: .3em;
 	list-style: none;
 	display: inline-block;
-	/* margin: 0 10px 16px 0 ; */
+	margin: 10px 10px 16px 0 ;
 
 }
 
@@ -1567,7 +1569,6 @@ textarea {
 }
 
 .widget-social__link-icon {
-	margin: 15px 10px 0 0;
 	vertical-align: middle;
 	fill: var(--icon-fill-color);
 }
@@ -1702,11 +1703,14 @@ textarea {
 
 	.navbar-nav{
 		flex-direction: column;
+		transition: all .3s ease;
+
 	}
 	
 	.nav-item{
 		justify-content: start;
 		padding-left: 23px;
+		transition: all .3s ease;
 	}
 
 	.nav-item[custom-title]::after {
@@ -2284,7 +2288,7 @@ div[role="search"]{
 	top: -100%;
 	margin: 0;
 	padding-top: 50px;
-	background-color: var(--wrapper-color);
+	background-color: var(--header-color);
 	transition: top 0.4s ease;
 	overflow-y: auto;
 }
