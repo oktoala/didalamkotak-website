@@ -7,6 +7,17 @@ author: "Yoga"
 toc: true
 type: post
 categories: ["Wine", "Linux"]
+tags:
+    - linux
+    - arch
+    - windows
+    - microsoft-office
+    - libreoffice
+    - word
+    - powerpoint
+    - excel
+    - wine
+    - playonlinux
 description: "Ini adalah cara menginstall MS Office di Arch Linux menggunakan PlayOnLinux"
 thumbnail: /img/thumbnail/ms-office-di-linux.jpg
 ---
