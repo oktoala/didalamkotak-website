@@ -8,7 +8,7 @@
 
 .body.light-theme {
 	--body-color: #f0f0f0;
-	--header-color: #f3f3f3;
+	--header-color: #e1e1e1;
 	--wrapper-color: #eeecec;
 	--heading-color: #c30d23;
 	--scrollbar-thumb: #272c34;
@@ -46,7 +46,7 @@
 
 :root{
 	--body-color: #232324;
-	--header-color: #252627;
+	--header-color: #1e1e1e;
 	--wrapper-color: #292a2d;
 	--heading-color: #8bd3e1;
 	--scrollbar-thumb: #272c34;
@@ -1199,11 +1199,8 @@ li.visible > a:hover{
 	max-width: 810px;
 }
 
-.list__item:hover {
-	box-shadow: 0 10px 10px 10px var(--body-color);
-	max-height: 353px;
-	margin: 15px 15px 20px;
-	transition: all .1s ease;
+article.list__item:hover {
+	filter: brightness(1.2);
 }
 
 .list__item .flex-box{
@@ -1222,7 +1219,7 @@ li.visible > a:hover{
 
 .list__thumbnail {
 	margin: 0;
-	align-self: center;
+	align-self: center;kkkkkkkkkkk
 }
 
 .summary_content{
