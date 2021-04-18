@@ -20,8 +20,7 @@
 	--code-header-color: #d3d3d3;
 	--icon-fill-color: #727272;
 	--tooltiptext-color: rgb(255, 255, 255);
-	--bC-color:#e7e7e7;
-	
+	--bC-color:#e7e7e7;	
 	
 	/* One */
 	--hr-color: #dadada;
@@ -2108,7 +2107,7 @@ img[alt=wine-hq-logo], [alt=wine-layer]{
 	--xAxis: 60px;
 	--yAxix: 100px;
 	z-index: 5;
-	stroke: var(--header-color);
+	stroke: var(--wrapper-color);
 	stroke-width: 20px;
 }
 
