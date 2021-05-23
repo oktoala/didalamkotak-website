@@ -8,7 +8,7 @@ toc: false
 sidebar: false
 categories: []
 type: post
-thumbnail: alasan-memakai-arch-linux/img/alasan-memakai-arch-linux.webp
+thumbnail: /img/thumbnail/alasan-memakai-arch-linux.webp
 description: "Alasan Memakai Arch Linux"
 ---
 
@@ -16,7 +16,7 @@ Kali ini saya akan membahas alasan kenapa memilih distro Arch Linux.
 
 <!--more-->
 
-![alasan-memakai-arch-linux](alasan-memakai-arch-linux/img/alasan-memakai-arch-linux.webp)
+![alasan-memakai-arch-linux](/img/thumbnail/alasan-memakai-arch-linux.webp)
 
 ## Pendahuluan
 
