@@ -1,6 +1,6 @@
 ---
 title: "Kustom Tema Firefox"
-date: 2021-04-24T13:57:27+08:00
+date: 2021-05-01T13:57:27+08:00
 comments: true
 draft: false
 author: "Yoga"
