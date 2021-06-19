@@ -7,10 +7,10 @@ author: "Yoga"
 toc: true
 categories: []
 type: post
-thumbnail: "/{{ .Name }}/img/thumbnail/{{ .Name }}.webp"
+thumbnail: "/img/thumbnail/{{ .Name }}.webp"
 description: "{{ replace .Name "-" " " | title }}"
 ---
 
 <!--more-->
 
-![{{ .Name }}](/{{ .Name }}/img/thumbnail/{{ .Name }}.webp)
+![{{ .Name }}](/img/thumbnail/{{ .Name }}.webp)
