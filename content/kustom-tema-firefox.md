@@ -5,7 +5,8 @@ comments: true
 draft: false
 author: "Yoga"
 toc: true
-categories: []
+categories: [Firefox]
+tags: [firefox, browser, tips, kustom]
 type: post
 thumbnail: /img/thumbnail/kustom-tema-firefox.webp
 description: "Kustom Tema Firefox"
