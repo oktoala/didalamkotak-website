@@ -1,7 +1,12 @@
-<img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" title="{{ .Text }}" onclick="imgClick({{ .Text }})"/>
+<img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" title="{{ .Text }}" onclick="imgClick({{ .Text }})" />
 <div class="overlay" id="{{ .Text }}">
-	<button class="prevPic" onclick="goToSlide(-1, {{ .Text }})">Prev</button>
-	<img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" title="{{ .Text }}" />
-	<button class="nextPic" onclick="goToSlide(1, {{ .Text }})" >Next</button>
+	<div class="overlay-header">
+		<div class="fa fa-expand"></div>
+		<div class="fa fa-times" onclick="imgClick({{ .Text }})"></div>
+	</div>
+	<div class="overlay-image">
+		<div class="fa fa-chevron-circle-left" onclick="goToSlide(-1, {{ .Text }})"></div>
+		<img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" title="{{ .Text }}" />
+		<div class="fa fa-chevron-circle-right" onclick="goToSlide(1, {{ .Text }})"></div>
+	</div>
 </div>
-

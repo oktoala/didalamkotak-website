@@ -44,6 +44,6 @@ function goToSlide(go, id){
 		}
 	}	
 	curr_id.classList.toggle("show");
-	index+=go;
+	index += go;
 	overlay[index].classList.toggle("show");
 }
