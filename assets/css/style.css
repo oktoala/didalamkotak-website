@@ -512,6 +512,16 @@ select {
 
 /* Header */
 
+/* 
+?██╗  ██╗███████╗ █████╗ ██████╗ ███████╗██████╗ 
+?██║  ██║██╔════╝██╔══██╗██╔══██╗██╔════╝██╔══██╗
+?███████║█████╗  ███████║██║  ██║█████╗  ██████╔╝
+?██╔══██║██╔══╝  ██╔══██║██║  ██║██╔══╝  ██╔══██╗
+?██║  ██║███████╗██║  ██║██████╔╝███████╗██║  ██║
+?╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝
+                                                
+*/
+
 .header {
 	display: flex;
 	border-bottom: 3px;
@@ -2158,7 +2168,6 @@ div[role="search"] {
 	overflow-y: auto;
 }
 
-
 div[role="search"].active {
 	top: 0%;
 	transition: top 0.4s ease;
@@ -2188,8 +2197,7 @@ form.search {
 	margin: 20px;
 }
 
-
-.search > input {
+.search>input {
 	outline: none;
 	background-color: #6b6b6d;
 	width: 100%;
@@ -2220,29 +2228,45 @@ form.search {
 	background-color: var(--highlight-color);
 }
 
-
 /* Overlay LightBox */
 
-.overlay{
+/* 
+! ██████╗ ██╗   ██╗███████╗██████╗ ██╗      █████╗ ██╗   ██╗
+!██╔═══██╗██║   ██║██╔════╝██╔══██╗██║     ██╔══██╗╚██╗ ██╔╝
+!██║   ██║██║   ██║█████╗  ██████╔╝██║     ███████║ ╚████╔╝ 
+!██║   ██║╚██╗ ██╔╝██╔══╝  ██╔══██╗██║     ██╔══██║  ╚██╔╝  
+!╚██████╔╝ ╚████╔╝ ███████╗██║  ██║███████╗██║  ██║   ██║   
+! ╚═════╝   ╚═══╝  ╚══════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝   ╚═╝   
+                                                           
+*/
+
+.overlay {
 	width: 0;
 	height: 0;
 	overflow: hidden;
 	position: fixed;
 	background: rgba(0, 0, 0, 0);
 }
-.overlay-image{
+
+.overlay-image {
 	display: flex;
+	position: fixed;
 	justify-content: space-between;
 	align-items: center;
+	width: 0;
+	height: 0;
+}
+
+.overlay.show > .overlay-image{
 	width: 100%;
 	height: 100%;
 }
-
-.overlay-image > img{
+.overlay-image>img {
 	max-width: 50%;
-
+	max-height: 50%;
 }
-.overlay.show{
+
+.overlay.show {
 	z-index: 999;
 	top: 0;
 	left: 0;
@@ -2252,25 +2276,32 @@ form.search {
 	height: auto;
 	background: rgba(0, 0, 0, .7);
 }
-.overlay-header{
+
+.overlay-header {
 	display: flex;
 	justify-content: end;
 	align-items: center;
 	height: 60px;
 }
 
-
-.overlay-header > .fa, .overlay-image > .fa{
+.overlay-header>.fa, .overlay-image>.fa {
 	margin: 0 25px;
-	font-size: 25px;
-	padding: 5px;
+	font-size: 0;
 	color: var(--icon-fill-color);
-} 
+}
+.overlay.show .overlay-header>.fa,.overlay.show .overlay-image>.fa {
+	font-size: 1.6rem;
+	
+}
 
-.overlay-header > .fa:hover, .overlay-image > .fa:hover{
+.overlay-header>.fa:hover, .overlay-image>.fa:hover {
 	color: #fff;
 }
 
-.overlay-header .fa:last-child{
+.overlay-header .fa:last-child {
 	margin-right: 25px;
+}
+
+.overlay-header > .fa-expand.full{
+	color: red;
 }
