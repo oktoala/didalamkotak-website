@@ -12,6 +12,10 @@ thumbnail: /img/thumbnail/konfigurasi-git.webp
 description: "Konfigurasi Git"
 ---
 
+Kita akan membahas cara konfigurasi Git untuk kali ini.
+
+<!-- Summary -->
+
 ![konfigurasi-git](/img/thumbnail/konfigurasi-git.webp)
 
 Jika kalian memakai linux, maka git akan sering kalian gunakan.

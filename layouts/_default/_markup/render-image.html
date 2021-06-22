@@ -1,12 +1,13 @@
 <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" title="{{ .Text }}" onclick="imgClick({{ .Text }})" />
 <div class="overlay" id="{{ .Text }}">
 	<div class="overlay-header">
-		<div class="fa fa-expand" title="Fullscreen" onclick="fullScreen()"></div>
-		<div class="fa fa-download" title="Download"></div>
+		<div class="fa fa-expand" title="Fullscreen" onclick="toggleFullScreen()"></div>
+		<a class="fa fa-download" title="Download" href="{{ .Destination | safeURL }}" download="{{ .Text }}"></a>
 		<div class="fa fa-times" onclick="imgClick({{ .Text }})" title="Close"></div>
 	</div>
-	<div class="overlay-image" >
-		<div class="fa fa-chevron-circle-left" title="Previous Image" onclick="goToSlide(-1, {{ .Text }})"></div>
+	<div class="overlay-image">
+		<div class="fa fa-chevron-circle-left" title="Previous Image" onclick="goToSlide(-1, {{ .Text }})">
+		</div>
 		<img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" title="{{ .Text }}" />
 		<div class="fa fa-chevron-circle-right" title="Next Image" onclick="goToSlide(1, {{ .Text }}) "></div>
 	</div>

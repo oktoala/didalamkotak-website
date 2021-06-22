@@ -35,10 +35,12 @@ function outFunc(ids) {
 function imgClick(id) {
 	const imgClicked = document.getElementById(id);
 	imgClicked.classList.toggle("show");
-	closeFullScreen();
+	if (iconFullScreen.classList.contains("full")) {
+		closeFullScreen();
+	}
 }
 
-function goToSlide(go, id) {
+function goToSlide(goTo, id) {
 	let index = 0;
 	const curr_id = document.getElementById(id);
 	for (let i = 0; i < overlay.length; i++) {
@@ -46,10 +48,31 @@ function goToSlide(go, id) {
 			index = i;
 		}
 	}
+	const overlayNextPrev = overlay[index + goTo];
+	const firstOverlay = overlay[0];
+	const lastOverlay = overlay[overlay.length - 1];
 
+	// * Remove current overlay
 	curr_id.classList.toggle("show");
-	index += go;
-	overlay[index].classList.toggle("show");
+
+
+	if (overlayNextPrev == firstOverlay) {
+		// ? Check Previous
+		lastOverlay.classList.toggle("show");
+	} else if (overlayNextPrev == lastOverlay) {
+		// ? Check Next
+		firstOverlay.classList.toggle("show");
+	} else {
+		overlay[index + goTo].classList.toggle("show");
+	}
+}
+
+function toggleFullScreen(){
+	if (iconFullScreen.classList.contains("full")){
+		closeFullScreen();
+	}else {
+		fullScreen();
+	}
 }
 
 function fullScreen() {
@@ -60,8 +83,13 @@ function fullScreen() {
 }
 
 function closeFullScreen() {
-	if (document.exitFullscreen) {
-		iconFullScreen.classList.remove("full");
-		document.exitFullscreen();
+	try {
+		if (document.exitFullscreen) {
+			iconFullScreen.classList.remove("full");
+			document.exitFullscreen();
+		}
+
+	} catch (error) {
+
 	}
 }
