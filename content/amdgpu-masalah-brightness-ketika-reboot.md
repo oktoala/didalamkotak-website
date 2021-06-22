@@ -18,7 +18,6 @@ Kali ini kita akan memberikan cara mengatasi brightness yang selalu full saat re
 ![amdgpu-masalah-brightness-ketika-reboot](/img/thumbnail/amdgpu-masalah-brightness-ketika-reboot.webp)
 
 Jika kalian memakai linux dan menggunakan amdgpu sebagai driver, mungkin kalian akan menemukan masalah brightness saat reboot.
-
 Hal ini bisa terjadi karena nilai `actual brightness` yang berukuran 16-bit ada di luar rentang `max brightness` yang berukuran 8-bit. Karena nilai terlalu besar, jadi dipotong ke kecerahan maksimum (255)
 
 Karena {{<linkBlank "bug" "https://bugzilla.kernel.org/show_bug.cgi?id=203905">}} di dalam driver belum ditangani, maka cara yang paling ampuh adalah dengan cara menanganinya sendiri.

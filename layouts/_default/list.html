@@ -2,19 +2,20 @@
 <main class="main list" role="main">
 	{{- with .Title }}
 	<header class="main__header">
-		<h1 class="main__title">{{ . }}</h1>
+		<!-- <h1 class="main__title">{{ . }}</h1> -->
+		<h4 class="widget__title">{{ . }}</h4>
 	</header>
 	{{- end }}
-	<!-- {{- $root := . }}
+	{{- $root := . }}
 	{{- with (default .Site.Params.sidebar.widgets .Params.widgets) -}}
-		{{- range $widget := . }}
-			{{- $p := printf "widgets/%s.html" $widget }}
-			{{- partial $p $root }}
-		{{- end }}
-	{{- end}} -->
-	<div class="main page">
+	{{- range $widget := . }}
+	{{- $p := printf "widgets/%s.html" $widget }}
+	{{- partial $p $root }}
+	{{- end }}
+	{{- end}}
+	<div id="main-page" class="main page">
 		{{- range .Paginator.Pages }}
-			{{- .Render "taxo" }}
+		{{- .Render "taxo" }}
 		{{- end }}
 	</div>
 </main>

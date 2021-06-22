@@ -1,7 +1,7 @@
 const codeText = document.querySelectorAll("code.bC");
 const copyButton = document.querySelectorAll(".fa-copy");
 const tooltiptexts = document.querySelectorAll('.tooltiptext');
-const images = document.querySelectorAll('img');
+const overlay = document.querySelectorAll(".overlay");
 const cB = "code-box";
 let i;
 
@@ -13,9 +13,6 @@ for ( i=0;  i<copyButton.length; i-=-1){
 	tooltiptexts[i].id = "tooltiptext" + i;
 }
 
-images.forEach(image => {
-	image.classList.add("modal-item");
-});
 
 function snackFunc(ids) {
 	const getArray = ids.split('');
@@ -31,4 +28,22 @@ function outFunc(ids) {
 	const idToolTip = "tooltiptext" + getNumber;
 	const tooltip = document.getElementById(idToolTip);
 	tooltip.innerHTML = "Copy ke clipboard";
+}
+
+function imgClick(id){
+	const imgClicked = document.getElementById(id);
+	imgClicked.classList.toggle("show");
+}
+
+function goToSlide(go, id){
+	let index = 0;
+	const curr_id = document.getElementById(id);
+	for(let i = 0; i< overlay.length; i++){
+		if (overlay[i] == curr_id){
+			index = i;
+		}
+	}	
+	curr_id.classList.toggle("show");
+	index+=go;
+	overlay[index].classList.toggle("show");
 }

@@ -7,23 +7,26 @@ paginate: 200
 enableRobotsTXT: true
 hasCJKLanguage: true
 summaryLength: 2
-menu:
-  main:
-    - identifier: home
-      name: Home
-      title: home section
-      url: /
-      weight: -110
-    - identifier: linux
-      name: Linux
-      title: linux section
-      url: /categories/linux
-      weight: -110
-    - identifier: windows
-      name: Windows
-      title: windows section
-      url: /categories/windows
-      weight: -110
+markup:
+  goldmark:
+    extensions:
+      definitionList: true
+      footnote: true
+      linkify: true
+      strikethrough: true
+      table: true
+      taskList: true
+      typographer: true
+    parser:
+      attribute:
+        block: false
+        title: true
+      autoHeadingID: true
+      autoHeadingIDType: github
+    renderer:
+      hardWraps: false
+      unsafe: false
+      xhtml: false
 Author:
   name: Oktoala
   bio: Ordinary Student

@@ -1,0 +1,7 @@
+<img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" title="{{ .Text }}" onclick="imgClick({{ .Text }})"/>
+<div class="overlay" id="{{ .Text }}">
+	<button class="prevPic" onclick="goToSlide(-1, {{ .Text }})">Prev</button>
+	<img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" title="{{ .Text }}" />
+	<button class="nextPic" onclick="goToSlide(1, {{ .Text }})" >Next</button>
+</div>
+
