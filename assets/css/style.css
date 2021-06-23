@@ -1156,7 +1156,7 @@ li.visible>a:hover {
 	background-color: var(--header-color);
 	transition: all .1s ease;
 	max-height: 363px;
-	max-width: 810px;
+	max-width: 395px;
 }
 
 article.list__item:hover {
@@ -1585,6 +1585,9 @@ textarea {
 		position: relative;
 		text-align: center;
 	}
+	.list__item{
+		max-width: 810px;
+	}
 	.list__item:hover {
 		box-shadow: none;
 		max-height: none;
@@ -1828,6 +1831,9 @@ code.bC {
 	border-left-color: #9c4221;
 }
 
+.code-header.JSON, pre.bC.JSON {
+	border-left-color: #d8c83e;
+}
 /* -------------------------------------------------------------------- */
 
 .bC::-webkit-scrollbar {
