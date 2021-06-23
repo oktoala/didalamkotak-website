@@ -47,15 +47,15 @@ function goToSlide(goTo, id) {
 		}
 	}
 	if (index + goTo == overlay.length) {
+		// * Check if its last overlay
 		overlayNextPrev = overlay[index];
-		console.log("Disini");
 	}else if (index+goTo == -1){
+		// * Check if its first overlay
 		overlayNextPrev = overlay[0];
 	} else{
 		overlayNextPrev = overlay[index + goTo];
-		console.log("Disana");
 	}
-	console.log(`Hasil: ${index + goTo}`);
+
 	const firstOverlay = overlay[0];
 	const lastOverlay = overlay[overlay.length - 1];
 
