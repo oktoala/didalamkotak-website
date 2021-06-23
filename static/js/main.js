@@ -40,14 +40,12 @@ if (sidebar != null) {
 		sidebar.classList.add('hidden');
 		slider.checked = false;
 		primary.classList.add("full");
-		console.log("Hahah");
 	} else {
 		slider.checked = true;
 	}
 
 } else {
 	slider_li.classList.add("hidden");
-	console.log("Hahah");
 	slider.checked = false;
 	slider.disabled = true;
 	primary.classList.add("full");

@@ -3,7 +3,6 @@ const copyButton = document.querySelectorAll(".fa-copy");
 const tooltiptexts = document.querySelectorAll('.tooltiptext');
 const overlay = document.querySelectorAll(".overlay");
 const elementFull = document.documentElement;
-const iconFullScreen = document.querySelector(".overlay-header > .fa-expand");
 const cB = "code-box";
 let i;
 
@@ -35,61 +34,44 @@ function outFunc(ids) {
 function imgClick(id) {
 	const imgClicked = document.getElementById(id);
 	imgClicked.classList.toggle("show");
-	if (iconFullScreen.classList.contains("full")) {
-		closeFullScreen();
-	}
+
 }
 
 function goToSlide(goTo, id) {
 	let index = 0;
+	let overlayNextPrev;
 	const curr_id = document.getElementById(id);
 	for (let i = 0; i < overlay.length; i++) {
 		if (overlay[i] == curr_id) {
 			index = i;
 		}
 	}
-	const overlayNextPrev = overlay[index + goTo];
+	if (index + goTo == overlay.length) {
+		overlayNextPrev = overlay[index];
+		console.log("Disini");
+	}else if (index+goTo == -1){
+		overlayNextPrev = overlay[0];
+	} else{
+		overlayNextPrev = overlay[index + goTo];
+		console.log("Disana");
+	}
+	console.log(`Hasil: ${index + goTo}`);
 	const firstOverlay = overlay[0];
 	const lastOverlay = overlay[overlay.length - 1];
 
 	// * Remove current overlay
 	curr_id.classList.toggle("show");
 
-
-	if (overlayNextPrev == firstOverlay) {
+	if (overlay.length == 1) {
+		// curr_id.classList.toggle("show");
+	}else if (overlayNextPrev == firstOverlay && index + goTo == -1) {
 		// ? Check Previous
 		lastOverlay.classList.toggle("show");
-	} else if (overlayNextPrev == lastOverlay) {
+	} else if (overlayNextPrev == lastOverlay && index == overlay.length-1) {
 		// ? Check Next
 		firstOverlay.classList.toggle("show");
 	} else {
-		overlay[index + goTo].classList.toggle("show");
+		overlayNextPrev.classList.toggle("show");
 	}
 }
 
-function toggleFullScreen(){
-	if (iconFullScreen.classList.contains("full")){
-		closeFullScreen();
-	}else {
-		fullScreen();
-	}
-}
-
-function fullScreen() {
-	if (elementFull.requestFullscreen) {
-		iconFullScreen.classList.add("full");
-		elementFull.requestFullscreen();
-	}
-}
-
-function closeFullScreen() {
-	try {
-		if (document.exitFullscreen) {
-			iconFullScreen.classList.remove("full");
-			document.exitFullscreen();
-		}
-
-	} catch (error) {
-
-	}
-}
