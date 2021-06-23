@@ -5,7 +5,8 @@ comments: true
 draft: false
 author: "Yoga"
 toc: true
-categories: []
+categories: [WSL, Windows]
+tags: [wsl, windows, linux, zshj]
 type: post
 thumbnail: "/img/thumbnail/mari-konfigurasi-windows-subsystem-for-linux.webp"
 description: "Mari Konfigurasi Windows Subsystem for Linux"

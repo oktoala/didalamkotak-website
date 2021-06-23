@@ -1,12 +1,11 @@
+{{- if .Params.thumbnail }}
 <article class="list__item">
 	<div class="list__item flex-box">
-		{{- if .Params.thumbnail }}
 		<figure class="list__thumbnail">
 			<a href="{{ .Permalink }}">
 				<img src="{{ .Params.thumbnail | relURL }}" alt="{{ .Title }}" />
 			</a>
 		</figure>
-		{{- end }}
 		<div class="summary_content">
 			<header class="list__header">
 				<h5 class="list__title post__title ">
@@ -18,11 +17,11 @@
 				<p class="list__lead post__lead">{{ . }}</p>
 				{{- end }}
 				<!-- {{ with partial "post_meta.html" . -}}
-				<div class="list__meta meta">{{ . }}</div>
-				{{- end }} -->
-			</header>
-			<div class="content list__excerpt post__content clearfix">
-				{{ .Summary }}
+					<div class="list__meta meta">{{ . }}</div>
+					{{- end }} -->
+				</header>
+				<div class="content list__excerpt post__content clearfix">
+					{{ .Summary }}
 			</div>
 			{{- if .Site.Params.readmore }}
 			{{- if .Truncated }}
@@ -34,4 +33,5 @@
 		</div>
 	</div>
 </article>
+{{- end }}
 

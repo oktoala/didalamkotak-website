@@ -1009,7 +1009,6 @@ input:checked+.slider:before {
 ?   ╚═╝   ╚═╝  ╚═╝╚═════╝ ╚══════╝╚══════╝     ╚═════╝ ╚═╝          ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝   ╚═╝   ╚══════╝╚═╝  ╚═══╝   ╚═╝   ╚══════╝
 */
 
-
 .hr-sidebar {
 	border-top: none;
 	margin-bottom: 20px;
@@ -1101,7 +1100,6 @@ li.visible>a:hover {
 	/*background: var(--btn-color);*/
 }
 
-
 /* Author Box */
 
 .authorbox {
@@ -1159,7 +1157,7 @@ li.visible>a:hover {
 	max-width: 395px;
 }
 
-article.list__item:hover {
+.list__thumbnail:hover {
 	filter: brightness(1.2);
 }
 
@@ -1178,7 +1176,27 @@ article.list__item:hover {
 
 .list__thumbnail {
 	margin: 0;
+	position: relative;
+	text-align: center;
 	align-self: center;
+}
+
+.tanggal-artikel {
+	position: absolute;
+	top: 0%;
+	right: 0%;
+	color: #8bd3e1bb;
+	padding: 3.5px;
+	background-color: #1d1d1dea;
+	visibility: hidden;
+	border: 0;
+	border-radius: 0 0 0 10px;
+	transition: all .1s;
+}
+
+.list__thumbnail:hover .tanggal-artikel {
+	visibility: visible;
+	transition: .1s;
 }
 
 .summary_content {
@@ -1546,7 +1564,6 @@ textarea {
 
 /* Media Queries */
 
-
 /*
 ?███╗   ███╗███████╗██████╗ ██╗ █████╗      ██████╗ ██╗   ██╗███████╗██████╗ ██╗███████╗███████╗
 ?████╗ ████║██╔════╝██╔══██╗██║██╔══██╗    ██╔═══██╗██║   ██║██╔════╝██╔══██╗██║██╔════╝██╔════╝
@@ -1585,7 +1602,7 @@ textarea {
 		position: relative;
 		text-align: center;
 	}
-	.list__item{
+	.list__item {
 		max-width: 810px;
 	}
 	.list__item:hover {
@@ -1737,7 +1754,6 @@ textarea {
 ?╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚═════╝ ╚═════╝ ╚══════╝╚══════╝
 */
 
-
 /* dir.html */
 
 .direktori {
@@ -1834,6 +1850,7 @@ code.bC {
 .code-header.JSON, pre.bC.JSON {
 	border-left-color: #d8c83e;
 }
+
 /* -------------------------------------------------------------------- */
 
 .bC::-webkit-scrollbar {
@@ -2292,10 +2309,11 @@ form.search {
 	height: 0;
 }
 
-.overlay.show > .overlay-image{
+.overlay.show>.overlay-image {
 	width: 100%;
 	height: 100%;
 }
+
 .overlay-image>img {
 	max-width: 50%;
 	max-height: 50%;
@@ -2324,9 +2342,9 @@ form.search {
 	font-size: 0;
 	color: var(--icon-fill-color);
 }
-.overlay.show .overlay-header>.fa,.overlay.show .overlay-image>.fa {
+
+.overlay.show .overlay-header>.fa, .overlay.show .overlay-image>.fa {
 	font-size: 1.6rem;
-	
 }
 
 .overlay-header>.fa:hover, .overlay-image>.fa:hover {
@@ -2337,6 +2355,6 @@ form.search {
 	margin-right: 25px;
 }
 
-.overlay-header > .fa-expand.full{
+.overlay-header>.fa-expand.full {
 	color: red;
 }
