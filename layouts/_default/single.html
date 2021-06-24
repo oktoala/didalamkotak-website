@@ -6,8 +6,8 @@
 			<p class="post__lead">{{ . }}</p>
 			{{- end }}
 			<ul class="breadcrumb">
-			  <li><a href="{{ .Sites.First.Home.RelPermalink }}">Home</a></li>
-			  <li class="is-active">{{ .Title }}</li>
+				<li><a href="{{ .Sites.First.Home.RelPermalink }}">Home</a></li>
+				<li class="is-active">{{ .Title }}</li>
 			</ul>
 			<h1 class="post__title">{{ .Title }}</h1>
 			{{ with partial "post_meta.html" . -}}
@@ -17,11 +17,6 @@
 		<div class="content clearfix">
 			{{ .Content | emojify }}
 		</div>
-		<!-- {{- if .Params.tags }}
-		<footer class="post__footer">
-			{{ partial "post_tags.html" . }}
-		</footer>
-		{{- end }} -->
 	</article>
 </main>
 {{ partial "authorbox.html" . }}

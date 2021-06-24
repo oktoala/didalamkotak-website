@@ -58,7 +58,7 @@ $fontFamilySecondary: {
 	--primary-pure-color: #000;
 	--btn-color: #2a2a2a;
 	--figcaption-color: rgb(187, 187, 187);
-	--code-header-color: #1a1e22;
+	--code-header-color: #0f0f0f;
 	--icon-fill-color: #b6b4b4;
 	--tooltiptext-color: #555;
 	--bC-color: #011627;
@@ -1154,6 +1154,7 @@ li.visible>a:hover {
 	background-color: var(--header-color);
 	transition: all .1s ease;
 	max-height: 363px;
+	height: 353px;
 	max-width: 395px;
 }
 
@@ -1161,10 +1162,11 @@ li.visible>a:hover {
 	filter: brightness(1.2);
 }
 
-.list__item .flex-box {
+.flex-box {
 	box-shadow: none;
 	display: flex;
 	flex-direction: column;
+	margin: 20px;
 }
 
 .list__header {
@@ -1772,6 +1774,7 @@ pre.bC {
 	border: 0;
 	border-left: 5px solid;
 	width: auto;
+	border-radius: 0 0 10px 10px;
 }
 
 code.bC {
@@ -1781,6 +1784,8 @@ code.bC {
 	font-family: "Cascadia Code";
 	max-height: 400px;
 	overflow: auto;
+	border: 0;
+	border-radius: 0 0 10px 10px;
 	/* overflow: scroll; */
 }
 
@@ -1827,27 +1832,27 @@ code.bC {
 
 /*-------------------------- Border color --------------------------*/
 
-.code-header.Powershell, pre.bC.Powershell {
+pre.bC.Powershell {
 	border-left-color: #012456;
 }
 
-.code-header.Shell, pre.bC.Shell {
+pre.bC.Shell {
 	border-left-color: #3e474a;
 }
 
-.code-header.Bash, pre.bC.Bash {
+pre.bC.Bash {
 	border-left-color: #3e474a;
 }
 
-.code-header.Python, pre.bC.Python {
+pre.bC.Python {
 	border-left-color: green;
 }
 
-.code-header.TOML, pre.bC.TOML {
+pre.bC.TOML {
 	border-left-color: #9c4221;
 }
 
-.code-header.JSON, pre.bC.JSON {
+pre.bC.JSON {
 	border-left-color: #d8c83e;
 }
 
@@ -1879,7 +1884,9 @@ code.bC {
 	height: 30px;
 	display: block;
 	background-color: var(--code-header-color);
-	border-left: 5px solid;
+	border: 0;
+	border-radius: 10px 10px 0 0;
+	/* border-left: 5px solid; */
 }
 
 .code-title {
@@ -1918,7 +1925,6 @@ code.bC {
 
 .chroma .bC {
 	scrollbar-color: var(--bC-color) var(--bC-color);
-	border-radius: 0;
 }
 
 .chroma:hover .bC {
