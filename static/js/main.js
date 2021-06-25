@@ -4,13 +4,19 @@ if (curr_themes == "light") {
 	body.classList.add('light-theme');
 }
 
+/* 
+? Listen for loader and hide when it has done
+*/
 window.addEventListener("load", () => {
 	const loader = document.querySelector(".loader");
 	loader.classList.add("hidden");
 	body.classList.remove("loading");
 });
 
-/* Logo Theme */
+/* 
+Logo Theme 
+? Change the theme when logo icon being pressed
+*/
 const logo_images = document.querySelector(".logo__imagebox");
 const bodies = document.querySelector("body");
 
@@ -35,6 +41,8 @@ const curr_slider = localStorage.getItem("sliderStorage");
 const curr_primary = localStorage.getItem("primaryStorage");
 
 
+/* 
+? Statement for check the sidebar that affect to slider on header */
 if (sidebar != null) {
 	if (curr_sidebar == "hidden") {
 		sidebar.classList.add('hidden');
@@ -112,11 +120,11 @@ function buttonScroll(directions) {
 	}
 }
 
-/* Hightlight Current Page */
+/* Hightlight Current Page 
+? Give color to the icon in header*/
 const links = document.querySelectorAll("a.icon-button");
 const nav_item = document.querySelectorAll(".nav-item");
 const curr_link = document.location.href;
-
 for (let i = 0; i < links.length; i++) {
 	const link = links[i];
 	if (link == curr_link) {
@@ -128,27 +136,30 @@ for (let i = 0; i < links.length; i++) {
 
 /* Asyn Categories */
 function loadPage(newUrl) {
-	var httpRequest = new XMLHttpRequest();
+	const httpRequest = new XMLHttpRequest();
 	httpRequest.onreadystatechange = function () {
 		if (httpRequest.readyState !== XMLHttpRequest.DONE)
 			return;
 
-		var newDocument = httpRequest.responseXML;
+		const newDocument = httpRequest.responseXML;
 		if (newDocument === null)
 			return;
 
-		var newContent = httpRequest.responseXML.getElementById("main-page");
+		const newContent = httpRequest.responseXML.querySelector("#main-page");
 		if (newContent === null)
 			return;
 
 		document.title = newDocument.title;
 
-		var contentElement = document.getElementById("main-page");
+		const contentElement = document.querySelector("#main-page");
 		contentElement.replaceWith(newContent);
 	}
 
 	httpRequest.responseType = "document";
 	httpRequest.open("GET", newUrl);
 	httpRequest.send();
+	console.log(this);
+	window.history.replaceState("None","Categories", newUrl);
 };
+
 
