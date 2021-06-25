@@ -535,16 +535,17 @@ select {
 	height: 54px;
 	display: flex;
 	align-items: center;
-	border-bottom: 2px solid;
-	border-image: linear-gradient(to right, var(--heading-color), var(--heading-color));
-	border-image-slice: 10;
+	border-bottom: 2px solid var(--heading-color);
+	/* border-image: linear-gradient(to right, var(--heading-color), var(--heading-color)); */
+	/* border-image-slice: 10; */
+
 	border-width: 4px;
 	transition: top, .4s;
 	background-color: var(--header-color);
 }
 
 .header__container.hide {
-	top: -10em;
+	top: -4em;
 	transition: top, .4s;
 }
 
