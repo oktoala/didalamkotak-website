@@ -3,6 +3,7 @@ const copyButton = document.querySelectorAll(".fa-copy");
 const tooltiptexts = document.querySelectorAll('.tooltiptext');
 const overlay = document.querySelectorAll(".overlay");
 const elementFull = document.documentElement;
+const overlay_img_btn = document.querySelectorAll(".overlay-img-btn");
 const cB = "code-box";
 let i;
 
@@ -65,10 +66,11 @@ function goToSlide(goTo, id) {
 	if (overlay.length == 1) {
 		// curr_id.classList.toggle("show");
 	}else if (overlayNextPrev == firstOverlay && index + goTo == -1) {
-		// ? Check Previous
+		// ? Check Previous on first overlay
+		// overlay_img_btn[1].classList.add("hidden");
 		lastOverlay.classList.toggle("show");
 	} else if (overlayNextPrev == lastOverlay && index == overlay.length-1) {
-		// ? Check Next
+		// ? Check Next on last overlay
 		firstOverlay.classList.toggle("show");
 	} else {
 		overlayNextPrev.classList.toggle("show");

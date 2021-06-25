@@ -817,8 +817,8 @@ input:checked+.slider:before {
 
 /* Posts/Pages */
 
-.main__header {
-	text-align: center;
+.main__header{
+	margin-top: 20px;
 }
 
 .main__title {
@@ -1421,7 +1421,6 @@ textarea {
 /* Widgets */
 
 .widget {
-	margin: 30px 0 0 20px;
 }
 
 .widget:last-child {
@@ -1457,6 +1456,7 @@ textarea {
 
 .widget__link {
 	display: inline-block;
+	cursor: pointer;
 }
 
 .widget__item:first-child {
@@ -2338,7 +2338,7 @@ form.search {
 
 .overlay-header {
 	display: flex;
-	justify-content: end;
+	justify-content: flex-end;
 	align-items: center;
 	height: 60px;
 }
@@ -2350,7 +2350,7 @@ form.search {
 }
 
 .overlay.show .overlay-header>.fa, .overlay.show .overlay-image>.fa {
-	font-size: 1.6rem;
+	font-size: 1.7rem;
 }
 
 .overlay-header>.fa:hover, .overlay-image>.fa:hover {

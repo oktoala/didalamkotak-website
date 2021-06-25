@@ -1,6 +1,6 @@
 {{- if .Params.thumbnail }}
 <article class="list__item">
-	<div class="list__item flex-box">
+	<div class="flex-box">
 		<figure class="list__thumbnail">
 			<a href="{{ .Permalink }}">
 				<img src="{{ .Params.thumbnail | relURL }}" alt="{{ .Title }}" />

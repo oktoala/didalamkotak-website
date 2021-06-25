@@ -72,7 +72,7 @@ Jika tidak muncul-muncul apapun, cukup restart Windows kalian.
 
 ### Mengubah Versi WSL
 
-Jalankan perintah ini di Powershell(Administrator) menampilkan list distro.
+Jalankan perintah ini di Powershell(Administrator) untuk menampilkan list distro.
 
 {{<scCode "Powershell">}}wsl --list --verbose{{</scCode>}}
 
@@ -142,7 +142,7 @@ Unduh font dibawah ini (salah satu juga boleh)
 
 Jika sudah, klik dua kali font yang telah di unduh dan install.
 
-Lalu, buka Windows terminal {{<scIcon class="fa fa-arrow-right">}} Settings {{<scIcon class="fa fa-arrow-right">}} Setting.json.
+Lalu, buka Windows terminal {{<scIcon class="fa fa-arrow-right">}} Settings {{<scIcon class="fa fa-arrow-right">}} Open Setting.json.
 
 Cari tulisan `profiles` dan ubah tulisan yang didalam kurung menjadi teks di bawah ini.
 
