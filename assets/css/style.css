@@ -596,6 +596,7 @@ select {
 	font-weight: 700;
 	line-height: 1;
 	color: var(--primary-text-color);
+	font-family: 'Monserrat';
 }
 
 .logo__tagline {
@@ -764,7 +765,6 @@ input:checked+.slider:before {
 
 .burger {
 	display: none;
-	padding: 0px 20px 0 0;
 	position: relative;
 	z-index: 17;
 }
@@ -1469,7 +1469,8 @@ textarea {
 }
 
 .taxo_text.current {
-	color: red;
+	color: var(--primary-pure-color);
+	background-color: var(--primary-text-color);
 }
 
 .taxo_num {

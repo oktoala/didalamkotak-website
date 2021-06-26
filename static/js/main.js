@@ -135,6 +135,7 @@ for (let i = 0; i < links.length; i++) {
 }
 
 /* Asyn Categories */
+let current_taxo;
 function loadPage(newUrl) {
 	const httpRequest = new XMLHttpRequest();
 	httpRequest.onreadystatechange = function () {
@@ -158,8 +159,14 @@ function loadPage(newUrl) {
 	httpRequest.responseType = "document";
 	httpRequest.open("GET", newUrl);
 	httpRequest.send();
-	console.log(this);
 	window.history.replaceState("None","Categories", newUrl);
+	if (current_taxo != null){
+		current_taxo.classList.toggle("current");
+	}
+	document.getElementById(newUrl).classList.toggle("current");
+	current_taxo = document.getElementById(newUrl);
+
+
 };
 
 

@@ -3,30 +3,16 @@
 <div class="widget-categories widget">
 	<div class="widget__content">
 		<ul class="widget__list">
-		{{- range $name, $taxonomy := $categories }}
+			{{- range $name, $taxonomy := $categories }}
 			{{- with $.Site.GetPage (printf "/categories/%s" $name) }}
 			<li class="widget__item">
 				<a class="widget__link" onclick="loadPage({{ .RelPermalink }})">
-					<span class="taxo_text"> {{ .Title }} </span><span class="taxo_num">{{ len $taxonomy }}</span>
+					<span id={{ .RelPermalink }} class="taxo_text"> {{ .Title }} </span><span class="taxo_num">{{ len $taxonomy }}</span>
 				</a>
 			</li>
 			{{- end }}
-		{{- end }}
+			{{- end }}
 		</ul>
 	</div>
 </div>
-<script>
-	const taxo_links = document.querySelectorAll(".widget__link");
-	const taxo_texts =document.querySelectorAll(".taxo-text");
-	const current_link = document.location.href;
-
-	for (let i = 0; i < taxo_links.length; i++){
-		const taxo_link = taxo_links[i];
-		if (taxo_link == current_link){
-			taxo_link.classList.toggle("current");
-			taxo_texts[i].classList.toggle("current");
-			break;
-		}
-	}
-</script>
 {{- end }}
