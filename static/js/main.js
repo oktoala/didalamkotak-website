@@ -167,6 +167,7 @@ function loadPage(newUrl) {
 	current_taxo = document.getElementById(newUrl);
 
 
+	console.log(newUrl);
 };
 
 

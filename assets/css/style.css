@@ -1462,8 +1462,9 @@ textarea {
 
 .taxo_text {
 	padding: 2px;
-	border-top-left-radius: 4px;
-	border-bottom-left-radius: 4px;
+	--taxo-radius: 7px;
+	border-top-left-radius: var(--taxo-radius);
+	border-bottom-left-radius: var(--taxo-radius);
 	background-color: var(--header-color);
 	color: var(--heading-color);
 }
@@ -1475,8 +1476,9 @@ textarea {
 
 .taxo_num {
 	padding: 2px;
-	border-top-right-radius: 4px;
-	border-bottom-right-radius: 4px;
+	--taxo-radius: 7px;
+	border-top-right-radius: var(--taxo-radius);
+	border-bottom-right-radius: var(--taxo-radius);
 	background: var(--primary-pure-color);
 }
 

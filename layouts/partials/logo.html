@@ -13,7 +13,7 @@
 				<!-- <img class="logo__img" src="{{ . | relURL }}"> -->
 			</div>
 		{{- end -}}
-		<a class="logo__link" href="{{ "" | relLangURL }}"{{ with $logoTitle }} custom-title="{{ . }}"{{ end }} rel="home">
+		<a class="logo__link" href="{{ "" | relLangURL }}" rel="home">
 			{{ with $logoTitle -}}
 				<div class="logo__item logo__text">
 					<nav class="logo__title"> {{ . }} </nav>
