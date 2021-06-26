@@ -159,7 +159,6 @@ function loadPage(newUrl) {
 	httpRequest.responseType = "document";
 	httpRequest.open("GET", newUrl);
 	httpRequest.send();
-	window.history.replaceState("None","Categories", newUrl);
 	if (current_taxo != null){
 		current_taxo.classList.toggle("current");
 	}
@@ -167,7 +166,6 @@ function loadPage(newUrl) {
 	current_taxo = document.getElementById(newUrl);
 
 
-	console.log(newUrl);
 };
 
 
