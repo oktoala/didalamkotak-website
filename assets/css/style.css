@@ -528,6 +528,7 @@ select {
 }
 
 .header__container {
+	padding: 0 25px;
 	position: fixed;
 	justify-content: space-between;
 	top: 0px;
@@ -536,9 +537,6 @@ select {
 	display: flex;
 	align-items: center;
 	border-bottom: 2px solid var(--heading-color);
-	/* border-image: linear-gradient(to right, var(--heading-color), var(--heading-color)); */
-	/* border-image-slice: 10; */
-
 	border-width: 4px;
 	transition: top, .4s;
 	background-color: var(--header-color);
@@ -550,7 +548,7 @@ select {
 }
 
 .logo {
-	padding-left: 23px;
+	/* padding-left: 23px; */
 	flex-shrink: 0;
 }
 
@@ -620,10 +618,6 @@ select {
 }
 
 /* Navigatiaon */
-
-.navigation {
-	padding-right: 25px;
-}
 
 .nav-item {
 	list-style: none;
@@ -818,7 +812,7 @@ input:checked+.slider:before {
 
 /* Posts/Pages */
 
-.main__header{
+.main__header {
 	margin-top: 20px;
 }
 
@@ -1146,10 +1140,13 @@ li.visible>a:hover {
 .main.page {
 	display: grid;
 	grid-template-columns: auto auto;
+	justify-content: space-between;
+	row-gap: 25px;
+	margin-top: 25px;
 }
 
 .list__item {
-	margin: 20px 15px 20px;
+	/* margin: 20px 70px 20px 0; */
 	border: none;
 	border-radius: 10px;
 	background-color: var(--header-color);
@@ -1244,7 +1241,7 @@ li.visible>a:hover {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin: 20px 15px;
+	margin: 20px 0;
 	list-style: none;
 	background-color: var(--header-color);
 	height: 40px;
@@ -1421,8 +1418,7 @@ textarea {
 
 /* Widgets */
 
-.widget {
-}
+.widget {}
 
 .widget:last-child {
 	margin-bottom: 0;
@@ -1471,7 +1467,8 @@ textarea {
 	background-color: var(--header-color);
 	color: var(--heading-color);
 }
-.taxo_text.current{
+
+.taxo_text.current {
 	color: red;
 }
 
@@ -1586,9 +1583,6 @@ textarea {
 }
 
 @media screen and (max-width: 900px) {
-	.main.page {
-		grid-template-columns: auto;
-	}
 	.container--outer {
 		width: 100%;
 		margin: 0 auto;
@@ -1608,14 +1602,23 @@ textarea {
 		position: relative;
 		text-align: center;
 	}
+}
+
+@media screen and (max-width: 850px) {
+	.main.page {
+		grid-template-columns: auto;
+		justify-content: center;
+	}
 	.list__item {
-		max-width: 810px;
+		width: 810px;
+		/* margin-right: 0; */
 	}
 	.list__item:hover {
 		box-shadow: none;
 		max-height: none;
 		margin: 20px 15px;
 		transition: none;
+		justify-content: center;
 	}
 }
 
