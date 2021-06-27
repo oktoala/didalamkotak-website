@@ -5,7 +5,8 @@ comments: true
 draft: false
 author: "Yoga"
 thumbnail: "img/thumbnail/choco.jpg"
-categories: ["Windows"]
+kategori: ["Windows"]
+topik: [chocolatey, windows, pacman]
 toc: true
 type: post
 description: "Cara menggunakan package manager dengan menggunakan chocolatey"

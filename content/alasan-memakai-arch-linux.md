@@ -6,7 +6,8 @@ draft: false
 author: "Yoga"
 toc: false
 sidebar: false
-categories: [Alasan, Linux]
+kategori: [Linux]
+topik: [linux, arch, aur]
 type: post
 thumbnail: /img/thumbnail/alasan-memakai-arch-linux.webp
 description: "Alasan Memakai Arch Linux"

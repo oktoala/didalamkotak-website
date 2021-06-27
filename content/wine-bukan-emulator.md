@@ -5,7 +5,8 @@ comments: true
 draft: false
 thumbnail: img/thumbnail/wine-bukan-emulator.jpg
 author: "Yoga"
-categories: ["Wine", "Linux"]
+kategori: ["Linux"]
+topik: [linux, wine, emulator]
 toc: true
 type: post
 description: "Wine bukan emulator"

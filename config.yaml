@@ -7,6 +7,12 @@ paginate: 200
 enableRobotsTXT: true
 hasCJKLanguage: true
 summaryLength: 2
+taxonomies:
+  kategori: kategori
+  topik: topik
+# disableKinds:
+#   - categories
+#   - tags
 markup:
   goldmark:
     extensions:
@@ -42,18 +48,12 @@ Params:
   post_meta:
     - author
     - date
-    - categories
     - translations
-  mainSections:
-    - post
-    - blog
-    - news
   sidebar:
     home: false
     list: false
     single: true
-    widgets:
-      - languages
+    widget:
       - categories
   logo:
     image: img/logoBaru.png

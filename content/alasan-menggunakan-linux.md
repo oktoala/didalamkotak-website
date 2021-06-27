@@ -6,7 +6,8 @@ draft: false
 author: "Yoga"
 thumbnail : "img/thumbnail/TNail2.jpg"
 toc: true
-categories: "Linux"
+kategori: ["Linux"]
+topik: [linux]
 pager: true
 type: post
 description: "Alasan-alasan kenapa saya menggunakan GNU/Linux"

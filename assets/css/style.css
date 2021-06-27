@@ -1143,6 +1143,10 @@ li.visible>a:hover {
 	margin-top: 25px;
 }
 
+.main.page:last-child, .main.page:nth-last-child(2){
+	margin-bottom: 25px;
+}
+
 .list__item {
 	/* margin: 20px 70px 20px 0; */
 	border: none;
@@ -1416,7 +1420,6 @@ textarea {
 
 /* Widgets */
 
-.widget {}
 
 .widget:last-child {
 	margin-bottom: 0;

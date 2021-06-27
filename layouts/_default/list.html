@@ -3,16 +3,12 @@
 	{{- with .Title }}
 	<header class="main__header">
 		<!-- <h1 class="main__title">{{ . }}</h1> -->
-		<h4 class="widget__title">Categories</h4>
+		<h4 class="widget__title">Kategori</h4>
 	</header>
 	{{- end }}
 	{{- $root := . }}
-	{{- with (default .Site.Params.sidebar.widgets .Params.widgets) -}}
-	{{- range $widget := . }}
-	{{- $p := printf "widgets/%s.html" $widget }}
+	{{- $p := printf "widgets/categories.html" }}
 	{{- partial $p $root }}
-	{{- end }}
-	{{- end}}
 	<div id="main-page" class="main page">
 		{{- range .Paginator.Pages }}
 		{{- .Render "taxo" }}

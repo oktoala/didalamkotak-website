@@ -5,10 +5,11 @@ comments: true
 draft: false
 author: "Yoga"
 toc: true
+kategori: "Programming"
+topik: [flutter, programming, dart, linux]
 type: post
 thumbnail: /img/thumbnail/flutter.jpg
 description: "Setup Flutter untuk Arch"
-categories: "Programming"
 ---
 
 Kali ini saya akan membahas cara setup flutter di Arch Linux

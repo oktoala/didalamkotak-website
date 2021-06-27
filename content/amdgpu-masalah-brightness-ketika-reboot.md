@@ -5,7 +5,8 @@ comments: true
 draft: false
 author: "Yoga"
 toc: true
-categories: []
+kategori: [Linux, Short]
+topik: [linux, amd, brightness, driver]
 type: post
 sidebar: false
 thumbnail: "img/thumbnail/amdgpu-masalah-brightness-ketika-reboot.webp"

@@ -6,7 +6,7 @@ draft: false
 author: "Yoga"
 toc: true
 type: post
-categories: ["Wine", "Linux"]
+kategori: ["Linux", "Tips"]
 tags:
     - linux
     - arch

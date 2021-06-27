@@ -6,8 +6,9 @@ draft: false
 author: "Yoga"
 toc: true
 sidebar: false
+kategori: ['Programming', 'Short']
+topik: [nodejs, npm, programming]
 description: "Ini adalah cara saya untuk mengatasi NPM EACCSES Permission Denied"
-categories: ['Programming', 'Quick']
 type: post
 thumbnail: /img/thumbnail/node-js-permission-denied-di-linux.jpg
 ---

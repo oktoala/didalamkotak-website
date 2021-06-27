@@ -5,7 +5,7 @@ comments: true
 draft: false
 author: "Yoga"
 toc: true
-categories: []
+kategori: []
 type: post
 thumbnail: "/img/thumbnail/{{ .Name }}.webp"
 description: "{{ replace .Name "-" " " | title }}"
