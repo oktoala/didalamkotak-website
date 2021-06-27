@@ -8,6 +8,8 @@
 	{{- end }}
 	{{- $root := . }}
 	{{- $p := printf "widgets/categories.html" }}
+	<!-- {{- $r := printf "widgets/taglist.html" }}
+	{{- partial $r $root }} -->
 	{{- partial $p $root }}
 	<div id="main-page" class="main page">
 		{{- range .Paginator.Pages }}
