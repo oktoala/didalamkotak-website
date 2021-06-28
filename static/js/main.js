@@ -120,22 +120,27 @@ function buttonScroll(directions) {
 	}
 }
 
-/* Hightlight Current Page 
-? Give color to the icon in header*/
-const links = document.querySelectorAll("a.icon-button");
-const nav_item = document.querySelectorAll(".nav-item");
-const curr_link = document.location.href;
-for (let i = 0; i < links.length; i++) {
-	const link = links[i];
-	if (link == curr_link) {
-		link.classList.toggle("current");
-		nav_item[i].classList.toggle("current");
-		break;
+function iconHeaderColor() {
+	/* Hightlight Current Page 
+	? Give color to the icon in header*/
+	const links = document.querySelectorAll("a.icon-button");
+	const nav_item = document.querySelectorAll(".nav-item");
+	const curr_link = document.location.href;
+	for (let i = 0; i < links.length; i++) {
+		const link = links[i];
+		console.log(`${curr_link + i} = ${link}`);
+		if (link == curr_link) {
+			link.classList.toggle("current");
+			nav_item[i].classList.toggle("current");
+			break;
+		}
 	}
 }
 
+iconHeaderColor();
+
 /* 
-!Asyn Categories */
+?Asyn Categories */
 let current_taxo;
 function loadPage(newUrl) {
 	const httpRequest = new XMLHttpRequest();
@@ -170,8 +175,8 @@ function loadPage(newUrl) {
 };
 
 // ? Async Next/Prev
-let current_page = document.getElementById("/");
-function asyncPage(newUrl) {
+function asyncPage(newUrl, id) {
+	let current_page = document.getElementById(".pagination li.active");
 	const httpRequest = new XMLHttpRequest();
 	httpRequest.onreadystatechange = function () {
 		if (httpRequest.readyState !== XMLHttpRequest.DONE)
@@ -194,13 +199,29 @@ function asyncPage(newUrl) {
 	httpRequest.responseType = "document";
 	httpRequest.open("GET", newUrl);
 	httpRequest.send();
-	if (current_page != null){
-		current_page.classList.toggle("active");
 
-	}
-	document.getElementById(newUrl).classList.toggle("active");
-	current_page = document.getElementById(newUrl);
+
+	document.querySelector(".pagination li.active").classList.remove("active");
+	// console.log("Not null");
+	document.getElementById(id).classList.add("active");
+	current_page = document.getElementById(id);
+
 	document.querySelector(".container").scrollIntoView(true);
 	window.history.replaceState({}, newUrl, newUrl);
+
+
+	// ? Home Icon Handle
+	const iconHome = document.querySelector("#homeIcon");
+	const navHome = document.querySelector("#homeIcon a");
+	
+	if (iconHome.classList.contains("current")){
+		iconHome.classList.remove("current");
+		navHome.classList.remove("current");
+	} else if (id == "Page1"){
+		iconHome.classList.add("current");
+		navHome.classList.add("current");
+
+	} 
+
 }
 
