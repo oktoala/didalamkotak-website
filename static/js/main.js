@@ -134,7 +134,8 @@ for (let i = 0; i < links.length; i++) {
 	}
 }
 
-/* Asyn Categories */
+/* 
+!Asyn Categories */
 let current_taxo;
 function loadPage(newUrl) {
 	const httpRequest = new XMLHttpRequest();
@@ -159,7 +160,7 @@ function loadPage(newUrl) {
 	httpRequest.responseType = "document";
 	httpRequest.open("GET", newUrl);
 	httpRequest.send();
-	if (current_taxo != null){
+	if (current_taxo != null) {
 		current_taxo.classList.toggle("current");
 	}
 	document.getElementById(newUrl).classList.toggle("current");
@@ -168,5 +169,38 @@ function loadPage(newUrl) {
 
 };
 
+// ? Async Next/Prev
+let current_page = document.getElementById("/");
+function asyncPage(newUrl) {
+	const httpRequest = new XMLHttpRequest();
+	httpRequest.onreadystatechange = function () {
+		if (httpRequest.readyState !== XMLHttpRequest.DONE)
+			return;
 
+		const newDocument = httpRequest.responseXML;
+		if (newDocument === null)
+			return;
+
+		const newContent = httpRequest.responseXML.querySelector(".main");
+		if (newContent === null)
+			return;
+
+		document.title = newDocument.title;
+
+		const contentElement = document.querySelector(".main");
+		contentElement.replaceWith(newContent);
+	}
+
+	httpRequest.responseType = "document";
+	httpRequest.open("GET", newUrl);
+	httpRequest.send();
+	if (current_page != null){
+		current_page.classList.toggle("active");
+
+	}
+	document.getElementById(newUrl).classList.toggle("active");
+	current_page = document.getElementById(newUrl);
+	document.querySelector(".container").scrollIntoView(true);
+	window.history.replaceState({}, newUrl, newUrl);
+}
 

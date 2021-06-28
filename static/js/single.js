@@ -32,6 +32,8 @@ function outFunc(ids) {
 	tooltip.innerHTML = "Copy ke clipboard";
 }
 
+
+// ! Slide Image Lightbox
 function imgClick(id) {
 	const imgClicked = document.getElementById(id);
 	imgClicked.classList.toggle("show");
