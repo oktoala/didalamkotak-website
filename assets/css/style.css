@@ -20,7 +20,7 @@ $fontFamilySecondary: {
 
 .body.light-theme {
 	--body-color: #f0f0f0;
-	--header-color: #e1e1e1;
+	--header-color: #f0f0f0;
 	--wrapper-color: #eeecec;
 	--heading-color: #c30d23;
 	--scrollbar-thumb: #272c34;
@@ -1158,6 +1158,7 @@ li.visible>a:hover {
 	max-height: 363px;
 	height: 353px;
 	max-width: 395px;
+	box-shadow: 5px 5px 10px #292a2d;
 }
 
 .list__thumbnail:hover {
