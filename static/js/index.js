@@ -81,7 +81,6 @@ function asyncButtonFunc(TotalPage) {
 			contentElement.appendChild(element);
 
 		});
-		console.log("First");
 		nextpage += 1;
 		if (nextpage > TotalPage) {
 			asyncButton.classList.add("disable");
@@ -91,5 +90,4 @@ function asyncButtonFunc(TotalPage) {
 	httpRequest.responseType = "document";
 	httpRequest.open("GET", `/page/${nextpage}`);
 	httpRequest.send();
-	console.log("Dua");
 }

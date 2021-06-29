@@ -128,7 +128,6 @@ function iconHeaderColor() {
 	const curr_link = document.location.href;
 	for (let i = 0; i < links.length; i++) {
 		const link = links[i];
-		console.log(`${curr_link + i} = ${link}`);
 		if (link == curr_link) {
 			link.classList.toggle("current");
 			nav_item[i].classList.toggle("current");
