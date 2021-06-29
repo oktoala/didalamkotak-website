@@ -1,9 +1,12 @@
 {{ define "main" }}
-    <main class="main page ">
-        {{ $paginator := .Paginate (where .Pages "Type" "post") 6 }}
-        {{ range $paginator.Pages}}
-            {{ .Render "summary"}}
-        {{ end }}
-    </main>
-    {{ partial "pagination.html" . }}
+<main class="main page ">
+    {{ $paginator := .Paginate (where .Pages "Type" "post") 6 }}
+    {{ range $paginator.Pages}}
+    {{ .Render "summary"}}
+    {{ end }}
+</main>
+<div class="asyncButton" onclick="asyncButtonFunc({{ .Paginator.TotalPages }})">
+    <button id="loadmore"><span>Tampilkan Lebih</span></button>
+</div>
+<script src="js/index.js"></script>
 {{ end }}
