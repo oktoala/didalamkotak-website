@@ -1805,8 +1805,8 @@ textarea {
 
 .direktori {
 	background-color: var(--direktori-bg-color);
-	border-radius: 3px;
-	padding: 0 2px 2px 2px;
+	border-radius: 5px;
+	padding: 3px; 
 }
 
 /*scCode.html*/
