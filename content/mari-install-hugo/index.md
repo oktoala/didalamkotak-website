@@ -2,7 +2,7 @@
 title: "Mari Install Hugo"
 date: 2021-06-30T14:38:29+08:00
 comments: true
-draft: false
+draft: true
 author: "Yoga"
 toc: true
 kategori: [Belajar]
