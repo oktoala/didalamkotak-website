@@ -1254,7 +1254,7 @@ li.visible>a:hover {
 	height: calc(var(--max-height)/3);
 	font-family: var(--headingFont);
 	color: var(--header-color);
-	font-weight: bold;
+	font-weight: bolder;
 	background-color: var(--heading-color);
 	filter: brightness(1);
 }
