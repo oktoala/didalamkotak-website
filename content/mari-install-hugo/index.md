@@ -34,16 +34,22 @@ Terdapat tiga cara untuk menginstall Hugo di Windows dan semuanya bisa kalian pi
 
 Pertama, buat folder bernama {{<dir "Hugo">}} dan buat lagi folder yang bernama {{<dir "bin">}} di dalam folder Hugo tadi.
 
-Kalian bebas mau membuat foldernya dimanapun, saya sendiri manaruhnya di drive {{<dir "C:\\ ">}}
+Kalian bebas mau membuat foldernya dimanapun, saya sendiri manaruhnya di drive {{<dir "C:\ ">}}
 
 Buka browser kalian dan pergi ke alamat [https://github.com/gohugoio/hugo/releases](https://github.com/gohugoio/hugo/releases)
 dan cari pada bagian Windows dan unduh sesuai arsitektur kalian.
 
 ![github-hugo-windows](/mari-install-hugo/img/github-hugo-windows.webp)
 
-Extract filenya dan masukkan kedalam {{<dir "C:\\Hugo\bin ">}}
+Extract filenya dan masukkan kedalam {{<dir "C:\Hugo\bin ">}}
 
-Lalu tambahkan bin ke dalam PATH
+![hugo-bin](/mari-install-hugo/img/hugo-bin.webp)
+
+Lalu tambahkan {{<dir "C:\Hugo\bin">}} ke dalam PATH.
+
+Kalian bisa cek melalui CMD apakah hugo sudah terinstall atau belum.
+
+![cmd-hugo](/mari-install-hugo/img/cmd-hugo.webp)
 
 <!-- Masih Lanjut -->
 
@@ -74,7 +80,7 @@ Untuk Arch Linux, bisa langsung melalui pacman.
 
 {{<scCode "Shell">}}sudo pacman -S hugo{{</scCode>}}
 
-## Tambahan Sedikit
+## Konfigurasi 
 
 Walaupun hugo sudah terinstall, rasanya tidak seru jika websitenya belum terlihat hasilnya.
 

@@ -6,7 +6,7 @@
 			{{- range $name, $taxonomy := $tags }}
 			{{- with $.Site.GetPage (printf "/topik/%s" $name) }}
 			<li class="widget__item">
-				<a class="widget__link">
+				<a class="widget__link" onclick="loadPage({{ .RelPermalink }})">
 					<span class="taxo_text" id={{ .RelPermalink }}> {{ .Title }}</span><span class="taxo_num">{{ len
 						$taxonomy }}</span>
 				</a>
