@@ -5,8 +5,8 @@ comments: true
 draft: true
 author: "Yoga"
 toc: true
-kategori: [Belajar]
-topik: []
+kategori: [Belajar, Programming]
+topik: [hugo, programming, web]
 type: post
 thumbnail: "/mari-install-hugo/img/mari-install-hugo.webp"
 description: "Mari Install Hugo"
@@ -32,10 +32,18 @@ Terdapat tiga cara untuk menginstall Hugo di Windows dan semuanya bisa kalian pi
 
 ### Cara Tradisional
 
+Pertama, buat folder bernama {{<dir "Hugo">}} dan buat lagi folder yang bernama {{<dir "bin">}} di dalam folder Hugo tadi.
+
+Kalian bebas mau membuat foldernya dimanapun, saya sendiri manaruhnya di drive {{<dir "C:\\ ">}}
+
 Buka browser kalian dan pergi ke alamat [https://github.com/gohugoio/hugo/releases](https://github.com/gohugoio/hugo/releases)
 dan cari pada bagian Windows dan unduh sesuai arsitektur kalian.
 
 ![github-hugo-windows](/mari-install-hugo/img/github-hugo-windows.webp)
+
+Extract filenya dan masukkan kedalam {{<dir "C:\\Hugo\bin ">}}
+
+Lalu tambahkan bin ke dalam PATH
 
 <!-- Masih Lanjut -->
 
@@ -117,7 +125,7 @@ Website kalian sudah bisa diakses di [http://localhost:1313/](http://localhost:1
 
 ![localhost](/mari-install-hugo/img/localhost.webp)
 
-Selamat, kalian sudah membuat website Hugo kalian sendiri.
+Selamat, kalian sudah membuat website Hugo kalian sendiri. 
 
 ## Apa Lagi?
 
