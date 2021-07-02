@@ -2,7 +2,7 @@
 title: "Mari Install Hugo"
 date: 2021-07-01T14:38:29+08:00
 comments: true
-draft: true
+draft: false
 author: "Yoga"
 toc: true
 kategori: [Belajar, Programming]
