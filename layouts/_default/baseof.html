@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html class="no-js" lang="{{ .Site.Language.Lang }}">
+
 <head class="">
 	<meta charset="UTF-8">
 	<link rel="manifest" href="/manifest.json">
@@ -21,7 +22,10 @@
 	{{- end }}
 	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css">
-	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
 	{{ $style := resources.Get "css/style.css" | resources.ExecuteAsTemplate "css/style.css" . -}}
 	<link rel="stylesheet" href="{{ $style.RelPermalink }}">
 	{{ range .Site.Params.customCSS -}}
@@ -47,9 +51,10 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/night-owl.min.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 	<!-- <link rel="stylesheet" href="/add-to-homescreen/style/addtohomescreen.css"> -->
 </head>
+
 <body data-spy="scroll" data-target="#toc" class="body loading">
 	<div class="loader">
 		{{ partial "svg/plainLogo1.svg" (dict "data-tilt" "") -}}
@@ -78,4 +83,5 @@
 	<script src="/js/main.js"></script>
 	<script src="/js/search.js"></script>
 </body>
+
 </html>
