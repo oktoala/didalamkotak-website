@@ -78,6 +78,7 @@ $fontFamilySecondary: {
 	--fontFamilyPrimary: 'Inter', 'Merriweather', Quicksand, Roboto, Helvetica, Arial, sans-serif;
 	--fontFamilySecondary: Domine, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
 	--headingFont: 'Monserrat', sans-serif;
+	--max-width: 900px;
 }
 
 *, *::before, *::after {
@@ -527,6 +528,8 @@ select {
 }
 
 .header__container {
+	max-width: var(--max-width);
+	width: 100%;
 	padding: 0 25px;
 	position: fixed;
 	justify-content: space-between;
@@ -595,7 +598,7 @@ select {
 	font-weight: 700;
 	line-height: 1;
 	color: var(--primary-text-color);
-	font-family: 'Monserrat';
+	font-family: var(--headingFont);
 }
 
 .logo__tagline {
