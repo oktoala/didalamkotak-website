@@ -5,7 +5,7 @@ comments: true
 draft: false
 author: "Yoga"
 sidebar: false
-kategori: [Programming, Short, Git]
+kategori: [Programming, Short]
 tags: [git, programming, github]
 type: post
 thumbnail: /img/thumbnail/konfigurasi-git.webp
