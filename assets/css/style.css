@@ -32,7 +32,6 @@ $fontFamilySecondary: {
 	--code-header-color: #d3d3d3;
 	--icon-fill-color: #727272;
 	--tooltiptext-color: rgb(255, 255, 255);
-	--bC-color: #e7e7e7;
 	/* One */
 	--hr-color: #dadada;
 	--mark-color: var(--heading-color);
@@ -61,7 +60,7 @@ $fontFamilySecondary: {
 	--code-header-color: #0f0f0f;
 	--icon-fill-color: #b6b4b4;
 	--tooltiptext-color: #555;
-	--bC-color: #011627;
+	--bC-color: transparent;
 	/* One */
 	--hr-color: #dadada;
 	--mark-color: var(--heading-color);
@@ -1614,7 +1613,7 @@ textarea {
 	padding: 10px 25px;
 	font-size: 12px;
 	font-size: .75rem;
-	color: #999;
+	color: var(--primary-text-color);
 	border-top: 3px solid #999;
 	background: var(--header-color);
 }
@@ -1841,7 +1840,7 @@ code.bC {
 	max-height: 400px;
 	overflow: auto;
 	border: 0;
-	border-radius: 0 0 10px 10px;
+	border-radius: 0;
 	/* overflow: scroll; */
 }
 
@@ -2314,10 +2313,11 @@ form.search {
 
 .search>input {
 	outline: none;
-	background-color: #6b6b6d;
+	background-color: var(--wrapper-color);
 	width: 100%;
 	border-radius: 15px;
 	font-family: FontAwesome;
+	box-shadow: 2px 5px 10px #1e1e1e;
 }
 
 /* .search input:focus {
