@@ -1266,6 +1266,36 @@ li.visible>a:hover {
 	filter: brightness(1.1);
 }
 
+.button-loading>span {
+	visibility: hidden;
+	opacity: 0;
+}
+
+.button-loading::before {
+	animation: 1.5s linear infinite loadmore-spinner;
+	animation-play-state: inherit;
+	border: solid 5px var(--heading-color);
+	border-bottom-color: var(--header-color);
+	border-radius: 50%;
+	content: "";
+	height: 40px;
+	width: 40px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate3d(-50%, -50%, 0);
+	will-change: transform;
+}
+
+@keyframes loadmore-spinner {
+	0% {
+		transform: translate3d(-50%, -50%, 0) rotate(0deg);
+	}
+	100% {
+		transform: translate3d(-50%, -50%, 0) rotate(360deg);
+	}
+}
+
 .asyncButton.disable {
 	display: none;
 }

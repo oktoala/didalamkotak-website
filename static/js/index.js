@@ -55,9 +55,10 @@ function asyncPage(newUrl, id) {
 
 let nextpage = 2
 const asyncButton = document.querySelector(".asyncButton");
-// asyncButton.addEventListener("click", asyncButtonFunc);
+const buttonAsync = document.getElementById("loadmore");
 
 function asyncButtonFunc(TotalPage) {
+	buttonAsync.classList.add("button-loading");
 	const httpRequest = new XMLHttpRequest();
 	httpRequest.onreadystatechange = function () {
 		if (httpRequest.readyState !== XMLHttpRequest.DONE)
@@ -67,7 +68,6 @@ function asyncButtonFunc(TotalPage) {
 		if (newDocument === null)
 			return;
 
-		// const newContent = httpRequest.responseXML.querySelector(".main");
 		const newContent = httpRequest.responseXML.querySelectorAll(".list__item");
 
 		if (newContent === null)
@@ -76,7 +76,6 @@ function asyncButtonFunc(TotalPage) {
 		document.title = newDocument.title;
 
 		const contentElement = document.querySelector(".main");
-		// contentElement.replaceWith(newContent);
 		newContent.forEach(element => {
 			contentElement.appendChild(element);
 
@@ -85,6 +84,7 @@ function asyncButtonFunc(TotalPage) {
 		if (nextpage > TotalPage) {
 			asyncButton.classList.add("disable");
 		}
+		buttonAsync.classList.remove("button-loading");
 	}
 
 	httpRequest.responseType = "document";

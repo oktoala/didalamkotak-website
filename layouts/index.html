@@ -5,8 +5,8 @@
     {{ .Render "summary"}}
     {{ end }}
 </main>
-<div class="asyncButton" onclick="asyncButtonFunc(`{{ .Paginator.TotalPages }}`)">
-    <button id="loadmore"><span>Tampilkan Lebih</span></button>
+<div class="asyncButton">
+    <button id="loadmore" onclick="asyncButtonFunc(`{{ .Paginator.TotalPages }}`)"><span>Tampilkan Lebih</span></button>
 </div>
 <script src="js/index.js"></script>
 {{ end }}
