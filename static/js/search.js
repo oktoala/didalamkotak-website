@@ -86,17 +86,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    const tags = (tags, searchString) => {
-        let tagHTML = (tags.split(" ; ") || [])
-            .filter(i => {
-                return i && i.length > 0;
-            })
-            .map(i => {
-                return "<span class='tag'>" + mark(i, searchString) + "</span>";
-            })
-        return tagHTML.join("");
-    }
-
     const mark = (content, search) => {
         if (search) {
             let pattern = /^[a-zA-Z0-9]*:/i;
@@ -136,7 +125,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const searchIndex = lunr(builder => {
                 builder.ref("id")
                 builder.field("content");
-                builder.field("tag");
                 builder.field("title");
                 builder.field("url");
                 builder.field("type");
@@ -166,11 +154,10 @@ document.addEventListener("DOMContentLoaded", () => {
                             return el.id == parseInt(match.ref);
                         });
                         return "<li>" +
-                            "<h4 title='field: title'><a href='" + item.url + "'>" + mark(item.title, searchString) + "</a></h4>" +
-                            "<p class='summary' title='field: content'>" +
+                            "<h4><a href='" + item.url + "'>" + mark(item.title, searchString) + "</a></h4>" +
+                            "<p class='summary'>" +
                             mark((item.content.length > 200 ? (item.content.substring(0, 200) + "...") : item.content), searchString) +
                             "</p>" +
-                            "<p class='tags' title='field: tag'>" + tags(item.tag, searchString) + "</p>" +
                             "</li>";
                     }).join("");
                 } else {

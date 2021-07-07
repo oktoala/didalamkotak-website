@@ -2333,15 +2333,26 @@ form.search {
 
 .search-results a {
 	color: var(--heading-color);
+	font-weight: 500;
 }
 
-.search-results a:hover {
+
+.search-results a  mark{
+	color: var(--heading-color);
+	font-weight: 900;
+	background-color: transparent;
+}
+
+.search-results a:hover, .search-results a:hover mark {
 	color: var(--highlight-color)
 }
 
-.search-results a:hover mark {
-	background-color: var(--highlight-color);
+p.summary mark{
+	color: var(--primary-text-color);
+	font-weight: 900;
+	background-color: transparent;
 }
+
 
 /* Overlay LightBox */
 
