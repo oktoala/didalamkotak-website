@@ -1660,20 +1660,9 @@ textarea {
 }
 
 @media screen and (max-width: 767px) {
-	.burger {
-		display: block;
-	}
-	.navigation {
-		position: absolute;
-		top: 90%;
-		right: -200%;
-		width: 100%;
-		background-color: var(--header-color);
-		/* margin-top: 10px; */
-		padding: 10px 0;
-		transition: all .5s;
-		opacity: 0;
-	}
+	/* 
+	? Menu
+	*/
 	.navigation.show {
 		right: 0%;
 		transition: all .5s;
@@ -1687,12 +1676,6 @@ textarea {
 		justify-content: start;
 		padding-left: 23px;
 		transition: all .3s ease;
-	}
-	.nav-item[custom-title]::after {
-		position: relative;
-		content: attr(custom-title);
-		padding-left: 10px;
-		color: var(--toc-a-color);
 	}
 	.nav-item.current[custom-title]::after {
 		color: var(--heading-color);
@@ -1727,10 +1710,6 @@ textarea {
 	}
 	.body.scroll-disabled {
 		overflow-y: hidden;
-	}
-	div[role="search"].active {
-		/* width: 52.97em; */
-		padding-top: 200px;
 	}
 }
 

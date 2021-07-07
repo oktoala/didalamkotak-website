@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const searchResultElement = searchWrapper.querySelector(".search-results");
     const searchInput = searchWrapper.querySelector("input");
     const search_button = document.querySelector(".icon-button.toggle-search");
-    const burger = document.querySelector('.burger input');
+    // const burger = document.querySelector('.burger input');
 	const nav = document.querySelector('.navigation');
     const nav_items = document.querySelectorAll(".nav-item");
     const search_text = document.querySelector(".nav-item.show-search");
@@ -26,8 +26,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    /* Make burger always unchecked if reload */
-    burger.checked = false;
+    /* Make always unchecked if reload */
+    // burger.checked = false;
 
     /* Toggle For Search Button */
     const toggleSearch = (searchWrapper, searchInput) => {
@@ -61,13 +61,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-    /* Close Search Field when burger button pressed */
-	burger.addEventListener('click', function(){
-		nav.classList.toggle('show');
-        if (searchWrapper.classList.contains("active")){
-            toggleAllSearchItem();
-        }
-	});
+    /* Close Search Field when button pressed */
+	// burger.addEventListener('click', function(){
+	// 	nav.classList.toggle('show');
+    //     if (searchWrapper.classList.contains("active")){
+    //         toggleAllSearchItem();
+    //     }
+	// });
 
     /* Shortcut for Escape and open the search field */
     window.addEventListener("keydown", e => {
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
             e.preventDefault();
             toggleAllSearchItem();
             document.querySelector(".navigation").classList.add("show");
-            burger.checked = true;
+            // burger.checked = true;
         }
     });
 
