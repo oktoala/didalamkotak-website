@@ -144,15 +144,12 @@ body {
 	overflow-y: hidden;
 }
 
-::-moz-selection {
-	color: var(--primary-text-color);
-	background-color: var(--highlight-color);
+::-moz-selection, ::selection {
+	color: var(--wrapper-color);
+	background-color: var(--primary-text-color); 
 }
 
-::selection {
-	background-color: var(--primary-text-color);
-	color: var(--wrapper-color);
-}
+
 
 .container {
 	position: relative;
@@ -2239,7 +2236,7 @@ pre:hover {
 }
 
 .chroma .bC::selection {
-	color: var(--bC-color);
+	color: var(--wrapper-color);
 	background-color: var(--primary-text-color);
 }
 
