@@ -5,7 +5,7 @@ comments: true
 draft: true
 author: "Yoga"
 toc: true
-kategori: [Tips]
+kategori: [Tips, Linux]
 topik: [tips, linux, font]
 type: post
 thumbnail: "/cara-install-font-di-linux/img/thumbnail.webp"

@@ -275,8 +275,7 @@ input, button, select, optgroup, textarea {
 /* Typography */
 
 h1, h2, h3, h4, h5, h6 {
-	margin: 0 0 20px;
-	margin: 0 0 1.25rem;
+	margin: 0 0 30px;
 	font-weight: 700;
 	line-height: 1.3;
 	color: var(--heading-color);
@@ -288,12 +287,14 @@ h1 {
 }
 
 h2 {
+	margin-top: 50px;
 	font-size: 2rem;
 	font-weight: 900;
 	/* text-decoration: double underline; */
 }
 
 h3 {
+	margin-top: 30px;
 	font-size: 1.5rem;
 	font-weight: 700;
 	/* text-decoration: underline; */
@@ -334,8 +335,8 @@ hr {
 }
 
 p {
-	margin: 0 0 20px;
-	margin: 0 0 1.25rem;
+	margin: 0 0 30px;
+	/* margin: 0 0 1.25rem; */
 	color: var(--primary-text-color);
 	font-size: 1rem;
 }
@@ -1810,7 +1811,8 @@ textarea {
 
 /* dir.html */
 
-.direktori {
+.direktori , code{
+	color: var(--primary-text-color);
 	background-color: var(--direktori-bg-color);
 	border-radius: 5px;
 	padding: 3px;
@@ -1948,7 +1950,7 @@ pre.bC.JSON {
 }
 
 .chroma {
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 }
 
 .chroma .fa-copy {
