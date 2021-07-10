@@ -2,7 +2,7 @@
 title: "Cara Install Font Di Arch Linux"
 date: 2021-07-08T09:47:37+08:00
 comments: true
-draft: true
+draft: false
 author: "Yoga"
 toc: true
 kategori: [Tips, Linux]
