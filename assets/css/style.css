@@ -74,7 +74,7 @@ $fontFamilySecondary: {
 	--logo-hover-color: #b2e2ebff;
 	--highlight-color: #fff400;
 	--max-width: 950px;
-	--box-shadow: 2px 2px 10px #292a2d;
+	--box-shadow: 1px 1px 10px;
 	/* Font */
 	--fontFamilyPrimary: 'Inter', 'Merriweather', Quicksand, Roboto, Helvetica, Arial, sans-serif;
 	--fontFamilySecondary: Domine, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
@@ -842,7 +842,7 @@ input:checked+.slider:before {
 	border: 0;
 	border-radius: 10px;
 	box-shadow: 1px 1px 5px #1e1e1e;
-	padding: 5px 20px 0;
+	padding: 5px 30px 0;
 }
 
 .main__header {
@@ -1152,7 +1152,7 @@ li.visible>a:hover {
 	float: left;
 	padding: 10px;
 	margin: 0 30px 0 0;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	box-shadow: 1px 1px 10px #000;
 	/* border: 1px solid #ebebeb; */
 }
 
@@ -1198,7 +1198,7 @@ li.visible>a:hover {
 	max-height: 363px;
 	height: 353px;
 	max-width: 395px;
-	box-shadow: 2px 2px 10px #232324;
+	box-shadow: var(--box-shadow) #232324;
 }
 
 .list__thumbnail:hover {
@@ -2108,9 +2108,9 @@ ul.breadcrumb {
 	padding: 4px 0 6px 20px;
 	list-style: none;
 	margin-top: 20px;
-	background-color: var(--header-color);
+	background-color: var(--body-color);
 	border-radius: 3px;
-	box-shadow: 2px 2px 10px #292a2d;
+	box-shadow: var(--box-shadow) #1a1b1d;
 }
 
 ul.breadcrumb li {
@@ -2318,7 +2318,7 @@ div[role="search"] {
 	top: -100%;
 	margin: 0;
 	padding-top: 50px;
-	background-color: var(--header-color);
+	background-color: var(--body-color);
 	transition: top 0.4s ease;
 	overflow-y: hidden;
 	display: flex;
@@ -2366,7 +2366,7 @@ form.search {
 	width: 100%;
 	border-radius: 15px;
 	font-family: FontAwesome;
-	box-shadow: 2px 5px 10px #1e1e1e;
+	box-shadow: var(--box-shadow)#232324;
 }
 
 /* .search input:focus {
