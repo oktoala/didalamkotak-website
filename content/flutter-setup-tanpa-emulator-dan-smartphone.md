@@ -1,5 +1,5 @@
 ---
-title: "Flutter Setup Untuk Arch"
+title: "Flutter Setup Untuk Arch Linux"
 date: 2021-02-18T09:15:26+08:00
 comments: true
 draft: false

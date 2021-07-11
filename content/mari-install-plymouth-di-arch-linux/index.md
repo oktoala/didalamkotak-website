@@ -1,8 +1,8 @@
 ---
 title: "Mari Install Plymouth Di Arch Linux"
-date: 2021-07-09T10:20:09+08:00
+date: 2021-07-11T10:20:09+08:00
 comments: true
-draft: true
+draft: false
 author: "Yoga"
 toc: true
 kategori: [Tips, Linux]
