@@ -76,7 +76,7 @@ $fontFamilySecondary: {
 	--max-width: 950px;
 	--box-shadow: 1px 1px 10px;
 	/* Font */
-	--fontFamilyPrimary: 'Inter', 'Merriweather', Quicksand, Roboto, Helvetica, Arial, sans-serif;
+	--fontFamilyPrimary:'Merriweather', Quicksand, Roboto, Helvetica, Arial, sans-serif;
 	--fontFamilySecondary: Domine, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
 	--headingFont: 'Monserrat', sans-serif;
 }
@@ -179,7 +179,7 @@ body {
 	min-height: 894.8px;
 	padding: 50px 20px 0;
 	border-width: 24px;
-	background: var(--body-color);
+	background-color: inherit;
 	transition: all, 1s;
 	display: -webkit-flex;
 	display: flex;
@@ -297,6 +297,10 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: var(--headingFont);
 }
 
+:target{
+	scroll-margin-top: 4rem;
+}
+
 h1 {
 	font-size: 2.5rem;
 }
@@ -358,7 +362,7 @@ p {
 
 b, strong {
 	font: inherit;
-	font-weight: 900;
+	font-weight: bolder;
 }
 
 i, em {
@@ -566,10 +570,10 @@ select {
 	padding: 0 20px;
 }
 
-.header__container.hide {
+/* .header__container.hide {
 	top: -4em;
 	transition: top, .4s;
-}
+} */
 
 .logo {
 	/* padding-left: 23px; */
@@ -1059,7 +1063,7 @@ input:checked+.slider:before {
 }
 
 .toc_class {
-	margin-top: 1px;
+	margin-top: 25px;
 	position: fixed;
 	font-weight: 700;
 	padding-left: 20px;
@@ -1266,6 +1270,7 @@ li.visible>a:hover {
 	white-space: nowrap;
 	overflow: hidden;
 	text-align: center;
+	/* max-height: 60px; */
 }
 
 .list__footer-readmore {
