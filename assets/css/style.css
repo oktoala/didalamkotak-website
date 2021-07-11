@@ -1832,6 +1832,16 @@ textarea {
 		align-items: center;
 		/* max-width: 80%; */
 	}
+
+	.main-single{
+		margin: 0;
+		/* padding: 0; */
+		
+	}
+
+	.wrapper {
+		padding: 50px 0 0;
+	}
 }
 
 @media screen and (max-width: 340px) {
