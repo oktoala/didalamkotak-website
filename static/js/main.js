@@ -85,7 +85,7 @@ slider.addEventListener("click", () => {
 });
 
 
-var prevScrollpos = window.pageYOffset;
+/* var prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
 	var navbar = document.querySelector('.header__container');
 	var currentScrollPos = window.pageYOffset;
@@ -109,7 +109,7 @@ window.onscroll = function () {
 		}
 	} catch (e) {
 	}
-};
+}; */
 // When the user clicks on the button, scroll to the top of the document
 
 function buttonScroll(directions) {
@@ -119,6 +119,8 @@ function buttonScroll(directions) {
 		document.querySelector(".container").scrollIntoView(false);
 	}
 }
+
+
 
 function iconHeaderColor() {
 	/* Hightlight Current Page 

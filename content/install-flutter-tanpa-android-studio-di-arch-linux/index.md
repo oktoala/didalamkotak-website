@@ -1,11 +1,12 @@
 ---
 title: "Install Flutter Tanpa Android Studio Di Arch Linux"
-date: 2021-07-11T20:11:00+08:00
+date: 2021-07-15T20:11:00+08:00
 comments: true
 draft: true
 author: "Yoga"
 toc: true
 kategori: [Programming, Linux]
+topik: [programming, flutter, linux, arch]
 type: post
 thumbnail: "/install-flutter-tanpa-android-studio-di-arch-linux/img/thumbnail.webp"
 description: "Install Flutter Tanpa Android Studio Di Arch Linux"

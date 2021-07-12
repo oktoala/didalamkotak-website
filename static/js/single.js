@@ -86,3 +86,19 @@ function goToSlide(goTo, id) {
 	}
 }
 
+// ! Go to the Top Button
+const top_button = document.querySelector(".top-button");
+window.onscroll = () => {
+	try {
+		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			top_button.classList.add("show");
+		} else {
+			top_button.classList.remove("show");
+		}
+	} catch (error) {
+
+	}
+}
+
+
+top_button.addEventListener("click", () => document.querySelector(".container").scrollIntoView(true));
