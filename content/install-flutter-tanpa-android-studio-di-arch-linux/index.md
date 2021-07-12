@@ -91,6 +91,12 @@ Semua packages yang kalian unduh dengan perintah di atas akan tersimpan di `/opt
 
 ## Konfigurasi
 
+### Flutter Doctor
+
+Jalankan perintah untuk troubleshooting semua masalah kalian dengan flutter.
+
+{{<scCode "Shell">}}flutter doctor -v{{</scCode>}}
+
 ### Membuat /opt/android-sdk _writeable_
 
 Karena semua Android SDK yang terinstall berada di `/opt/android-sdk` yang dimana memerlukan root permissions maka kita harus membuat folder tersebut menjadi _writeable_.
@@ -108,4 +114,40 @@ Jalankan perintah di bawah untuk mengatur _Accsess Control List_.
 sudo setfacl -d -m g:android-sdk:rwX /opt/android-sdk {{</scCode>}}
 
 Login ulang atau cukup jalankan `newgrp android-sdk` untuk berubah grup user.
+
+### Flutter Config 
+
+Jalankan perintah di bawah ini untuk mengatur lokasi Android SDK agar bisa dideteksi oleh flutter.
+
+{{<scCode "Shell">}}flutter config --android-sdk /opt/android-sdk{{</scCode>}}
+
+### Flutter Android Licences
+
+Jalankan perintah di bawah untuk menerima lisensi SDK.
+
+{{<scCode "Shell">}}flutter doctor --android-licenses{{</scCode>}}
+
+Tekan `Y` ke semua prompt yang muncul. Jalankan perintah `flutter doctor -v` untuk mengecek apakah sudah berhasil atau tidak.
+
+## Troubleshooting
+
+### Android Licenses tidak tersimpan
+
+Cukup tambahkan `sudo` jika kalian sudah menekan Y tapi tidak tersimpan.
+
+{{<scCode "Shell">}}sudo flutter doctor --android-licenses{{</scCode>}}
+
+### BUG! exception in phase 'semantic analysis' in source unit '...'
+
+Ini adalah error yang terjadi saat build aplikasi. Solusi yang saya dapatkan adalah mengganti jdk default. 
+
+Saya sendiri memakai jdk11 dan tidak masalah setelah itu.
+
+{{<scCode "Shell">}}sudo archlinux-java set java-11-openjdk{{</scCode>}}
+
+## Sumber
+
+{{<linkBlank "https://wiki.archlinux.org/title/Android" "linkhttps://wiki.archlinux.org/title/Android">}}. 
+
+{{<linkBlank "https://flutter.dev/docs/get-started/install/linux" "https://flutter.dev/docs/get-started/install/linux">}}.
 

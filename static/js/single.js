@@ -17,16 +17,23 @@ for (i = 0; i < copyButton.length; i -= -1) {
 
 
 function snackFunc(ids) {
-	const getArray = ids.split('');
-	const getNumber = getArray[getArray.length - 1];
+	const regex = /\d/g; // ! Regex to get number
+	let getNumber = ids.match(regex);
+	if (getNumber.length > 1) {
+		// ! Check if the number is not unit
+		getNumber = getNumber[0] + getNumber[1];
+	}
 	const idToolTip = "tooltiptext" + getNumber;
 	const tooltip = document.getElementById(idToolTip);
 	tooltip.innerHTML = "Berhasil!";
 }
 
 function outFunc(ids) {
-	const getArray = ids.split('');
-	const getNumber = getArray[getArray.length - 1];
+	const regex = /\d/g;
+	let getNumber = ids.match(regex);
+	if (getNumber.length > 1) {
+		getNumber = getNumber[0] + getNumber[1];
+	}
 	const idToolTip = "tooltiptext" + getNumber;
 	const tooltip = document.getElementById(idToolTip);
 	tooltip.innerHTML = "Copy ke clipboard";
@@ -52,10 +59,10 @@ function goToSlide(goTo, id) {
 	if (index + goTo == overlay.length) {
 		// * Check if its last overlay
 		overlayNextPrev = overlay[index];
-	}else if (index+goTo == -1){
+	} else if (index + goTo == -1) {
 		// * Check if its first overlay
 		overlayNextPrev = overlay[0];
-	} else{
+	} else {
 		overlayNextPrev = overlay[index + goTo];
 	}
 
@@ -67,11 +74,11 @@ function goToSlide(goTo, id) {
 
 	if (overlay.length == 1) {
 		// curr_id.classList.toggle("show");
-	}else if (overlayNextPrev == firstOverlay && index + goTo == -1) {
+	} else if (overlayNextPrev == firstOverlay && index + goTo == -1) {
 		// ? Check Previous on first overlay
 		// overlay_img_btn[1].classList.add("hidden");
 		lastOverlay.classList.toggle("show");
-	} else if (overlayNextPrev == lastOverlay && index == overlay.length-1) {
+	} else if (overlayNextPrev == lastOverlay && index == overlay.length - 1) {
 		// ? Check Next on last overlay
 		firstOverlay.classList.toggle("show");
 	} else {
