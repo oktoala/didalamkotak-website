@@ -1,11 +1,12 @@
 ---
 title: "Mari Install Plymouth Di Arch Linux"
-date: 2021-07-11T10:20:09+08:00
+date: 2021-07-12T10:10:09+08:00
 comments: true
 draft: false
 author: "Yoga"
 toc: true
 kategori: [Tips, Linux]
+topik: [plymouth, linux, tips, boot, arch]
 type: post
 thumbnail: "/mari-install-plymouth-di-arch-linux/img/thumbnail.webp"
 description: "Mari Install Plymouth Di Arch Linux"
