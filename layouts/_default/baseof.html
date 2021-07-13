@@ -76,7 +76,7 @@
 	{{ range .Site.Params.customJS -}}
 	<script src="{{ . | relURL }}"></script>
 	{{- end }}
-	<script src="https://unpkg.com/lunr/lunr.js"></script>
+	<script src="https://unpkg.com/lunr/lunr.min.js"></script>
 	<script src="/js/main.js"></script>
 	<script src="/js/search.js"></script>
 </body>
