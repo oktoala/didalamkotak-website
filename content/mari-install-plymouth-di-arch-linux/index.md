@@ -95,7 +95,7 @@ atau
 
 Tema default adalah **spinner**, tapi bisa kalian ganti dengan mengedit `/etc/plymouth/plymouthd.conf`, contoh:
 
-{{<fileCode "TOML" "/etc/plymouth/plymouthd.conf">}}[Daemon]
+{{<fileCode "TOML" "plymouthd.conf">}}[Daemon]
 Theme=solar
 ShowDelay=5{{</fileCode>}}
 
