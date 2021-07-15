@@ -86,9 +86,19 @@ $fontFamilySecondary: {
 	margin: 0;
 }
 
-::selection, ::-moz-selection {
-	color: var(--bC-color);
-	background-color: var(--primary-text-color);
+*::-moz-selection, *::-webkit-selection {
+	color: var(--wrapper-color);
+	background: var(--primary-text-color);
+}
+
+::webkit-selection {
+	color: var(--wrapper-color);
+	background: var(--primary-text-color);
+}
+
+::selection {
+	color: var(--wrapper-color);
+	background: var(--primary-text-color);
 }
 
 *, *::before, *::after {
@@ -153,11 +163,6 @@ body {
 
 .body.loading {
 	overflow-y: hidden;
-}
-
-::-moz-selection, ::selection {
-	color: var(--wrapper-color);
-	background-color: var(--primary-text-color);
 }
 
 .container {
@@ -2280,11 +2285,6 @@ pre {
 
 pre:hover {
 	scrollbar-color: var(--code-header-color) var(--bC-color);
-}
-
-.chroma .bC::selection {
-	color: var(--wrapper-color);
-	background-color: var(--primary-text-color);
 }
 
 pre::-webkit-scrollbar {
