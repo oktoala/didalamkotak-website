@@ -43,12 +43,15 @@
 	{{- if not .Site.IsServer }}
 	{{ template "_internal/google_analytics_async.html" . }}
 	{{- end }}
+	<script data-ad-client="ca-pub-4698265549676881" async
+		src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<link rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/monokai-sublime.min.css">
+		href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/monokai-sublime.min.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<!-- <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"> -->
 	<!-- <link rel="stylesheet" href="/add-to-homescreen/style/addtohomescreen.css"> -->
 </head>
+
 <body class="body loading">
 	<div class="loader">
 		{{ partial "svg/plainLogo1.svg" (dict "data-tilt" "") -}}
@@ -80,4 +83,5 @@
 	<script src="/js/main.js"></script>
 	<script src="/js/search.js"></script>
 </body>
+
 </html>

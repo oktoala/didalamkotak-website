@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: dalamkotak.onrender.com
-Token: ea4c14ce6ad1dea9596719e991766513dc2829946c3ca17efd0138415a7a8783
