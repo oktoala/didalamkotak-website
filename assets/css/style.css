@@ -277,7 +277,6 @@ input, button, select, optgroup, textarea {
 	/* padding: 5px 10px; */
 	font-weight: 700;
 	color: var(--primary-text-color);
-	white-space: pre-line;
 	background: var(--wrapper-color);
 }
 
@@ -1555,13 +1554,13 @@ textarea {
 	margin: 0 10px 16px 0;
 }
 
-.social_item {
+/* .social_item {
 	position: relative;
 	font-size: .3em;
 	list-style: none;
 	display: inline-block;
 	margin: 10px 10px 16px 0;
-}
+} */
 
 .widget__item:hover .taxo_num {
 	color: var(--primary-text-color);
@@ -1610,16 +1609,25 @@ textarea {
 
 /* Social widget */
 
+.social-media {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 100px;
+	white-space: normal;
+	margin-top: 10px;
+}
+
 .widget-social__item {
 	padding: 0;
 	border: 0;
 }
 
-.widget-social__link {
+/* .widget-social__link {
 	display: block;
 	margin: 0 0 8px;
 	white-space: normal;
-}
+} */
 
 .widget-social__link-icon {
 	vertical-align: middle;
