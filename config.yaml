@@ -10,9 +10,6 @@ summaryLength: 2
 taxonomies:
   kategori: kategori
   topik: topik
-# disableKinds:
-#   - categories
-#   - tags
 markup:
   goldmark:
     extensions:
@@ -66,9 +63,3 @@ Params:
   widgets:
     recent_num: 5
     tags_counter: true
-    social:
-      twitter: oktoala
-      instagram: yogatra29
-      telegram: yogatra29
-      github: oktoala
-      email: okta.yoga.syah@egmail.com

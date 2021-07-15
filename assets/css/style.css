@@ -1611,16 +1611,14 @@ textarea {
 
 .social-media {
 	display: flex;
-	justify-content: space-between;
+	justify-content: start;
 	align-items: center;
-	max-width: 100px;
-	white-space: normal;
 	margin-top: 10px;
+	max-width: 300px;
 }
 
 .widget-social__item {
-	padding: 0;
-	border: 0;
+	margin-right: 10px;
 }
 
 /* .widget-social__link {

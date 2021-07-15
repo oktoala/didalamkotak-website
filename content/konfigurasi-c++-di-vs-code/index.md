@@ -3,7 +3,7 @@ title: "Konfigurasi C++ Di VS Code"
 date: 2021-07-15T09:24:06+08:00
 comments: true
 draft: true
-author: "yoga"
+author: "Yoga"
 toc: true
 kategori: []
 type: post
