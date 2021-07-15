@@ -3,9 +3,10 @@ title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 comments: true
 draft: true
-author: "Yoga"
+author: "yoga"
 toc: true
 kategori: []
+topik: []
 type: post
 thumbnail: "/{{ .Name }}/img/thumbnail.webp"
 description: "{{ replace .Name "-" " " | title }}"

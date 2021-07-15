@@ -3,7 +3,7 @@ title: "Konfigurasi C++ Di VS Code"
 date: 2021-07-15T09:24:06+08:00
 comments: true
 draft: true
-author: "Yoga"
+author: "yoga"
 toc: true
 kategori: []
 type: post
@@ -11,7 +11,7 @@ thumbnail: "/konfigurasi-c++-di-vs-code/img/thumbnail.webp"
 description: "Konfigurasi C++ Di vs Code"
 ---
 
-Kalin ini kita akan membahas cara konfigurasi lingkungan pemrograman C++ di Visual Studio Code.
+Kali ini kita akan membahas cara konfigurasi lingkungan pemrograman C++ di Visual Studio Code.
 
 <!--more-->
 
