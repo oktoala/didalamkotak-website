@@ -23,8 +23,8 @@ $fontFamilySecondary: {
 	--header-color: #f0f0f0;
 	--wrapper-color: #ffffff;
 	--heading-color: #c30d23;
-	--scrollbar-thumb: #272c34;
-	--scrollbar-track: #909090;
+	--scrollbar-thumb: #909090;
+	--scrollbar-track: var(--header-color);
 	--primary-text-color: #0a0a0a;
 	--primary-pure-color: rgb(226, 226, 226);
 	--btn-color: #fff;
@@ -51,8 +51,8 @@ $fontFamilySecondary: {
 	--header-color: #1e1e1e;
 	--wrapper-color: #1a1b1d;
 	--heading-color: #8bd3e1;
-	--scrollbar-thumb: #272c34;
-	--scrollbar-track: #909090;
+	--scrollbar-thumb: #909090;
+	--scrollbar-track: var(--body-color);
 	--primary-text-color: #ffffff;
 	--primary-pure-color: #000;
 	--btn-color: #2a2a2a;
@@ -1833,6 +1833,11 @@ textarea {
 	.content ul ul, .content ol ol, .content ol ul, .content ul ol {
 		margin: 0 0 0 20px;
 	}
+	.social-media {
+		justify-content: center;
+		max-width: var(--max-width);
+	}
+	
 }
 
 @media screen and (max-width: 498px) {
