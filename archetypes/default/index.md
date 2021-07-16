@@ -3,7 +3,7 @@ title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 comments: true
 draft: true
-author: "yoga"
+author: "Yoga"
 toc: true
 kategori: []
 topik: []
