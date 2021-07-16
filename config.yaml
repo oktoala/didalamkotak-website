@@ -7,6 +7,7 @@ paginate: 200
 enableRobotsTXT: true
 hasCJKLanguage: true
 summaryLength: 2
+googleAnalytics: G-E8LKT4EFZP
 taxonomies:
   kategori: kategori
   topik: topik
