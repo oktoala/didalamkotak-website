@@ -161,6 +161,10 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 
+.fa .fas{
+	margin-right: 5px;
+}
+
 .body.loading {
 	overflow-y: hidden;
 }
@@ -972,7 +976,11 @@ input:checked+.slider:before {
 }
 
 .content ul {
-	list-style: square;
+	list-style: disc;
+}
+
+.content ul ul {
+	list-style: circle;
 }
 
 .content ol {

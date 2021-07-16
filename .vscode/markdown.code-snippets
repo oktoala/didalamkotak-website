@@ -37,7 +37,7 @@
 	},
 	"Font Awesome": {
 		"prefix": "scIcon",
-		"body": "{{<scIcon class=\"${1:fa fa-icon}\">}}",
+		"body": "{{<scIcon class=\"fa fa-${1:icon}\">}}",
 		"description": "Menambahkan icon font awesome"
 	},
 	"WebM": {

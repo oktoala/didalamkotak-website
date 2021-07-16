@@ -56,7 +56,23 @@ Di dalam folder `src` akan berisi file `.cpp` dan hasil compilenya akan ditaruh 
 
 ![folder](/konfigurasi-c++-di-vs-code/img/folder.webp)
 
+Program yang sudah kita buat sebenarnya sudah dapat dijalankan dengan perintah di bawah.
 
+{{<scCode "Shell">}}g++ src/main.cpp -o main && ./main{{</scCode>}}
+
+![compile](/konfigurasi-c++-di-vs-code/img/compile.webp)
+
+Tapi kalian mungkin akan malas jika setiap kali ingin melihat hasil tapi harus mengetikkan perintah yang panjang seperti di atas.
+
+Maka dari kita akan membuat sebuah **build task**.
+
+Tekan `Ctrl+Shift+B` lalu tekan {{<scIcon class="fa fa-cog">}} pada `C/C++: g++ build active file`.
+
+![build](/konfigurasi-c++-di-vs-code/img/build.webp)
+
+Maka akan muncul folder baru bernama `.vscode` dengan file `tasks.json` di dalamnya.
+
+Ganti saja semua teks di dalam `tasks.json` menjadi teks di bawah ini.
 
 {{<fileCode "JSON" "tasks.json">}}{
     "version": "2.0.0",
@@ -69,9 +85,7 @@ Di dalam folder `src` akan berisi file `.cpp` dan hasil compilenya akan ditaruh 
                 "${relativeFile}",
                 "-o",
                 "./bin/${fileBasenameNoExtension}"
-
             ]
-
         },
         {
             "label": "Run C++",
@@ -85,3 +99,7 @@ Di dalam folder `src` akan berisi file `.cpp` dan hasil compilenya akan ditaruh 
         }
     ]
 }{{</fileCode>}}
+
+Penjelasan:
++ Perintah di atas sama seperti perintah yang di jalankan pada gambar.
+    - Hah
