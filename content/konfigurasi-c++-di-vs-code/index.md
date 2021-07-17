@@ -102,4 +102,6 @@ Ganti saja semua teks di dalam `tasks.json` menjadi teks di bawah ini.
 
 Penjelasan:
 + Perintah di atas sama seperti perintah yang di jalankan pada gambar.
-    - Hah
++ `${relativeFile}` adalah file yang saat ini kita buka (example.cpp, example.py).
++ `-o` adalah perintah untuk menaruh filenya dimana.
++ 
