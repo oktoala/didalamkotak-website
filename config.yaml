@@ -7,7 +7,7 @@ disqusShortname: didalamkotak-netlify-app
 paginate: 200
 enableRobotsTXT: true
 hasCJKLanguage: true
-summaryLength: 2
+summaryLength: 1
 googleAnalytics: G-E8LKT4EFZP
 taxonomies:
   kategori: kategori

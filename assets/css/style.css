@@ -44,6 +44,7 @@ $fontFamilySecondary: {
 	--breadcrumb-text-color: #7c7c7c;
 	--logo-hover-color: #ec122c;
 	--highlight-color: #ff3c01;
+	--brightness: brightness(.9);
 }
 
 :root {
@@ -75,6 +76,7 @@ $fontFamilySecondary: {
 	--highlight-color: #fff400;
 	--max-width: 950px;
 	--box-shadow: 1px 1px 10px;
+	--brightness: brightness(1.3);
 	/* Font */
 	--fontFamilyPrimary: 'Merriweather', Roboto, Helvetica, Arial, sans-serif;
 	--fontFamilySecondary: 'Cascadia Code', sans-serif, monospace;
@@ -1212,15 +1214,15 @@ li.visible>a:hover {
 }
 
 .list__item {
-	/* margin: 20px 70px 20px 0; */
 	border: none;
 	border-radius: 10px;
 	background-color: var(--wrapper-color);
 	transition: all .1s ease;
-	max-height: 363px;
-	height: 353px;
+	max-height: 405px;
+	height: 100%;
 	max-width: 395px;
 	box-shadow: var(--box-shadow) #232324;
+	padding: 20px 20px 10px;
 }
 
 .list__thumbnail:hover {
@@ -1231,7 +1233,7 @@ li.visible>a:hover {
 	box-shadow: none;
 	display: flex;
 	flex-direction: column;
-	margin: 20px;
+	height: 100%;
 }
 
 .list__header {
@@ -1270,6 +1272,22 @@ li.visible>a:hover {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: space-between;
+	height: 100%;
+}
+
+.readmore-button {
+	width: 100%;
+	color: var(--primary-text-color);
+	background: var(--body-color);
+	border: none;
+	border-radius: 5px;
+	font-family: var(--headingFont);
+	cursor: pointer;
+}
+
+.readmore-button:hover {
+	filter: var(--brightness);
 }
 
 .list__thumbnail img {
@@ -1282,10 +1300,11 @@ li.visible>a:hover {
 
 .post__content.clearfix>p, .post__content.clearfix {
 	color: var(--breadcrumb-text-color);
-	max-width: 350px;
+	font-size: .9em;
+	/* max-width: 350px; */
 	width: 100%;
 	text-overflow: ellipsis;
-	white-space: nowrap;
+	/* white-space: nowrap; */
 	overflow: hidden;
 	text-align: center;
 	margin: 0;
@@ -1324,7 +1343,7 @@ li.visible>a:hover {
 }
 
 #loadmore:hover {
-	filter: brightness(1.1);
+	filter: var(--brightness);
 }
 
 .button-loading>span {
@@ -1856,7 +1875,7 @@ textarea {
 		grid-template-columns: repeat(auto-fit, 300px);
 	}
 	.list__item {
-		min-width: 50%;
+		/* min-width: 50%; */
 		width: 100%;
 		height: 100%;
 		/* margin: 0; */

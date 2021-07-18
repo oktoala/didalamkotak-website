@@ -84,34 +84,6 @@ slider.addEventListener("click", () => {
 
 });
 
-
-/* var prevScrollpos = window.pageYOffset;
-window.onscroll = function () {
-	var navbar = document.querySelector('.header__container');
-	var currentScrollPos = window.pageYOffset;
-	if (document.querySelector("div[role=search]").classList.contains("active")) {
-
-	} else if (prevScrollpos > currentScrollPos) {
-		navbar.classList.remove('hide');
-	} else {
-		navbar.classList.add('hide');
-	}
-	prevScrollpos = currentScrollPos;
-
-	var mybutton = document.querySelector(".nav_arrow");
-	try {
-		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-			mybutton.style.display = "flex";
-
-		} else {
-			mybutton.style.display = "none";
-			mybutton.style.animation = "fadein 0.5s";
-		}
-	} catch (e) {
-	}
-}; */
-// When the user clicks on the button, scroll to the top of the document
-
 function buttonScroll(directions) {
 	if (directions == 'top') {
 		document.querySelector(".container").scrollIntoView(true);
@@ -121,24 +93,6 @@ function buttonScroll(directions) {
 }
 
 
-
-function iconHeaderColor() {
-	/* Hightlight Current Page 
-	? Give color to the icon in header*/
-	const links = document.querySelectorAll("a.icon-button");
-	const nav_item = document.querySelectorAll(".nav-item");
-	const curr_link = document.location.href;
-	for (let i = 0; i < links.length; i++) {
-		const link = links[i];
-		if (link == curr_link) {
-			link.classList.toggle("current");
-			nav_item[i].classList.toggle("current");
-			break;
-		}
-	}
-}
-
-iconHeaderColor();
 
 /* 
 ?Asyn Categories */

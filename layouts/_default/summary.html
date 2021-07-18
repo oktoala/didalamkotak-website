@@ -19,9 +19,12 @@
 				{{- end }}
 			</header>
 			<div class="content list__excerpt post__content clearfix">
-				<!-- <button></button> -->
 				{{ .Summary }}
 			</div>
+			<div class="readmore-button">
+				<a href="{{ .Permalink}}">
+					<button class="readmore-button">Mulai Baca!</button>
+				</a>
+			</div>
 		</div>
-	</div>
 </article>
