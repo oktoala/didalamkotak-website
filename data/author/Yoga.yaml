@@ -2,12 +2,12 @@ name: Yoga
 bio: Ordinary Colleger
 avatar: img/codoala.png
 social:
-  # facebook: hahah
+  facebook: false
   twitter: oktoala
   instagram: yogatra29
-  # linkedin: none
-  # telegram: none
+  linkedin: false
+  telegram: false
   github: oktoala
-  # gitlab: none
-  # bitbucket: none
+  gitlab: false 
+  bitbucket: false
   email: okta.yoga.syah@gmail.com

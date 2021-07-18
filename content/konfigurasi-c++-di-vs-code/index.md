@@ -1,8 +1,8 @@
 ---
 title: "Konfigurasi C++ Di VS Code"
-date: 2021-07-15T09:24:06+08:00
+date: 2021-07-18T09:24:06+08:00
 comments: true
-draft: true
+draft: false
 author: "Yoga"
 toc: true
 kategori: [Programming]
@@ -48,6 +48,10 @@ Buka Visual Studio Code, buka Extension (Ctrl+Shift+x), lalu cari C++ dan instal
 
 ![extension](/konfigurasi-c++-di-vs-code/img/extension.webp)
 
+## Konfigurasi
+
+### Membuat file
+
 Sekerang kita akan membuat sebuah project baru. Buat saja sebuah folder bernama `Coba`.
 
 Di dalam folder tersebut buat lagi dua folder dengan nama masing-masing `bin` dan `src`.
@@ -65,6 +69,8 @@ Program yang sudah kita buat sebenarnya sudah dapat dijalankan dengan perintah d
 Tapi kalian mungkin akan malas jika setiap kali ingin melihat hasil tapi harus mengetikkan perintah yang panjang seperti di atas.
 
 Maka dari kita akan membuat sebuah **build task**.
+
+### Membuat Build Tasks
 
 Tekan `Ctrl+Shift+B` lalu tekan {{<scIcon class="fa fa-cog">}} pada `C/C++: g++ build active file`.
 
@@ -100,8 +106,15 @@ Ganti saja semua teks di dalam `tasks.json` menjadi teks di bawah ini.
     ]
 }{{</fileCode>}}
 
-Penjelasan:
-+ Perintah di atas sama seperti perintah yang di jalankan pada gambar.
-+ `${relativeFile}` adalah file yang saat ini kita buka (example.cpp, example.py).
-+ `-o` adalah perintah untuk menaruh filenya dimana.
-+ 
+
+Perbedaan untuk di Windows mungkin hanya pada path seperator yang menjadi `\` dan `${fileBasenameNoExtension}.exe`.
+
+Jika sudah, simpan lalu tekan `Ctrl+Shift+b` maka program kalian dikompilasi dan dijalankan secara langsung.
+
+![run](/konfigurasi-c++-di-vs-code/img/run.webp)
+
+Jika kaliat lihat gambar diatas, hasil kompilasi berada di dalam folder `bin`.
+
+## Akhir Kata...
+
+Oke mungkin itu aja yang bisa saya sampaikan. **_Smell ya later._**
