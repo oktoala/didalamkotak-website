@@ -82,11 +82,12 @@ Jika sudah kalian akan diminta untuk mencari aplikasi yang diinstall. Klik _brow
 
 ## Penampakan
 
-{{<figure "/img/word-test.jpg" "Microsoft Word">}}
+![word](/img/word-test.jpg)
 
-{{<figure "/img/powerpoint-test.jpg" "Microsoft Powerpoint">}}
+![ppt](/img/powerpoint-test.jpg)
 
-{{<figure "/img/excel-test.jpg" "Microsoft Excel">}}
+![excel](/img/excel-test.jpg)
+
 
 ## Troubleshooting
 

@@ -19,7 +19,7 @@ $fontFamilySecondary: {
 } */
 
 .body.light-theme {
-	--body-color: #f0f0f0;
+	--body-color: #e0e0e0;
 	--header-color: #f0f0f0;
 	--wrapper-color: #ffffff;
 	--heading-color: #c30d23;
@@ -1284,6 +1284,7 @@ li.visible>a:hover {
 	border-radius: 5px;
 	font-family: var(--headingFont);
 	cursor: pointer;
+
 }
 
 .readmore-button:hover {
@@ -1829,15 +1830,6 @@ textarea {
 @media screen and (max-width: 620px) {
 	input[type=text], input[type=email], input[type=tel], input[type=url] {
 		width: 88%;
-	}
-	/* .sidebar{
-		float: none;
-		width: 100%;
-		visibility: hidden;
-	} */
-	.meta__item {
-		display: block;
-		margin-left: 0;
 	}
 	.authorbox {
 		text-align: center;
