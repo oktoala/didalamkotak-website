@@ -1,4 +1,4 @@
-<img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" onclick="imgClick({{ .Text }})" />
+<img loading="lazy" src="{{ .Destination | safeURL }}" alt="{{ .Text }}" onclick="imgClick({{ .Text }})" />
 <div class="overlay" id="{{ .Text }}">
 	<div class="overlay-header">
 		<a class="fa fa-download" title="Download" href="{{ .Destination | safeURL }}" download="{{ .Text }}"></a>
@@ -7,7 +7,7 @@
 	<div class="overlay-image">
 		<div class="fa fa-chevron-circle-left" title="Previous Image" onclick="goToSlide(-1, {{ .Text }})">
 		</div>
-		<img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" title="{{ .Text }}" />
+		<img loading="lazy" src="{{ .Destination | safeURL }}" alt="{{ .Text }}" title="{{ .Text }}" />
 		<div class="fa fa-chevron-circle-right" title="Next Image" onclick="goToSlide(1, {{ .Text }}) "></div>
 	</div>
 </div>

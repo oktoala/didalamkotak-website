@@ -5,7 +5,8 @@
 	<meta charset="UTF-8">
 	<link rel="manifest" href="/manifest.json">
 	<meta name="description"
-		content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Params.Description }}{{ end }}">
+	content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Params.Description }}{{ end }}">
+	{{ template "_internal/opengraph.html" . }}
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="theme-color" content="#292a2d" />
 	<meta content="IE=edge">
@@ -30,7 +31,7 @@
 	{{ printf `
 	<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
 	{{- end }}
-	<link rel="apple-touch-icon" href="{{ " favicon.ico" | relURL }}">
+	<link rel="apple-touch-icon" href="{{ "favicon.ico" | relURL }}">
 	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/appicons/apple-touch-icon-57x57.png" />
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/appicons/apple-touch-icon-114x114.png" />
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/appicons/apple-touch-icon-72x72.png" />

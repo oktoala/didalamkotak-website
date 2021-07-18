@@ -1,6 +1,7 @@
 baseURL: 'https://dalamkotak.onrender.com'
 languageCode: en-us
 title: DalamKotak
+images: img/codoala.png
 enableEmoji: true
 disqusShortname: didalamkotak-netlify-app
 paginate: 200
@@ -36,6 +37,9 @@ Author:
   bio: Ordinary Student
   avatar: img/codoala.png
 Params:
+  description: Based on Problem Not on Demand
+  images: 
+    - img/logoBaru.png
   subtitle: ''
   copyright: DalamKotak | Dibuat menggunakan Hugo
   opengraph: true
