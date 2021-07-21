@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html class="no-js" lang="{{ .Site.Language.Lang }}">
-
 <head class="">
 	<meta charset="UTF-8">
 	<link rel="manifest" href="/manifest.json">
 	<meta name="description"
 	content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Params.Description }}{{ end }}">
-	{{ template "_internal/opengraph.html" . }}
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="theme-color" content="#292a2d" />
 	<meta content="IE=edge">
@@ -16,6 +14,7 @@
 	<meta name="mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<meta name="apple-mobile-web-app-title" content="DalamKotak">
+	{{ template "_internal/opengraph.html" . }}
 	<title>{{ block "title" . }}{{ if not .IsHome }}{{ .Title }} - {{ end }}{{ .Site.Title }}{{ end }}</title>
 	<script>(function (d, e) { d[e] = d[e].replace("no-js", "js"); })(document.documentElement, "className");</script>
 	{{- if .Site.Params.schema }}
@@ -41,9 +40,6 @@
 	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/appicons/apple-touch-icon-76x76.png" />
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 	<!-- <link rel="shortcut icon" href="{{ "favicon.ico" | relURL }}"> -->
-	{{- if not .Site.IsServer }}
-	{{ template "_internal/google_analytics_async.html" . }}
-	{{- end }}
 	<script data-ad-client="ca-pub-4698265549676881" async
 		src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<link rel="stylesheet"
