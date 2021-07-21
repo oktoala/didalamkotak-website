@@ -1250,6 +1250,7 @@ li.visible>a:hover {
 	position: relative;
 	text-align: center;
 	align-self: center;
+	border: 0;
 }
 
 .tanggal-artikel {
@@ -1299,6 +1300,8 @@ li.visible>a:hover {
 	-moz-align-self: center;
 	-ms-align-self: center;
 	align-self: center;
+	border: 0;
+	border-radius: 5px;
 }
 
 .post__content.clearfix > p, .post__content.clearfix {

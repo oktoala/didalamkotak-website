@@ -22,14 +22,19 @@
 <buttton class="fas fa-arrow-circle-up top-button" title="Ke Atas"></buttton>
 {{ partial "authorbox.html" . }}
 {{ partial "comments.html" . }}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/languages/shell.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/powershell.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/shell.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/powershell.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
 <script async defer src='{{ "js/single.js" | relURL }}'></script>
 <!-- <script async defer src='{{ "js/disqusLoader.js" | relURL }}'></script> -->
 <script>
 	new ClipboardJS('.fa-copy');
-	hljs.initHighlightingOnLoad();
+</script>
+<script>hljs.highlightAll();</script>
+<script>
+	document.querySelectorAll(".bC.language-xml").forEach(function(element) {
+    element.innerHTML = element.innerHTML.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+});
 </script>
 {{ end }}
