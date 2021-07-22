@@ -2,11 +2,11 @@
 title: "Tips Dan Trik Gnome Shell"
 date: 2021-07-21T09:08:16+08:00
 comments: true
-draft: true
+draft: false
 author: "Yoga"
 toc: true
-kategori: []
-topik: []
+kategori: [Tips, Linux]
+topik: [gdm, gnome, tips, linux]
 type: post
 thumbnail: "/tips-dan-trik-gnome-shell/img/thumbnail.webp"
 description: "Tips Dan Trik Gnome Shell"
@@ -91,7 +91,7 @@ Lalu edit (buat baru jika tidak ada) file `gnome-shell-theme.gresource.xml`.
     <file>checkbox-off-focused.svg</file>
     <file>checkbox-off.svg</file>
     <file>checkbox.svg</file>
-    <file>dash-placeholder.svg</file>
+    <file>workspace-placeholder.svg</file>
     <file>gnome-shell.css</file>
     <file>gnome-shell-high-contrast.css</file>
     <file>icons/scalable/status/eye-not-looking-symbolic.svg</file>
@@ -107,7 +107,7 @@ Lalu edit (buat baru jika tidak ada) file `gnome-shell-theme.gresource.xml`.
     <file>icons/scalable/actions/pointer-drag-symbolic.svg</file>
     <file>icons/scalable/actions/pointer-primary-click-symbolic.svg</file>
     <file>icons/scalable/actions/pointer-secondary-click-symbolic.svg</file>
-    <file>filename</file>
+    <file>FILENAME</file>
     <file>no-events.svg</file>
     <file>no-notifications.svg</file>
     <file>pad-osd.css</file>
@@ -120,3 +120,27 @@ Lalu edit (buat baru jika tidak ada) file `gnome-shell-theme.gresource.xml`.
     <file>toggle-on.svg</file>
   </gresource>
 </gresources>{{</fileCode>}}
+
+Ganti **FILENAME** dengan gambar yang ingin kalian jadikan background.
+
+Sekarang buka `gnome-shell.css` di direktori tersebut dan cari `#lockDialogGroup` menjadi seperti di bawah.
+
+{{<fileCode "CSS" "gnome-shell.css">}}#lockDialogGroup {
+  background: url(FILENAME);
+  background-size: cover;
+  background-repeat: no-repeat;
+}{{</fileCode>}}
+
+Jika sudah jalankan perintah di bawah ini mengkompilasi tema.
+
+{{<scCode "Shell">}}glib-compile-resources gnome-shell-theme.gresource.xml{{</scCode>}}
+
+Lalu copy `gnome-shell-theme.gresource` ke `/usr/share/gnome-shell`.
+
+Jika sudah lalu restart `gdm.service`.
+
+{{<scCode "Shell">}}systemctl restart gdm.service{{</scCode>}}
+
+## Sumber
+
+{{<linkBlank "https://wiki.archlinux.org/title/GDM" "https://wiki.archlinux.org/title/GDM">}}

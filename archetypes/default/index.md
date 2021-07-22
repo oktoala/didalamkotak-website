@@ -10,6 +10,7 @@ topik: []
 type: post
 thumbnail: "/{{ .Name }}/img/thumbnail.webp"
 description: "{{ replace .Name "-" " " | title }}"
+summary: h
 ---
 
 <!--more-->
