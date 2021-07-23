@@ -610,8 +610,13 @@ select {
 	max-height: 10px;
 }
 
+.logo--mixed {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
 .logo--mixed .logo__item {
-	margin: .5rem auto;
 }
 
 .logo--mixed .logo__img {
@@ -1892,7 +1897,6 @@ textarea {
 	}
 }
 
-@media screen and (max-width: 340px) {}
 
 /*Shortcodes*/
 
@@ -1977,10 +1981,8 @@ pre.bC {
 	line-height: 1.5;
 	white-space: inherit;
 	border: 0;
-	border-left: 5px solid;
 	width: auto;
 	border-radius: 0 0 10px 10px;
-	color: red;
 }
 
 code.bC {
@@ -1991,6 +1993,7 @@ code.bC {
 	max-height: 400px;
 	overflow: auto;
 	border: 0;
+	border-left: 5px solid;
 	border-radius: 0;
 	/* overflow: scroll; */
 }
@@ -2039,32 +2042,36 @@ code.bC {
 
 /*-------------------------- Border color --------------------------*/
 
-pre.bC.Powershell {
+code.bC[data-lang=Powershell] {
 	border-left-color: #012456;
 }
 
-pre.bC.Shell {
+code.bC[data-lang=Shell] {
 	border-left-color: #3e474a;
 }
 
-pre.bC.Bash {
+code.bC[data-lang=Bash] {
 	border-left-color: #3e474a;
 }
 
-pre.bC.Python {
+code.bC[data-lang=Python] {
 	border-left-color: green;
 }
 
-pre.bC.TOML {
+code.bC[data-lang=TOML] {
 	border-left-color: #9c4221;
 }
 
-pre.bC.JSON {
+code.bC[data-lang=JSON] {
 	border-left-color: #d8c83e;
 }
 
-pre.bC.CSS {
+code.bC[data-lang=CSS] {
 	border-left-color: #1570B3;
+}
+
+code.bC[data-lang=XML] {
+	border-left-color: #FF6600;
 }
 
 /* -------------------------------------------------------------------- */

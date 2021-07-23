@@ -83,7 +83,7 @@ Jika sudah, maka akan muncul folder `shell-theme` di Home kalian.
 
 Lalu edit (buat baru jika tidak ada) file `gnome-shell-theme.gresource.xml`.
 
-{{<fileCode "xml" "gnome-shell-theme.gresource.xml">}}&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+{{<fileCode "XML" "gnome-shell-theme.gresource.xml">}}&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 <gresources>
   <gresource prefix="/org/gnome/shell/theme">
     <file>calendar-today.svg</file>
