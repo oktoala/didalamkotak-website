@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html class="no-js" lang="{{ .Site.Language.Lang }}">
+
 <head class="">
 	<meta charset="UTF-8">
 	<link rel="manifest" href="/manifest.json">
 	<meta name="description"
-	content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Params.Description }}{{ end }}">
+		content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Params.Description }}{{ end }}">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="theme-color" content="#292a2d" />
 	<meta content="IE=edge">
@@ -30,7 +31,7 @@
 	{{ printf `
 	<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
 	{{- end }}
-	<link rel="apple-touch-icon" href="{{ "favicon.ico" | relURL }}">
+	<link rel="apple-touch-icon" href="{{ " favicon.ico" | relURL }}">
 	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/appicons/apple-touch-icon-57x57.png" />
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/appicons/apple-touch-icon-114x114.png" />
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/appicons/apple-touch-icon-72x72.png" />
@@ -43,7 +44,7 @@
 	<script data-ad-client="ca-pub-4698265549676881" async
 		src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<link rel="stylesheet"
-		href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/monokai-sublime.min.css">
+		href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/base16/dracula.min.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<!-- <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"> -->
 	<!-- <link rel="stylesheet" href="/add-to-homescreen/style/addtohomescreen.css"> -->
