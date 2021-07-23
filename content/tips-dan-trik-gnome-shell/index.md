@@ -93,6 +93,7 @@ Lalu edit (buat baru jika tidak ada) file `gnome-shell-theme.gresource.xml`.
     <file>checkbox.svg</file>
     <file>workspace-placeholder.svg</file>
     <file>gnome-shell.css</file>
+    <file>FILENAME</file>
     <file>gnome-shell-high-contrast.css</file>
     <file>icons/scalable/status/eye-not-looking-symbolic.svg</file>
     <file>icons/scalable/status/eye-open-negative-filled-symbolic.svg</file>
@@ -107,7 +108,6 @@ Lalu edit (buat baru jika tidak ada) file `gnome-shell-theme.gresource.xml`.
     <file>icons/scalable/actions/pointer-drag-symbolic.svg</file>
     <file>icons/scalable/actions/pointer-primary-click-symbolic.svg</file>
     <file>icons/scalable/actions/pointer-secondary-click-symbolic.svg</file>
-    <file>FILENAME</file>
     <file>no-events.svg</file>
     <file>no-notifications.svg</file>
     <file>pad-osd.css</file>

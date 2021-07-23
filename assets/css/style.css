@@ -644,6 +644,10 @@ select {
 	font-family: var(--headingFont);
 }
 
+.logo__title:hover {
+	color: var(--heading-color);
+}
+
 .logo__tagline {
 	display: inline-block;
 	padding-top: 10px;

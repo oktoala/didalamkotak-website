@@ -13,6 +13,4 @@ description: "{{ replace .Name "-" " " | title }}"
 summary: h
 ---
 
-<!--more-->
-
 ![{{ .Name }}](/{{ .Name }}/img/thumbnail.webp)
