@@ -43,3 +43,4 @@ Pastikan kalian menambahkan `.md` pada archetypes seperti about dan post (yang b
 
 ## Content
 
+Folder **content** adalah tempat kita menyimpan artikel kita.

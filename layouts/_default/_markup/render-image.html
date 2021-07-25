@@ -1,7 +1,6 @@
 <img loading="lazy" src="{{ .Destination | safeURL }}" alt="{{ .Text }}" onclick="imgClick({{ .Text }})" />
 <div class="overlay" id="{{ .Text }}">
 	<div class="overlay-header">
-		<a class="fa fa-download" title="Download" href="{{ .Destination | safeURL }}" download="{{ .Text }}"></a>
 		<div class="fa fa-times" onclick="imgClick({{ .Text }})" title="Close"></div>
 	</div>
 	<div class="overlay-image">

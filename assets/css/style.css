@@ -616,8 +616,6 @@ select {
 	align-items: center;
 }
 
-.logo--mixed .logo__item {
-}
 
 .logo--mixed .logo__img {
 	max-width: 40px;
@@ -1010,7 +1008,7 @@ input:checked+.slider:before {
 }
 
 .content li {
-	margin-bottom: 5px;
+	margin-bottom: 30px;
 }
 
 .post__footer {
