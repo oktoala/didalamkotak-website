@@ -5,8 +5,8 @@ comments: true
 draft: false
 author: "Yoga"
 toc: true
-kategori: []
-topik: []
+kategori: [Tips]
+topik: [vlc, tips]
 type: post
 thumbnail: "/klik-pause-pada-vlc/img/thumbnail.webp"
 description: "Klik Pause Pada Vlc"
