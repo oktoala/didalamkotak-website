@@ -1000,7 +1000,7 @@ input:checked+.slider:before {
 }
 
 .content ul, .content ol {
-	margin: 0 0 20px 40px;
+	margin: 20px 0 20px 40px;
 }
 
 .content ul ul, .content ol ol, .content ol ul, .content ul ol {

@@ -1,0 +1,65 @@
+---
+title: "Konfigurasi XAMPP Di Arch Linux"
+date: 2021-07-29T19:40:11+08:00
+comments: true
+draft: true
+author: "Yoga"
+toc: true
+kategori: [Pemrograman, Linux]
+topik: [php, xampp, pemrograman, linux]
+type: post
+thumbnail: "/konfigurasi-xampp-di-arch-linux/img/thumbnail.webp"
+description: "Konfigurasi Xampp Di Arch Linux"
+summary: Ini adalah artikel tentang cara install dan konfigurasi XAMPP di Arch Linux
+---
+
+![konfigurasi-xampp-di-arch-linux](/konfigurasi-xampp-di-arch-linux/img/thumbnail.webp)
+
+Untuk memulai pemrograman PHP di Linux sebenarnya ada beberapa cara. 
+
+Kalian bisa menginstall semuanya secara terpisah yang akan membuat kalian kelihatan lebih keren 😎 atau kalian bisa
+menggunakan cara yang lebih gampang yaitu dengan XAMPP.
+
+XAMPP adalah sebuah package yang di dalamnya sudah terdapat Apache, MariaDB, PHP, dan Perl. Jadi kalian tidak perlu untuk menginstall semua hal tadi.
+
+## Installasi
+
+Kalian bisa menginstallnya menggunakan AUR helper.
+
+{{<scCode "Shell">}}yay -S xampp{{</scCode>}}
+
+Untuk cara manual, unduh dulu [xampp](https://www.apachefriends.org/index.html).
+
+Lalu buat agar dapat dieksekusi dan jalankan.
+
+{{<scCode "Shell">}}sudo chmod +x xampp-linux-version-installer.run
+sudo ./xampp-linux-version-installer.run{{</scCode>}}
+
+Cukup tekan next saja.
+
+## Coba jalankan
+
+Jika kalian menginstallnya dari menggunakan AUR helper, seharusnya ada shortcut desktop yang terbuat. Untuk yang manual kalian bisa buat sendiri.
+
+Tapi kalian bisa menjalankannya dengan menggunakan perintah di bawah ini.
+
+{{<scCode "Shell">}}sudo /opt/lampp/lampp start{{</scCode>}}
+
+Lalu cobalah buka [localhost][localhost] kalian.
+
+## Uninstall
+
+Jangan lupa untuk menghentikan service XAMPP kalian
+
+{{<scCode "Shell">}}sudo /opt/lampp/lampp stop{{</scCode>}}
+
+Jika kalian install menggunakan AUR helper maka hapus menggunakan AUR helper juga.
+
+{{<scCode "Shell">}}yay -Ru xampp{{</scCode>}}
+
+Dan jika kalian menginstallnya dengan cara manual, maka kalian harus menghapus semua foldernya. Biasanya ada di `/opt/lampp`
+
+{{<scCode "Shell">}}sudo rm -rf /opt/lampp{{</scCode>}}
+
+> Catatan
+> > ha
