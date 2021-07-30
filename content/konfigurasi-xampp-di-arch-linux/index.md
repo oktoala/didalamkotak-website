@@ -2,7 +2,7 @@
 title: "Konfigurasi XAMPP Di Arch Linux"
 date: 2021-07-29T19:40:11+08:00
 comments: true
-draft: true
+draft: false
 author: "Yoga"
 toc: true
 kategori: [Pemrograman, Linux]
