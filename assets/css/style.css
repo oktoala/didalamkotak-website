@@ -24,7 +24,7 @@ $fontFamilySecondary: {
 	--wrapper-color: #ffffff;
 	--heading-color: #c30d23;
 	--scrollbar-thumb: #909090;
-	--scrollbar-track: var(--header-color);
+	--scrollbar-track: #f0f0f0;
 	--primary-text-color: #0a0a0a;
 	--primary-pure-color: #ffffff;
 	--btn-color: #fff;
@@ -54,7 +54,7 @@ $fontFamilySecondary: {
 	--wrapper-color: #1a1b1d;
 	--heading-color: #8bd3e1;
 	--scrollbar-thumb: #909090;
-	--scrollbar-track: var(--body-color);
+	--scrollbar-track: #1e1e1e;
 	--primary-text-color: #ffffff;
 	--primary-pure-color: #000;
 	--btn-color: #2a2a2a;
@@ -147,10 +147,12 @@ html::-webkit-scrollbar {
 }
 
 html::-webkit-scrollbar-track {
-	background: var(--scrollbar-track);
+	/* border-radius: 10px; */
+	background: transparent;
 }
 
 html::-webkit-scrollbar-thumb {
+	border-radius: 10px;
 	background: var(--scrollbar-thumb);
 }
 
