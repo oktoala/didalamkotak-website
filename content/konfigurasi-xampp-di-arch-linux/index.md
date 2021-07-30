@@ -45,7 +45,7 @@ Tapi kalian bisa menjalankannya dengan menggunakan perintah di bawah ini.
 
 {{<scCode "Shell">}}sudo /opt/lampp/lampp start{{</scCode>}}
 
-Lalu cobalah buka [localhost][localhost] kalian.
+Lalu cobalah buka [localhost](http://localhost) kalian.
 
 ## Uninstall
 
@@ -61,5 +61,29 @@ Dan jika kalian menginstallnya dengan cara manual, maka kalian harus menghapus s
 
 {{<scCode "Shell">}}sudo rm -rf /opt/lampp{{</scCode>}}
 
-> Catatan
-> > ha
+## Konfigurasi
+
+### Hosting file selain di htdocs
+
+Root document XAMPP berada di `/opt/lampp/htdocs`. Semua file yang diletakkan di sana akan di proses oleh web server.
+
+Untuk hosting file di tempat lain, kalian bisa mengaturnya dengan mengikuti langkah di bawah.
+
++ Buka `opt/lampp/etc/httpd.conf` dan edit dengan editor favorit kalian.
++ Cari `DocumentRoot`, dan kalian akan melihat yang seperti ini.
+
+{{<fileCode "XML" "httpd.conf">}}DocumentRoot "/opt/lampp/htdocs"
+&lt;Directory "/opt/lampp/htdocs">
+    ...    
+    ...
+
+&lt;/Directory>{{</fileCode>}}
+
+Ubah menjadi seperti gambar di bawah ini.
+
+![root](/konfigurasi-xampp-di-arch-linux/img/root.webp)
+
+Ubah foldernya mengikuti struktur folder kalian sendiri.
+
+
+
