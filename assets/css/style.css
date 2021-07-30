@@ -1893,8 +1893,19 @@ textarea {
 	.top-button.show {
 		display: none;
 	}
+
+	.wrapper {
+		padding: 50px 0 0;
+	}
+
+	.main-single{
+		/* margin: 0; */
+	}	
 }
 
+.highlight {
+	margin-top: 20px;
+}
 
 /*Shortcodes*/
 

@@ -85,5 +85,33 @@ Ubah menjadi seperti gambar di bawah ini.
 
 Ubah foldernya mengikuti struktur folder kalian sendiri.
 
+Setelah itu, carilah `<IfModule unixd_module>`.
+
+```XML
+<IfModule unixd_module>
+  ...  
+  ...
+    User daemon
+    Group daemon
+</IfModule>
+```
+
+Lalu ubah `daemon` menjadi nama username dan group kalian.
+
+```XML
+<IfModule unixd_module>
+  ...  
+  ...
+    User yourUsername
+    Group yourGroup
+</IfModule>
+```
+
+Jika kalian tidak tahu apa username name kalian, cek menggunakan perintah `whoami` dan untuk mengetahui group, cek menggunakan perintah `groups <yourUsername>`.
 
 
+## Kesimpulan
+
+Oke, mungkin itu aja yang bisa saya sampaikan. Untuk kedepannya mungkin akan saya tambahkan lagi.
+
+Baik, itu aja, **_Smell ya later_**.
