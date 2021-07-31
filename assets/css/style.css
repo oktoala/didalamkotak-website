@@ -167,7 +167,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 
-.fa .fas{
+.fa .fas {
 	margin-right: 5px;
 }
 
@@ -264,7 +264,6 @@ body {
 .list__excerpt .clearfix p {
 	font-size: 14px;
 }
-
 
 .clearfix::after {
 	display: block;
@@ -614,7 +613,6 @@ select {
 	justify-content: space-between;
 	align-items: center;
 }
-
 
 .logo--mixed .logo__img {
 	max-width: 40px;
@@ -1293,7 +1291,6 @@ li.visible>a:hover {
 	border-radius: 5px;
 	font-family: var(--headingFont);
 	cursor: pointer;
-
 }
 
 .readmore-button:hover {
@@ -1310,7 +1307,7 @@ li.visible>a:hover {
 	border-radius: 5px;
 }
 
-.post__content.clearfix > p, .post__content.clearfix {
+.post__content.clearfix>p, .post__content.clearfix {
 	color: var(--breadcrumb-text-color);
 	font-size: 13px;
 	/* max-width: 350px; */
@@ -1870,7 +1867,6 @@ textarea {
 		justify-content: center;
 		max-width: var(--max-width);
 	}
-	
 }
 
 @media screen and (max-width: 498px) {
@@ -1879,27 +1875,24 @@ textarea {
 		height: 100%;
 		min-height: 320px;
 	}
-	
 	.summary_content {
 		height: 100%;
 	}
-
 	.list__thumbnail {
 		align-items: center;
 		/* max-width: 80%; */
 	}
-	
 	.top-button.show {
 		display: none;
 	}
-
 	.wrapper {
 		padding: 50px 0 0;
 	}
-
-	.main-single{
-		/* margin: 0; */
-	}	
+	
+	.overlay-image>img {
+		margin: 20px;
+		max-width: 90%;
+	}
 }
 
 .highlight {
@@ -2105,7 +2098,6 @@ code.bC[data-lang=XML] {
 .bC:hover::-webkit-scrollbar-thumb {
 	background: var(--code-header-color);
 }
-
 
 /* Breadcrumb */
 
@@ -2421,7 +2413,7 @@ p.summary mark {
 
 .overlay-image>img {
 	margin: 20px;
-	max-width: 90%;
+	max-width: 70%;
 }
 
 .overlay.show {
@@ -2443,20 +2435,20 @@ p.summary mark {
 }
 
 .overlay-header>.fa, .overlay-image>.fa {
-	
 	margin: 0 25px;
 	font-size: 0;
 	color: var(--icon-fill-color);
 }
 
-.overlay-image > .fa {
+.overlay-image>.fa {
 	position: absolute;
 }
 
-.overlay-image > .fa-chevron-circle-left{
+.overlay-image>.fa-chevron-circle-left {
 	left: 0;
 }
-.overlay-image > .fa-chevron-circle-right{
+
+.overlay-image>.fa-chevron-circle-right {
 	right: 0;
 }
 
