@@ -41,7 +41,7 @@ Beberapa perintah untuk **yay** sama seperti **pacman**, yang jadi pembeda hanya
 
 Jika kalian ingin mengupgrade package yang kalian install menggunakan AUR helper jalankan perintah di bawah ini.
 
-{{<scCode "Shell">}}yay -Sya{{</scCode>}}
+{{<scCode "Shell">}}yay -Syua{{</scCode>}}
 
 ## Sumber
 
