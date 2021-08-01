@@ -1,8 +1,33 @@
 <footer class="footer">
 	<div class="container footer__container flex">
-		{{ partial "footer_links.html" . }}
-		<div class="footer__copyright">
-			&copy; {{ now.Format "2006" }} {{ .Site.Params.copyright | default .Site.Title }} {{ hugo.Version}}.
+		<div class="footer-flex">
+			<div class="footer-menu">
+				<ul class="footer-list">
+					<li>
+						<a href="{{ "" | relLangURL }}" class="" rel="home">
+							Home 
+						</a>
+					</li>
+					<li>
+						<a href="{{ "/about" | relLangURL }}" class="" rel="about">
+							About
+						</a>
+					</li>
+					<li>
+						<a href="{{ "/kategori" | relLangURL }}" class="" rel="about">
+							Kategori
+						</a>
+					</li>
+					<li>
+						<a href="{{ "/topik" | relLangURL }}" class="" rel="about">
+							Topik
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer__copyright">
+				&copy; {{ now.Format "2006" }} {{ .Site.Params.copyright | default .Site.Title }} {{ hugo.Version}}.
+			</div>
 		</div>
 	</div>
 </footer>

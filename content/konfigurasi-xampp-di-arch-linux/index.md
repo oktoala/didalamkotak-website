@@ -5,7 +5,7 @@ comments: true
 draft: false
 author: "Yoga"
 toc: true
-kategori: [Pemrograman, Linux]
+kategori: [Programming, Linux]
 topik: [php, xampp, pemrograman, linux]
 type: post
 thumbnail: "/konfigurasi-xampp-di-arch-linux/img/thumbnail.webp"
