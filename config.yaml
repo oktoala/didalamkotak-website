@@ -41,7 +41,7 @@ Params:
   images: 
     - img/dalamkotak-show.png
   subtitle: ''
-  copyright: DalamKotak | Dibuat menggunakan Hugo
+  copyright: Dibuat menggunakan Hugo
   opengraph: true
   readmore: false
   authorbox: true

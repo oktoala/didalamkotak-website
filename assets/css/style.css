@@ -1731,6 +1731,10 @@ textarea {
 	justify-content: center;
 }
 
+.footer__copyright {
+	text-align: center;
+}
+
 .footer-list {
 	display: flex;
 	list-style: none;
@@ -1738,7 +1742,12 @@ textarea {
 }
 
 .footer-list > li{
+	font-weight: bolder;
 	margin-right: 20px;
+}
+
+.footer-list > li a:hover{
+	color: var(--highlight-color);
 }
 
 .footer__links {
@@ -1787,10 +1796,7 @@ textarea {
 		padding-bottom: 0.5rem;
 		text-align: center;
 	}
-	.footer__copyright {
-		position: relative;
-		text-align: center;
-	}
+	
 }
 
 @media screen and (max-width: 893px) {
@@ -1917,6 +1923,10 @@ textarea {
 
 	.main.page {
 		padding: 0 20px;
+	}
+
+	.footer__copyright > span {
+		display: none;
 	}
 }
 

@@ -5,28 +5,29 @@
 				<ul class="footer-list">
 					<li>
 						<a href="{{ "" | relLangURL }}" class="" rel="home">
-							Home 
+							Home
 						</a>
 					</li>
 					<li>
-						<a href="{{ "/about" | relLangURL }}" class="" rel="about">
+						<a href="{{ " /about" | relLangURL }}" class="" rel="about">
 							About
 						</a>
 					</li>
 					<li>
-						<a href="{{ "/kategori" | relLangURL }}" class="" rel="about">
+						<a href="{{ " /kategori" | relLangURL }}" class="" rel="about">
 							Kategori
 						</a>
 					</li>
 					<li>
-						<a href="{{ "/topik" | relLangURL }}" class="" rel="about">
+						<a href="{{ " /topik" | relLangURL }}" class="" rel="about">
 							Topik
 						</a>
 					</li>
 				</ul>
 			</div>
 			<div class="footer__copyright">
-				&copy; {{ now.Format "2006" }} {{ .Site.Params.copyright | default .Site.Title }} {{ hugo.Version}}.
+				&copy; 2020 - {{ now.Format "2006" }}  <b>{{ .Site.Title}}</b> <span> | {{ .Site.Params.copyright | default .Site.Title }}
+					{{ hugo.Version}}.</span>
 			</div>
 		</div>
 	</div>
