@@ -1,12 +1,12 @@
 ---
 title: "Steam Gaming Di Linux"
-date: 2021-08-03T10:22:19+08:00
+date: 2021-08-07T10:22:19+08:00
 comments: true
 draft: true
 author: "Yoga"
 toc: true
-kategori: []
-topik: []
+kategori: [Tips, Linux]
+topik: [steam, tips, linux, steam, proton]
 type: post
 thumbnail: "/steam-gaming-di-linux/img/thumbnail.webp"
 description: "Steam Gaming Di Linux"
@@ -64,3 +64,5 @@ Proton yang kalian inginkan.
 Jika kalian ingin versi Proton mana yang berfungsi untuk setiap game, kalian bisa mencarinya di [ProtonDB](https://www.protondb.com/)
 
 ![protondb](/steam-gaming-di-linux/img/protondb.webp)
+
+Untuk tambahan lebih lanjut bisa kalian baca [disini](https://github.com/GloriousEggroll/proton-ge-custom).
