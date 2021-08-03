@@ -3,23 +3,23 @@
 {{- $logoImage := .Site.Params.logo.image -}}
 
 {{- if or $logoTitle $logoImage }}
-	{{/* Defined when logo is mixed (image + text) */}}
-	{{- $logoMix := and $logoImage $logoTitle -}}
+{{/* Defined when logo is mixed (image + text) */}}
+{{- $logoMix := and $logoImage $logoTitle -}}
 
-	<div class="logo{{ with $logoMix }} logo--mixed{{ end }}">
-		{{ with $logoImage -}}
-			<div class="logo__item logo__imagebox " onclick="logo_theme()">
-				{{ partial "svg/logoInOfBox2.svg" (dict "class" "logo__img" ) }}
-				<!-- <img class="logo__img" src="{{ . | relURL }}"> -->
-			</div>
-		{{- end -}}
-		<a class="logo__link" href="{{ "" | relLangURL }}" rel="home">
-			{{ with $logoTitle -}}
-				<div class="logo__item logo__text">
-					<nav class="logo__title"> {{ . }} </nav>
-					{{ with $logoSubtitle }}<div class="logo__tagline">{{ . }}</div>{{ end }}
-				</div>
-			{{- end }}
-		</a>
+<div class="logo{{ with $logoMix }} logo--mixed{{ end }}">
+	{{ with $logoImage -}}
+	<div class="logo__item logo__imagebox " onclick="logo_theme()">
+		{{ partial "svg/logoInOfBox2.svg" (dict "class" "logo__img" ) }}
+		<!-- <img class="logo__img" src="{{ . | relURL }}"> -->
 	</div>
+	{{- end -}}
+	<div class="logo__item logo__text logo__title">
+		{{ with $logoTitle -}}
+		<a class="logo__link" href="{{ "" | relLangURL }}" rel="home">
+			{{ . }}
+			{{ with $logoSubtitle }}<div class="logo__tagline">{{ . }}</div>{{ end }}
+		</a>
+		{{- end }}
+	</div>
+</div>
 {{- end }}

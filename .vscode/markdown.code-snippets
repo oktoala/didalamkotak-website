@@ -23,6 +23,13 @@
 		],
 		"description": "Code Bar"
 	},
+	"Shell Bar": {
+		"prefix": "shell",
+		"body": [
+			"{{<shell \"${1:permission$/#}\">}}${2:Script}{{</shell>}}",
+		],
+		"description": "Shell Bar"
+	},
 	"Display File Code Bar": {
 		"prefix": "fileCode",
 		"body": [
