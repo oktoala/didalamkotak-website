@@ -26,14 +26,14 @@ XAMPP adalah sebuah package yang di dalamnya sudah terdapat Apache, MariaDB, PHP
 
 Kalian bisa menginstallnya menggunakan AUR helper.
 
-{{<scCode "Shell">}}yay -S xampp{{</scCode>}}
+{{<shell"$">}}yay -S xampp{{</shell>}}
 
 Untuk cara manual, unduh dulu [xampp](https://www.apachefriends.org/index.html).
 
 Lalu buat agar dapat dieksekusi dan jalankan.
 
-{{<scCode "Shell">}}sudo chmod +x xampp-linux-version-installer.run
-sudo ./xampp-linux-version-installer.run{{</scCode>}}
+{{<shell "$">}}sudo chmod +x xampp-linux-version-installer.run
+sudo ./xampp-linux-version-installer.run{{</shell>}}
 
 Cukup tekan next saja.
 
@@ -43,7 +43,7 @@ Jika kalian menginstallnya dari menggunakan AUR helper, seharusnya ada shortcut 
 
 Tapi kalian bisa menjalankannya dengan menggunakan perintah di bawah ini.
 
-{{<scCode "Shell">}}sudo /opt/lampp/lampp start{{</scCode>}}
+{{<shell "$">}}sudo /opt/lampp/lampp start{{</shell>}}
 
 Lalu cobalah buka [localhost](http://localhost) kalian.
 
@@ -51,15 +51,15 @@ Lalu cobalah buka [localhost](http://localhost) kalian.
 
 Jangan lupa untuk menghentikan service XAMPP kalian
 
-{{<scCode "Shell">}}sudo /opt/lampp/lampp stop{{</scCode>}}
+{{<shell "$">}}sudo /opt/lampp/lampp stop{{</shell>}}
 
 Jika kalian install menggunakan AUR helper maka hapus menggunakan AUR helper juga.
 
-{{<scCode "Shell">}}yay -Ru xampp{{</scCode>}}
+{{<shell "$">}}yay -Ru xampp{{</shell>}}
 
 Dan jika kalian menginstallnya dengan cara manual, maka kalian harus menghapus semua foldernya. Biasanya ada di `/opt/lampp`
 
-{{<scCode "Shell">}}sudo rm -rf /opt/lampp{{</scCode>}}
+{{<shell "$">}}sudo rm -rf /opt/lampp{{</shell>}}
 
 ## Konfigurasi
 

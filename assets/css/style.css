@@ -1979,7 +1979,7 @@ textarea {
 	margin-top: 30px;
 }
 
-.chroma .fa-copy {
+.chroma .fa {
 	opacity: 0%;
 	/* float: right; */
 	position: relative;
@@ -1991,15 +1991,15 @@ textarea {
 	color: var(--icon-fill-color);
 }
 
-.chroma:hover .fa-copy {
+.chroma:hover .fa {
 	opacity: 100%;
 }
 
-.fa-copy:hover {
+.fa:hover {
 	color: var(--primary-text-color);
 }
 
-.fa-copy:active {
+.fa:active {
 	color: var(--highlight-color)
 }
 
@@ -2143,7 +2143,7 @@ ul.breadcrumb {
 	margin-top: 20px;
 	background-color: var(--breadcrumb-color);
 	border-radius: 10px;
-	box-shadow: var(--box-shadow) #1a1b1d;
+	box-shadow: var(--box-shadow) #1A1B1D;
 }
 
 ul.breadcrumb li {
