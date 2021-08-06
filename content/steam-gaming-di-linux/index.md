@@ -1,8 +1,8 @@
 ---
 title: "Steam Gaming Di Linux"
-date: 2021-08-07T10:22:19+08:00
+date: 2021-08-06T10:22:19+08:00
 comments: true
-draft: true
+draft: false
 author: "Yoga"
 toc: true
 kategori: [Tips, Linux]
