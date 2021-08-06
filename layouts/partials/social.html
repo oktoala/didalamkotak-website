@@ -1,8 +1,0 @@
-{{- if .Params.author -}}
-{{ $var := index .Site.Data.author .Params.author }}
-{{ range $var.social }}
-	{{ if . }}
-		{{ . }}
-	{{end}}
-{{ end }}
-{{ end }}

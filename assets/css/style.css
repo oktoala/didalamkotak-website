@@ -27,7 +27,7 @@
 	--direktori-bg-color: #c4c4c4;
 	--breadcrumb-text-color: #7c7c7c;
 	--logo-hover-color: #ec122c;
-	--highlight-color: #ff3c01;
+	--highlight-color: #08851d;
 	--brightness: brightness(.9);
 }
 
@@ -1096,6 +1096,8 @@ li.visible>a:hover {
 	margin: 0 0 30px;
 }
 
+
+
 /* ------------ List content --------------*/
 
 .main.page {
@@ -1491,14 +1493,6 @@ textarea {
 	margin: 0 10px 16px 0;
 }
 
-/* .social_item {
-	position: relative;
-	font-size: .3em;
-	list-style: none;
-	display: inline-block;
-	margin: 10px 10px 16px 0;
-} */
-
 .widget__item:hover .taxo_num {
 	color: var(--primary-text-color);
 }
@@ -1506,6 +1500,7 @@ textarea {
 .widget__link {
 	display: inline-block;
 	cursor: pointer;
+	font-size: 25px;
 }
 
 .widget__item:first-child {
@@ -1556,13 +1551,8 @@ textarea {
 
 .widget-social__item {
 	margin-right: 10px;
+	
 }
-
-/* .widget-social__link {
-	display: block;
-	margin: 0 0 8px;
-	white-space: normal;
-} */
 
 .widget-social__link-icon {
 	vertical-align: middle;
@@ -1573,7 +1563,6 @@ textarea {
 	fill: var(--primary-text-color);
 	background: var(--wrapper-color);
 }
-
 
 
 /* Footer */
