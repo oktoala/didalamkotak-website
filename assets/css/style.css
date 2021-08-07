@@ -65,7 +65,7 @@
 	/* Font */
 	--fontFamilyPrimary: 'Merriweather', Roboto, Helvetica, Arial, sans-serif;
 	--fontFamilySecondary: 'Cascadia Code', sans-serif, monospace;
-	--headingFont: 'Montserrat', sans-serif;
+	--headingFont: 'Roboto', sans-serif;
 }
 
 * {

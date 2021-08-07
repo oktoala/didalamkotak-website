@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html class="no-js" lang="{{ .Site.Language.Lang }}">
+
 <head class="">
 	<meta charset="UTF-8">
 	<link rel="manifest" href="/manifest.json">
@@ -38,11 +39,15 @@
 	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/appicons/apple-touch-icon-120x120.png" />
 	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/appicons/apple-touch-icon-76x76.png" />
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/base16/dracula.min.css"> <!-- Dracula -->
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/base16/dracula.min.css">
+	<!-- Dracula -->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet"> <!-- Monstserrat -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css"> <!-- Cascadia Code -->
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css">
+	<!-- Cascadia Code -->
 </head>
+
 <body class="body loading">
 	<div class="loader">
 		{{ partial "svg/plainLogo1.svg" (dict "data-tilt" "") -}}
@@ -74,4 +79,5 @@
 	<script src="/js/main.js"></script>
 	<script src="/js/search.js"></script>
 </body>
+
 </html>
