@@ -1508,6 +1508,10 @@ textarea {
 	padding-top: 0;
 }
 
+.widget__link.taxo {
+	font-size: inherit;
+}
+
 .taxo_text {
 	padding: 10px;
 	--taxo-radius: 7px;

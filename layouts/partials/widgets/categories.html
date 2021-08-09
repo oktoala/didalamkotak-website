@@ -6,7 +6,7 @@
 			{{- range $name, $taxonomy := $categories }}
 			{{- with $.Site.GetPage (printf "/kategori/%s" $name) }}
 			<li class="widget__item">
-				<a class="widget__link" onclick="loadPage({{ .RelPermalink }})">
+				<a class="widget__link taxo" onclick="loadPage({{ .RelPermalink }})">
 					<span id={{ .RelPermalink }} class="taxo_text"> {{ .Title }} </span><span class="taxo_num">{{ len
 						$taxonomy }}</span>
 				</a>
