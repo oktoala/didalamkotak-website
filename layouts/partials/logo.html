@@ -14,8 +14,10 @@
 	</div>
 	{{- end -}}
 	<div class="logo__item logo__text logo__title">
+		{{ $posts := (where .Pages "Type" "post") }}
+		{{ $postsLen := len $posts}}
 		{{ with $logoTitle -}}
-		<a class="logo__link" href="{{ "" | relLangURL }}" rel="home">
+		<a class="logo__link" href="{{ "" | relLangURL }}" rel="home" title="{{ $postsLen }}">
 			{{ . }}
 			{{ with $logoSubtitle }}<div class="logo__tagline">{{ . }}</div>{{ end }}
 		</a>
