@@ -19,7 +19,7 @@ Jika kalian bosan dengan bentuk kursor di Windows, maka kalian bisa mengubahnya 
 
 ## Unduh Tema Kursor
 
-Tema kursor yang dipakai untuk tutorial kali ini adalah [Bibata Cursor](https://github.com/ful1e5/Bibata_Cursor).
+Tema kursor yang akan dipakai untuk tutorial kali ini adalah {{<linkBlank "Bibata Cursor" "https://github.com/ful1e5/Bibata_Cursor">}}.
 
 Kalian bisa unduh filenya [disini](https://www.pling.com/p/1197198/), klik pada **Files**, lalu unduh yang memiliki tulisan **Windows**.
 
@@ -57,3 +57,6 @@ Jika sudah, masuk ke tab Pointers, lalu pada bagian **Schemes**, kalian bisa mem
 
 ![pointer](/cara-ubah-kursor-di-windows/img/pointer.webp)
 
+## Akhir Kata...
+
+Oke mungkin itu aja yang bisa saya sampaikan, **_Smell Ya Later_**.
