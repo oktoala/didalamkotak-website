@@ -100,5 +100,11 @@ window.onscroll = () => {
 	}
 }
 
+document.onkeydown = function(evt) {
+    evt = evt || window.event;
+    if (evt.key == 27) {
+        alert('Esc key pressed.');
+    }
+};
 
 top_button.addEventListener("click", () => document.querySelector(".container").scrollIntoView(true));

@@ -580,7 +580,7 @@ select {
 }
 
 .logo__link {
-	display: inline-block;
+	margin-top: 2.5px;
 }
 
 .header .logo__item {
@@ -700,7 +700,7 @@ select {
 	width: 30px;
 	vertical-align: bottom;
 	fill: var(--header-color);
-	stroke: var(--heading-color);
+	stroke: var(--primary-text-color);
 	stroke-width: 50px;
 }
 
@@ -715,7 +715,7 @@ select {
 }
 
 .nav-item.current>.icon-button.current svg {
-	fill: var(--heading-color);
+	fill: var(--primary-text-color);
 	stroke-width: 0px;
 }
 
@@ -751,7 +751,7 @@ select {
 	background-color: var(--header-color);
 	-webkit-transition: .4s;
 	transition: .4s;
-	border: solid 2px var(--heading-color);
+	border: solid 2px var(--primary-text-color);
 }
 
 input:disabled~.slider {
@@ -765,14 +765,14 @@ input:disabled~.slider {
 	width: var(--slider-round);
 	left: 8px;
 	bottom: 3.5px;
-	border: solid 1px var(--heading-color);
+	border: solid 1px var(--primary-text-color);
 	background-color: var(--header-color);
 	-webkit-transition: .4s;
 	transition: .4s;
 }
 
 input:checked+.slider {
-	background-color: var(--heading-color);
+	background-color: var(--primary-text-color);
 }
 
 input:focus+.slider {
@@ -787,7 +787,7 @@ input:checked+.slider:before {
 
 .slider.round {
 	border-radius: 34px;
-	border: solid 2px var(--heading-color);
+	border: solid 2px var(--primary-text-color);
 }
 
 .slider.round:before {
@@ -2206,7 +2206,7 @@ div[role="search"].active {
 }
 
 .icon-button.toggle-search.active svg {
-	fill: var(--heading-color);
+	fill: var(--primary-text-color);
 }
 
 .search-flex {
