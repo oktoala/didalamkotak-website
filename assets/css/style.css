@@ -592,7 +592,7 @@ select {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	max-width: 155px;
+	max-width: 180px;
 	width: 100%;
 }
 
@@ -614,7 +614,9 @@ select {
 }
 
 .logo__link {
-	font-size: 20px;
+	/* height: 30px; */
+	text-align: center;
+	font-size: 25px;
 	font-weight: bolder;
 	font-family: var(--headingFont);
 }
