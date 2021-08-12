@@ -13,7 +13,7 @@
 		<!-- <img class="logo__img" src="{{ . | relURL }}"> -->
 	</div>
 	{{- end -}}
-	<div class="logo__item logo__text logo__title">
+	<!-- <div class="logo__item logo__text logo__title"> -->
 		{{ $posts := (where .Pages "Type" "post") }}
 		{{ $postsLen := len $posts}}
 		{{ with $logoTitle -}}
@@ -22,6 +22,6 @@
 			{{ with $logoSubtitle }}<div class="logo__tagline">{{ . }}</div>{{ end }}
 		</a>
 		{{- end }}
-	</div>
+	<!-- </div> -->
 </div>
 {{- end }}
