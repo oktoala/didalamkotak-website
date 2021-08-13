@@ -21,11 +21,11 @@ Jika kalian bosan dengan bentuk kursor di Windows, maka kalian bisa mengubahnya 
 
 Tema kursor yang akan dipakai untuk tutorial kali ini adalah {{<linkBlank "Bibata Cursor" "https://github.com/ful1e5/Bibata_Cursor">}}.
 
-Kalian bisa unduh filenya [disini](https://www.pling.com/p/1197198/), klik pada **Files**, lalu unduh yang memiliki tulisan **Windows**.
+Kalian bisa unduh filenya [disini](https://www.pling.com/p/1197198/), klik pada **Files(..)**, lalu unduh yang memiliki tulisan **Windows**.
 
 ## Install Tema Kursor
 
-Jika sudah diunduh, extract maka kalian akan memiliki beberapa pilihan untuk tema kursor kalian.
+Jika sudah diunduh, extract, maka kalian akan memiliki beberapa pilihan untuk tema kursor kalian.
 
 Untuk tutorial kali ini, saya akan memilih tema **Bibata-Modern-Classic-Windows**.
 
@@ -39,13 +39,13 @@ Klik kanan pada file tersebut, lalu klik Install.
 
 ## Mengubah Tema Kursor
 
-Jika sudah diinstall, maka step yang terakhir adalah mengubah tema dari kursor tersebut.
+Jika sudah diinstall, maka step yang terakhir adalah mengubah tema dari kursor.
 
-Pergi ke **Mouse Settings** dengan cara menekan {{<scIcon class="fa fa-windows">}}+R, lalu ketik `main.cpl`.
+Pergi ke **Mouse Settings** dengan cara menekan {{<scIcon class="fa fa-windows">}}+r, lalu ketik `main.cpl`.
 
 ![run](/cara-ubah-kursor-di-windows/img/run.webp)
 
-Atau kalian bisa juga melakukannya dengan cara menekan {{<scIcon class="fa fa-windows">}}+S, lalu ketik **Mouse Setting**.
+Atau kalian bisa juga melakukannya dengan cara menekan {{<scIcon class="fa fa-windows">}}+s, lalu ketik **Mouse Settings**.
 
 ![search](/cara-ubah-kursor-di-windows/img/search.webp)
 
@@ -53,7 +53,7 @@ Jika sudah, pergi ke **Mouse {{<scIcon class="fa fa-arrow-right">}} Additionals 
 
 ### Scheme Kursor
 
-Jika sudah, masuk ke tab Pointers, lalu pada bagian **Schemes**, kalian bisa memilih tema kursor yang sudah kalian install sebelumnya.
+Apabila kalian sudah berada **Mouse Properties**, masuk ke tab Pointers, lalu pada bagian **Schemes**, kalian bisa memilih tema kursor yang sudah kalian install sebelumnya.
 
 ![pointer](/cara-ubah-kursor-di-windows/img/pointer.webp)
 

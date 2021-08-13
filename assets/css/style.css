@@ -670,7 +670,6 @@ select {
 .icon-button svg {
 	width: 30px;
 	fill: var(--primary-text-color);
-	/* stroke-width: 0px; */
 }
 
 .icon-button {
