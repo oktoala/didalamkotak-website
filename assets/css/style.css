@@ -66,6 +66,7 @@
 	--fontFamilyPrimary: 'Merriweather', Roboto, Helvetica, Arial, sans-serif;
 	--fontFamilySecondary: 'Cascadia Code', sans-serif, monospace;
 	--headingFont: 'Roboto', sans-serif;
+	--side: 20px;
 }
 
 * {
@@ -125,16 +126,16 @@ html {
 	scroll-behavior: smooth;
 }
 
-html::-webkit-scrollbar {
+::-webkit-scrollbar {
 	width: 11px;
 }
 
-html::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
 	/* border-radius: 10px; */
 	background: transparent;
 }
 
-html::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
 	border-radius: 10px;
 	background: var(--scrollbar-thumb);
 }
@@ -565,7 +566,7 @@ select {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin: 0 20px;
+	margin: 0 var(--side);
 }
 
 .logo--mixed {
@@ -1683,12 +1684,7 @@ textarea {
 		visibility: hidden;
 		transition: all .5s;
 	}
-	.logo__link {
-		z-index: -1;
-	}
-	.sidebar {
-		margin-top: 0px;
-	}
+	
 	.body.scroll-disabled {
 		overflow-y: hidden;
 	}
@@ -2158,12 +2154,10 @@ pre:hover::-webkit-scrollbar-thumb {
 
 div[role="search"] {
 	width: 100%;
-	/* max-width: 900px; */
 	height: 100%;
 	position: fixed;
 	z-index: 2;
 	top: -100%;
-	margin: 0;
 	padding-top: 50px;
 	background-color: var(--body-color);
 	transition: top 0.4s ease;
@@ -2180,6 +2174,7 @@ div[role="search"].active {
 
 
 .search-flex {
+	margin: 5px var(--side);
 	width: 100%;
 	overflow-y: auto;
 	max-width: var(--max-width);
@@ -2215,7 +2210,7 @@ form.search {
 }
 
 .search-results>li {
-	margin: 20px 20px;
+	margin: 20px 0px;
 	list-style: none;
 }
 
