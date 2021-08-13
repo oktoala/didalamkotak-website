@@ -1,6 +1,6 @@
 ---
 title: "Cara Ubah Kursor Di Windows"
-date: 2021-08-13T22:39:20+08:00
+date: 2021-08-13T12:39:20+08:00
 comments: true
 draft: false 
 author: "Yoga"
