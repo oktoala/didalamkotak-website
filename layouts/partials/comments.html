@@ -1,5 +1,5 @@
 {{ if and .Site.DisqusShortname (index .Params "comments" | default "true") (not .Site.IsServer) }}
-<section class="main-single">
+<section class="comment">
 	{{ partial "disqus.html" . }}
 </section>
 {{ end }}
