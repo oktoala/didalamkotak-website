@@ -32,7 +32,7 @@
 }
 
 :root {
-	--body-color: #232324;
+	--body-color: #262627;
 	--header-color: #1e1e1e;
 	--wrapper-color: #1a1b1d;
 	--heading-color: #8bd3e1;
@@ -771,11 +771,11 @@ input:checked+.slider:before {
 
 .main-single {
 	background-color: var(--wrapper-color);
-	margin: 25px 0 0;
+	margin: 25px 0;
 	border: 0;
 	border-radius: 10px;
 	box-shadow: 1px 1px 5px #1e1e1e;
-	padding: 5px 30px 25px;
+	padding: 15px 30px 25px;
 }
 
 .main__header {
