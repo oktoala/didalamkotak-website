@@ -596,6 +596,7 @@ select {
 .logo__title {
 	display: flex;
 	align-items: center;
+	min-width: 145px;
 }
 
 .logo__link {
@@ -770,13 +771,17 @@ input:checked+.slider:before {
 
 /* Posts/Pages */
 
+.main.list{
+	margin: 0 var(--side);
+}
+
 .main-single {
 	background-color: var(--wrapper-color);
 	margin: 25px 0;
 	border: 0;
 	border-radius: 10px;
 	box-shadow: 1px 1px 5px #1e1e1e;
-	padding: 15px 30px 25px;
+	padding: 15px 20px 25px;
 }
 
 .main__header {
@@ -1576,12 +1581,13 @@ textarea {
 .footer-list {
 	display: flex;
 	list-style: none;
-	justify-content: center;
+	justify-content: space-evenly;
+	width: 100%;
 }
 
 .footer-list > li{
 	font-weight: bolder;
-	margin-right: 20px;
+	/* margin-right: 20px; */
 }
 
 .footer-list > li a:hover{
@@ -1626,9 +1632,7 @@ textarea {
 	.widget {
 		margin-bottom: 20px;
 	}
-	.footer__container {
-		display: block;
-	}
+	
 	.footer__links {
 		padding-bottom: 8px;
 		padding-bottom: 0.5rem;

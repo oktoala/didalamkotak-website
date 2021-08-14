@@ -26,8 +26,8 @@
 				</ul>
 			</div>
 			<div class="footer__copyright">
-				&copy; 2020 - {{ now.Format "2006" }}  <b>{{ .Site.Title}}</b> <span> | {{ .Site.Params.copyright | default .Site.Title }}
-					{{ hugo.Version}}.</span>
+				&copy; 2020 - {{ now.Format "2006" }}  <b>{{ .Site.Title}}</b> | <span>{{ .Site.Params.copyright | default .Site.Title }}
+					</span> Hugo {{ hugo.Version }}.
 			</div>
 		</div>
 	</div>
