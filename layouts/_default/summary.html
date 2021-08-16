@@ -2,7 +2,7 @@
 	<div class="flex-box">
 		{{- if .Params.thumbnail }}
 		<figure class="list__thumbnail">
-			<a href="{{ .Permalink }}">
+			<a href="{{ .RelPermalink }}">
 				<img loading="lazy" src="{{ .Params.thumbnail | relURL }}" alt="/img/placeholder.png" />
 			</a>
 		</figure>

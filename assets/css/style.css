@@ -131,7 +131,6 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-	/* border-radius: 10px; */
 	background: transparent;
 }
 
@@ -162,7 +161,6 @@ body {
 .container {
 	position: relative;
 	width: 100%;
-	/* max-width: 900px; */
 	margin: 0;
 }
 
@@ -175,7 +173,6 @@ body {
 	width: 100%;
 	display: flex;
 	justify-content: center;
-	/* max-width: var(--max-width); */
 }
 
 .wrapper {
@@ -287,6 +284,91 @@ input, button, select, optgroup, textarea {
 
 .menu__item, .btn {
 	transition: background-color .25s ease-out;
+}
+
+/* Images / Video */
+
+img {
+	width: auto\9;
+	/* ie8 */
+	max-width: 100%;
+	height: auto;
+	vertical-align: bottom;
+}
+
+iframe, embed, object, video {
+	max-width: 100%;
+}
+
+/* Table */
+
+table {
+	width: 200px;
+	height: 100px;
+	overflow: auto;
+	margin-bottom: 20px;
+	margin-bottom: 1.25rem;
+	border-spacing: 0;
+	border-collapse: collapse;
+	border-top: 1px solid #ebebeb;
+	border-left: 1px solid #ebebeb;
+}
+
+td, th {
+	padding: 5px 10px;
+	border-right: 1px solid #ebebeb;
+	border-bottom: 1px solid #ebebeb;
+}
+
+th {
+	font-weight: 700;
+}
+
+/* Forms */
+
+input {
+	padding: 0 0 3px 15px;
+	color: var(--primary-text-color);
+	font-size: 16px;
+	background: #1c2022;
+	transition: all .25s ease-in-out;
+	border: none;
+}
+
+input[type=text], input[type=email], input[type=tel], input[type=url] {
+	width: 83%;
+}
+
+input[type=text]:hover, input[type=email]:hover, input[type=tel]:hover, input[type=url]:hover, textarea:hover {
+	border: 2px solid var(--highlight-color);
+}
+
+input[type=submit], input[type=reset] {
+	display: inline-block;
+	min-width: 150px;
+	padding: 10px 15px;
+	font-weight: 700;
+	color: var(--heading-color);
+	text-transform: uppercase;
+	cursor: pointer;
+	background: var(--btn-color);
+	border: 0;
+	transition: all .1s linear;
+	-webkit-appearance: none;
+}
+
+input[type=submit]:hover, input[type=reset]:hover {
+	background: var(--highlight-color);
+}
+
+textarea {
+	width: 96%;
+	padding: 5px;
+	overflow: auto;
+	line-height: 1.5;
+	resize: vertical;
+	background: #f5f5f5;
+	border: 1px solid rgba(0, 0, 0, .1);
 }
 
 /* Typography */
@@ -526,6 +608,12 @@ select {
 	fill: #ddd;
 }
 
+.flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
 /* Header */
 
 /* 
@@ -575,6 +663,8 @@ select {
 	max-width: 195px;
 	width: 100%;
 }
+
+
 
 .logo__imagebox{
 	display: flex;
@@ -1012,12 +1102,6 @@ li.visible>a:hover {
 	list-style: none;
 }
 
-/* .sticky{
-	position: fixed;
-	top: 55px;
-	transition: all, 0.3s;
-} */
-
 .toc__title {
 	padding-left: 15px;
 	font-size: 16px;
@@ -1036,12 +1120,6 @@ li.visible>a:hover {
 	padding: 25px;
 	margin: 25px 0;
 	line-height: 1.5;
-	border: 0;
-	border-radius: 10px;
-	background-color: var(--wrapper-color);
-	box-shadow: 1px 1px 5px #1e1e1e;
-	/* border-top: 1px solid #ebebeb; */
-	/* border-bottom: 1px solid #ebebeb; */
 	color: var(--primary-text-color);
 }
 
@@ -1120,7 +1198,6 @@ li.visible>a:hover {
 .list__header {
 	text-align: center;
 	margin-bottom: 5px;
-	/* max-width: 350px; */
 	width: 100%;
 }
 
@@ -1368,90 +1445,7 @@ li.visible>a:hover {
 	color: var(--primary-text-color);
 }
 
-/* Images / Video */
 
-img {
-	width: auto\9;
-	/* ie8 */
-	max-width: 100%;
-	height: auto;
-	vertical-align: bottom;
-}
-
-iframe, embed, object, video {
-	max-width: 100%;
-}
-
-/* Table */
-
-table {
-	width: 200px;
-	height: 100px;
-	overflow: auto;
-	margin-bottom: 20px;
-	margin-bottom: 1.25rem;
-	border-spacing: 0;
-	border-collapse: collapse;
-	border-top: 1px solid #ebebeb;
-	border-left: 1px solid #ebebeb;
-}
-
-td, th {
-	padding: 5px 10px;
-	border-right: 1px solid #ebebeb;
-	border-bottom: 1px solid #ebebeb;
-}
-
-th {
-	font-weight: 700;
-}
-
-/* Forms */
-
-input {
-	padding: 0 0 3px 15px;
-	color: var(--primary-text-color);
-	font-size: 16px;
-	background: #1c2022;
-	transition: all .25s ease-in-out;
-	border: none;
-}
-
-input[type=text], input[type=email], input[type=tel], input[type=url] {
-	width: 83%;
-}
-
-input[type=text]:hover, input[type=email]:hover, input[type=tel]:hover, input[type=url]:hover, textarea:hover {
-	border: 2px solid var(--highlight-color);
-}
-
-input[type=submit], input[type=reset] {
-	display: inline-block;
-	min-width: 150px;
-	padding: 10px 15px;
-	font-weight: 700;
-	color: var(--heading-color);
-	text-transform: uppercase;
-	cursor: pointer;
-	background: var(--btn-color);
-	border: 0;
-	transition: all .1s linear;
-	-webkit-appearance: none;
-}
-
-input[type=submit]:hover, input[type=reset]:hover {
-	background: var(--highlight-color);
-}
-
-textarea {
-	width: 96%;
-	padding: 5px;
-	overflow: auto;
-	line-height: 1.5;
-	resize: vertical;
-	background: #f5f5f5;
-	border: 1px solid rgba(0, 0, 0, .1);
-}
 
 /* Widgets */
 
@@ -2175,8 +2169,6 @@ div[role="search"].active {
 	transition: top 0.4s ease;
 }
 
-
-
 .search-flex {
 	margin: 5px var(--side);
 	width: 100%;
@@ -2197,7 +2189,6 @@ div[role="search"]>.close {
 }
 
 form.search {
-	/* outline: none; */
 	display: flex;
 	align-items: center;
 	justify-content: center;
