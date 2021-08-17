@@ -5,20 +5,22 @@
 
 <main class="main list" role="main">
 	{{- with .Title }}
-	<header class="main__header">
-		<!-- <h1 class="main__title">{{ . }}</h1> -->
-		<h4 class="widget__title">{{ . }}</h4>
-	</header>
-	{{- end }}
-	{{ if eq .Title $kategori}}
-	{{- $root := . }}
-	{{- $p := printf "widgets/categories.html" }}
-	{{- partial $p $root }}
-	{{ else }}
-	{{- $root := . }}
-	{{- $r := printf "widgets/taglist.html" }}
-	{{- partial $r $root }}
-	{{- end }}	
+	<div class="header-taxo">
+		<header class="main__header">
+			<!-- <h1 class="main__title">{{ . }}</h1> -->
+			<h4 class="widget__title">{{ . }}</h4>
+		</header>
+		{{- end }}
+		{{ if eq .Title $kategori}}
+		{{- $root := . }}
+		{{- $p := printf "widgets/categories.html" }}
+		{{- partial $p $root }}
+		{{ else }}
+		{{- $root := . }}
+		{{- $r := printf "widgets/taglist.html" }}
+		{{- partial $r $root }}
+		{{- end }}
+	</div>
 	<div id="main-page" class="main page">
 		{{- range .Paginator.Pages }}
 		{{- .Render "taxo" }}
