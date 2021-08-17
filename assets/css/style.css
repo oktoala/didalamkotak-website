@@ -176,7 +176,7 @@ body {
 .wrapper {
 	width: 100%;
 	min-height: 894.8px;
-	padding: 70px 0px 0;
+	padding: 50px 0px 0;
 	border-width: 24px;
 	background-color: inherit;
 	transition: all, 1s;
@@ -639,7 +639,6 @@ select {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	display: flex;
 	border-bottom: 2px solid var(--heading-color);
 	border-width: 4px;
 	transition: top, .4s;
