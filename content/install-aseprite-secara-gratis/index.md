@@ -35,6 +35,29 @@ Saya sarankan kalian mengikuti cara yang disediakan oleh Aseprite di laman [gith
 
 Cara yang akan saya berikan di bawah adalah hasil modifikasi sedikit karena saya sempat gagal saat menginstallnya 😅.
 
+### Install Dependencies
+
+Ini adalah hal-hal yang dibutuhkan untuk menginstall Aseprite:
+
+    + CMake versi terbaru (>3.14)
+    + Ninja 
+    + Skia
+
+Ikuti perintah di bawah untuk Ubuntu/Debian:
+
+{{<shell "$">}}sudo apt-get install -y g++ cmake ninja-build libx11-dev libxcursor-dev libxi-dev libgl1-mesa-dev libfontconfig1-dev
+{{</shell>}}
+
+Untuk Fedora:
+
+{{<shell "$">}}sudo dnf install -y gcc-c++ cmake ninja-build libX11-devel libXcursor-devel libXi-devel mesa-libGL-devel fontconfig-devel
+{{</shell>}}
+
+Untuk Arch:
+
+{{<shell "$">}}sudo pacman -S gcc cmake ninja libx11 libxcursor mesa-libgl fontconfig
+{{</shell>}}
+
 ### Install Skia
 
 Skia adalah sebuah 2D graphic library yang dikembangkan oleh Google.
@@ -67,7 +90,46 @@ ninja -C out/Release-x64 skia modules{{</shell>}}
 
 ### Install Aseprite
 
+Pertama, unduh source code Aseprite dari [release page](https://github.com/aseprite/aseprite/releases) dan unduh `Aseprite-v1.x-Source.zip`
+lalu extract filenya. Saya sendiri menaruhnya di folder `~/aseprite`.
 
+Kalian juga bisa menggunakan git untuk mengambil source code-nya.
 
+{{<shell "$">}}git clone --recursive https://github.com/aseprite/aseprite.git ~/aseprite
+{{</shell>}}
 
+Dan untuk mengupdatenya kalian bisa gunakan perintah di bawah.
 
+{{<shell "$">}}cd ~/aseprite
+git pull
+git submodule update --init --recursive
+{{</shell>}}
+
+Jika sudah jalankan perintah di bawah ini.
+
+{{<shell "$">}}cd ~/aseprite
+mkdir build
+cd build
+cmake \
+  -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+  -DLAF_BACKEND=skia \
+  -DSKIA_DIR=$HOME/deps/skia \
+  -DSKIA_LIBRARY_DIR=$HOME/deps/skia/out/Release-x64 \
+  -DSKIA_LIBRARY=$HOME/deps/skia/out/Release-x64/libskia.a \
+  -G Ninja \
+  ..
+ninja aseprite{{</shell>}}
+
+Jika berhasil, binary dari Aseprite ada di folder `bin`.
+
+{{<shell "$">}}./bin/aseprite{{</shell>}}
+
+![aseprite](/install-aseprite-secara-gratis/img/aseprite.webp)
+
+## Akhir Kata...
+
+Jadi itu adalah cara menginstall Aseprite secara gratis dan legal.
+
+Terkadang pengetahuan membuat kita lebih hemat 😄.
+
+Oke mungkin itu aja, **_Smell ya later_**.
