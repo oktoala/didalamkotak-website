@@ -1,12 +1,11 @@
+{{- if .Params.thumbnail }}
 <article class="list__item">
 	<div class="flex-box">
-		{{- if .Params.thumbnail }}
 		<figure class="list__thumbnail">
 			<a href="{{ .RelPermalink }}">
 				<img loading="lazy" src="{{ .Params.thumbnail | relURL }}" alt="/img/placeholder.png" />
 			</a>
 		</figure>
-		{{- end }}
 		<div class="summary_content">
 			<header class="list__header">
 				<h5 class="list__title post__title ">
@@ -22,4 +21,5 @@
 				{{ .Summary }}
 			</div>
 		</div>
-</article>
+	</article>
+{{- end }}
