@@ -2,7 +2,7 @@
 title: "Install Aseprite Secara Gratis"
 date: 2021-08-20T22:12:24+08:00
 comments: true
-draft: true
+draft: false
 author: "Yoga"
 toc: true
 kategori: [Belajar]
@@ -10,10 +10,8 @@ topik: [belajar, aseprite, pixel]
 type: post
 thumbnail: "/install-aseprite-secara-gratis/img/thumbnail.webp"
 description: "Install Aseprite Secara Gratis"
-summary: Tutorial menginstall Aseprite secara gratis dan pastinya dengan cara yang legal
+summary: Belajar menginstall Aseprite secara gratis dan pastinya dengan cara yang legal
 ---
-
-![install-aseprite-secara-gratis](/install-aseprite-secara-gratis/img/thumbnail.webp)
 
 Jika kalian ingin menggambar tapi kalian tidak punya pen tablet, maka pixel art bisa menjadi solusi alternatifnya.
 
@@ -39,9 +37,10 @@ Cara yang akan saya berikan di bawah adalah hasil modifikasi sedikit karena saya
 
 Ini adalah hal-hal yang dibutuhkan untuk menginstall Aseprite:
 
-    + CMake versi terbaru (>3.14)
-    + Ninja 
-    + Skia
++ gcc 9.2 atau clang 9.0
++ CMake versi terbaru (>3.14)
++ Ninja 
++ Skia
 
 Ikuti perintah di bawah untuk Ubuntu/Debian:
 
