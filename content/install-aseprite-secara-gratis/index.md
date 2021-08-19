@@ -35,27 +35,24 @@ Cara yang akan saya berikan di bawah adalah hasil modifikasi sedikit karena saya
 
 ### Install Dependencies
 
-Ini adalah hal-hal yang dibutuhkan untuk menginstall Aseprite:
+Ini adalah hal-hal yang dibutuhkan untuk menginstall Aseprite
 
 + gcc 9.2 atau clang 9.0
 + CMake versi terbaru (>3.14)
 + Ninja 
 + Skia
 
-Ikuti perintah di bawah untuk Ubuntu/Debian:
+Ikuti perintah di bawah untuk Ubuntu/Debian.
 
-{{<shell "$">}}sudo apt-get install -y g++ cmake ninja-build libx11-dev libxcursor-dev libxi-dev libgl1-mesa-dev libfontconfig1-dev
-{{</shell>}}
+{{<shell "$">}}sudo apt-get install -y g++ cmake ninja-build libx11-dev libxcursor-dev libxi-dev libgl1-mesa-dev libfontconfig1-dev{{</shell>}}
 
-Untuk Fedora:
+Untuk Fedora.
 
-{{<shell "$">}}sudo dnf install -y gcc-c++ cmake ninja-build libX11-devel libXcursor-devel libXi-devel mesa-libGL-devel fontconfig-devel
-{{</shell>}}
+{{<shell "$">}}sudo dnf install -y gcc-c++ cmake ninja-build libX11-devel libXcursor-devel libXi-devel mesa-libGL-devel fontconfig-devel{{</shell>}}
 
-Untuk Arch:
+Untuk Arch.
 
-{{<shell "$">}}sudo pacman -S gcc cmake ninja libx11 libxcursor mesa-libgl fontconfig
-{{</shell>}}
+{{<shell "$">}}sudo pacman -S gcc cmake ninja libx11 libxcursor mesa-libgl fontconfig{{</shell>}}
 
 ### Install Skia
 

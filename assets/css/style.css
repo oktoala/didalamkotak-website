@@ -184,7 +184,7 @@ body {
 	display: flex;
 	justify-content: space-between;
 	max-width: var(--max-width);
-	margin: 0 20px;
+	margin: 0 var(--side);
 }
 
 .primary {
@@ -1125,7 +1125,6 @@ li.visible>a:hover {
 }
 
 .authorbox__header {
-	margin: 0 0 0 10px;
 }
 
 .authorbox__ditulis {
