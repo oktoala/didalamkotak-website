@@ -171,6 +171,7 @@ body {
 	width: 100%;
 	display: flex;
 	justify-content: center;
+	padding: 0 var(--side);
 }
 
 .wrapper {
@@ -184,7 +185,6 @@ body {
 	display: flex;
 	justify-content: space-between;
 	max-width: var(--max-width);
-	margin: 0 var(--side);
 }
 
 .primary {
@@ -1724,9 +1724,11 @@ li.visible>a:hover {
 	.footer__copyright>span {
 		display: none;
 	}
-	.wrapper {
-		margin: 0;
+	
+	.wrapper-container {
+		padding: 0;
 	}
+
 	.header-taxo {
 		margin: 0 var(--side);
 	}
