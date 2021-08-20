@@ -1,6 +1,6 @@
 ---
 title: "Install Aseprite Secara Gratis"
-date: 2021-08-20T22:10:25+08:00
+date: 2021-08-20T10:10:25+08:00
 comments: true
 draft: false
 author: "Yoga"
