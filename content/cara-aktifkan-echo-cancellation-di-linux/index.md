@@ -1,6 +1,6 @@
 ---
 title: "Cara Aktifkan Echo Cancellation Di Linux"
-date: 2021-08-27T10:21:57+08:00
+date: 2021-08-27T10:01:57+08:00
 comments: true
 draft: false
 author: "Yoga"
