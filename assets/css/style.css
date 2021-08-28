@@ -990,7 +990,7 @@ input:checked+.slider:before {
 }
 
 .content ul, .content ol {
-	margin: 20px 0 20px 40px;
+	margin: 20px 0 20px 20px;
 }
 
 .content ul ul, .content ol ol, .content ol ul, .content ul ol {
@@ -1124,8 +1124,6 @@ li.visible>a:hover {
 	/* border: 1px solid #ebebeb; */
 }
 
-.authorbox__header {
-}
 
 .authorbox__ditulis {
 	font-size: 0.9em;
