@@ -1911,6 +1911,10 @@ code.bC[data-lang=XML] {
 code.bC[data-lang=Apache] {
 	border-left-color: #D12127;
 }
+
+code.bC[data-lang=PHP] {
+	border-left-color: #8892BF;
+}
 /* -------------------------------------------------------------------- */
 
 .bC::-webkit-scrollbar {
