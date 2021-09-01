@@ -142,7 +142,18 @@ Atau buka **localhost/~username** jika kalian membuatnya di `~/public_html`.
 
 ![phpinfo](/install-lamp-dan-phpmyadmin/img/phpinfo.webp)
 
-Kalian bisa mengubah dari folder `~/public_html` ke folder lain dengan cara mengaturnya di `/etc/httpd/conf/extra/httpd-userdir.conf`.
+Sebenarnya kalian juga bisa menjalankan PHP dengan web server yang ada di PHP tanpa perlu Apache.
+
+Cukup jalankan perintah di bawah ini di dalam folder yang memiliki `index.php` dengan perintah `php -S localhost:<port>`.
+
+Contoh:
+
+{{<shell "$">}}php -S localhost:8080{{</shell>}}
+
+![phpinfo2](/install-lamp-dan-phpmyadmin/img/phpinfo2.webp)
+
+
+Kalian bisa mengubah folder default `~/public_html` ke folder lain dengan cara mengaturnya di `/etc/httpd/conf/extra/httpd-userdir.conf`.
 
 ### Test MariaDB dan PHPMyAdmin
 
