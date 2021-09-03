@@ -1,6 +1,6 @@
 ---
-title: "Install LAMP dan PHPMyAdmin"
-date: 2021-09-03T10:12:06+08:00
+title: "Install LAMP Stack"
+date: 2021-09-03T08:12:06+08:00
 comments: true
 draft: false
 author: "Yoga"
