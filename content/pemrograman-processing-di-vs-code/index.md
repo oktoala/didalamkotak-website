@@ -2,7 +2,7 @@
 title: "Pemrograman Processing Di VSCode"
 date: 2021-09-10T13:36:08+08:00
 comments: true
-draft: true
+draft: false
 author: "Yoga"
 toc: true
 kategori: [Programming, Belajar]
