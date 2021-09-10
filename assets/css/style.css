@@ -1915,6 +1915,9 @@ code.bC[data-lang=Apache] {
 code.bC[data-lang=PHP] {
 	border-left-color: #8892BF;
 }
+code.bC[data-lang=Arduino] {
+	border-left-color: #008184; 
+}
 /* -------------------------------------------------------------------- */
 
 .bC::-webkit-scrollbar {
