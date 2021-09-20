@@ -1086,6 +1086,21 @@ li.visible>a:hover {
 	color: yellow;
 }
 
+.anchor {
+	font-size: 18px;
+	visibility: hidden;
+}
+
+h2:hover .anchor , h3:hover .anchor {
+	color: var(--icon-fill-color);
+	text-decoration: none;
+	visibility: visible;
+}
+
+h2:hover .anchor:hover, h3:hover .anchor:hover {
+	color: var(--primary-text-color);
+}
+
 .nav-ul li {
 	list-style: none;
 }
