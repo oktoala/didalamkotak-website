@@ -5,7 +5,7 @@ comments: true
 draft: false
 author: "Yoga"
 toc: true
-kategori: [Linux, Short]
+kategori: [Tips]
 topik: [linux, amd, brightness, driver]
 type: post
 sidebar: false

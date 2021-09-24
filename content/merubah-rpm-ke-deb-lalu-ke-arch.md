@@ -7,7 +7,7 @@ author: "Yoga"
 toc: true
 type: post
 thumbnail: /img/thumbnail/merubah-rpm-ke-deb-lalu-ke-arch.jpg
-kategori: ["Linux", "Tips"]
+kategori: ["Linux"]
 tags:
     - arch
     - linux

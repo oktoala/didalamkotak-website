@@ -5,7 +5,7 @@ comments: true
 draft: false
 author: "Yoga"
 toc: true
-kategori: [Tips, Linux]
+kategori: [Tips]
 topik: [gdm, gnome, tips, linux]
 type: post
 thumbnail: "/tips-dan-trik-gnome-shell/img/thumbnail.webp"

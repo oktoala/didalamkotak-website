@@ -5,7 +5,7 @@ comments: true
 draft: false
 author: "Yoga"
 toc: true
-kategori: [Tips, Linux]
+kategori: [Linux]
 topik: [plymouth, linux, tips, boot, arch]
 type: post
 thumbnail: "/mari-install-plymouth-di-arch-linux/img/thumbnail.webp"

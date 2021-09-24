@@ -5,7 +5,7 @@ comments: true
 draft: false 
 author: "Yoga"
 toc: true
-kategori: [Tips, Windows]
+kategori: [Windows]
 topik: [tips, kursor, windows, bibata]
 type: post
 thumbnail: "/cara-ubah-kursor-di-windows/img/thumbnail.webp"

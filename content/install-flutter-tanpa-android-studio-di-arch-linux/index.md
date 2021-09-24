@@ -5,7 +5,7 @@ comments: true
 draft: false
 author: "Yoga"
 toc: true
-kategori: [Programming, Linux]
+kategori: [Programming]
 topik: [programming, flutter, linux, arch]
 type: post
 thumbnail: "/install-flutter-tanpa-android-studio-di-arch-linux/img/thumbnail.webp"

@@ -6,7 +6,7 @@ draft: false
 author: "Yoga"
 toc: true
 sidebar: false
-kategori: [Short, Linux]
+kategori: [Linux]
 topik: [short, linux, echo, mic]
 type: post
 thumbnail: "/cara-aktifkan-echo-cancellation-di-linux/img/thumbnail.webp"

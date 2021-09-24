@@ -6,7 +6,7 @@ draft: false
 author: "Yoga"
 sidebar: false
 toc: false
-kategori: [Programming, Short]
+kategori: [Programming]
 topik: [git, programming, github, ssh, short]
 type: post
 thumbnail: "/konfigurasi-ssh-di-github/img/thumbnail.webp"

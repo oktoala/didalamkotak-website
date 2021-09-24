@@ -5,7 +5,7 @@ comments: true
 draft: false
 author: "Yoga"
 toc: true
-kategori: [Programming, Belajar]
+kategori: [Programming]
 topik: [processing, vscode]
 type: post
 thumbnail: "/pemrograman-processing-di-vs-code/img/thumbnail.webp"

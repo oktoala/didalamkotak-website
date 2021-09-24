@@ -5,7 +5,7 @@ comments: true
 draft: false
 author: "Yoga"
 toc: true
-kategori: [Tips, Linux]
+kategori: [Linux]
 topik: [steam, tips, linux, steam, proton]
 type: post
 thumbnail: "/steam-gaming-di-linux/img/thumbnail.webp"

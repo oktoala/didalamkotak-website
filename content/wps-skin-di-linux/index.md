@@ -5,7 +5,7 @@ comments: true
 draft: false
 author: "Yoga"
 toc: true
-kategori: [Tips]
+kategori: [Linux]
 topik: [wps, office, linux]
 type: post
 thumbnail: "/wps-skin-di-linux/img/thumbnail.webp"

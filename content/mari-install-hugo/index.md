@@ -5,7 +5,7 @@ comments: true
 draft: false
 author: "Yoga"
 toc: true
-kategori: [Belajar, Programming]
+kategori: [Belajar]
 topik: [hugo, programming, web]
 type: post
 thumbnail: "/mari-install-hugo/img/mari-install-hugo.webp"

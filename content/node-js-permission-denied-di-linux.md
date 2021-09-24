@@ -6,7 +6,7 @@ draft: false
 author: "Yoga"
 toc: true
 sidebar: false
-kategori: ['Programming', 'Short']
+kategori: ['Programming']
 topik: [nodejs, npm, programming]
 description: "Ini adalah cara saya untuk mengatasi NPM EACCSES Permission Denied"
 type: post
