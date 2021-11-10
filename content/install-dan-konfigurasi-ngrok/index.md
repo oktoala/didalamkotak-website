@@ -5,8 +5,8 @@ comments: true
 draft: false
 author: "Yoga"
 toc: true
-kategori: []
-topik: []
+kategori: [Tips]
+topik: [ngrok, http]
 type: post
 thumbnail: "/install-dan-konfigurasi-ngrok/img/thumbnail.webp"
 description: "Install Dan Konfigurasi Ngrok"
