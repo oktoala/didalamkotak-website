@@ -49,7 +49,7 @@
 	},
 	"WebM": {
 		"prefix": "webm",
-		"body": "{{<webm \"${1:PathKeVideo}\">}}",
+		"body": "{{<webm \"${RELATIVE_FILEPATH/(?:content|index.md)/$1/g}img/${1:namaVideo}.webm\">}}",
 		"description": "Masukkan WebM video"
 	},
 	"Gambar Caption": {

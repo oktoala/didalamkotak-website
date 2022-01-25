@@ -1,5 +1,5 @@
 {{- if .Param "authorbox" }}
-{{ $author := index .Site.Data.author .Params.author }}
+{{ $author := (index .Site.Data.author .Params.author) }}
 <div class="authorbox clearfix main-single">
 	{{- if and (not .Site.Author.avatar) (not .Site.Author.name) (not .Site.Author.bio) }}
 	<p class="authorbox__warning">
