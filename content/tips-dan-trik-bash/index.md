@@ -34,7 +34,7 @@ Yup, it's rainbow 🌈
 Kalian juga bisa menampilkannya dengan animasi, cukup tambahkan flags `-a`.
 
 
-{{<webm "/tips-dan-trik-bash/img/lolcat.webm/">}}
+{{<webm "/tips-dan-trik-bash/img/lolcat.webm">}}
 
 ## sl
 
