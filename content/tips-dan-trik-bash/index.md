@@ -10,7 +10,7 @@ topik: [bash, terminal]
 type: post
 thumbnail: "/tips-dan-trik-bash/img/thumbnail.webp"
 description: "Tips Dan Trik Bash"
-summary: h
+summary: Ini adalah perintah terminal yang mungkin kalian belum tahu
 ---
 
 ![tips-dan-trik-bash](/tips-dan-trik-bash/img/thumbnail.webp)
@@ -53,4 +53,51 @@ Perintah ini akan menampilkan akuarium.
 {{<webm "/tips-dan-trik-bash/img/asciiquarium.webm">}}
 
 ## cmatrix
+
+Perintah ini akan membuat kalian terlihat seperti hacker.
+
+{{<webm "/tips-dan-trik-bash/img/cmatrix.webm">}}
+
+## lsd
+
+Perintah ini mirip seperti `ls`, tapi lebih baik.
+
+![lsd-image](/tips-dan-trik-bash/img/lsd.webp)
+
+Yap, ini punya icon.
+
+Kalian mungkin ingin mengganti perintah `ls` default kalian menjadi `lsd`, cukup buat aliases di `.bashrc` kalian.
+
+{{<fileCode "bash" ".bashrc">}}alias ls='lsd --color=auto'
+alias ll='lsd -l --color=auto'
+# ls, the common ones I use a lot shortened for rapid fire usage
+alias l='lsd -lFh --color=auto'     #size,show type,human readable
+alias la='lsd -lAFh --color=auto'   #long list,show almost all,show type,human readable
+alias lr='lsd -tRFh --color=auto'   #sorted by date,recursive,show type,human readable
+alias lt='lsd -ltFh --color=auto'   #long list,sorted by date,show type,human readable
+alias ll='lsd -l --color=auto'      #long list
+alias ldot='lsd -ld .*'
+alias lS='lsd -1FSsh'
+alias lart='lsd -1Fcart'
+alias lrt='lsd -1Fcrt'
+{{</fileCode>}}
+
+## tldr
+
+Perintah ini mirip dengan `man`, yang dimana akan memberitahu kegunaan dari suatu perintah.
+
+Tapi `tldr` lebih user-friendly.
+
+Mari kita bandingkan cara penggunaan `man` dan `tldr` pada `git`.
+
+Ini adalah perintah `man git`.
+
+![man](/tips-dan-trik-bash/img/man.webp)
+
+Dan ini adalah perintah `tldr git`.
+
+![tldrs](/tips-dan-trik-bash/img/tldr.webp)
+
+Bisa kita lihat mana yang lebih user friendly. Walaupun `tldr` tidak selengkap `man`.
+
 
