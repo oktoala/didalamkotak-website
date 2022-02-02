@@ -1,69 +1,16 @@
 {{- if .Params.author -}}
 {{ $var := index .Site.Data.author .Params.author}}
-{{- with $var.social.facebook}}
+{{ range $key, $value := $var.social }}
+{{ with . }}
 <div class="widget-social__item social__item">
-	<a class="widget-social__link widget__link btn fa fa-facebook" title="Facebook" rel="noopener noreferrer"
-		href="https://facebook.com/{{ . }}" target="_blank">
+	<a class="widget-social__link widget__link btn fa fa-{{ $key }}" title="{{ . }}" rel="noopener noreferrer" href='{{if eq $key "envelope" }} 
+					mailto:{{ . }}
+				{{ else }}
+					https://{{$key}}.com/{{.}}
+				{{ end }}' target="_blank">
 	</a>
 </div>
-{{- end }}
-{{- with $var.social.twitter }}
-<div class="widget-social__item social_item">
-	<a class="widget-social__link widget__link btn fa fa-twitter" title="Twitter" rel="noopener noreferrer"
-		href="https://twitter.com/{{ . }}" target="_blank">
-	</a>
-</div>
-{{- end }}
-{{- with $var.social.instagram }}
-<div class="widget-social__item social_item">
-	<a class="widget-social__link widget__link btn fa fa-instagram" title="Instagram" rel="noopener noreferrer"
-		href="https://www.instagram.com/{{ . }}" target="_blank">
-	</a>
-</div>
-{{- end }}
-{{- with $var.social.linkedin }}
-<div class="widget-social__item social__item">
-	<a class="widget-social__link widget__link btn" title="LinkedIn" rel="noopener noreferrer"
-		href="https://linkedin.com/in/{{ . }}" target="_blank">
-		{{ partial "svg/linkedin.svg" (dict "class" "widget-social__link-icon") }}
-	</a>
-</div>
-{{- end }}
-{{- with $var.social.telegram }}
-<div class="widget-social__item social__item">
-	<a class="widget-social__link widget__link btn" title="Telegram" rel="noopener noreferrer"
-		href="https://t.me/{{ . }}" target="_blank">
-		{{ partial "svg/telegram.svg" (dict "class" "widget-social__link-icon") }}
-	</a>
-</div>
-{{- end }}
-{{- with $var.social.github }}
-<div class="widget-social__item social_item">
-	<a class="widget-social__link widget__link btn fa fa-github" title="GitHub" rel="noopener noreferrer"
-		href="https://github.com/{{ . }}" target="_blank">
-	</a>
-</div>
-{{- end }}
-{{- with $var.social.gitlab }}
-<div class="widget-social__item social__item">
-	<a class="widget-social__link widget__link btn" title="GitLab" rel="noopener noreferrer"
-		href="https://gitlab.com/{{ . }}" target="_blank">
-		{{ partial "svg/gitlab.svg" (dict "class" "widget-social__link-icon") }}
-	</a>
-</div>
-{{- end }}
-{{- with $var.social.bitbucket }}
-<div class="widget-social__item social__item">
-	<a class="widget-social__link widget__link btn" title="Bitbucket" rel="noopener noreferrer"
-		href="https://bitbucket.org/{{ . }}" target="_blank">
-		{{ partial "svg/bitbucket.svg" (dict "class" "widget-social__link-icon") }}
-	</a>
-</div>
-{{- end }}
-{{- with $var.social.email }}
-<div class="widget-social__item social__item">
-	<a class="widget-social__link widget__link btn fa fa-envelope" title="Email" href="mailto:{{ . }}">
-	</a>
-</div>
-{{- end }}
+{{end}}
+{{end}}
+
 {{- end }}

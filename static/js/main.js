@@ -62,8 +62,6 @@ if (sidebar != null) {
 
 slider.addEventListener("click", () => {
 	primary.classList.toggle("full");
-
-
 	let sidebar_class = "show";
 	let slider_class = "checked";
 	let primary_class = "unfull";

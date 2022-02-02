@@ -51,11 +51,11 @@ Di sini saya akan membuat sebuah skenario.
 > Saya punya matakuliah **Cloud Computing**, tiap hari **Selasa**, jam **3:30 PM sampai 05:00 PM** di ruangan **C404** **setiap minggu**
 > selama **16 kali pertemuan** dan saya harus diingatkan **1 jam sebelum** matakuliah dimulai.
 
-1. Oke, jadi pada **Add Title** bisa kalian isi **Cloud Computing**.
+1. Oke, jadi pada `Add Title` bisa kalian isi **Cloud Computing**.
 
     ![add-title](/google-calendar-untuk-jadwal-kuliah/img/add-title.webp)
 
-1. Jangan centang {{<scIcon class="far fa-clock">}} All-day dan atur jam yang ada dibawahnya menjadi 3:30 PM dan 05:00 PM. Atur juga tanggal dan harinya.
+1. Jangan centang `{{<scIcon class="far fa-clock">}} All-day` dan atur jam yang ada dibawahnya menjadi 3:30 PM dan 05:00 PM. Atur juga tanggal dan harinya.
 
     ![time-day](/google-calendar-untuk-jadwal-kuliah/img/time-day.webp)
 

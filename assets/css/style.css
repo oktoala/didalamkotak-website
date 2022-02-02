@@ -193,12 +193,12 @@ body {
 	-webkit-order: 1;
 	order: 1;
 	min-width: 0;
-	transition: all 0.2s ease;
+	transition: all 0.2s ease-in;
 }
 
 .primary.full {
 	max-width: var(--max-width);
-	transition: all .5s ease;
+	transition: all .5s ease-in;
 }
 
 .homepage-content {
@@ -213,17 +213,23 @@ body {
 	-webkit-order: 2;
 	order: 2;
 	min-width: 0;
-	transition: visibility 0.3s ease;
+	transition: all 0.3s ease-in-out;
 	opacity: 1;
 }
 
 .sidebar.visible {
 	opacity: 0;
-	transition: all 0.3s ease;
+	transition: all 0.01s ease-in-out;
 }
 
 .sidebar.hidden {
-	display: none;
+	-webkit-flex: 0;
+	flex: 0;
+}
+
+.sidebar.hidden nav {
+	visibility: hidden;
+	transition: all 0.01s ease-in-out;
 }
 
 .sidebar--left {
