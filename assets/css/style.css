@@ -193,12 +193,12 @@ body {
 	-webkit-order: 1;
 	order: 1;
 	min-width: 0;
-	transition: all 0.2s ease-in;
+	transition: all .5s ease-in;
 }
 
 .primary.full {
 	max-width: var(--max-width);
-	transition: all .5s ease-in;
+	transition: all .5s ease-in ;
 }
 
 .homepage-content {
@@ -213,23 +213,19 @@ body {
 	-webkit-order: 2;
 	order: 2;
 	min-width: 0;
-	transition: all 0.3s ease-in-out;
-	opacity: 1;
-}
-
-.sidebar.visible {
-	opacity: 0;
-	transition: all 0.01s ease-in-out;
+	transition: all .3s linear;
 }
 
 .sidebar.hidden {
 	-webkit-flex: 0;
 	flex: 0;
+	transition: all .5s ease-in;
 }
 
 .sidebar.hidden nav {
-	visibility: hidden;
-	transition: all 0.01s ease-in-out;
+	transition: all .3s linear;
+	top: -100px;
+	opacity: 0;
 }
 
 .sidebar--left {
@@ -1046,10 +1042,13 @@ input:checked+.slider:before {
 
 .toc_class {
 	margin-top: 25px;
-	position: fixed;
+	position: absolute;
 	font-weight: 700;
 	padding-left: 20px;
 	z-index: 0;
+	top: 50px;
+	transition: all .7s ease-in;
+	opacity: 1;
 }
 
 .toc-marker {
