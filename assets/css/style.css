@@ -219,7 +219,7 @@ body {
 .sidebar.hidden {
 	-webkit-flex: 0;
 	flex: 0;
-	transition: all .5s ease-in .3s;
+	transition: all .5s ease-in;
 }
 
 .sidebar.hidden .toc_class  {
@@ -1046,12 +1046,7 @@ input:checked+.slider:before {
 	font-weight: 700;
 	padding-left: 20px;
 	z-index: 0;
-}
-
-.toc_class.absolute {
-	position: absolute;
 	top: 50px;
-	opacity: 1;
 	transition: all .7s ease-in;
 }
 

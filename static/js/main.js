@@ -35,7 +35,6 @@ const slider = document.querySelector(".switch > input");
 const slider_li = document.querySelector("#slider_sidebar");
 const sidebar = document.querySelector(".sidebar");
 const primary = document.querySelector(".primary");
-const toc_class = document.querySelector("#toc");
 const curr_sidebar = localStorage.getItem("sidebarStorage");
 const curr_slider = localStorage.getItem("sliderStorage");
 const curr_primary = localStorage.getItem("primaryStorage");
@@ -60,15 +59,10 @@ if (sidebar != null) {
 }
 
 slider.addEventListener("click", () => {
-	toc_class.classList.toggle("absolute");
 	primary.classList.toggle("full");
 	let sidebar_class = "show";
 	let slider_class = "checked";
 	let primary_class = "unfull";
-
-	toc_class.addEventListener('transtitionrun', () => {
-		console.log('hahah');
-	});
 	
 	sidebar.classList.toggle("hidden");
 
