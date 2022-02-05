@@ -2,7 +2,7 @@
 title: "Google Calendar Untuk Jadwal Kuliah"
 date: 2022-02-02T09:22:10+08:00
 comments: true
-draft: false
+draft: true
 author: "Yoga"
 toc: true
 kategori: Tips
@@ -72,7 +72,19 @@ Di sini saya akan membuat sebuah skenario.
 1. Klik `{{<scIcon class="fa fa-map-marker-alt">}} Add Location` untuk menambahkan lokasi. Ketik C404 (gak akan muncul di google map, gapapa).
 Jika sudah klik {{<scIcon class="fa fa-check">}} di keyboard kalian.
 
-1. 
+1. Klik `{{<scIcon class="far fa-bell">}} Add Notification`, lalu pilih `1 hour before`. Jika sudah ada notikasi, klik {{<scIcon class="fa fa-times">}} untuk menghapus.
+
+1. Klik **Save** di pojok kanan atas.
+
+Jika sudah, seharusnya event yang kalian tambahkan akan terlihat seperti gambar di bawah ini.
+
+![saved-event](/google-calendar-untuk-jadwal-kuliah/img/saved-event.webp)
+
+## Integrasi di Windows
+
+
+
+
     
 
 

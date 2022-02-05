@@ -2341,3 +2341,9 @@ p.summary mark {
 .top-button:hover {
 	color: var(--heading-color);
 }
+
+/* Comment */
+
+.disqus_thread {
+	min-height: 683.381px;
+}
