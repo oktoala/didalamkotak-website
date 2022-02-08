@@ -2,7 +2,7 @@
 title: "Google Calendar Untuk Jadwal Kuliah"
 date: 2022-02-02T09:22:10+08:00
 comments: true
-draft: true
+draft: false
 author: "Yoga"
 toc: true
 kategori: Tips
@@ -79,13 +79,3 @@ Jika sudah klik {{<scIcon class="fa fa-check">}} di keyboard kalian.
 Jika sudah, seharusnya event yang kalian tambahkan akan terlihat seperti gambar di bawah ini.
 
 ![saved-event](/google-calendar-untuk-jadwal-kuliah/img/saved-event.webp)
-
-## Integrasi di Windows
-
-
-
-
-    
-
-
-
