@@ -24,7 +24,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Thumbnail", name: "thumbnail", widget: "image"}
       - {label: "Description", name: "description", widget: "string", default: string}
       - {label: "Summary", name: "summary", widget: "string", default: "Hahah"}
-      - {label: "Body": , name: "body", widget: "markdown"}
+      - {label: "Body", name: "body", widget: "markdown"}
   
   - name: "newpost"
     label: "Postingan Baru"
@@ -44,7 +44,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Thumbnail", name: "thumbnail", widget: "image"}
       - {label: "Description", name: "description", widget: "string", default: string}
       - {label: "Summary", name: "summary", widget: "string", default: "Hahah"}
-      - {label: "Body": , name: "body", widget: "markdown"}
+      - {label: "Body", name: "body", widget: "markdown"}
 
   # - name: "about"
   #   label: "About"
