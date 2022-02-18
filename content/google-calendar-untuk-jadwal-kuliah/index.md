@@ -7,7 +7,7 @@ author: "Yoga"
 toc: true
 kategori: Tips
 topik: [tips, google, calendar, windows, linux]
-type: post
+type: "post"
 thumbnail: "/google-calendar-untuk-jadwal-kuliah/img/thumbnail.webp"
 description: "Google Calendar Untuk Jadwal Kuliah"
 summary: Hari gini masih ngecek jadwal manual?
