@@ -6,8 +6,8 @@ media_folder: "static/img"
 public_folder: "img"
 
 collections: # A list of collections the CMS should be able to edit
-  - name: "posts"
-    label: "Posts"
+  - name: "oldpost"
+    label: "Postingan Lama"
     folder: "content"
     create: true
     slug: "{{slug}}"
@@ -24,3 +24,30 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Thumbnail", name: "thumbnail", widget: "image"}
       - {label: "Description", name: "description", widget: "string", default: string}
       - {label: "Summary", name: "summary", widget: "string", default: "Hahah"}
+      - {label: "Body": , name: "body", widget: "markdown"}
+  
+  - name: "newpost"
+    label: "Postingan Baru"
+    folder: "content/{{slug}}"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string", default: "{{ slug }}"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Comment", name: "comments", widget: "boolean", default: true}
+      - {label: "Draft", name: "draft", widget: "boolean", default: true}
+      - {label: "Author", name: "author", widget: "string", default: "Yoga"}
+      - {label: "Table Of Content", name: "toc", widget: "boolean", default: true}
+      - {label: "Categories", name: "kategori", widget: "string"}
+      - {label: "Tags", name: "topik", widget: "list"}
+      - {label: "Type", name: "post", widget: "hidden", default: "post"}
+      - {label: "Thumbnail", name: "thumbnail", widget: "image"}
+      - {label: "Description", name: "description", widget: "string", default: string}
+      - {label: "Summary", name: "summary", widget: "string", default: "Hahah"}
+      - {label: "Body": , name: "body", widget: "markdown"}
+
+  # - name: "about"
+  #   label: "About"
+  #   folder: "content/about"
+  #   fields:
+  #     - {label: }
