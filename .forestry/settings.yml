@@ -1,0 +1,151 @@
+---
+new_page_extension: md
+auto_deploy: false
+admin_path: 
+webhook_url: 
+sections:
+- type: directory
+  path: content
+  label: Pages
+  create: all
+  match: "*"
+- type: directory
+  path: content/wps-skin-di-linux
+  label: Wps skin di linux
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/ulasan-struktur-folder-hugo
+  label: Ulasan struktur folder hugo
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/tips-dan-trik-gnome-shell
+  label: Tips dan trik gnome shell
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/tips-dan-trik-bash
+  label: Tips dan trik bash
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/steam-gaming-di-linux
+  label: Steam gaming di linux
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/search
+  label: Search
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/posts
+  label: Posts
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/pemrograman-processing-di-vs-code
+  label: Pemrograman processing di vs code
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/offline
+  label: Offline
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/mari-install-plymouth-di-arch-linux
+  label: Mari install plymouth di arch linux
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/mari-install-hugo
+  label: Mari install hugo
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/konfigurasi-xampp-di-arch-linux
+  label: Konfigurasi xampp di arch linux
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/konfigurasi-ssh-di-github
+  label: Konfigurasi ssh di github
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/konfigurasi-c++-di-vs-code
+  label: Konfigurasi c++ di vs code
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/klik-pause-pada-vlc
+  label: Klik pause pada vlc
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/install-lamp-dan-phpmyadmin
+  label: Install lamp dan phpmyadmin
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/install-flutter-tanpa-android-studio-di-arch-linux
+  label: Install flutter tanpa android studio di arch linux
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/install-dan-konfigurasi-ngrok
+  label: Install dan konfigurasi ngrok
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/install-aseprite-secara-gratis
+  label: Install aseprite secara gratis
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/google-calendar-untuk-jadwal-kuliah
+  label: Google calendar untuk jadwal kuliah
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/cara-ubah-kursor-di-windows
+  label: Cara ubah kursor di windows
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/cara-install-font-di-linux
+  label: Cara install font di linux
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/cara-install-aur-helper
+  label: Cara install aur helper
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/cara-aktifkan-echo-cancellation-di-linux
+  label: Cara aktifkan echo cancellation di linux
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/about
+  label: About
+  create: all
+  match: "**/*"
+upload_dir: static/uploads
+public_path: "/uploads"
+front_matter_path: ''
+use_front_matter_path: false
+file_template: ":filename:"
+build:
+  preview_env:
+  - HUGO_ENV=staging
+  - HUGO_VERSION=0.81.0
+  preview_output_directory: public
+  preview_docker_image: forestryio/hugo:latest
+  mount_path: "/srv"
+  working_dir: "/srv"
+  instant_preview_command: hugo server -D -E -F --renderToDisk -d public
+version: 0.81.0
