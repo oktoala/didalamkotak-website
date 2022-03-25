@@ -21,7 +21,7 @@ Jika kalian bosan dengan bentuk kursor di Windows, maka kalian bisa mengubahnya 
 
 Tema kursor yang akan dipakai untuk tutorial kali ini adalah {{<linkBlank "Bibata Cursor" "https://github.com/ful1e5/Bibata_Cursor">}}.
 
-Kalian bisa unduh filenya [disini](https://www.pling.com/p/1197198/), klik pada **Files(..)**, lalu unduh yang memiliki tulisan **Windows**.
+Kalian bisa unduh filenya {{<linkBlank "disini" "https://www.pling.com/p/1197198/">}}, klik pada **Files(..)**, lalu unduh yang memiliki tulisan **Windows**.
 
 ## Install Tema Kursor
 
