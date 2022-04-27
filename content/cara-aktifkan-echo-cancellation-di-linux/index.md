@@ -18,6 +18,7 @@ Kalian pasti tidak ingin suara bising di luar mengganggu suara di microphone kal
 
 ## Mengaktifkan Module
 
+
 Cek apakah module sudah ada atau belum dengan perintah `pacmd` lalu ketik `list-modules`. Lalu cari baris yang memiliki nama `<module-echo-cancel>`.
 
 Jika tidak ada, tambahkan teks di bawah ke dalam file `/etc/pulse/default.pa.d/noice-cancellation.pa`
