@@ -73,6 +73,26 @@
 		"prefix": "test",
 		"body": "${RELATIVE_FILEPATH/(?:content|index.md)/$1/g}",
 		"description": "Test"
+	},
+
+	"Code": {
+		"prefix": "code",
+		"body": [
+			"```${1:Bahasa Pemrograman}",
+			"${2:...Kodingan}",
+			"```"
+		],
+		"description": "Codingan Tapi Lebih Clean"
+	},
+
+	"Code File": {
+		"prefix": "cf",
+		"body": [
+			"```${1:Bahasa Pemrograman} {file=\"${2:Nama File}\"}",
+			"${3:...Kodingan}",
+			"```"
+		],
+		"description": "Codingan dengan file"
 	}
 
 }
