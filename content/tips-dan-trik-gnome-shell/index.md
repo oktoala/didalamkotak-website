@@ -83,7 +83,8 @@ Jika sudah, maka akan muncul folder `shell-theme` di Home kalian.
 
 Lalu edit (buat baru jika tidak ada) file `gnome-shell-theme.gresource.xml`.
 
-{{<fileCode "XML" "gnome-shell-theme.gresource.xml">}}&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+```XML {file="gnome-shell-theme.gresource.xml"}
+<?xml version="1.0" encoding="UTF-8"?>
 <gresources>
   <gresource prefix="/org/gnome/shell/theme">
     <file>calendar-today.svg</file>
@@ -119,7 +120,8 @@ Lalu edit (buat baru jika tidak ada) file `gnome-shell-theme.gresource.xml`.
     <file>toggle-on-hc.svg</file>
     <file>toggle-on.svg</file>
   </gresource>
-</gresources>{{</fileCode>}}
+</gresources>
+```
 
 Ganti **FILENAME** dengan gambar yang ingin kalian jadikan background.
 

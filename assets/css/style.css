@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 .body.light-theme {
 	--body-color: #e0e0e0;
 	--header-color: #f0f0f0;
@@ -62,7 +61,7 @@
 	--brightness: brightness(1.3);
 	/* Font */
 	--fontFamilyPrimary: 'Merriweather', Roboto, Helvetica, Arial, sans-serif;
-	--fontFamilySecondary: 'Cascadia Code', sans-serif, monospace;
+	--fontFamilySecondary: 'Fira Code', sans-serif, monospace;
 	--headingFont: 'Roboto', sans-serif;
 	--side: 20px;
 }
@@ -303,7 +302,7 @@ iframe, embed, object, video {
 /* Table */
 
 table {
-	width: 200px;
+	/* width: 200px; */
 	height: 100px;
 	overflow: auto;
 	margin-bottom: 20px;
@@ -1900,11 +1899,11 @@ code.bC[data-lang=Powershell] {
 }
 
 code.bC[data-lang=Shell] {
-	border-left-color: #3e474a;
+	border-left-color: #3E474A;
 }
 
 code.bC[data-lang=Bash] {
-	border-left-color: #3e474a;
+	border-left-color: #3E474A;
 }
 
 code.bC[data-lang=Python] {
@@ -1912,11 +1911,11 @@ code.bC[data-lang=Python] {
 }
 
 code.bC[data-lang=TOML] {
-	border-left-color: #9c4221;
+	border-left-color: #9C4221;
 }
 
 code.bC[data-lang=JSON] {
-	border-left-color: #d8c83e;
+	border-left-color: #D8C83E;
 }
 
 code.bC[data-lang=CSS] {
@@ -1934,8 +1933,13 @@ code.bC[data-lang=Apache] {
 code.bC[data-lang=PHP] {
 	border-left-color: #8892BF;
 }
+
 code.bC[data-lang=Arduino] {
 	border-left-color: #008184; 
+}
+
+code.bC[data-lang=Javascript] {
+	border-left-color: #F0DB4F; 
 }
 /* -------------------------------------------------------------------- */
 

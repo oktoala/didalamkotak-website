@@ -12,6 +12,9 @@ taxonomies:
   kategori: kategori
   topik: topik
 markup:
+  highlight:
+    style: dracula
+    tabWidth: 2
   goldmark:
     extensions:
       definitionList: true
@@ -28,9 +31,9 @@ markup:
       autoHeadingID: true
       autoHeadingIDType: github
     renderer:
-      hardWraps: false
-      unsafe: false
-      xhtml: false
+      hardWraps: true
+      unsafe: true
+      xhtml: true
 Author:
   name: Oktoala
   bio: Ordinary Student

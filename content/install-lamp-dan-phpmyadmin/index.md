@@ -109,13 +109,15 @@ Jika sudah, jalankan atau restart `httpd.service`.
 
 Buat sebuah file di `/etc/httpd/conf/extra/` dengan nama `phpmyadmin.conf` lalu isi sebagai berikut.
 
-{{<fileCode "Apache" "phpmyadmin.conf">}}Alias /phpmyadmin "/usr/share/webapps/phpMyAdmin"
-&lt;Directory "/usr/share/webapps/phpMyAdmin">
+```Apache {file="phpmyadmin.conf"}
+Alias /phpmyadmin "/usr/share/webapps/phpMyAdmin"
+<Directory "/usr/share/webapps/phpMyAdmin">
     DirectoryIndex index.php
     AllowOverride All
     Options FollowSymlinks
     Require all granted
-&lt;/Directory>{{</fileCode>}}
+</Directory>
+```
 
 Lalu _include_ di dalam `/etc/httpd/conf/httpd.conf`.
 
