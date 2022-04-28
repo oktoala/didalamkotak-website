@@ -173,7 +173,7 @@ Enter, maka kalian sudah membuat projectnya.
 
 ![done-create](/react-untuk-pemula/img/done-create.webp)
 
-Jalankan perintah muncul saat kalian sudah membuat projectnya.
+Jalankan perintah yang muncul di bawah saat kalian sudah membuat projectnya.
 
 ```Shell {file="CMD / Terminal"}
 cd test-react
