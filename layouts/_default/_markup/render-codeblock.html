@@ -1,0 +1,10 @@
+<div class="chroma">
+	<div class="code-header {{ .Type }}">
+		<span class="code-title"> {{ .Attributes.file | default .Type }} </span>
+		<div class="tooltip">
+			<span id="" class="fa fa-copy" onclick="snackFunc(this.id)" onmouseout="outFunc(this.id)"></span>
+			<span class="tooltiptext">Copy ke clipboard</span>
+		</div>
+	</div>
+	<pre class="bC {{ .Type }}"><code class="bC language-{{.Type}}" data-lang="{{.Type}}">{{ .Inner }}</code></pre>
+</div>
