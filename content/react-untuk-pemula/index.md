@@ -5,7 +5,7 @@ comments: true
 draft: false
 author: "Yoga"
 toc: true
-kategori: "Programing"
+kategori: "Programming"
 topik: ["react", "web", "javascript"]
 type: post
 thumbnail: "/react-untuk-pemula/img/thumbnail.webp"
