@@ -67,7 +67,7 @@ Coba ingat-ingat, apa tujuan sebuah program dimasukkan ke dalam sebuah function?
 
 Agar program itu bisa kita panggil berkali-kali tanpa harus menulis kodingan yang sama bukan?
 
-Jika di HTML, jika ingin membuat 5 paragraph, kita harus melakukannya seperti ini.
+Di HTML, jika ingin membuat 5 paragraph, kita harus melakukannya seperti ini.
 
 ```HTML
 <p class="test">Goodbye World!</p>
