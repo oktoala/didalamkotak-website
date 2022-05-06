@@ -1,26 +1,24 @@
 <nav class="navigation">
-	<ul class="navbar-nav">
-		<!-- <li id="homeIcon" class="nav-item " custom-title="Home">
-			<a class="icon-button" href="/">
-				{{ partial "svg/home.svg" (dict "class" "logo__img" ) }}
+	<ul class="max-w-full w-full h-full flex justify-between list-none">
+		{{ if eq .Type "post" }}
+		<li class="list-none flex items-center justify-center pl-8 show-search" custom-title="Search">
+			<a class="p-1 m-[2px] flex items-center justify-center toggle-search">
+				<i class="fa-solid fa-bars"></i>
+				<!-- {{ partial "svg/search.html" (dict "class" "logo__img" ) }} -->
 			</a>
 		</li>
-		<li class="nav-item" custom-title="About">
-			<a class="icon-button" href="/about/">
-				{{ partial "svg/about.svg" (dict "class" "logo__img" ) }}
-			</a>
-		</li> -->
-		<li class="nav-item show-search" custom-title="Search" >
-			<a class="icon-button toggle-search">
-				{{ partial "svg/search.svg" (dict "class" "logo__img" ) }}
+		{{ end }}
+		<li class="list-none flex items-center justify-center pl-8 show-search" custom-title="Search">
+			<a class="p-1 m-[2px] flex items-center justify-center toggle-search">
+				<i class="fa-solid fa-magnifying-glass"></i>
+				<!-- {{ partial "svg/search.html" (dict "class" "logo__img" ) }} -->
 			</a>
 		</li>
-		<li id="slider_sidebar" class="nav-item" custom-title="Toggle-Sidebar">
+		<!-- <li id="slider_sidebar" class="nav-item" custom-title="Toggle-Sidebar">
 			<label class="switch">
 				<input type="checkbox">
 				<span class="slider round"></span>
 			</label>
-		</li>
+		</li> -->
 	</ul>
 </nav>
-

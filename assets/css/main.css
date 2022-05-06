@@ -2,3 +2,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  a {
+    @apply text-dk-text no-underline;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply mb-[30px] mt-0 mx-0 leading-5 tracking-wide font-dk-heading
+  }
+
+  ol, li {
+    @apply p-0 m-0
+  }
+
+  p {
+    @apply mt-[30px] mb-0 mx-0 text-dk-text text-base
+  }
+
+  input {
+    @apply pt-0 pr-0 pb-1 pl-4 text-dk-text text-base border-none
+  }
+}

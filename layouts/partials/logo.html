@@ -6,18 +6,17 @@
 {{/* Defined when logo is mixed (image + text) */}}
 {{- $logoMix := and $logoImage $logoTitle -}}
 
-<div class="logo{{ with $logoMix }} logo--mixed{{ end }}">
+<div class="flex justify-between max-w-[195px] w-full">
 	{{ with $logoImage -}}
-	<div class="logo__item logo__imagebox " onclick="logo_theme()">
-		{{ partial "svg/logoInOfBox2.svg" (dict "class" "logo__img" ) }}
-		<!-- <img class="logo__img" src="{{ . | relURL }}"> -->
+	<div class="flex justify-center items-center " onclick="logo_theme()">
+		{{ partial "svg/logoInOfBox2.html" (dict "class" "logo__img" ) }}
 	</div>
 	{{- end -}}
-	<div class="logo__item logo__text logo__title">
+	<div class="flex items-center min-w-[145px]">
 		{{ $posts := (where .Pages "Type" "post") }}
 		{{ $postsLen := len $posts}}
 		{{ with $logoTitle -}}
-		<a class="logo__link" href="{{ "" | relLangURL }}" rel="home" title="{{ $postsLen }}">
+		<a class="text-center text-2xl font-bold hover:text-dk-hl font-dk-heading" href='{{ "" | relLangURL }}' rel="home" title="{{ $postsLen }}">
 			{{ . }}
 		</a>
 		{{- end }}
