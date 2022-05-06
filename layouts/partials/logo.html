@@ -6,7 +6,7 @@
 {{/* Defined when logo is mixed (image + text) */}}
 {{- $logoMix := and $logoImage $logoTitle -}}
 
-<div class="flex justify-between max-w-[195px] w-full">
+<div class="flex justify-between max-w-[190px] w-full">
 	{{ with $logoImage -}}
 	<div class="flex justify-center items-center " onclick="logo_theme()">
 		{{ partial "svg/logoInOfBox2.html" (dict "class" "logo__img" ) }}
@@ -16,7 +16,7 @@
 		{{ $posts := (where .Pages "Type" "post") }}
 		{{ $postsLen := len $posts}}
 		{{ with $logoTitle -}}
-		<a class="text-center text-2xl font-bold hover:text-dk-hl-300 font-dk-heading" href='{{ "" | relLangURL }}' rel="home" title="{{ $postsLen }}">
+		<a class="text-center text-lg font-bold hover:text-dk-hl-300 font-dk-heading" href='{{ "" | relLangURL }}' rel="home" title="{{ $postsLen }}">
 			{{ . }}
 		</a>
 		{{- end }}

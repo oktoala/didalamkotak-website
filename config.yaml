@@ -70,3 +70,12 @@ Params:
   widgets:
     recent_num: 5
     tags_counter: true
+  footer:
+    - name: 'Home'
+      link: '/'
+    - name: 'About'
+      link: '/about'
+    - name: 'Kategori'
+      link: '/kategori'
+    - name: 'Topik'
+      link: '/topik'

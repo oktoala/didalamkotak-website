@@ -16,6 +16,10 @@
     @apply pt-0 pr-0 pb-1 pl-4 text-dk-text text-base border-none
   }
 
+  b, strong {
+    @apply font-bold
+  }
+
   ol, li {
     @apply p-0 m-0
   }
