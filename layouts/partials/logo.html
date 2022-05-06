@@ -16,7 +16,7 @@
 		{{ $posts := (where .Pages "Type" "post") }}
 		{{ $postsLen := len $posts}}
 		{{ with $logoTitle -}}
-		<a class="text-center text-2xl font-bold hover:text-dk-hl font-dk-heading" href='{{ "" | relLangURL }}' rel="home" title="{{ $postsLen }}">
+		<a class="text-center text-2xl font-bold hover:text-dk-hl-300 font-dk-heading" href='{{ "" | relLangURL }}' rel="home" title="{{ $postsLen }}">
 			{{ . }}
 		</a>
 		{{- end }}
