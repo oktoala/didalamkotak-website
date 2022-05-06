@@ -1,1 +1,6 @@
-<h{{ .Level }} id="{{ .Anchor | safeURL }}">{{ .Text | safeHTML }} <a class="fas fa-link anchor" href="#{{ .Anchor | safeURL }}"></a></h{{ .Level }}>
+<h{{ .Level }} id="{{ .Anchor | safeURL }}" class="">
+  {{ .Text | safeHTML }}
+  <a class="hover:no-underline  align-middle " href="#{{ .Anchor | safeURL }}">
+    <i class="fas w-4  fa-link text text-dk-text visible hover:visible "></i>
+  </a>
+</h{{ .Level }}>
