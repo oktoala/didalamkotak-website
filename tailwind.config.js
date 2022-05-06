@@ -14,13 +14,13 @@ module.exports = {
         'dk-primary': colors.zinc,
         'dk-secondary': colors.slate,
         'dk-text': colors.white,
-        'dk-text-alpha': colors.slate,
+        'dk-text-alpha': colors.gray,
         'dk-hl': colors.yellow,
       },
       fontFamily: {
-        'dk-sans': "'Merriweather', Roboto, Helvetica, Arial, sans-serif",
+        'dk-sans': "'Poppins', Roboto, Helvetica, Arial, sans-serif",
         'dk-mono': "'Fira Code', sans-serif, monospace",
-        'dk-heading': "'Roboto', sans-serif",
+        'dk-heading': "'Poppins', 'Roboto', sans-serif",
         'dk-fa': 'FontAwesome',
       },
       gridTemplateColumns: {

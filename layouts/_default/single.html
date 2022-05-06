@@ -1,17 +1,19 @@
 {{ define "main" }}
-<main class="main-single" role="main">
-	<article class="post">
+<main class="bg-dk-primary-900 my-7 mx-0 rounded-xl pt-4 px-5 pb-6" role="main">
+	<article class="">
 		<header class="post__header">
 			{{- with .Params.lead }}
 			<p class="post__lead">{{ . }}</p>
 			{{- end }}
-			<ul class="breadcrumb">
-				<li><a href="{{ .Sites.First.Home.RelPermalink }}">Home</a></li>
-				<li class="is-active">{{ .Title }}</li>
+			<ul class="mb-8 py-2 pl-5 list-none mt-5 bg-dk-primary-800 rounded-xl ">
+				<li class="inline items-center text-base font-extrabold">
+					<a class="text-dk-hl-400 hover:underline" href="{{ .Sites.First.Home.RelPermalink }}">Home</a>
+				</li>
+				<li class="inline items-center text-base font-extrabold before:content-['>'] before:text-dk-hl-400 before:p-2 text-dk-text-alpha-500" >{{ .Title }}</li>
 			</ul>
-			<h1 class="post__title">{{ .Title }}</h1>
+			<h1 class="text-dk-text pt-3 m-0 font-extrabold">{{ .Title }}</h1>
 			{{ with partial "post_meta.html" . -}}
-			<div class="post__meta meta">{{ . }}</div>
+			<div class="py-3 px-0 mb-5 text-dk-text-alpha-500 text-sm align-baseline">{{ . }}</div>
 			{{- end }}
 		</header>
 		<div class="content clearfix">
