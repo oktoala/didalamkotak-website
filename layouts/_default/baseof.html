@@ -6,15 +6,15 @@
 </head>
 
 <body class="m-0 overflow-x-hidden text-base break-words bg-dk-secondary font-dk-sans  loading">
-	<div class="loader">
+	<div id="loader" class="fixed z-40 top-0 left-0 w-full h-full flex justify-center items-center bg-dk-primary invisible">
 		{{ partial "svg/plainLogo1.svg" (dict "data-tilt" "") -}}
 	</div>
 	<div class="relative container--outer">
 		{{ partial "header.html" . }}
 		{{ partial "search.html" . }}
-		<div class="wrapper-container">
-			<div class="wrapper flex">
-				<div class="primary">
+		<div class="w-full flex justify-center py-0 px-side">
+			<div class="w-full min-h-[894.4px] pt-14 px-0 pb-0 max-w-dk-maxW ">
+				<div class="grow shrink-0 basis-2/3 order-1 max-w-dk-maxW">
 					{{ block "main" . }}
 					{{ with .Content }}
 					<div class="content main__content clearfix">

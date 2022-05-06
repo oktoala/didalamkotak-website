@@ -13,6 +13,7 @@ module.exports = {
         'dk-primary': '#1e1e1e',
         'dk-secondary': '#262627',
         'dk-text': '#ffffff',
+        'dk-text-alpha': '#8a8a8a',
         'dk-hl': '#fff400',
       },
       fontFamily: {
@@ -20,7 +21,10 @@ module.exports = {
         'dk-mono': "'Fira Code', sans-serif, monospace",
         'dk-heading': "'Roboto', sans-serif",
         'dk-fa': 'FontAwesome',
-      }
+      },
+      gridTemplateColumns: {
+        'dk-grid': "repeat(auto-fit, minmax(300px, 395px))"
+      },
     },
   },
   plugins: [],
