@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const searchWrapper = document.querySelector("div[role=search]");
     const searchResultElement = searchWrapper.querySelector(".search-results");
     const searchInput = searchWrapper.querySelector("input");
-    const search_button = document.querySelector(".icon-button.toggle-search");
+    const search_button = document.querySelector(".toggle-search");
     // const burger = document.querySelector('.burger input');
 	const nav = document.querySelector('.navigation');
     const nav_items = document.querySelectorAll(".nav-item");

@@ -4,16 +4,9 @@
 @tailwind utilities;
 
 @layer base {
-  a {
-    @apply text-dk-text no-underline;
-  }
 
-  p {
-    @apply mt-[30px] mb-0 mx-0 text-dk-text text-base
-  }
-
-  input {
-    @apply pt-0 pr-0 pb-1 pl-4 text-dk-text text-base border-none
+  :target {
+    @apply scroll-mt-16
   }
 
   b, strong {
@@ -27,6 +20,23 @@
   h1, h2, h3, h4, h5, h6 {
     @apply mb-[30px] mt-0 mx-0 leading-5 tracking-wide font-dk-heading text-dk-blue-500
   }
+
+  a {
+    @apply text-dk-text no-underline;
+  }
+
+  img {
+    @apply max-w-full h-auto align-bottom
+  }
+
+  input {
+    @apply pt-0 pr-0 pb-1 pl-4 text-dk-text text-base border-none
+  }
+
+  p {
+    @apply mt-[30px] mb-0 mx-0 text-dk-text text-base
+  }
+
 
   h1 {
     @apply text-4xl

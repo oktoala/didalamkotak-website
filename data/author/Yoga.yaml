@@ -1,13 +1,40 @@
-name: Ian Syah
-bio: Ordinary Colleger
+name: Oktavian
+bio: Develover, Joker
 avatar: img/codoala.png
 social:
-  facebook: false
-  twitter: oktoala
-  instagram: yogatra29
-  linkedin: false
-  telegram: false
-  github: oktoala
-  gitlab: false 
-  bitbucket: false
-  envelope: okta.yoga.syah@gmail.com
+  facebook:
+      name: oktoala
+      icon: "fa-brands fa-twitter-square"
+      enable: false
+  twitter:
+      name: oktoala
+      icon: "fa-brands fa-twitter"
+      enable: true
+  instagram:
+      name: yogatra29
+      icon: "fa-brands fa-instagram"
+      enable: true
+  linkedin: 
+      name: oktoala
+      icon: "fa-brands fa-twitter-square"
+      enable: false
+  telegram: 
+      name: oktoala
+      icon: "fa-brands fa-twitter-square"
+      enable: false
+  github: 
+      name: oktoala
+      icon: "fa-brands fa-github-alt"
+      enable: true 
+  gitlab: 
+      name: oktoala
+      icon: "fa-brands fa-twitter-square"
+      enable: false
+  bitbucket: 
+      name: oktoala
+      icon: "fa-brands fa-twitter-square"
+      enable: false
+  mail: 
+      name: okta.yoga.syah@gmail.com
+      icon: "fa-regular fa-envelope"
+      enable: true

@@ -1,29 +1,35 @@
 {{- if .Param "authorbox" }}
 {{ $author := (index .Site.Data.author .Params.author) }}
-<div class="authorbox clearfix main-single">
+<div
+	class="p-6 my-6 mx-0 leading-6 text-dk-text bg-dk-primary-900 rounded-xl flex justify-start overflow-auto overflow-x-hidden content-center">
 	{{- if and (not .Site.Author.avatar) (not .Site.Author.name) (not .Site.Author.bio) }}
 	<p class="authorbox__warning">
 		<strong>WARNING:</strong> Authorbox is activated, but [Author] parameters are not specified.
 	</p>
 	{{- end }}
 	{{- with $author.avatar }}
-	<figure class="authorbox__avatar" data-tilt>
-		<img loading="lazy" alt="{{ $author.name }} avatar" src="{{ $author.avatar | relURL }}" class="avatar" height="140" width="140">
-	</figure>
+	<div  class="mr-8 rounded-full border-dk-text border-2 bg-dk-primary-800 ">
+		<img loading="lazy" alt="{{ $author.name }} avatar" src="{{ $author.avatar | relURL }}" class="avatar rounded-full" height="140"
+			width="140">
+	</div>
 	{{- end }}
 	{{- with $author.name }}
-	<div class="authorbox__header">
-		<span class="authorbox__ditulis">DITULIS OLEH</span>
-		<p class="authorbox__name">{{ $author.name }}</p>
+	<div class="flex flex-col justify-between h-auto relative">
+		<div class="authorbox__header">
+			<span class="text-sm opacity-75">DITULIS OLEH</span>
+			<p class="underline text-2xl font-bold text-dk-text mt-0">{{ $author.name }}</p>
+		</div>
+		{{- end }}
+		{{- with $author.bio }}
+		<div>
+			<div class="authorbox__description">
+				{{ . | markdownify }}
+			</div>
+			{{- end }}
+			<div class="flex justify-start items-center mt-0 max-w-xs">
+				{{ partial "sosmed" . }}
+			</div>
+		</div>
 	</div>
-	{{- end }}
-	{{- with $author.bio }}
-	<div class="authorbox__description">
-		{{ . | markdownify }}
-	</div>
-	{{- end }}
-	<div class="social-media">
-		{{ partial "sosmed" . }}
-	</div>	
 </div>
 {{- end }}

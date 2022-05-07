@@ -43,8 +43,11 @@
 	document.querySelectorAll(".bC.language-XML").forEach(function (element) {
 		element.innerHTML = element.innerHTML.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
 	});
-	// document.querySelectorAll(".bC.language-Typescript").forEach(function (element) {
-	// 	element.innerHTML = element.innerHTML.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
-	// });
+	document.querySelectorAll(".bC.language-Javacript").forEach(function (element) {
+		element.innerHTML = element.innerHTML.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+	});
+	document.querySelectorAll(".bC.language-HTML").forEach(function (element) {
+		element.innerHTML = element.innerHTML.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+	});
 </script>
 {{ end }}

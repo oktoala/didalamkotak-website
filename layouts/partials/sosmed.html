@@ -2,14 +2,17 @@
 {{ $var := index .Site.Data.author .Params.author}}
 {{ range $key, $value := $var.social }}
 {{ with . }}
-<div class="widget-social__item social__item">
-	<a class="widget-social__link widget__link btn fa fa-{{ $key }}" title="{{ . }}" rel="noopener noreferrer" href='{{if eq $key "envelope" }} 
-					mailto:{{ . }}
-				{{ else }}
-					https://{{$key}}.com/{{.}}
-				{{ end }}' target="_blank">
+{{- if .enable -}}
+<div class="mr-3 ">
+	<a class="inline-block  " target="_blank" title="{{ .name }}" rel="noopener noreferrer" href='{{if eq $key "mail" }} 
+	mailto:{{ .name }}
+	{{ else }}
+	https://{{$key}}.com/{{.name}}
+	{{ end }}' target="_blank">
+		<i class="cursor-pointer text-2xl {{ .icon }}"></i>
 	</a>
 </div>
+{{ end }}
 {{end}}
 {{end}}
 

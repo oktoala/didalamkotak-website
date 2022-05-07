@@ -29,11 +29,10 @@ React memiliki istilah yang bernama **component**.
 
 Component hanyalah sebuah function javascript yang memiliki nilai kembalian sebuah HTML.
 
-```Javascript 
-function Item() {
+{{<scCode "Javascript">}}function Item() {
   return <p>Goodbye World!</p>
 }
-```
+{{</scCode>}}
 
 Gimana ceritanya bisa ada syntax HTML di Javascript? _I'm glad you asked._
 
@@ -43,21 +42,19 @@ Bisa dibilang ini cuman bentuk custom advanced dari HTML yang dibuat oleh orang 
 
 Jika di HTML ada `class`, maka di JSX ada `className`.
 
-```Javascript
-function Item() {
+{{<scCode "Javascript">}}function Item() {
   return <p className="test">Goodbye World!</p>
 }
-```
+{{</scCode>}}
 
 Jika kita sudah membuat sebuah component, kita bisa memanggilnya seperti tag HTML biasa.
 
-```Javascript
-function Item() {
+{{<scCode "Javascript">}}function Item() {
   return <p className="test">Goodbye World!</p>
 }
 
 <Item/>
-```
+{{</scCode>}}
 
 ## Props & Children
 
@@ -69,23 +66,22 @@ Agar program itu bisa kita panggil berkali-kali tanpa harus menulis kodingan yan
 
 Di HTML, jika ingin membuat 5 paragraph, kita harus melakukannya seperti ini.
 
-```HTML
+{{<scCode "HTML">}}<p class="test">Goodbye World!</p>
 <p class="test">Goodbye World!</p>
 <p class="test">Goodbye World!</p>
 <p class="test">Goodbye World!</p>
 <p class="test">Goodbye World!</p>
-<p class="test">Goodbye World!</p>
-```
+{{</scCode>}}
 
 Jika di React, cukup panggil componentnya saja sebanyak 5x.
 
-```Javascript
+{{<scCode "Javascript">}}
 <Item/> // Gak tau kenapa ini beda sendiri
 <Item/>
 <Item/>
 <Item/>
 <Item/>
-```
+{{</scCode>}}
 
 Tapi ada tujuan lain kenapa kita menggunakan function? Yaa, parameter.
 
@@ -97,13 +93,12 @@ Parameter pada component disebut **props**. Props hanyalah sebuah object atau di
 
 Cukup taruh props di parameter function.
 
-```Javascript
-function Item(props) {
+{{<scCode "Javascript">}}function Item(props) {
   return <p className={props.myClass}>Goodbye World!</p>
 }
 
-<Item/>
-```
+<Item />
+{{</scCode>}}
 
 Hmm, dari mana datangnya `props.myClass`? 
 
@@ -111,20 +106,18 @@ Seperti yang sudah dijelaskan di atas, `props` hanyalah sebuah object dan cara m
 
 Dan cara memberi nilainya adalah sama seperti kita memberi attribute pada HTML.
 
-```Javascript
-function Item(props) {
+{{<scCode "Javascript">}}function Item(props) {
   return <p className={props.myClass}>Goodbye World!</p>
 }
 
 <Item myClass="test"/> // <== Begini
-```
+{{</scCode>}}
 
 Bagaimana kalau saya ingin di dalam component, bisa diisi component atau jsx yang lain?
 
 React menyediakan props khusus bernama `props.children`.
 
-```Javascript
-function Item(props) {
+{{<scCode "Javascript">}}function Item(props) {
   return <p className={props.myClass}>
     {props.children}
   </p>
@@ -137,7 +130,7 @@ function Item(props) {
 <Item myClass="test-2"> 
   The World, berhentikanlah waktu
 </Item>
-```
+{{</scCode>}}
 
 ## How To Start React
 
@@ -153,9 +146,8 @@ Sebagai gantinya, kita akan menggunakan {{<linkBlank "Vite" "https://vitejs.dev/
 
 Jalankan perintah di bawah ini.
 
-```Shell {file="CMD / Terminal"}
-npm init vite
-```
+{{<fileCode "Shell" "CMD / Terminal">}}npm init vite
+{{</fileCode>}}
 
 Jika sudah kalian akan diminta memasukkan nama project (dan akan jadi nama folder yang dibuat ).
 
@@ -175,11 +167,11 @@ Enter, maka kalian sudah membuat projectnya.
 
 Jalankan perintah yang muncul di bawah saat kalian sudah membuat projectnya.
 
-```Shell {file="CMD / Terminal"}
+{{<fileCode "Shell" "CMD / Terminal">}}
 cd test-react
 npm install
 npm run dev
-```
+{{</fileCode>}}
 
 Jika sudah maka akan muncul tampilan seperti ini.
 

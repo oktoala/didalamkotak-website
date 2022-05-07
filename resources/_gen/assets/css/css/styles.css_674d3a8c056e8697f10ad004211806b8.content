@@ -423,34 +423,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
-a {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-  -webkit-text-decoration-line: none;
-          text-decoration-line: none;
-}
-
-p {
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-top: 30px;
-  margin-bottom: 0px;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-input {
-  border-style: none;
-  padding-top: 0px;
-  padding-right: 0px;
-  padding-bottom: 0.25rem;
-  padding-left: 1rem;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+:target {
+  scroll-margin-top: 4rem;
 }
 
 b, strong {
@@ -472,6 +446,42 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.025em;
   --tw-text-opacity: 1;
   color: rgb(14 165 233 / var(--tw-text-opacity));
+}
+
+a {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+input {
+  border-style: none;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0.25rem;
+  padding-left: 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+p {
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 h1 {
@@ -541,10 +551,6 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
   --tw-backdrop-sepia:  ;
 }
 
-.visible {
-  visibility: visible;
-}
-
 .invisible {
   visibility: hidden;
 }
@@ -599,6 +605,11 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
   margin-bottom: 1.75rem;
 }
 
+.my-6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
 .mx-side {
   margin-left: 20px;
   margin-right: 20px;
@@ -638,6 +649,18 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
   margin-bottom: 0.25rem;
 }
 
+.mr-8 {
+  margin-right: 2rem;
+}
+
+.mt-0 {
+  margin-top: 0px;
+}
+
+.mr-3 {
+  margin-right: 0.75rem;
+}
+
 .ml-4 {
   margin-left: 1rem;
 }
@@ -648,6 +671,10 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 
 .block {
   display: block;
+}
+
+.inline-block {
+  display: inline-block;
 }
 
 .inline {
@@ -746,6 +773,10 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
   max-width: 395px;
 }
 
+.max-w-xs {
+  max-width: 20rem;
+}
+
 .max-w-\[190px\] {
   max-width: 190px;
 }
@@ -768,6 +799,10 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .cursor-help {
@@ -796,6 +831,10 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 
 .items-center {
   align-items: center;
+}
+
+.justify-start {
+  justify-content: flex-start;
 }
 
 .justify-center {
@@ -871,6 +910,10 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
   border-width: 0px;
 }
 
+.border-2 {
+  border-width: 2px;
+}
+
 .border-t-2 {
   border-top-width: 2px;
 }
@@ -881,6 +924,11 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 
 .border-none {
   border-style: none;
+}
+
+.border-dk-text {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
 .border-dk-blue-500 {
@@ -927,6 +975,10 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 
 .fill-dk-text {
   fill: #fff;
+}
+
+.p-6 {
+  padding: 1.5rem;
 }
 
 .p-1 {
@@ -1047,6 +1099,11 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
   line-height: 1rem;
 }
 
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -1058,6 +1115,10 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 
 .font-bold {
   font-weight: 700;
+}
+
+.leading-6 {
+  line-height: 1.5rem;
 }
 
 .text-white {
@@ -1078,6 +1139,15 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 .text-dk-text {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.underline {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
+.opacity-75 {
+  opacity: 0.75;
 }
 
 .shadow-none {
