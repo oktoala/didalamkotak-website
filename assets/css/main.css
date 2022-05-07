@@ -55,7 +55,7 @@
   }
 }
 
-@layer utilities {
+@layer components {
   .content a {
     @apply font-bold text-dk-hl-500 hover:text-dk-hl-400 hover:underline
   }
@@ -65,9 +65,21 @@
     @apply text-sm text-dk-text-alpha-500 hover:text-dk-hl-500 active:text-dk-hl-400
   }
 
+  /* h3 */
   #TableOfContents ul > li > ul > li > a {
     @apply ml-3
   }
+  
+  .results {
+    @apply mb-3
+  }
+  
+  
+}
+.mark {
+  @apply p-1 rounded-full text-dk-hl-200 bg-dk-hl-700 
+}
 
-
+.result-h {
+  @apply font-bold text-dk-text hover:text-dk-hl-200 mb-1
 }
