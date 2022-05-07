@@ -60,5 +60,14 @@
     @apply font-bold text-dk-hl-500 hover:text-dk-hl-400 hover:underline
   }
 
+  /* h2 */
+  #TableOfContents ul li a {
+    @apply text-sm text-dk-text-alpha-500 hover:text-dk-hl-500 active:text-dk-hl-400
+  }
+
+  #TableOfContents ul > li > ul > li > a {
+    @apply ml-3
+  }
+
 
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="{{ .Site.Language.Lang }}">
+<html class="no-js scroll-smooth" lang="{{ .Site.Language.Lang }}">
 
 <head class="">
 	{{ partial "head.html" . }}	
@@ -12,15 +12,10 @@
 	<div class="relative container--outer">
 		{{ partial "header.html" . }}
 		{{ partial "search.html" . }}
-		<div class="w-full flex justify-center py-0 px-side">
-			<div class="w-full min-h-[894.4px] pt-14 px-0 pb-0 max-w-dk-maxW ">
-				<div class="grow shrink-0 basis-2/3 order-1 max-w-dk-maxW">
+		<div class="w-auto flex justify-center py-0 px-side">
+			<div class='w-full min-h-[894.4px] pt-14 px-0 pb-0 max-w-dk-maxW {{ if eq .Type "post" }} flex justify-between {{ end }} '>
+				<div id="main-page" class="min-w-0 transition-all ">
 					{{ block "main" . }}
-					{{ with .Content }}
-					<div class="content main__content clearfix">
-						{{ . }}
-					</div>
-					{{ end }}
 					{{ end }}
 				</div>
 				{{ partial "sidebar.html" . }}
