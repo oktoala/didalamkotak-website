@@ -662,6 +662,10 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
   display: grid;
 }
 
+.hidden {
+  display: none;
+}
+
 .h-auto {
   height: auto;
 }
