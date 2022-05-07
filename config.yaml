@@ -43,7 +43,7 @@ Params:
   images: 
     - img/dalamkotak-show.png
   subtitle: ''
-  copyright: Dibuat menggunakan
+  copyright: Made with
   opengraph: true
   readmore: false
   authorbox: true

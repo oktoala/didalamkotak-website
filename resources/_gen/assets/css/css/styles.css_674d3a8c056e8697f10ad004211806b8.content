@@ -448,6 +448,29 @@ h1, h2, h3, h4, h5, h6 {
   color: rgb(14 165 233 / var(--tw-text-opacity));
 }
 
+pre, code, kbd, smp {
+  font-family: 'Fira Code', sans-serif, monospace;
+}
+
+blockquote p {
+  margin: 0px;
+  --tw-text-opacity: 1;
+  color: rgb(115 115 115 / var(--tw-text-opacity));
+}
+
+blockquote {
+  margin-top: 30px;
+  display: block;
+  border-left-width: 8px;
+  --tw-border-opacity: 1;
+  border-left-color: rgb(100 116 139 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(51 65 85 / var(--tw-bg-opacity));
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+}
+
 a {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -551,6 +574,8 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
   --tw-backdrop-sepia:  ;
 }
 
+/* Single */
+
 .content a {
   font-weight: 700;
   --tw-text-opacity: 1;
@@ -562,6 +587,15 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
   color: rgb(250 204 21 / var(--tw-text-opacity));
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
+}
+
+.content code {
+  border-radius: 0.375rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
+  padding: 3px;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 /* h2 */
@@ -585,7 +619,7 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 
 /* h3 */
 
-#TableOfContents ul > li > ul > li > a {
+#TableOfContents ul>li>ul>li>a {
   margin-left: 0.75rem;
 }
 
@@ -614,8 +648,20 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
   left: 0px;
 }
 
+.right-8 {
+  right: 2rem;
+}
+
+.bottom-3 {
+  bottom: 0.75rem;
+}
+
 .top-14 {
   top: 3.5rem;
+}
+
+.-top-full {
+  top: -100%;
 }
 
 .z-40 {
@@ -802,6 +848,10 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 
 .w-5 {
   width: 1.25rem;
+}
+
+.w-72 {
+  width: 18rem;
 }
 
 .w-4 {
@@ -1168,14 +1218,14 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
   line-height: 1.25rem;
 }
 
-.text-xs {
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
-
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 .text-lg {
@@ -1213,6 +1263,21 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 .text-dk-text {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.text-gray-200 {
+  --tw-text-opacity: 1;
+  color: rgb(229 231 235 / var(--tw-text-opacity));
+}
+
+.text-gray-300 {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -1263,8 +1328,18 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
   transition-duration: 150ms;
 }
 
+.transition-\[top\] {
+  transition-property: top;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .duration-100 {
   transition-duration: 100ms;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
 }
 
 .ease-in {
@@ -1343,9 +1418,39 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
   fill: #38bdf8;
 }
 
+.hover\:text-dk-blue-500:hover {
+  --tw-text-opacity: 1;
+  color: rgb(14 165 233 / var(--tw-text-opacity));
+}
+
 .hover\:text-dk-hl-300:hover {
   --tw-text-opacity: 1;
   color: rgb(253 224 71 / var(--tw-text-opacity));
+}
+
+.hover\:text-pink-400:hover {
+  --tw-text-opacity: 1;
+  color: rgb(244 114 182 / var(--tw-text-opacity));
+}
+
+.hover\:text-sky-500:hover {
+  --tw-text-opacity: 1;
+  color: rgb(14 165 233 / var(--tw-text-opacity));
+}
+
+.hover\:text-gray-100:hover {
+  --tw-text-opacity: 1;
+  color: rgb(243 244 246 / var(--tw-text-opacity));
+}
+
+.hover\:text-gray-50:hover {
+  --tw-text-opacity: 1;
+  color: rgb(249 250 251 / var(--tw-text-opacity));
+}
+
+.hover\:text-dk-text:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .hover\:underline:hover {
@@ -1361,4 +1466,13 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 .hover\:brightness-110:hover {
   --tw-brightness: brightness(1.1);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.group:checked .group-checked\:text-dk-blue-400 {
+  --tw-text-opacity: 1;
+  color: rgb(56 189 248 / var(--tw-text-opacity));
+}
+
+.peer:checked ~ .peer-checked\:top-0 {
+  top: 0px;
 }

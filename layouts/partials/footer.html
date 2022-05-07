@@ -6,19 +6,19 @@
 					{{ range $value := .Site.Params.footer }}
 					{{ with . }}
 					<li class="font-extrabold">
-						<a  class=" text-dk-text hover:text-dk-hl-300 hover:underline" href="{{ .link }}">
-						{{ .name }}
+						<a class=" text-dk-text hover:text-dk-hl-300 hover:underline" href="{{ .link }}">
+							{{ .name }}
 						</a>
 					</li>
 					{{ end }}
 					{{ end }}
-					
 				</ul>
 			</div>
 			<div class="text-center">
 				&copy; 2020 - {{ now.Format "2006" }} <b>{{ .Site.Title}}</b> | <span>{{ .Site.Params.copyright | default
 					.Site.Title }}
-				</span> <a href="https://gohugo.io/" target="_blank">Hugo {{ hugo.Version }}.</a>
+				</span> <a class="hover:text-pink-400" href="https://gohugo.io/" target="_blank">Hugo {{ hugo.Version }}.</a>
+				and <a class="hover:text-sky-500" target="_blank" href="https://tailwindcss.com/">TailwindCSS 3.0.24</a>
 			</div>
 		</div>
 	</div>

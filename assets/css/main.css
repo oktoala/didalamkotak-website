@@ -21,6 +21,18 @@
     @apply mb-[30px] mt-0 mx-0 leading-5 tracking-wide font-dk-heading text-dk-blue-500
   }
 
+  pre, code, kbd, smp {
+    @apply font-dk-mono
+  }
+
+  blockquote p {
+    @apply m-0 text-neutral-500
+  }
+
+  blockquote {
+    @apply bg-slate-700 block py-[5px] pl-[15px] mt-[30px] border-l-8 border-l-slate-500
+  }
+
   a {
     @apply text-dk-text no-underline;
   }
@@ -56,8 +68,14 @@
 }
 
 @layer components {
+
+  /* Single */
   .content a {
     @apply font-bold text-dk-hl-500 hover:text-dk-hl-400 hover:underline
+  }
+
+  .content code {
+    @apply text-dk-text bg-gray-500 rounded-md p-[3px]
   }
 
   /* h2 */
@@ -66,12 +84,10 @@
   }
 
   /* h3 */
-  #TableOfContents ul > li > ul > li > a {
+  #TableOfContents ul>li>ul>li>a {
     @apply ml-3
   }
-  
-  
-  
+
 }
 
 /* Search */
@@ -80,7 +96,7 @@
 }
 
 .mark {
-  @apply p-1 rounded-full text-dk-hl-200 bg-dk-hl-700 
+  @apply p-1 rounded-full text-dk-hl-200 bg-dk-hl-700
 }
 
 .result-h {

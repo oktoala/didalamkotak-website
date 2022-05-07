@@ -1,8 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
     let searchResults = [];
+
+    const searchIcon = document.querySelector('.toogle-search');
+    const searchDiv = document.querySelector('div[role="search"]');
+
+    // Search
     const searchInput = document.querySelector('#search-input');
     const searchResultElement = document.querySelector('#search-results');
-
+    
     const mark = (content, search) => {
         if (search) {
             let pattern = /^[a-zA-Z0-9]*:/i;
