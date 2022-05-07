@@ -71,8 +71,8 @@ document.addEventListener("DOMContentLoaded", () => {
                             return el.id == parseInt(match.ref);
                         });
                         return "<li class='results mb-5'>" +
-                            "<h4 ><a class='result-h' href='" + item.url + "'>" + mark(item.title, searchString) + "</a></h4>" +
-                            "<p class='summary text-dk-text-alpha-500 text-xs leading-6 mt-4'>" +
+                            "<h4 class='result-h' ><a class='result-a' href='" + item.url + "'>" + mark(item.title, searchString) + "</a></h4>" +
+                            "<p class='summary text-dk-text-alpha-500 text-xs leading-6 '>" +
                             mark((item.content.length > 200 ? (item.content.substring(0, 200) + "...") : item.content), searchString) +
                             "</p>" +
                             "</li>";

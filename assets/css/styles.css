@@ -1275,6 +1275,12 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
   transition-timing-function: linear;
 }
 
+/* Search */
+
+.results {
+  margin-bottom: 1.5rem;
+}
+
 .mark {
   border-radius: 9999px;
   --tw-bg-opacity: 1;
@@ -1285,15 +1291,23 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 }
 
 .result-h {
+  margin-bottom: 0.75rem;
+}
+
+.result-a {
   margin-bottom: 0.25rem;
   font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.result-h:hover {
+.result-a:hover {
   --tw-text-opacity: 1;
   color: rgb(254 240 138 / var(--tw-text-opacity));
+}
+
+.summary {
+  margin-top: 0.75rem;
 }
 
 .before\:p-2::before {

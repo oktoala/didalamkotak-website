@@ -70,16 +70,27 @@
     @apply ml-3
   }
   
-  .results {
-    @apply mb-3
-  }
   
   
 }
+
+/* Search */
+.results {
+  @apply mb-6
+}
+
 .mark {
   @apply p-1 rounded-full text-dk-hl-200 bg-dk-hl-700 
 }
 
 .result-h {
+  @apply mb-3
+}
+
+.result-a {
   @apply font-bold text-dk-text hover:text-dk-hl-200 mb-1
+}
+
+.summary {
+  @apply mt-3
 }
