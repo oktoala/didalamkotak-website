@@ -9,12 +9,9 @@ kategori: [Linux]
 topik: [plymouth, linux, tips, boot, arch]
 type: post
 thumbnail: "/mari-install-plymouth-di-arch-linux/img/thumbnail.webp"
-description: "Mari Install Plymouth Di Arch Linux"
+description: "Tampilkan splash screen yang keren saat booting"
+summary: "Tampilkan splash screen yang keren saat booting"
 ---
-
-Kali ini kita akan membahas cara install dan konfigurasi Plymouth di Arch Linux.
-
-<!--more-->
 
 ![mari-install-plymouth-di-arch-linux](/mari-install-plymouth-di-arch-linux/img/thumbnail.webp)
 

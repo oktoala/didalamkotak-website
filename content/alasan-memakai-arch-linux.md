@@ -10,12 +10,10 @@ kategori: [Linux]
 topik: [linux, arch, aur]
 type: post
 thumbnail: /img/thumbnail/alasan-memakai-arch-linux.webp
-description: "Alasan Memakai Arch Linux"
+description: "I used Arch, btw"
+summary: "I used Arch, btw"
 ---
 
-Kali ini saya akan membahas alasan kenapa memilih distro Arch Linux.
-
-<!--more-->
 
 ![alasan-memakai-arch-linux](/img/thumbnail/alasan-memakai-arch-linux.webp)
 

@@ -11,10 +11,8 @@ topik: [linux]
 pager: true
 type: post
 description: "Alasan-alasan kenapa saya menggunakan GNU/Linux"
+summary: "Alasan-alasan kenapa saya menggunakan GNU/Linux"
 ---
-
-Kali ini saya akan membagikan alasan kenapa saya menggunakan Linux.
-<!--more-->
 
 ![](/img/thumbnail/TNail2.jpg)
 

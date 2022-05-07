@@ -19,11 +19,9 @@ tags:
     - alien
     - debtap
     - ubuntu
-description: "Ini adalah cara merubah rpm ke deb ke pacman"
+description: "Cara Install RPM di Arch Linux"
+summary: "Cara Install RPM di Arch Linux"
 ---
-
-Kita akan membahas bagaiman cara menjalankan rpm di Debian dan Arch.
-<!--more-->
 
 ![merubah-rpm-ke-deb-ke-arch](/img/thumbnail/merubah-rpm-ke-deb-lalu-ke-arch.jpg)
 

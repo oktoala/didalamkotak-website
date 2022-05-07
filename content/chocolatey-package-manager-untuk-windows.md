@@ -10,11 +10,8 @@ topik: [chocolatey, windows, pacman]
 toc: true
 type: post
 description: "Cara menggunakan package manager dengan menggunakan chocolatey"
+summary: "Cara menggunakan package manager dengan menggunakan chocolatey"
 ---
-
-Kali ini saya akan membahas tentang Chocolatey, package manager untuk Windows.
-
-<!--more-->
 
 ![chocolatey](/img/thumbnail/choco.jpg)
 

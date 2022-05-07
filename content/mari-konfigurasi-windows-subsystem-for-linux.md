@@ -9,11 +9,9 @@ kategori: [Windows]
 tags: [wsl, windows, linux]
 type: post
 thumbnail: "/img/thumbnail/mari-konfigurasi-windows-subsystem-for-linux.webp"
-description: "Mari Konfigurasi Windows Subsystem for Linux"
+description: "Gunakan Linux di Windows dengan WSL2"
+summary: "Gunakan Linux di Windows dengan WSL2"
 ---
-
-Kita akan membahas cara install dan konfigurasi Windows Subsystem for Linux (WSL).
-<!--more-->
 
 ![mari-konfigurasi-windows-subsystem-for-linux](/img/thumbnail/mari-konfigurasi-windows-subsystem-for-linux.webp)
 

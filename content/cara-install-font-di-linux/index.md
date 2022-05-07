@@ -9,12 +9,9 @@ kategori: [Linux]
 topik: [tips, linux, font]
 type: post
 thumbnail: "/cara-install-font-di-linux/img/thumbnail.webp"
-description: "Cara Install Font Di Linux"
+description: "Atasi huruf-huruf asia yang tidak terbaca"
+summary: "Atasi huruf-huruf asia yang tidak terbaca"
 ---
-
-Kali ini kita akan belajar cara menginstall font di Arch Linux.
-
-<!--more-->
 
 ![cara-install-font-di-linux](/cara-install-font-di-linux/img/thumbnail.webp)
 

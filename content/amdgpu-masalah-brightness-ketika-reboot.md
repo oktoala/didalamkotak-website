@@ -10,11 +10,9 @@ topik: [linux, amd, brightness, driver]
 type: post
 sidebar: false
 thumbnail: "img/thumbnail/amdgpu-masalah-brightness-ketika-reboot.webp"
-description: "Amdgpu Masalah Brightness Ketika Reboot"
+description: "Brightness tidak tersimpan ketika booting PC"
+summary: "Brightness tidak tersimpan ketika booting PC"
 ---
-
-Kali ini kita akan memberikan cara mengatasi brightness yang selalu full saat reboot.
-<!--more-->
 
 ![amdgpu-masalah-brightness-ketika-reboot](/img/thumbnail/amdgpu-masalah-brightness-ketika-reboot.webp)
 

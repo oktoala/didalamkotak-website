@@ -82,7 +82,7 @@ function asyncButtonFunc(TotalPage) {
 		});
 		nextpage += 1;
 		if (nextpage > TotalPage) {
-			asyncButton.classList.add("disable");
+			asyncButton.classList.add("hidden");
 		}
 		buttonAsync.classList.remove("button-loading");
 	}

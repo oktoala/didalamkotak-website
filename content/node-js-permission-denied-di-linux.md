@@ -8,14 +8,11 @@ toc: true
 sidebar: false
 kategori: ['Programming']
 topik: [nodejs, npm, programming]
-description: "Ini adalah cara saya untuk mengatasi NPM EACCSES Permission Denied"
 type: post
 thumbnail: /img/thumbnail/node-js-permission-denied-di-linux.jpg
+description: "Cara mengatasi NPM EACCES Permission Denied"
+summary: "Cara mengatasi NPM EACCES Permission Denied"
 ---
-
-Kali ini kita akan membahas bagaimana caranyan mengatasi npm EACCSES permission denied di linux.
-
-<!--more-->
 
 ![node-js-permission-denied-di-linux](/img/thumbnail/node-js-permission-denied-di-linux.jpg)
 

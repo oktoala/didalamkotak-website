@@ -18,13 +18,10 @@ tags:
     - excel
     - wine
     - playonlinux
-description: "Ini adalah cara menginstall MS Office di Arch Linux menggunakan PlayOnLinux"
+description: "Cara menginstall MS Office di Arch Linux"
+summary: "Cara menginstall MS Office di Arch Linux"
 thumbnail: /img/thumbnail/ms-office-di-linux.jpg
 ---
-
-Kali ini akan membahasa cara install Microsoft Office di Linux
-
-<!--more-->
 
 ![ms-office-di-linux](/img/thumbnail/ms-office-di-linux.jpg)
 

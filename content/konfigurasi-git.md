@@ -10,6 +10,7 @@ tags: [git, programming, github]
 type: post
 thumbnail: /img/thumbnail/konfigurasi-git.webp
 description: "Konfigurasi Git"
+summary: "Konfigurasi Git"
 ---
 
 Kita akan membahas cara konfigurasi Git untuk kali ini.

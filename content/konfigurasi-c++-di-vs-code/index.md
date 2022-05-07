@@ -9,12 +9,9 @@ kategori: [Programming]
 topik: [programming, vscode, linux, windows]
 type: post
 thumbnail: "/konfigurasi-c++-di-vs-code/img/thumbnail.webp"
-description: "Konfigurasi C++ Di vs Code"
+description: "Konfigurasi C++ Di vs Code dengan cara paling gampang"
+summary: "Karena VS Code is the best"
 ---
-
-Kali ini kita akan membahas cara konfigurasi lingkungan pemrograman C++ di Visual Studio Code.
-
-<!--more-->
 
 ![konfigurasi-c++-di-vs-code](/konfigurasi-c++-di-vs-code/img/thumbnail.webp)
 

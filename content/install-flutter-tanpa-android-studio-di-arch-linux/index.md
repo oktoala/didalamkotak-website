@@ -9,12 +9,9 @@ kategori: [Programming]
 topik: [programming, flutter, linux, arch]
 type: post
 thumbnail: "/install-flutter-tanpa-android-studio-di-arch-linux/img/thumbnail.webp"
-description: "Install Flutter Tanpa Android Studio Di Arch Linux"
+description: "Karena Android Studio berat"
+summary: "Karena Android Studio berat"
 ---
-
-Ini adalah update dari artikel saya sebelumnya, tapi kali ini tanpa Android Studio.
-
-<!--more-->
 
 ![install-flutter-tanpa-android-studio-di-arch-linux](/install-flutter-tanpa-android-studio-di-arch-linux/img/thumbnail.webp)
 

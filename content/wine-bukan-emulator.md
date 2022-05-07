@@ -9,11 +9,9 @@ kategori: ["Linux"]
 topik: [linux, wine, emulator]
 toc: true
 type: post
-description: "Wine bukan emulator"
+description: "Wine Is Not an Emulator"
+summary: "Wine Is Not an Emulator"
 ---
-
-Kali ini saya akan membahas WINE.
-<!--more-->
 
  ![wine-hq-logo](/img/winehq-logo.png)
 

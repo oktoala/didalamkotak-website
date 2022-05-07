@@ -10,12 +10,9 @@ kategori: [Programming]
 topik: [git, programming, github, ssh, short]
 type: post
 thumbnail: "/konfigurasi-ssh-di-github/img/thumbnail.webp"
-description: "Konfigurasi Ssh Di Github"
+description: "Konfigurasi SSH supaya tidak perlu masukkan password setiap push"
+summary: "Konfigurasi SSH supaya tidak perlu masukkan password setiap push"
 ---
-
-Kali ini kita akan belajar cara mengkonfigurasi ssh di github.
-
-<!--more-->
 
 ![konfigurasi-ssh-di-github](/konfigurasi-ssh-di-github/img/thumbnail.webp)
 

@@ -9,12 +9,9 @@ kategori: [Belajar]
 topik: [hugo, programming, web]
 type: post
 thumbnail: "/mari-install-hugo/img/mari-install-hugo.webp"
-description: "Mari Install Hugo"
+description: "Belajar Hugo, karena website ini dibuat pakai Hugo"
+summary: "Belajar Hugo, karena website ini dibuat pakai Hugo"
 ---
-
-Kali ini kita akan belajar cara membuat sebuah website menggunakan Hugo.
-
-<!--more-->
 
 ![mari-install-hugo](/mari-install-hugo/img/mari-install-hugo.webp)
 

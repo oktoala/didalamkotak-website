@@ -9,12 +9,9 @@ kategori: [Tips]
 tags: [firefox, browser, tips, kustom]
 type: post
 thumbnail: /img/thumbnail/kustom-tema-firefox.webp
-description: "Kustom Tema Firefox"
+description: "Beragam tema Firefox yang bisa kalian pakai"
+summary: "Beragam tema Firefox yang bisa kalian pakai"
 ---
-
-Kustom firefox dengan tema-tema dari github
-
-<!--more-->
 
 ![kustom-tema-firefox](/img/thumbnail/kustom-tema-firefox.webp)
 
