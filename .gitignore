@@ -2,3 +2,4 @@ gitPush.sh
 /themes
 /public
 firebase-debug.log
+node_modules
