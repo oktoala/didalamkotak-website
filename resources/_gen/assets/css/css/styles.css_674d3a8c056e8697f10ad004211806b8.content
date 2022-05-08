@@ -885,8 +885,8 @@ code {
   min-height: 894.4px;
 }
 
-.min-h-\[350px\] {
-  min-height: 350px;
+.min-h-\[320px\] {
+  min-height: 320px;
 }
 
 .w-auto {
@@ -934,11 +934,11 @@ code {
 }
 
 .max-w-dk-maxW {
-  max-width: 950px;
+  max-width: 1150px;
 }
 
-.max-w-\[395px\] {
-  max-width: 395px;
+.max-w-\[365px\] {
+  max-width: 365px;
 }
 
 .max-w-xs {
@@ -989,7 +989,7 @@ code {
 }
 
 .grid-cols-dk-grid {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 395px));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 365px));
 }
 
 .flex-col {
@@ -1024,13 +1024,8 @@ code {
   justify-content: space-evenly;
 }
 
-.gap-y-6 {
-  row-gap: 1.5rem;
-}
-
-.gap-x-6 {
-  -moz-column-gap: 1.5rem;
-       column-gap: 1.5rem;
+.gap-y-4 {
+  row-gap: 1rem;
 }
 
 .self-center {

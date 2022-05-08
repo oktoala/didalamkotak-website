@@ -7,7 +7,7 @@ module.exports = {
         'side': '20px',
       },
       maxWidth: {
-        'dk-maxW': '950px'
+        'dk-maxW': '1150px'
       },
       colors: {
         'dk-blue': colors.sky,
@@ -24,7 +24,7 @@ module.exports = {
         'dk-fa': 'FontAwesome',
       },
       gridTemplateColumns: {
-        'dk-grid': "repeat(auto-fit, minmax(300px, 395px))"
+        'dk-grid': "repeat(auto-fit, minmax(300px, 365px))"
       },
       borderRadius: {
         '4xl': '2em'
