@@ -1,6 +1,6 @@
 {{ define "main" }}
 <main id="main" class="" role="main">
-	<article class="post">
+	<article class="content">
 		<header class="post__header">
 			{{- with .Params.lead }}
 			<p class="post__lead">{{ . }}</p>
@@ -9,16 +9,9 @@
 			<h1 id="title" style="text-decoration:underline;" class="post__title">{{ .Title }}</h1>
 			<br>
 		</header>
-		{{- if .Params.thumbnail }}
-		{{- end }}
-		<div class="content clearfix">
+		<div id="post" class="block text-dk-text overflow-auto overflow-x-hidden content-center">
 			{{ .Content | emojify }}
 		</div>
-		{{- if .Params.tags }}
-		<footer class="post__footer">
-			{{ partial "post_tags.html" . }}
-		</footer>
-		{{- end }}
 	</article>
 </main>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
