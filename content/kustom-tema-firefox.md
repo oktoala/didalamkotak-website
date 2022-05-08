@@ -34,7 +34,7 @@ Berikut tema-tema firefox yang sudah saya coba.
 
 ## Tema Firefox
 
-Semua tema firefox bisa kalian pakai dengan memasukkan semua tema tersebut ke folder chrome profile kalian. Cukup ketikan {{<dir "about:profiles">}} lalu klik
+Semua tema firefox bisa kalian pakai dengan memasukkan semua tema tersebut ke folder chrome profile kalian. Cukup ketikan ``about:profiles`` lalu klik
 pada bagian root direktory.
 
 ### Firefox-Gnome-Theme

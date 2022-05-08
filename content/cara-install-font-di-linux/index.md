@@ -23,13 +23,13 @@ Font **Serif** dipakai untuk keperluan cetak, **Sans Serif** untuk online (seper
 
 ## Install Secara Manual
 
-Jika hanya ingin untuk satu user, install font di {{<dir "~/.local/share/fonts">}}
+Jika hanya ingin untuk satu user, install font di ``~/.local/share/fonts``
 
-Cukup pindahkan {{<dir ".ttf">}} ke folder {{<dir "~/.local/share/fonts">}}
+Cukup pindahkan ``.ttf`` ke folder ``~/.local/share/fonts``
 
-Dan jika kalian ingin menginstall untuk semua user, install font di {{<dir "/usr/share/fonts">}}
+Dan jika kalian ingin menginstall untuk semua user, install font di ``/usr/share/fonts``
 
-Untuk {{<dir ".ttf">}} masukkan ke folder {{<dir "TTF">}} dan {{<dir ".otf">}} masukkan ke folder {{<dir "OTF">}}
+Untuk ``.ttf`` masukkan ke folder ``TTF`` dan `.otf` masukkan ke folder ``OTF``
 
 ## Install Dengan Package Manager
 
@@ -51,17 +51,18 @@ Ada beberapa font arabic yang bisa kalian install.
 
 ### Chinese, Korean, dan Japanese
 
-Untuk font Chinese, Korean, dan Japanese, kalian perlu mengaktifkan localizations di {{<dir "/etc/locale.gen">}}
+Untuk font Chinese, Korean, dan Japanese, kalian perlu mengaktifkan localizations di ``/etc/locale.gen``
 
-Cukup uncomment teks (hapus tanda # sebelum teks) dibawah ini atau copy saja ke {{<dir "/etc/locale/gen">}}
+Cukup uncomment teks (hapus tanda # sebelum teks) dibawah ini atau copy saja ke ``/etc/locale/gen``
 
-{{<fileCode "Bash" "locale.gen">}}# Untuk Chinese
+```Bash {file="locale.gen"}
+# Untuk China
 zh_CN.UTF-8 UTF-8
 # Untuk Korean
 ko_KR.UTF-8
 # Untuk Japanese
 ja_JP.UTF-8
-{{</fileCode>}}
+```
 
 ![locale](/cara-install-font-di-linux/img/locale.webp)
 

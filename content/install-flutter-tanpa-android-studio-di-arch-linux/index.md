@@ -51,8 +51,10 @@ sudo archlinux-java set java11-openjdk
 
 Buka file `/etc/pacman.conf`, lalu uncomment teks dibawah untuk mengaktifkan multilib di Arch Linux.
 
-{{<fileCode "TOML" "/etc/pacman.conf">}}[multilib]
-Include = /etc/pacman.d/mirrorlist{{</fileCode>}}
+```TOML {file="/etc/pacman.conf"}
+[multilib]
+Include = /etc/pacman.d/mirrorlist
+```
 
 Lalu install **semua** packages di bawah menggunakan pacman.
 
@@ -76,7 +78,9 @@ git clone https://github.com/flutter/flutter.git -b stable ~/.flutter
 
 Lalu tambahkan teks di bawah ke `.bashrc` atau `.zshrc` kalian.
 
-{{<fileCode "Bash" ".bashrc atau .zshrc">}}export PATH="$PATH:$HOME/.flutter/bin"{{</fileCode>}}
+```Bash {file".bashrc atau .zshrc"}
+export PATH="$PATH:$HOME/.flutter/bin"
+```
 
 ### Install Android SDK
 

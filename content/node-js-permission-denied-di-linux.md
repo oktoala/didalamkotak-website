@@ -16,7 +16,7 @@ summary: "Cara mengatasi NPM EACCES Permission Denied"
 
 ![node-js-permission-denied-di-linux](/img/thumbnail/node-js-permission-denied-di-linux.jpg)
 
-Jika kalian mendapat {{<dir "EACCES">}} saat ingin menginstall sebuah package secara global menggunakan npm kalian bisa mengatasinya dengan beberapa cara.
+Jika kalian mendapat `EACCES` saat ingin menginstall sebuah package secara global menggunakan npm kalian bisa mengatasinya dengan beberapa cara.
 
 ## Reinstall Node js
 
@@ -32,41 +32,41 @@ Sebenarnya cara ini tidak pernah saya coba karena saya memakai cara kedua.
 
 Cara ini lebih aman daripada harus menggunakan sudo saat menginstall packagenya. Karena saya sebelumnya menggunakan sudo :smile:
 
-+ Buatlah folder bernama {{<dir ".node-global">}} di home kalian.
++ Buatlah folder bernama `.node-global` di home kalian.
 
     ```Shell {user="$"}
-mkdir ~/.node-global
-```
+    mkdir ~/.node-global
+    ```
 
 + Mengatur direktori bawaan npm
 
     ```Shell {user="$"}
-npm config set prefix '~/.npm-global'
-```
+    npm config set prefix '~/.npm-global'
+    ```
 
 + Menambahkan direktori ke PATH
 
-    Tambahkan teks dibawah ke {{<dir ".bashrc">}} atau {{<dir ".zshrc">}} kalian.
+    Tambahkan teks dibawah ke `.bashrc` atau `.zshrc` kalian.
 
     ```Shell {user="$"}
-export PATH=~/.npm-global/bin:$PATH
-```
+    export PATH=~/.npm-global/bin:$PATH
+    ```
 
     Lalu restart terminal kalian.
 
 + Cek npm default directori
 
     ```Shell {user="$"}
-npm config get prefix
-```
+    npm config get prefix
+    ```
 
 + Cobalah untuk menginstall package
 
     Saya akan mencoba untuk menginstall firebase-tools
 
     ```Shell {user="$"}
-npm i -g firebase-tools
-```
+    npm i -g firebase-tools
+    ```
 
     Jika kalian bisa menjalankan `firebase` secara global di terminal kalian, itu berarti konfigurasinya berhasil.
 

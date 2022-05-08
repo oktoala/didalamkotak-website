@@ -57,7 +57,7 @@ Unduh android studio di [sini](https://developer.android.com/studio/) atau kalia
 yay -S android-studio
 ```
 
-Jika sudah terinstall, buka android studio, lalu pilih direktori untuk sdk kalian. Biasanya di {{<dir "~/Android/sdk">}}.
+Jika sudah terinstall, buka android studio, lalu pilih direktori untuk sdk kalian. Biasanya di `~/Android/sdk`.
 
 Setelah itu, android studio akan menginstall semua kebutuhan untuk android studio.
 
@@ -74,7 +74,7 @@ cd ~/.flutter
 tar -xf ~/Downloads/flutter-linux*\*-stable.tar.xz
 {{</scCode>}}
 
-Lalu tambahkan flutter PATH dengan cara menambahkan teks dibawah ini ke {{<dir ".bashrc">}} atau {{<dir ".zshrc">}}.
+Lalu tambahkan flutter PATH dengan cara menambahkan teks dibawah ini ke `.bashrc` atau `.zshrc`.
 
 {{<scCode "Bash">}}export PATH="${PATH}:$HOME/.flutter/flutter/bin"{{</scCode>}}
 
@@ -113,7 +113,7 @@ Untuk web dan desktop tidak terlalu disarankan, karena masih dalam tahap pengemb
 
 Buka android studio, pilih Configure > AVD Manager > Create Virtual Device. Lalu buat emulator sesuai keinginan kalian.
 
-Lalu tambahkan teks di bawah ke {{<dir ".bashrc">}} atau {{<dir ".zshrc">}}.
+Lalu tambahkan teks di bawah ke `.bashrc` atau `.zshrc`.
 
 {{<scCode "Bash">}}export ANDROID_SDK_ROOT="$HOME/Android/sdk"
 export ANDROID_AVD_HOME="$HOME/.android/avd"
@@ -172,7 +172,7 @@ flutter config --android-sdk ~/Android/sdk
 
 ### CHROME_EXECUTEABLE
 
-Kalian bisa mengecek di {{<dir "/usr/bin">}} apakah nama dari binary chrome kalian adalah **google-chrome**.
+Kalian bisa mengecek di `/usr/bin` apakah nama dari binary chrome kalian adalah **google-chrome**.
 
 Jika bukan, maka kalian bisa rename atau membuat simbolic link dari binary tersebut.
 
