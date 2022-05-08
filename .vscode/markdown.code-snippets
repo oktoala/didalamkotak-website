@@ -16,63 +16,24 @@
 	// 	"description": "Log output to console"
 	// }
 
-	"Display Code Bar": {
-		"prefix": "scCode",
-		"body": [
-			"{{<scCode \"${1:Bahasa Pemrograman}\">}}${2:Script}{{</scCode>}}",
-		],
-		"description": "Code Bar"
-	},
-	"Shell Bar": {
-		"prefix": "shell",
-		"body": [
-			"{{<shell \"${1:permission$/#}\">}}${2:Script}{{</shell>}}",
-		],
-		"description": "Shell Bar"
-	},
-	"Display File Code Bar": {
-		"prefix": "fileCode",
-		"body": [
-			"{{<fileCode \"${1:BahasaPemrograman}\" \"${2:NamaFile.txt}\">}}${3:Script}{{</fileCode>}}",
-		],
-		"description": "{{<fileCode \"nama format(Bash)\" \"nama File(Coba.conf)\""
-	},
-	"Directory Mark": {
-		"prefix": "dir",
-		"body": "{{<dir \"${1:Direktori}\">}}",
-		"description": "Menampilkan dir"
-	},
+	//! Shortcode
 	"Font Awesome": {
 		"prefix": "scIcon",
 		"body": "{{<scIcon class=\"fa fa-${1:icon}\">}}",
 		"description": "Menambahkan icon font awesome"
 	},
+
 	"WebM": {
 		"prefix": "webm",
 		"body": "{{<webm \"${RELATIVE_FILEPATH/(?:content|index.md)/$1/g}img/${1:namaVideo}.webm\">}}",
 		"description": "Masukkan WebM video"
 	},
-	"Gambar Caption": {
-		"prefix": "figure",
-		"body": "{{<figure \"${1:PathKeGambar}\" \"${2:Caption}\">}}",
-		"description": "Masukkan gambar dengan caption, $path $caption"
-	},
-	"Link Blank": {
-		"prefix": "linkBlank",
-		"body": "{{<linkBlank \"${1:text}\" \"${2:link}\">}}",
-		"description": "Link dengan target blank"
-	},
 
+	// ? Render Hooks
 	"Image Markdown": {
 		"prefix": "img",
 		"body": "![${1:alt}](${RELATIVE_FILEPATH/(?:content|index.md)/$1/g}img/${1:namaGambar}.webp)",
 		"description": "Image Markdown"
-	},
-
-	"Test":{
-		"prefix": "test",
-		"body": "${RELATIVE_FILEPATH/(?:content|index.md)/$1/g}",
-		"description": "Test"
 	},
 
 	"Code": {
