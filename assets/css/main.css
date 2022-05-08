@@ -66,6 +66,10 @@
     @apply mt-12 text-3xl font-bold;
   }
 
+  h3 {
+    @apply mt-10 text-2xl font-semibold text-gray-200
+  }
+
   h5 {
     @apply text-base font-bold;
   }
@@ -87,8 +91,16 @@
 
 @layer components {
   /*! Single */
-  .content a  {
+  #post a  {
     @apply font-bold text-dk-hl-500 hover:text-dk-hl-400 hover:underline 
+  }
+
+  #post ul, #post ol {
+    @apply my-5 ml-5 list-disc list-outside list-item
+  }
+
+  #post li {
+    @apply mb-7 
   }
 
   #main {
@@ -99,7 +111,7 @@
     @apply text-dk-text pt-3 m-0 font-extrabold;
   }
 
-  p code {
+  code {
     @apply text-dk-text bg-gray-500 rounded-md p-[3px];
   }
 

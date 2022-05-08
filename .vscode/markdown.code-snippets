@@ -93,6 +93,26 @@
 			"```"
 		],
 		"description": "Codingan dengan file"
-	}
+	},
+
+	"Code Regular": {
+		"prefix": "cr",
+		"body": [
+			"```${1:Bahasa Pemrograman} {noheader=true}",
+			"${2:...Kodingan}",
+			"```"
+		],
+		"description": "Codingan dengan file"
+	},
+
+	"Terminal ": {
+		"prefix": "sh",
+		"body": [
+			"```Shell {user=\"${2:$}\"}",
+			"${1:...Kodingan}",
+			"```"
+		],
+		"description": "Terminal atau Shell"
+	},
 
 }

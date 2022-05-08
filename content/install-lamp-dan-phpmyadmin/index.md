@@ -21,7 +21,9 @@ Kita akan menginstall dan menkonfigurasi PHP, Apache, MariaDB, dan juga Laravel.
 
 Install PHP, Apache, MariaDB, dan PHPMyAdmin menggunakan Pacman.
 
-{{<shell "$">}}sudo pacman -S php apache mariadb phpmyadmin {{</shell>}}
+```Shell {user="$"}
+sudo pacman -S php apache mariadb phpmyadmin
+```
 
 ## Konfigurasi PHP
 
@@ -29,7 +31,7 @@ Semua konfigurasi PHP bisa dilakukan di `/etc/php/php.ini`.
 
 + Kalian bisa mengatur timezone seperti ini.
 
-```bash
+```bash {noheader=true}
 date.timezone = Asia/Kuala_Lumpur
 ```
 
@@ -37,26 +39,26 @@ date.timezone = Asia/Kuala_Lumpur
 
     **Extension gd**
 
-    ```bash
+    ```bash {noheader=true}
     extension=gd
     ```
 
     **Extension iconv**
 
-    ```bash
+    ```bash {noheader=true}
     extension=iconv
     ```
 
     **Extension bz2 dan zip**
 
-    ```bash
+    ```bash {noheader=true}
     extension=bz2
     extension=zip
     ```
 
     **MySQL/MariaDB**
 
-    ```bash
+    ```bash {noheader=true}
     extension=pdo_mysql
     extension=mysqli
     ```
@@ -65,7 +67,9 @@ date.timezone = Asia/Kuala_Lumpur
 
 Setelah kalian menginstall MariaDB, jalankan dulu perintah dibawah.
 
-{{<shell "#">}}mariadb-install-db --user=mysql --basedir=/usr --datadir=/var/lib/mysql{{</shell>}}
+```Shell {user="$"}
+mariadb-install-db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
+```
 
 ![mysql1](/install-lamp-dan-phpmyadmin/img/mysql1.webp)
 
@@ -73,7 +77,9 @@ Untuk menjalankannya servicenya, jalankan `mariadb.service`.
 
 Untuk masuk ke MySQL server jalankan perintah di bawah.
 
-{{<shell "#">}}mysql -u root -p{{</shell>}}
+```Shell {user="$"}
+mysql -u root -p
+```
 
 Password defaultnya kosong, jadi cukup tekan enter saja.
 
@@ -88,20 +94,28 @@ Kali ini saya akan pakai cara yang pertama, karena yang paling gampang tapi juga
 
 Buka file `/etc/httpd/conf/httpd.conf` lalu comment baris di bawah ini.
 
-{{<fileCode "Apache" "httpd.conf">}}#LoadModule mpm_event_module modules/mod_mpm_event.so{{</fileCode>}}
+```Apache {file="httpd.conf"}
+#LoadModule mpm_event_module modules/mod_mpm_event.so
+```
 
 dan uncomment baris di bawah ini.
 
-{{<fileCode "Apache" "httpd.conf">}}LoadModule mpm_prefork_module modules/mod_mpm_prefork.so{{</fileCode>}}
+```Apache {file="httpd.conf"}
+LoadModule mpm_prefork_module modules/mod_mpm_prefork.so
+```
 
 Jika sudah, tambahkan kalimat di bawah ini di akhir dari list `LoadModule`.
 
-{{<fileCode "Apache" "httpd.conf">}}LoadModule php_module modules/libphp.so
-AddHandler php-script .php{{</fileCode>}}
+```Apache {file="httpd.conf"}
+LoadModule php_module modules/libphp.so
+AddHandler php-script .php
+```
 
 Lalu tambahkan baris di bawah ini di akhir dari list `Include`.
 
-{{<fileCode "Apache" "httpd.conf">}}Include conf/extra/php_module.conf{{</fileCode>}}
+```Apache {file="httpd.conf"}
+Include conf/extra/php_module.conf
+```
 
 Jika sudah, jalankan atau restart `httpd.service`.
 
@@ -121,8 +135,10 @@ Alias /phpmyadmin "/usr/share/webapps/phpMyAdmin"
 
 Lalu _include_ di dalam `/etc/httpd/conf/httpd.conf`.
 
-{{<fileCode "Apache" "httpd.conf">}}# PHPMyAdmin configuration
-Include conf/extra/phpmyadmin.conf{{</fileCode>}}
+```Apache {file="httpd.conf"}
+# PHPMyAdmin configuration
+Include conf/extra/phpmyadmin.conf
+```
 
 Untuk file konfigurasi dari phpmyadmin ada di `/usr/share/webapps/phpMyAdmin/config.inc.php`.
 
@@ -130,15 +146,19 @@ Untuk file konfigurasi dari phpmyadmin ada di `/usr/share/webapps/phpMyAdmin/con
 
 Pastikan `httpd.service` dan `mariadb.service` kalian sudah dijalankan.
 
-{{<shell "$">}}systemctl start httpd.service mariadb.service{{</shell>}}
+```Shell {user="$"}
+systemctl start httpd.service mariadb.service
+```
 
 ### Test PHP dan Apache
 
 Coba buat file `index.php` di folder `~/public_html` atau di folder `/srv/http` dan isi dengan code di bawah ini.
 
-{{<fileCode "PHP" "index.php">}}&lt;?php phpinfo(); ?>{{</fileCode>}}
+```PHP {file="index.php"}
+<?php phpinfo(); ?>
+```
 
-Jika sudah, buka [http://localhost](http://localhost) jika kalian membuatnya di folder `/srv/http`.
+Jika sudah, buka [http://localhost](http://localhost "blank") jika kalian membuatnya di folder `/srv/http`.
 
 Atau buka **localhost/~username** jika kalian membuatnya di `~/public_html`.
 
@@ -150,10 +170,11 @@ Cukup jalankan perintah di bawah ini di dalam folder yang memiliki `index.php` d
 
 Contoh:
 
-{{<shell "$">}}php -S localhost:8080{{</shell>}}
+```Shell {user="$"}
+php -S localhost:8080
+```
 
 ![phpinfo2](/install-lamp-dan-phpmyadmin/img/phpinfo2.webp)
-
 
 Kalian bisa mengubah folder default `~/public_html` ke folder lain dengan cara mengaturnya di `/etc/httpd/conf/extra/httpd-userdir.conf`.
 
@@ -163,13 +184,15 @@ Pergi [localhost/phpmyadmin](http://localhost/phpmyadmin) untuk membuka PHPMyAdm
 
 Jika kalian mendapatkan masalah **AllowNoPassword**, pergi ke `/usr/share/webapps/phpMyAdmin/config.inc.php` lalu edit baris di bawah ini menjadi TRUE.
 
-{{<fileCode "PHP" "config.inc.php">}}$cfg['Servers'][$i]['AllowNoPassword'] = TRUE;{{</fileCode>}}
+```PHP {file="config.inc.php"}
+$cfg['Servers'][$i]['AllowNoPassword'] = TRUE;
+```
 
 Kalau masih tidak bisa, maka kalian harus mengatur password di MySQL server.
 
 Masuk ke MySQL server, lalu set password dengan perintah di bawah.
 
-```sql
+```sql {noheader=true}
 SET PASSWORD FOR 'root'@'localhost' = PASSWORD('PASSWORD BARU KALIAN');
 ```
 
@@ -187,17 +210,21 @@ Composer adalah package manager untuk PHP, mirip NPM kalau di NodeJS.
 
 Untuk menginstallnya dengan pacman, ikuti perintah di bawah atau kalian bisa unduh dari {{<linkBlank "websitenya" "https://getcomposer.org/download/">}} langsung.
 
-{{<shell "$">}}sudo pacman -S composer{{</shell>}}
+```Shell {user="$"}
+sudo pacman -S composer
+```
 
 Jika kalian ingin menginstall sebuah package secara global, cukup ketikkan perintah `composer global require package/name`.
 
 Contoh:
 
-{{<shell "$">}}composer global require laravel/installer{{</shell>}}
+```Shell {user="$"}
+composer global require laravel/installer
+```
 
 Kalian mungkin harus menambahkan direktori `bin` dari composer ke PATH. 
 
-```bash
+```bash {noheader=true}
 PATH="$HOME/.config/composer/vendor/bin:$PATH"
 ```
 
@@ -209,7 +236,7 @@ Kalian bisa membuat sebuah fungsi untuk mengaktikan service di file `.bashrc` at
 
 Contoh:
 
-```bash
+```bash {noheader=true}
 apachemariadb ()
 {
     systemctl $1 httpd.service mariadb.service
@@ -218,12 +245,8 @@ apachemariadb ()
 
 Dan jika kalian ingin menjalankan cukup jalankan `apachemariadb start`.
 
-```bash
+```bash {noheader=true}
 apachemariadb start # untuk menjalankan service
 apachemariadb stop # untuk menghentikan service
 apachemariadb restart # untuk menjalankan kembali service
 ```
-
-
-
-

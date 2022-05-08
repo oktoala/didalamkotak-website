@@ -1,12 +1,12 @@
 <div class="chroma group mt-[30px]">
-	<div class=" h-[30px] bg-black border-none flex justify-between items-center rounded-tl-[10px] rounded-tr-[10px] px-[15px] code-header {{.Type}}">
+	<div class="{{ if .Attributes.noheader }} hidden {{ end }} h-[30px] bg-black border-none flex justify-between items-center rounded-tl-[10px] rounded-tr-[10px] px-[15px] code-header {{.Type}}">
 		<span class="code-title text-dk-text whitespace-nowrap font-semibold"> {{ .Attributes.file | default .Type}}</span>
 		<div class="tooltip flex justify-between items-center">
-			<span id="" class="fa-regular fa-clipboard group-hover:opacity-100 opacity-0 relative leading-normal cursor-pointer duration-100 text-gray-300 active:text-gray-50 transition-opacity peer" onclick="snackFunc(this.id)" onmouseout="outFunc(this.id)"></span>
+			<span id="" data-clipboard-text="{{ .Inner }}" class="fa-regular fa-clipboard group-hover:opacity-100 opacity-0 relative leading-normal cursor-pointer duration-100 text-gray-300 active:text-gray-50 transition-opacity peer" onclick="snackFunc(this.id)" onmouseout="outFunc(this.id)"></span>
 			<span class="tooltiptext invisible w-[140px] bg-gray-600 text-dk-text text-center rounded-[6px] p-[3px] absolute z-10  -ml-[150px] opacity-0 peer-hover:opacity-100 peer-hover:visible transition-opacity duration-300 text-sm after:absolute after:top-[35%] after:left-[10%] after:ml-0 after:border-[5px] after:border-t-transparent after:border-b-transparent after:border-l-transparent after:border-r-gray-600">
 				Copy ke clipboard
 			</span>
 		</div>
 	</div>
-	<pre class="bC {{.Type}}"><code class="bC language-{{.Type}}" data-lang="{{.Type}}">{{ .Inner }}</code></pre>
+	<pre class="bC {{.Type}}"><code class="bC language-{{.Type}}" data-lang="{{.Type}}">{{ with .Attributes.user }}{{ . }}{{- " " -}} {{ end}}{{ .Inner }}</code></pre>
 </div>

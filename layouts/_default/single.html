@@ -5,7 +5,7 @@
 			{{- with .Params.lead }}
 			<p class="post__lead">{{ . }}</p>
 			{{- end }}
-			<ul class="mb-8 py-2 pl-5 list-none mt-5 bg-dk-primary-800 rounded-xl ">
+			<ul class="mb-8 py-2 pl-5 list-none mt-5 bg-dk-primary-800 rounded-xl">
 				<li class="inline items-center text-base font-extrabold">
 					<a class="text-dk-hl-400 hover:underline" href="{{ .Sites.First.Home.RelPermalink }}">Home</a>
 				</li>
@@ -18,7 +18,7 @@
 			<div class="py-3 px-0 mb-5 text-dk-text-alpha-500 text-sm align-baseline">{{ . }}</div>
 			{{- end }}
 		</header>
-		<div class="block text-dk-text overflow-auto overflow-x-hidden content-center">
+		<div id="post" class="block text-dk-text overflow-auto overflow-x-hidden content-center">
 			{{ .Content | emojify }}
 		</div>
 	</article>

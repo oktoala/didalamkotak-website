@@ -33,7 +33,6 @@ Yup, it's rainbow 🌈
 
 Kalian juga bisa menampilkannya dengan animasi, cukup tambahkan flags `-a`.
 
-
 {{<webm "/tips-dan-trik-bash/img/lolcat.webm">}}
 
 ## sl
@@ -68,7 +67,8 @@ Yap, ini punya icon.
 
 Kalian mungkin ingin mengganti perintah `ls` default kalian menjadi `lsd`, cukup buat aliases di `.bashrc` kalian.
 
-{{<fileCode "bash" ".bashrc">}}alias ls='lsd --color=auto'
+```Bash {file="bashrc"
+alias ls='lsd --color=auto'
 alias ll='lsd -l --color=auto'
 # ls, the common ones I use a lot shortened for rapid fire usage
 alias l='lsd -lFh --color=auto'     #size,show type,human readable
@@ -80,7 +80,7 @@ alias ldot='lsd -ld .*'
 alias lS='lsd -1FSsh'
 alias lart='lsd -1Fcart'
 alias lrt='lsd -1Fcrt'
-{{</fileCode>}}
+```
 
 ## tldr
 

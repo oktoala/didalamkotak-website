@@ -23,23 +23,28 @@ Tapi semua skin itu bisa kalian install secara manual.
 
 ## Installasi
 
-Jika kalian memakai Flatpak, kalian bisa mengikuti cara [di sini](https://github.com/Prayag2/wps-skin-installer).
+Jika kalian memakai Flatpak, kalian bisa mengikuti cara [di sini.](https://github.com/Prayag2/wps-skin-installer)
 
 Atau jika kalian menginstall WPS Office menggunakan package manager, kalian bisa ikuti cara di bawah ini.
 
 Pertama, clone repository di bawah ini.
 
-{{<shell "$">}}git clone https://github.com/oktoala/wps-skin-installer.git ~/wps-skin{{</shell>}}
+```Shell {user="$"}
+git clone https://github.com/oktoala/wps-skin-installer.git ~/wps-skin
+```
 
 Lalu masuk ke dalam folder repositori yang sudah diclone tadi lalu ubah `script.sh` agar bisa dieksekusi secara root.
 
-{{<shell "$">}}cd ~/wps-skin
+```Shell {user="$"}
+cd ~/wps-skin
 sudo chmod +x script.sh
-{{</shell>}}
+```
 
 Jika sudah jalankan menggunakan sudo atau sebagai root user.
 
-{{<shell "$">}}sudo ./script.sh{{</shell>}}
+```Shell {user="$"}
+sudo ./script.sh
+```
 
 Kemudian pilih skin yang kalian mau.
 

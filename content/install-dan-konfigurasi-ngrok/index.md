@@ -26,7 +26,7 @@ Jika kalian menghadapi solusi seperti itu, makan **Ngrok** adalah solusinya.
 
 HTTP tunnel adalah sebuah cara untuk meneruskan request HTTP ke target yang dituju.
 
-Jadi simplenya
+Jadi, kita bisa memperlihatkan website kita kepada orang lain hanya dari localhost dan tanpa perlu di hosting di internet.
 
 ## Installasi
 
@@ -59,7 +59,7 @@ Lalu jalankan `./ngrok authtoken <AUTHTOKEN YANG DI COPY>`.
 
 ![authtoken-terminal](/install-dan-konfigurasi-ngrok/img/authtoken-terminal.webp)
 
-Jika sudah, maka akan tampil lokasi dimana file konfigurasi Ngrok kalian. 
+Jika sudah, maka akan tampil lokasi dimana file konfigurasi Ngrok kalian.
 
 ## Konfigurasi
 
@@ -84,7 +84,9 @@ Saya bisa menjalankan Ngrok dengan dua cara:
 
 Saya akan coba menggunakan cara kedua, karena saya sudah mengatur port 3000 di file konfigurasi.
 
-{{<fileCode "Shell" "~/.local/bin">}}./ngrok start react{{</fileCode>}}
+```Shell {file="~/.local/bin"}
+./ngrok start react
+```
 
 ![test](/install-dan-konfigurasi-ngrok/img/test.webp)
 
@@ -99,5 +101,3 @@ Berhasil!! 🎉
 Dengan Ngrok kalian bisa membagikan website kalian ke teman ataupun dosen kalian tanpa perlu hosting di internet.
 
 Oke, mungkin itu aja, **_Smell ya later_**.
-
-
