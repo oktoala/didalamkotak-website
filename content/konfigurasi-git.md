@@ -43,12 +43,14 @@ sudo pacman -S git
 
 Jika sudah terinstall, jalankan perintah dibawah ini.
 
-{{<scCode "Shell">}}git config --global user.name "namaKalian"
-git config --global user.email "email.kalian@gmail.com"{{</scCode>}}
+```Shell {user="$"}
+git config --global user.name "namaKalian"
+git config --global user.email "email.kalian@gmail.com"
+```
 
 Tuliskan `git config --list` untuk melihat konfigurasi kalian.
 
-{{<figure "/img/ss-git-config.webp" "">}}
+[gambar](/img/ss-git-config.webp)
 
 ## Akhir kata...
 

@@ -45,11 +45,15 @@ Karena Wine bukanlah emulator, jadi tidak ada _performance/memory penalties_ yan
 
 ### Debian/Ubuntu Based
 
-{{< scCode "Bash" >}}sudo apt install wine{{< /scCode >}}
+```Bash 
+sudo apt install wine
+```
 
 ### Arch Based
 
-{{< scCode "Bash" >}}sudo pacman -S wine{{< /scCode >}}
+```Bash 
+sudo pacman -S wine
+```
 
 ## Konfigurasi
 
@@ -57,27 +61,33 @@ Ada beberapa hal yang perlu dipelajari sebelum memakai Wine, yaitu WINEPREFIX da
 
 ### WINEPREFIX
 
-Wine akan menaruh file konfigurasinya di {{< dir "~/.wine" >}} secara default. Direktori tersebut "Wine Prefix" atau "Wine Bottle".
+Wine akan menaruh file konfigurasinya di ``~/.wine`` secara default. Direktori tersebut "Wine Prefix" atau "Wine Bottle".
 
 Tapi kalian bisa menaruhnya di direktori lain dengan `WINEPREFIX=~/direktoriLain` pada environment variabelnya.
 
-{{< scCode "Bash" >}}WINEPREFIX=~/direktoriLain wine aplikasiWindows.exe{{< /scCode >}}
+```Bash 
+WINEPREFIX=~/direktoriLain wine aplikasiWindows.exe
+```
 
 ### WINEARCH
 
 Wine akan memulai aplikasi dengan 64-bit environment secara default. Tapi kalian bisa mengubahnya menjadi `WINEARCH=win32` atau `WINEARCH=win64` pada environment variabelnya.
 
-{{< scCode "Bash" >}}WINEARCH=win32 WINEPREFIX=~/direktoriLain wine aplikasiWindows.exe{{< /scCode >}}
+```Bash 
+WINEARCH=win32 WINEPREFIX=~/direktoriLain wine aplikasiWindows.exe
+```
 
 ## Testing
 
-Mari kita coba intall game Windows yang gratisan yaitu {{< linkBlank  "Deltarune" "https://www.deltarune.com/" >}}.
+Mari kita coba intall game Windows yang gratisan yaitu [Deltarune](https://www.deltarune.com/ "blank").
 
 Pastikan kalian unduh yang untuk Windows dan juga pastikan kalian sudah main Undertale. :smile:
 
 Saya menyimpan filenya di folder Download dengan nama deltarune.exe.
 
-{{< scCode "Bash" >}}WINEARCH=win32 WINEPREFIX=~/deltarune wine deltarune.exe{{< /scCode >}}
+```Bash 
+WINEARCH=win32 WINEPREFIX=~/deltarune wine deltarune.exe
+```
 
 Saya pakai 32-bit, karena Deltarune bisa berjalan pada 32-bit dan juga karena versi yang 32-bit lebih stabil.
 

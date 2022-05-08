@@ -157,4 +157,4 @@ systemctl restart gdm.service
 
 ## Sumber
 
-{{<linkBlank "https://wiki.archlinux.org/title/GDM" "https://wiki.archlinux.org/title/GDM">}}
+[https://wiki.archlinux.org/title/GDM](https://wiki.archlinux.org/title/GDM "blank")

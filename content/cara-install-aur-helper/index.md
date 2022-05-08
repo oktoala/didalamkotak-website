@@ -32,10 +32,11 @@ sudo pacman -S --needed git base-devel
 
 Jika sudah tinggal jalankan perintah di bawah ini.
 
-{{<scCode "Shell">}}git clone https://aur.archlinux.org/yay.git
+```Shell {user="$"}
+git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
-{{</scCode>}}
+```
 
 ## Command
 

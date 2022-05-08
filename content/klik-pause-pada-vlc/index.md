@@ -80,4 +80,4 @@ Control Interfaces {{<scIcon class="fa fa-arrow-right">}}**. Lalu centang pada *
 
 ## Sumber
 
-{{<linkBlank "https://github.com/nurupo/vlc-pause-click-plugin" "https://github.com/nurupo/vlc-pause-click-plugin">}}
+[https://github.com/nurupo/vlc-pause-click-plugin](https://github.com/nurupo/vlc-pause-click-plugin "blank")

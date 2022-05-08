@@ -35,7 +35,7 @@ Arch Linux juga memiliki beberapa prinsip seperti berikut:
 - _User\_Centarlity_: Ketimbang _user-friendly_, Arch Linux lebih ke arah _user centric_,
 - _Versatility_     : Arch linux sangat fleksibel.
 
-Untuk lebih lanjutnya bisa kalian baca {{<linkBlank "disini" "https://wiki.archlinux.org/title/Arch_Linux">}}
+Untuk lebih lanjutnya bisa kalian baca [disini](https://wiki.archlinux.org/title/Arch_Linux "blank")
 
 Oke, tidak perlu berlama-lama, ini adalah alasan kenapa saya memakai Arch Linux.
 

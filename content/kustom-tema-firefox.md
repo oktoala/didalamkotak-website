@@ -58,7 +58,7 @@ Namun yang berbeda adalah ketimbang menggunakan Adwaita yang merupakan default d
 Sweet theme sendiri merupakan tema yang cukup populer sebagai GTK+ theme dan bisa mengintegrasikan tema tersebut dengan firefox akan membuat
 tampilan menjadi lebih menyatu.
 
-Kalian bisa dapatkan Firefox-Sweet-Theme {{<linkBlank "disini" "https://github.com/EliverLara/firefox-sweet-theme">}}
+Kalian bisa dapatkan Firefox-Sweet-Theme [disini](https://github.com/EliverLara/firefox-sweet-theme)
 
 ### Blurredfox
 
@@ -66,7 +66,7 @@ Tema ini sedikit berbeda dengan dua tema diatas karena posisi tabbar dan urlbar 
 
 Walaupun tema ini punya kata blur di dalam namanya, tapi sama sekali tidak ada yang diblur di dalam tema ini. Jadi ya agak menipu aja sih. :smile:
 
-Kalian bisa mencoba temanya {{<linkBlank "disini" "https://github.com/manilarome/blurredfox">}}
+Kalian bisa mencoba temanya [disini](https://github.com/manilarome/blurredfox "blank")
 
 ### Firefox-mod-blur
 
@@ -74,7 +74,7 @@ Mungkin cuman tema ini yang menjanjikan bisa dipasang di Windows dan Linux.
 
 Tema ini menyediakan banyak template, mulai dari mode blur, mode one-liner, dll.
 
-Kalian bisa mencobanya {{<linkBlank "disini" "https://github.com/datguypiko/Firefox-Mod-Blur">}}
+Kalian bisa mencobanya [disini](https://github.com/datguypiko/Firefox-Mod-Blur "blank")
 
 ## Penutup
 

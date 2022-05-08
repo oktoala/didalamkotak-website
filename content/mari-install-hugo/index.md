@@ -103,9 +103,11 @@ hugo new site coba-coba
 
 Saya menyarankan untuk menggunakan git supaya lebih cepat. Cukup jalankan perintah dibawah.
 
-{{<fileCode "Bash" "Terminal">}}cd coba-coba
+```Shell {user="$"}
+cd coba-coba
 git init
-git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke{{</fileCode>}}
+git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
+```
 
 Jika kalian tidak menggunakan git:
 

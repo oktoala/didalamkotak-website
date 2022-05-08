@@ -67,16 +67,19 @@ Unduh flutter sdk di [sini](https://flutter.dev/docs/development/tools/sdk/relea
 
 Saya menyarankan untuk mengunduh yang versi stable.
 
-Install flutter sdk di folder yang kalian suka. Kalau saya menyimpannya di folder {{< dir ".flutter">}}.
+Install flutter sdk di folder yang kalian suka. Kalau saya menyimpannya di folder ``.flutter``.
 
-{{<scCode "Shell">}}mkdir ~/.flutter
+```Shell {user="$"}
+mkdir ~/.flutter
 cd ~/.flutter
 tar -xf ~/Downloads/flutter-linux*\*-stable.tar.xz
-{{</scCode>}}
+```
 
 Lalu tambahkan flutter PATH dengan cara menambahkan teks dibawah ini ke `.bashrc` atau `.zshrc`.
 
-{{<scCode "Bash">}}export PATH="${PATH}:$HOME/.flutter/flutter/bin"{{</scCode>}}
+```Bash 
+export PATH="${PATH}:$HOME/.flutter/flutter/bin"
+```
 
 ### 4. Install VS Code
 
@@ -115,12 +118,13 @@ Buka android studio, pilih Configure > AVD Manager > Create Virtual Device. Lalu
 
 Lalu tambahkan teks di bawah ke `.bashrc` atau `.zshrc`.
 
-{{<scCode "Bash">}}export ANDROID_SDK_ROOT="$HOME/Android/sdk"
+```Bash {file=".bashrc"}
+export ANDROID_SDK_ROOT="$HOME/Android/sdk"
 export ANDROID_AVD_HOME="$HOME/.android/avd"
-export PATH="${PATH}:$HOME/Android/sdk/emulator"{{</scCode>}}
+export PATH="${PATH}:$HOME/Android/sdk/emulator"
+```
 
 ### Setup Smartphone
-
 
 Sambungkan PC kalian dengan smartphone menggunakan USB. Buka smartphone kalian, pilih Setting > Developer Options. 
 
