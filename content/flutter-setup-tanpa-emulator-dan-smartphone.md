@@ -31,23 +31,31 @@ Sayangnya flutter tidak bisa diinstall melalui pacman. Jadi saya harus menginsta
 Kita akan butuh java untuk menginstall android studio. Seharusnya java sudah terinstall di sistem kalian, tapi jika belum terinstall
 ketikkan perintah di bawah ini.
 
-{{<scCode "Shell">}}sudo pacman -S jdk8-openjdk jdk11-openjdk{{</scCode>}}
+```Shell {user="$"}
+sudo pacman -S jdk8-openjdk jdk11-openjdk
+```
 
 Untuk mengubah melihat list jdk, jalankan perintah di bawah.
 
-{{<scCode "Shell">}}archlinux-java status{{</scCode>}}
+```Shell {user="$"}
+archlinux-java status
+```
 
 Untuk mengubah default java environment, jalankan perintah ``sudo archlinux-java set <Nama_JDK>``
 
 Contoh:
 
-{{<scCode "Shell" >}}sudo archlinux-java set java8-openjdk{{</scCode>}}
+```Shell {user="$"}
+sudo archlinux-java set java8-openjdk
+```
 
 ### 2. Install Android Studio
 
 Unduh android studio di [sini](https://developer.android.com/studio/) atau kalian bisa menggunakan AUR.
 
-{{<scCode "Shell">}}yay -S android-studio{{</scCode>}}
+```Shell {user="$"}
+yay -S android-studio
+```
 
 Jika sudah terinstall, buka android studio, lalu pilih direktori untuk sdk kalian. Biasanya di {{<dir "~/Android/sdk">}}.
 
@@ -80,11 +88,15 @@ menggunakan yang dari Microsoft branded packages. Karena ada beberapa fitur yang
 
 Ini yang Microsoft branded packages.
 
-{{<scCode "Shell">}}yay -S visual-studio-code-bin{{</scCode>}}
+```Shell {user="$"}
+yay -S visual-studio-code-bin
+```
 
 Ini yang versi open source.
 
-{{<scCode "Shell">}}sudo pacman -S code{{</scCode>}}
+```Shell {user="$"}
+sudo pacman -S code
+```
 
 Setelah terinstall, buka vs code, tekan `Ctrl+Shift+P` untuk membuka command pallete, lalu ketikkan `Extension: Install Extensions` atau cukup tekan `Ctrl+Shift+X`.
 Lalu ketikkan 'Flutter' dan tekan install.
@@ -122,21 +134,29 @@ Kalian bisa memunculkan layar smartphone kalian ke PC kalian dengan menggunakan 
 
 Kalian harus pindah flutter channel kalian ke master.
 
-{{<scCode "Shell">}}flutter channel master{{</scCode>}}
+```Shell {user="$"}
+flutter channel master
+```
 
 Lalu upgrade flutter kalian.
 
-{{<scCode "Shell">}}flutter upgrade{{</scCode>}}
+```Shell {user="$"}
+flutter upgrade
+```
 
 Jika sudah, aktifkan fitur web menggunakan flutter config.
 
-{{<scCode "Shell">}}flutter config --enable-web{{</scCode>}}
+```Shell {user="$"}
+flutter config --enable-web
+```
 
 ### Setup Untuk Desktop
 
 Sama seperti setup untuk web, hanya berbeda dibagian flutter config.
 
-{{<scCode "Shell">}}flutter config --enable-linux-desktop{{</scCode>}}
+```Shell {user="$"}
+flutter config --enable-linux-desktop
+```
 
 ## Troubleshooting
 
@@ -146,7 +166,9 @@ Jalankan perintah `flutter config --android-sdk <PATH_KE_Android_SDK>` di termin
 
 Contoh: 
 
-{{<scCode "Shell">}}flutter config --android-sdk ~/Android/sdk{{</scCode>}}
+```Shell {user="$"}
+flutter config --android-sdk ~/Android/sdk
+```
 
 ### CHROME_EXECUTEABLE
 
@@ -156,7 +178,9 @@ Jika bukan, maka kalian bisa rename atau membuat simbolic link dari binary terse
 
 Contoh jika binary chrome bernama **google-chrome-stable**:
 
-{{<scCode "Shell">}}sudo ln -s /bin/google-chrome-stable /bin/google-chrome{{</scCode>}}
+```Shell {user="$"}
+sudo ln -s /bin/google-chrome-stable /bin/google-chrome
+```
 
 ### Emulator 
 

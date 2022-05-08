@@ -112,7 +112,7 @@
   }
 
   code {
-    @apply text-dk-text bg-gray-500 rounded-md p-[3px];
+    @apply text-dk-text bg-gray-700 rounded-md p-[3px];
   }
 
   /*? h2 */

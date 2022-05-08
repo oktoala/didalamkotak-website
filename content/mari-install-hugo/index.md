@@ -71,11 +71,15 @@ Lebih baik untuk mengunduh binary nya langsung dari [github](https://github.com/
 
 Kalian bisa menggunakan snap untuk menginstallnya.
 
-{{<scCode "Shell">}}snap install hugo --channel=extended{{</scCode>}}
+```Shell {user="$"}
+snap install hugo --channel=extended
+```
 
 Untuk Arch Linux, bisa langsung melalui pacman.
 
-{{<scCode "Shell">}}sudo pacman -S hugo{{</scCode>}}
+```Shell {user="$"}
+sudo pacman -S hugo
+```
 
 ## Konfigurasi 
 

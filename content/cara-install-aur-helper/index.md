@@ -26,7 +26,9 @@ Saya memilih ini karena banyak yang pakai. :smiley:
 
 Pertama-tama, kita harus menginstall **git** dan **base-devel**.
 
-{{<scCode "Shell">}}sudo pacman -S --needed git base-devel{{</scCode>}}
+```Shell {user="$"}
+sudo pacman -S --needed git base-devel
+```
 
 Jika sudah tinggal jalankan perintah di bawah ini.
 
@@ -41,7 +43,9 @@ Beberapa perintah untuk **yay** sama seperti **pacman**, yang jadi pembeda hanya
 
 Jika kalian ingin mengupgrade package yang kalian install menggunakan AUR helper jalankan perintah di bawah ini.
 
-{{<scCode "Shell">}}yay -Syua{{</scCode>}}
+```Shell {user="$"}
+yay -Syua
+```
 
 ## Sumber
 

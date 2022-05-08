@@ -59,11 +59,15 @@ Libre -> MS Office ❌
 
 Kita akan menggunakan PlayOnLinux, sebuah aplikasi GUI untuk Wine. Jadi, sebenarnya ini adalah Wine tapi ada GUI.
 
-{{<scCode "Shell">}}sudo pacman -S wine playonlinux{{</scCode>}}
+```Shell {user="$"}
+sudo pacman -S wine playonlinux
+```
 
 Kalian mungkin juga butuh beberapa hal ini untuk diinstall.
 
-{{<scCode "Shell">}}sudo pacman -S winetrick zenity{{</scCode>}}
+```Shell {user="$"}
+sudo pacman -S winetrick zenity
+```
 
 Jika sudah terinstall, 
 
@@ -92,7 +96,9 @@ Jika sudah kalian akan diminta untuk mencari aplikasi yang diinstall. Klik _brow
 
 Jalankan perintah di bawah ini dengan mengganti `namaFolder` dengan nama winebottle yang kalian masukkan di point no. 3
 
-{{<scCode "Shell">}}WINEPREFIX=~/.PlayOnLinux/wineprefix/namaFolder winetricks{{</scCode>}}
+```Shell {user="$"}
+WINEPREFIX=~/.PlayOnLinux/wineprefix/namaFolder winetricks
+```
 
 Jika sudah, maka akan muncul window baru. Lalu klik **Select the default prefix** -> **Install a Windows DDL or component** ->
 pilih **dotnet20** dan **msxml6**. Lalu klik OK.
@@ -196,11 +202,13 @@ echo ok{{</scCode>}}
 
 Lalu jalankan file `smooth.sh` tadi dengan argumen winebottle kalian.
 
-{{<scCode "Shell">}}./smooth.sh ~/.PlayOnLinux/wineprefix/namaWineBottle{{</scCode>}}
+```Shell {user="$"}
+./smooth.sh ~/.PlayOnLinux/wineprefix/namaWineBottle
+```
 
 {{<webm "/webm/font-smooth.webm">}}
 
-Script di atas bisa kalian baca lebih lanjut {{<linkBlank "disini" "https://askubuntu.com/questions/219791/improve-gui-appearance-of-wine-applications">}} -->
+Script di atas bisa kalian baca lebih lanjut [disini"](https://askubuntu.com/questions/219791/improve-gui-appearance-of-wine-applications "blank")-->
 
 ## Penutup
 

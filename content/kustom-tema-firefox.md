@@ -45,7 +45,7 @@ Tema ini bisa kalian pakai mulai dari Firefox 85.
 
 Hal yang saya suka dari tema ini adalah tabbar yang panjangnya menyesuaikan. Posisi {{<scIcon class="fa fa-plus-square">}} new tab dari tema ini tidak akan berubah.
 
-Tema ini bisa kalian dapatkan {{<linkBlank "disini" "https://github.com/rafaelmardojai/firefox-gnome-theme">}} 
+Tema ini bisa kalian dapatkan [disini"](https://github.com/rafaelmardojai/firefox-gnome-theme "blank")
 
 ### Firefox-Sweet-Theme
 

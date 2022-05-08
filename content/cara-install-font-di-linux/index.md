@@ -35,7 +35,9 @@ Untuk {{<dir ".ttf">}} masukkan ke folder {{<dir "TTF">}} dan {{<dir ".otf">}} m
 
 Kebanyakan font sudah tersedia baik di Arch Repository maupun di AUR.
 
-{{<scCode "Shell">}}yay -S ttf-ms-fonts{{</scCode>}}
+```Shell {user="$"}
+yay -S ttf-ms-fonts
+```
 
 ## Non-Latin Font
 
@@ -65,7 +67,9 @@ ja_JP.UTF-8
 
 Setelah itu jalankan perintah di bawah ini.
 
-{{<scCode "Shell">}}sudo locale-gen{{</scCode>}}
+```Shell {user="$"}
+sudo locale-gen
+```
 
 Berikut adalah beberapa Chinese font 🇨🇳 yang bisa kalian pakai:
 

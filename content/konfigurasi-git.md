@@ -29,11 +29,15 @@ Seharusnya git sudah terinstall secara default, tapi untuk jaga-jaga mari kita c
 
 **Untuk Ubuntu**
 
-{{<scCode "Shell">}}sudo apt install git{{</scCode>}}
+```Shell {user="$"}
+sudo apt install git
+```
 
 **Untuk Arch**
 
-{{<scCode "Shell">}}sudo pacman -S git{{</scCode>}}
+```Shell {user="$"}
+sudo pacman -S git
+```
 
 ## Konfigurasi
 

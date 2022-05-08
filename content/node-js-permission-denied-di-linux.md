@@ -22,7 +22,9 @@ Jika kalian mendapat {{<dir "EACCES">}} saat ingin menginstall sebuah package se
 
 Kalian bisa menginstall ulang node js dengan cara mengunduh langsung dari websitenya atau menggunakan package manager kalian.
 
-{{<scCode "Shell">}}sudo pacman -S nodejs{{</scCode>}}
+```Shell {user="$"}
+sudo pacman -S nodejs
+```
 
 Sebenarnya cara ini tidak pernah saya coba karena saya memakai cara kedua.
 
@@ -32,29 +34,39 @@ Cara ini lebih aman daripada harus menggunakan sudo saat menginstall packagenya.
 
 + Buatlah folder bernama {{<dir ".node-global">}} di home kalian.
 
-    {{<scCode "Shell">}}mkdir ~/.node-global{{</scCode>}}
+    ```Shell {user="$"}
+mkdir ~/.node-global
+```
 
 + Mengatur direktori bawaan npm
 
-    {{<scCode "Shell">}}npm config set prefix '~/.npm-global'{{</scCode>}}
+    ```Shell {user="$"}
+npm config set prefix '~/.npm-global'
+```
 
 + Menambahkan direktori ke PATH
 
     Tambahkan teks dibawah ke {{<dir ".bashrc">}} atau {{<dir ".zshrc">}} kalian.
 
-    {{<scCode "Shell">}}export PATH=~/.npm-global/bin:$PATH{{</scCode>}}
+    ```Shell {user="$"}
+export PATH=~/.npm-global/bin:$PATH
+```
 
     Lalu restart terminal kalian.
 
 + Cek npm default directori
 
-    {{<scCode "Shell">}}npm config get prefix{{</scCode>}}
+    ```Shell {user="$"}
+npm config get prefix
+```
 
 + Cobalah untuk menginstall package
 
     Saya akan mencoba untuk menginstall firebase-tools
 
-    {{<scCode "Shell">}}npm i -g firebase-tools{{</scCode>}}
+    ```Shell {user="$"}
+npm i -g firebase-tools
+```
 
     Jika kalian bisa menjalankan `firebase` secara global di terminal kalian, itu berarti konfigurasinya berhasil.
 

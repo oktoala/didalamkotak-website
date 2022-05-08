@@ -17,13 +17,15 @@ summary: "Tampilkan splash screen yang keren saat booting"
 
 ## Pendahuluan
 
-Plymouth adalah sebuah proyek dari Fedora yang sekarang sudah terdaftar di {{<linkBlank "freedesktop.org" "https://www.freedesktop.org/wiki/Software/#graphicsdriverswindowsystemsandsupportinglibraries">}} yang membuat kita bisa menampilkan tampilan yang menarik saat proses boot.
+Plymouth adalah sebuah proyek dari Fedora yang sekarang sudah terdaftar di [freedesktop.org"](https://www.freedesktop.org/wiki/Software/#graphicsdriverswindowsystemsandsupportinglibraries "blank")yang membuat kita bisa menampilkan tampilan yang menarik saat proses boot.
 
 ## Instalasi
 
 Plymouth ada di AUR, jadi bisa kalian langsung unduh saja atau kalian bisa build dari [gitlab](https://gitlab.freedesktop.org/plymouth/plymouth).
 
-{{<scCode "Shell">}}yay -S plymouth-git{{</scCode>}}
+```Shell {user="$"}
+yay -S plymouth-git
+```
 
 ### Plymouth Hook
 
@@ -56,7 +58,9 @@ Ubah isi dari `GRUB_CMDLINE_LINUX_DEFAULT` menjadi teks di bawah ini.
 
 Lalu jalankan perintah di bawah ini.
 
-{{<scCode "Shell">}}sudo grub-mkconfig -o /boot/grub/grub.cfg{{</scCode>}}
+```Shell {user="$"}
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
 
 ## Konfigurasi
 
@@ -66,11 +70,15 @@ Jika kalian memakai **GDM**, maka cukup install **gdm-plymouth** dari AUR.
 
 Tapi jika kalian memakai selain GDM, seperti SDDM, LightDM, LXDM, maka pertama kalian harus menonaktifkannya terlebih dahulu.
 
-{{<scCode "Shell">}}systemctl disable lightdm.service{{</scCode>}}
+```Shell {user="$"}
+systemctl disable lightdm.service
+```
 
 Lalu aktifkan yang versi plymouth.
 
-{{<scCode "Shell">}}systemctl enable lightdm-plymouth.service{{</scCode>}}
+```Shell {user="$"}
+systemctl enable lightdm-plymouth.service
+```
 
 ### Delay
 
@@ -84,11 +92,15 @@ ShowDelay=0{{</fileCode>}}
 
 Kalian bisa melihat list tema yang kalian miliki dengan perintah di bawah.
 
-{{<scCode "Shell">}}plymouth-set-default-theme -l{{</scCode>}}
+```Shell {user="$"}
+plymouth-set-default-theme -l
+```
 
 atau
 
-{{<scCode "Shell">}}ls /usr/share/plymouth/themes{{</scCode>}}
+```Shell {user="$"}
+ls /usr/share/plymouth/themes
+```
 
 Tema default adalah **spinner**, tapi bisa kalian ganti dengan mengedit `/etc/plymouth/plymouthd.conf`, contoh:
 
@@ -105,7 +117,9 @@ Untuk keluar dari preview, tekan lagi `Ctrl+Alt+F6` dan ketik `plymouth --quit`.
 
 Setiap kalian mengganti tema, `initrd` harus di built ulang. Jalankan perintah di bawah ini.
 
-{{<scCode "Shell">}}mkinicpio -P{{</scCode>}}
+```Shell {user="$"}
+mkinicpio -P
+```
 
 ## Tweaks
 
@@ -115,11 +129,15 @@ Tema plymouth bisa diinstall secara manual dengan cara menaruh tema yang telah k
 
 Dan jika tidak ingin repot, kalian juga bisa mengunduh tema dari AUR.
 
-{{<scCode "Shell">}}yay -S plymouth-theme-arch-logo{{</scCode>}}
+```Shell {user="$"}
+yay -S plymouth-theme-arch-logo
+```
 
 Lalu jalankan perintah dibawah ini untuk mengubah tema dan build ulang initrd.
 
-{{<scCode "Shell">}}plymouth-set-default-theme -R arch-logo{{</scCode>}}
+```Shell {user="$"}
+plymouth-set-default-theme -R arch-logo
+```
 
 ## Akhir Kata...
 

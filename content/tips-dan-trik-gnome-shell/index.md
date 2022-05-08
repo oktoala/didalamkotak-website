@@ -31,7 +31,8 @@ Oke, tanpa berlama-lama, ini adalah beberapa tips dan trik yang sudah saya pelaj
 
 Untuk mengganti logo activies, kalian bisa memasukkan teks di bawah ke `gnome-shell.css`.
 
-{{<fileCode "CSS" "gnome-shell.css">}}#panel .panel-button#panelActivities{
+```CSS {file="gnome-shell.css"}
+#panel .panel-button#panelActivities{
         background-image: url(gambar);
         background-position: center center;
         background-repeat: no-repeat;
@@ -39,7 +40,8 @@ Untuk mengganti logo activies, kalian bisa memasukkan teks di bawah ke `gnome-sh
         color: transparent;
         background-color: transparent;
         box-shadow: none;
-}{{</fileCode>}}
+}
+```
 
 Ganti **gambar** dengan file yang ingin kalian jadikan logo activities.
 
@@ -47,12 +49,14 @@ Ganti **gambar** dengan file yang ingin kalian jadikan logo activities.
 
 Untuk mengganti background overview, cukup tambahkan teks di bawah ini ke `gnome-shell.css`.
 
-{{<fileCode "CSS" "gnome-shell.css">}}#overviewGroup {
+```CSS {file="gnome-shell.css"}
+#overviewGroup {
         background-color: #1d1e25;
         background-image: url(gambar);
         background-repeat: no-repeat;
         background-size: cover;
-}{{</fileCode>}}
+}
+```
 
 Ganti **gambar** dengan file yang ingin kalian jadikan background dari overview.
 
@@ -62,7 +66,8 @@ Untuk yang satu ini agak ribet dan ada kemungkinan untuk tereset jika kalian men
 
 Pertama buat shell file seperti di bawah ini dan jalankan.
 
-{{<fileCode "Bash" "extractgst.sh">}}#!/bin/sh
+```Bash {file="extractgst"}
+#!/bin/sh
 gst=/usr/share/gnome-shell/gnome-shell-theme.gresource
 workdir=${HOME}/shell-theme
 
@@ -75,7 +80,8 @@ done
 
 for r in `gresource list $gst`; do
         gresource extract $gst $r >$workdir/${r#\/org\/gnome\/shell/}
-done{{</fileCode>}}
+done
+```
 
 Jika sudah, maka akan muncul folder `shell-theme` di Home kalian.
 
@@ -127,21 +133,27 @@ Ganti **FILENAME** dengan gambar yang ingin kalian jadikan background.
 
 Sekarang buka `gnome-shell.css` di direktori tersebut dan cari `#lockDialogGroup` menjadi seperti di bawah.
 
-{{<fileCode "CSS" "gnome-shell.css">}}#lockDialogGroup {
+```CSS {file="gnome-shell.css"}
+#lockDialogGroup {
   background: url(FILENAME);
   background-size: cover;
   background-repeat: no-repeat;
-}{{</fileCode>}}
+}
+```
 
 Jika sudah jalankan perintah di bawah ini mengkompilasi tema.
 
-{{<scCode "Shell">}}glib-compile-resources gnome-shell-theme.gresource.xml{{</scCode>}}
+```Shell {user="$"}
+glib-compile-resources gnome-shell-theme.gresource.xml
+```
 
 Lalu copy `gnome-shell-theme.gresource` ke `/usr/share/gnome-shell`.
 
 Jika sudah lalu restart `gdm.service`.
 
-{{<scCode "Shell">}}systemctl restart gdm.service{{</scCode>}}
+```Shell {user="$"}
+systemctl restart gdm.service
+```
 
 ## Sumber
 

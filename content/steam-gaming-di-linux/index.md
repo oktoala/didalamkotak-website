@@ -28,7 +28,9 @@ Untuk proton yang kita pakai kali ini adalah sebuah custom Proton yang bernama P
 
 Pastikan kalian punya Steam.
 
-{{<shell "$">}}sudo pacman -S steam{{</shell>}}
+```Shell {user="$"}
+sudo pacman -S steam
+```
 
 Jika sudah, pergi ke halaman github [release](https://github.com/GloriousEggroll/proton-ge-custom/releases)
 dari ProtonGE.
@@ -37,7 +39,9 @@ dari ProtonGE.
 
 Buat folder `~/.steam/root/compatibilitytools.d` jika tidak ada.
 
-{{<shell "$">}}cd ~/.steam/root && mkdir compatibilitytools.d{{</shell>}}
+```Shell {user="$"}
+cd ~/.steam/root && mkdir compatibilitytools.d
+```
 
 Lalu extract isi file `.tar.gz` yang sudah kalian unduh, ke dalam folder `~/.steam/root/compatibilitytools.d`.
 

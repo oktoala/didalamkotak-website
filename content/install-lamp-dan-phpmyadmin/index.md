@@ -208,7 +208,7 @@ Ini adalah tambahan yang tidak perlu kalian ikuti.
 
 Composer adalah package manager untuk PHP, mirip NPM kalau di NodeJS.
 
-Untuk menginstallnya dengan pacman, ikuti perintah di bawah atau kalian bisa unduh dari {{<linkBlank "websitenya" "https://getcomposer.org/download/">}} langsung.
+Untuk menginstallnya dengan pacman, ikuti perintah di bawah atau kalian bisa unduh dari [websitenya"](https://getcomposer.org/download/ "blank")langsung.
 
 ```Shell {user="$"}
 sudo pacman -S composer
