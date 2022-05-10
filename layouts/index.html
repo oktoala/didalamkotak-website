@@ -1,5 +1,5 @@
 {{ define "main" }}
-<main class="main grid grid-cols-dk-grid justify-between mt-6 gap-y-4 pb-6">
+<main class="main grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1  mt-6 gap-y-4 gap-x-4 place-items-center md:justify-between pb-6">
     {{ $paginator := .Paginate (where .Pages "Type" "post") 6 }}
     {{ range $paginator.Pages}}
     {{ .Render "summary"}}
