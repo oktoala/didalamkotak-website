@@ -2,26 +2,28 @@
 <html class="no-js scroll-smooth" lang="{{ .Site.Language.Lang }}">
 
 <head class="">
-	{{ partial "head.html" . }}	
+	{{ partial "head.html" . }}
 </head>
 
 <body class="m-0 overflow-x-hidden text-base break-words bg-dk-primary-800 font-dk-sans loading">
-	<div id="loader" class="fixed z-40 top-0 left-0 w-full h-full flex justify-center items-center bg-dk-primary invisible">
+	<div id="loader"
+		class="fixed z-40 top-0 left-0 w-full h-full flex justify-center items-center bg-dk-primary invisible">
 		{{ partial "svg/plainLogo1.svg" (dict "data-tilt" "") -}}
 	</div>
 	<div class="relative container--outer">
 		{{ partial "header.html" . }}
 		{{ partial "search.html" . }}
 		<div class="w-auto flex justify-center py-0 px-side">
-			<div class='w-full min-h-[894.4px] pt-14 px-0 pb-0 max-w-dk-maxW {{ if eq .Type "post" }} flex justify-between {{ end }} '>
-				<div id="main-page" class="min-w-0 transition-all ">
+			<div
+				class='w-full min-h-[894.4px] pt-14 px-0 pb-0 max-w-dk-maxW {{ if eq .Type "post" }} flex justify-between {{ end }} '>
+				<div  class="min-w-0 transition-all ">
 					{{ block "main" . }}
 					{{ end }}
 				</div>
 				{{ partial "sidebar.html" . }}
 			</div>
 		</div>
-		<div class="hidden"></div>
+		<div class="hidden is-active-link"></div>
 		{{ partial "footer.html" . }}
 	</div>
 	{{ range .Site.Params.customJS -}}
@@ -30,6 +32,20 @@
 	<script async defer src="https://unpkg.com/lunr@2.3.9/lunr.min.js"></script>
 	<script src="/js/search.js"></script>
 	<script async src="/js/main.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+	<script>
+		tocbot.init({
+			// Where to render the table of contents.
+			tocSelector: '#TableOfContents',
+			// Where to grab the headings to build the table of contents.
+			contentSelector: '#post',
+			// Which headings to grab inside of the contentSelector element.
+			headingSelector: 'h1, h2, h3',
+			// For headings inside relative or absolute positioned containers within content.
+			hasInnerContainers: false,
+		});
+		tocbot.refresh();
+	</script>
 
 </body>
 

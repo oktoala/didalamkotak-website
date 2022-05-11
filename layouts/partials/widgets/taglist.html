@@ -6,13 +6,18 @@
 			{{- range $name, $taxonomy := $tags }}
 			{{- with $.Site.GetPage (printf "/topik/%s" $name) }}
 			<li class="relative text-sm list-none inline-block mr-3 mb-4">
-				<a class="cursor-pointer  flex justify-evenly items-center" onclick="loadPage({{ .RelPermalink }})">
-					<span class="taxo_text rounded-tl-lg px-2 rounded-bl-lg border-r-0 mr-0 border-gray-300  border-2" id={{
-						.RelPermalink }}> {{ .Title }}</span><span
-						class="taxo_num rounded-tr-lg rounded-br-lg border-l-0 border-gray-300 border-2 bg-dk-blue-700 w-full px-2">{{
+				<label for="{{ .Title }}" class="cursor-pointer flex justify-evenly items-center"
+					onclick="loadPage({{ .RelPermalink }})">
+					<input type="radio" name="kategori" class="absolute peer opacity-0 w-0 h-0" value="{{ .Title }}"
+						id="{{.Title}}">
+					<span id={{ .RelPermalink }}
+						class="taxo_text rounded-tl-lg px-2 rounded-bl-lg border-r-0 mr-0 hover:underline text-dk-text peer-checked:text-dk-primary-800 peer-checked:bg-gray-50 border-gray-700  border-2">
+						{{ .Title }}
+					</span><span
+						class="taxo_num rounded-tr-lg rounded-br-lg border-l-0 text-dk-text border-gray-700 bg-dk-primary-900 border-2 peer-checked:bg-blue-400 w-full px-2">{{
 						len
 						$taxonomy }}</span>
-				</a>
+				</label>
 			</li>
 			{{- end }}
 			{{- end }}
