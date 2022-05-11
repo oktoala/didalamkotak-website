@@ -14,7 +14,7 @@
 <meta name="apple-mobile-web-app-title" content="DalamKotak">
 {{ template "_internal/opengraph.html" . }}
 <title>{{ block "title" . }}{{ if not .IsHome }}{{ .Title }} - {{ end }}{{ .Site.Title }}{{ end }}</title>
-{{ $styles := resources.Get "/css/styles.css" | postCSS }}
+{{ $styles := resources.Get "/css/styles.css" | minify | postCSS }}
 
 {{ if .Site.IsServer }}
 <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
