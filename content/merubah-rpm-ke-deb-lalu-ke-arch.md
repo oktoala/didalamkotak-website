@@ -19,15 +19,13 @@ tags:
     - alien
     - debtap
     - ubuntu
-description: "Ini adalah cara merubah rpm ke deb ke pacman"
+description: "Cara Install RPM di Arch Linux"
+summary: "Cara Install RPM di Arch Linux"
 ---
-
-Kita akan membahas bagaiman cara menjalankan rpm di Debian dan Arch.
-<!--more-->
 
 ![merubah-rpm-ke-deb-ke-arch](/img/thumbnail/merubah-rpm-ke-deb-lalu-ke-arch.jpg)
 
-Kelas Saya ada mata kuliah basis data dan dosen meminta kelas saya untuk menginstall {{< linkBlank "Oracle Data Modeler" "https://www.oracle.com/tools/downloads/sql-data-modeler-downloads.html" >}}.
+Kelas Saya ada mata kuliah basis data dan dosen meminta kelas saya untuk menginstall [Oracle Data Modeler](https://www.oracle.com/tools/downloads/sql-data-modeler-downloads.html "blank").
 
 Oke, karena Saya pakai Arch Linux harusnya packagenya ada di Package Manager ataupun di AUR.
 
@@ -66,13 +64,17 @@ Jadi pertama kalian harus menginstall beberapa aplikasi.
 
 Kalau kalian memakai Ubuntu based cukup install **alien** saja. Install dpkg untuk memasang packagenya nanti.
 
-{{< scCode "Bash" >}}sudo apt alien dpkg-dev{{< /scCode >}}
+```Bash 
+sudo apt alien dpkg-dev
+```
 
 Dan jika kalian memakai Arch based, kalian harus install dua-duanya. Keduanya ada di AUR.
 
-{{< scCode "Bash" >}}yay -S alien_package_converter debtap{{< /scCode >}}
+```Bash 
+yay -S alien_package_converter debtap
+```
 
-Kita akan pakai Oracle Data Modeler sebagai contohnya. Kalian bisa download {{< linkBlank "disini" "https://www.oracle.com/tools/downloads/sql-data-modeler-downloads.html" >}}.
+Kita akan pakai Oracle Data Modeler sebagai contohnya. Kalian bisa download [disini](https://www.oracle.com/tools/downloads/sql-data-modeler-downloads.html "blank").
 
 ## Konfigurasi
 
@@ -84,7 +86,9 @@ Saya menyimpannya di folder Downloads. Kalian bisa simpan dimanapun kalian suka.
 
 ![SS-odm-place.png](/img/SS-odm-place.png)
 
-{{< scCode "Bash" >}}sudo alien datamodeler-20.2.0.167.1538-noarch.rpm{{< /scCode >}}
+```Bash 
+sudo alien datamodeler-20.2.0.167.1538-noarch.rpm
+```
 
 Tunggu sampai proses converting selesai.
 
@@ -94,11 +98,15 @@ Jika sudah, kalian bisa mengecek file **.deb** kalian.
 
 Jika kalian di Ubuntu, kalian bisa install langsung menggunakan dpkg.
 
-{{< scCode "Bash" >}}sudo dpkg -i datamodeler_20.2.0.167.1538-2_all.deb{{< /scCode >}}
+```Bash 
+sudo dpkg -i datamodeler_20.2.0.167.1538-2_all.deb
+```
 
 Tapi jika kalian di Arch, maka kalian harus convert lagi.
 
-{{< scCode "Bash" >}}debtap datamodeler_20.2.0.167.1538-2_all.deb{{< /scCode >}}
+```Bash 
+debtap datamodeler_20.2.0.167.1538-2_all.deb
+```
 
 Kalian bisa isi nama package dan lisensinya sesuka kalian, sisanya kalian bisa tekan _enter_ aja.
 
@@ -108,7 +116,9 @@ Kalian bisa cek apakah sudah terconvert atau tidak.
 
 Sekarang kalian sudah bisa menginstall package tersebut dengan _pacman_.
 
-{{< scCode "Bash" >}}sudo pacman -U datamodeler-20.2.0.167.1538-1-any.pkg.tar.zst{{< /scCode >}}
+```Bash 
+sudo pacman -U datamodeler-20.2.0.167.1538-1-any.pkg.tar.zst
+```
 
 Sekarang kalian bisa cek di **start menu**.
 

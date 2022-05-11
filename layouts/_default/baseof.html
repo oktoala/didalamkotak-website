@@ -1,90 +1,51 @@
 <!DOCTYPE html>
-<html class="no-js" lang="{{ .Site.Language.Lang }}">
+<html class="no-js scroll-smooth" lang="{{ .Site.Language.Lang }}">
 
 <head class="">
-	<meta charset="UTF-8">
-	<link rel="manifest" href="/manifest.json">
-	<meta name="google-site-verification" content="I5PaMLx45N_DoSoYS20GbbHjxZA_LCxndLcQOmRuwno" />
-	<meta name="description"
-		content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Params.Description }}{{ end }}">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="theme-color" content="#292a2d" />
-	<meta content="IE=edge">
-	<meta name="mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<meta name="mobile-web-app-capable" content="yes" />
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<meta name="apple-mobile-web-app-title" content="DalamKotak">
-	{{ template "_internal/opengraph.html" . }}
-	<title>{{ block "title" . }}{{ if not .IsHome }}{{ .Title }} - {{ end }}{{ .Site.Title }}{{ end }}</title>
-	<script>(function (d, e) { d[e] = d[e].replace("no-js", "js"); })(document.documentElement, "className");</script>
-	{{- if .Site.Params.schema }}
-	{{ template "_internal/schema.html" . }}
-	{{- end }}
-	{{ $style := resources.Get "css/style.css" | resources.ExecuteAsTemplate "css/style.css" . -}}
-	<link rel="stylesheet" href="{{ $style.RelPermalink }}">
-	{{ range .Site.Params.customCSS -}}
-	<link rel="stylesheet" href="{{ . | relURL }}">
-	{{- end }}
-	{{- with .OutputFormats.Get "rss" }}
-	{{ printf `
-	<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
-	{{- end }}
-	<link rel="apple-touch-icon" href="{{ " favicon.ico" | relURL }}">
-	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/appicons/apple-touch-icon-57x57.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/appicons/apple-touch-icon-114x114.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/appicons/apple-touch-icon-72x72.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/appicons/apple-touch-icon-144x144.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/appicons/apple-touch-icon-60x60.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/appicons/apple-touch-icon-120x120.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/appicons/apple-touch-icon-76x76.png" />
-	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-	<!-- Dracula -->
-	<link rel="stylesheet"
-		href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/base16/dracula.min.css">
-	<!-- Font Google -->
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-	<!-- Cascadia Code -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css">
-	<link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+	{{ partial "head.html" . }}
 </head>
 
-<body class="body loading">
-	<div class="loader">
+<body class="m-0 overflow-x-hidden text-base break-words bg-dk-primary-800 font-dk-sans loading">
+	<div id="loader"
+		class="fixed z-40 top-0 left-0 w-full h-full flex justify-center items-center bg-dk-primary invisible">
 		{{ partial "svg/plainLogo1.svg" (dict "data-tilt" "") -}}
 	</div>
-	<div class="container container--outer">
+	<div class="relative container--outer">
 		{{ partial "header.html" . }}
 		{{ partial "search.html" . }}
-		<div class="wrapper-container">
-			<div class="wrapper flex">
-				<div class="primary">
+		<div class="w-auto flex justify-center py-0 px-side">
+			<div
+				class='w-full min-h-[894.4px] pt-14 px-0 pb-0 max-w-dk-maxW {{ if eq .Type "post" }} flex justify-between {{ end }} '>
+				<div  class="min-w-0 transition-all ">
 					{{ block "main" . }}
-					{{ with .Content }}
-					<div class="content main__content clearfix">
-						{{ . }}
-					</div>
-					{{ end }}
 					{{ end }}
 				</div>
 				{{ partial "sidebar.html" . }}
 			</div>
 		</div>
+		<div class="hidden is-active-link"></div>
 		{{ partial "footer.html" . }}
 	</div>
 	{{ range .Site.Params.customJS -}}
 	<script src="{{ . | relURL }}"></script>
 	{{- end }}
-	<script async src="https://kit.fontawesome.com/2f975d5468.js" crossorigin="anonymous"></script>
 	<script async defer src="https://unpkg.com/lunr@2.3.9/lunr.min.js"></script>
 	<script src="/js/search.js"></script>
 	<script async src="/js/main.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+	<script>
+		tocbot.init({
+			// Where to render the table of contents.
+			tocSelector: '#TableOfContents',
+			// Where to grab the headings to build the table of contents.
+			contentSelector: '#post',
+			// Which headings to grab inside of the contentSelector element.
+			headingSelector: 'h1, h2, h3',
+			// For headings inside relative or absolute positioned containers within content.
+			hasInnerContainers: false,
+		});
+		tocbot.refresh();
+	</script>
 
 </body>
 

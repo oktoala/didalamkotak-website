@@ -1,20 +1,7 @@
-<!-- ignore empty links with + -->
-{{ $headers := findRE "<h[1-3].*?>(.|\n])+?</h[1-3]>" .Content }}
-  <!-- at least one header to link to -->
-  {{ $has_headers := ge (len $headers) 1 }}
-  <!-- a post can explicitly disable Table of Contents with toc: false -->
-  {{ $show_toc := (eq $.Params.toc true) }}
-  {{ if and $has_headers $show_toc }}
-  <nav class="toc_class" id="toc" data-toggle="toc">
-    <!-- TOC header -->
-    <div class="toc__title">
-      Ada apa aja?
-    </div>
-    {{ .TableOfContents }}
-    <svg class="toc-marker" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-      <path stroke="#f0ff00" stroke-width="3" fill="transparent" stroke-dasharray="0, 0, 0, 1000" stroke-linecap="round"
-        stroke-linejoin="round" transform="translate(-0.5, -0.5)" />
-    </svg>
-  </nav>
-  <script async defer src='{{ "js/scrollspy.js" | relURL }}'></script>
-  {{end}}
+<nav class="mt-7 sticky font-bold pl-5 z-0 top-14 transition-all" id="toc" data-toggle="toc">
+  <!-- TOC header -->
+  <div class="text-base select-none text-dk-text font-bold ">
+    Ada apa aja?
+  </div>
+  {{ .TableOfContents }}
+</nav>

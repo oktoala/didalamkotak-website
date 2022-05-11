@@ -7,7 +7,7 @@ sidebar: false
 description: "Ini adalah profile saya"
 ---
 
-```Python
+```Python {noheader=true}
 print("Hello Word")
 ```
 
@@ -17,9 +17,9 @@ DalamKotak adalah website untuk dokumentasi kuliah dan juga sebagai dokumentasi 
 
 Tapi website ini juga menyediakan tulisan tentang sistem operasi lain. Karena saya tahu jika ingin membuat lebih banyak orang memakai linux, saya harus membahas hal yang dipakai banyak orang juga :skull:.
 
-# Siapa Saya?
+## Siapa Saya?
 
-```YAML
+```YAML {noheader=true}
 ---
 nama: "Oktavian Yoga Syahputra"
 nickname: ["Yoga", "Oktoala"]
@@ -33,7 +33,7 @@ Perkenalkan, saya **Oktavian Yoga**. Mahasiswa prodi Informatika di salah satu p
 
 Kalian bisa baca [disini](/alasan-menggunakan-linux) untuk alasan kenapa saya menggunakan linux.
 
-# Kenapa membuat DalamKotak?
+## Kenapa membuat DalamKotak?
 
 Saya awalnya ingin membuat sebuah website untuk belajar pemrograman web. Saya sudah melihat tutorial HTML, CSS, dan Javascript tapi karena tidak pernah saya implementasikan akhirnya saya lupa.
 

@@ -17,8 +17,7 @@ summary: Hari gini masih ngecek jadwal manual?
 
 Pasti kalian sering mencatat jadwal sekolah kalian secara manual di kertas ataupun di notepad kan.
 
-Dan untuk tau jadwal apa yang ada dihari itu kalian juga harus mengeceknya secara manual. Akan membingungkan jika kalian tidak
-ingat menaruhnya dimana.
+Dan untuk tau jadwal apa yang ada dihari itu kalian juga harus mengeceknya secara manual. Akan membingungkan jika kalian tidak ingat menaruhnya dimana.
 
 Tapi permasalahan itu bisa kalian selesaikan dengan Google Calendar {{<scIcon class="fa fa-google">}}.
 

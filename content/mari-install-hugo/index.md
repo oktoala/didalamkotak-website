@@ -9,12 +9,9 @@ kategori: [Belajar]
 topik: [hugo, programming, web]
 type: post
 thumbnail: "/mari-install-hugo/img/mari-install-hugo.webp"
-description: "Mari Install Hugo"
+description: "Belajar Hugo, karena website ini dibuat pakai Hugo"
+summary: "Belajar Hugo, karena website ini dibuat pakai Hugo"
 ---
-
-Kali ini kita akan belajar cara membuat sebuah website menggunakan Hugo.
-
-<!--more-->
 
 ![mari-install-hugo](/mari-install-hugo/img/mari-install-hugo.webp)
 
@@ -32,20 +29,20 @@ Terdapat tiga cara untuk menginstall Hugo di Windows dan semuanya bisa kalian pi
 
 ### Cara Tradisional
 
-Pertama, buat folder bernama {{<dir "Hugo">}} dan buat lagi folder yang bernama {{<dir "bin">}} di dalam folder Hugo tadi.
+Pertama, buat folder bernama ``Hugo`` dan buat lagi folder yang bernama ``bin`` di dalam folder Hugo tadi.
 
-Kalian bebas mau membuat foldernya dimanapun, saya sendiri manaruhnya di drive {{<dir "C:\ ">}}
+Kalian bebas mau membuat foldernya dimanapun, saya sendiri manaruhnya di drive ``C:\ ``
 
 Buka browser kalian dan pergi ke alamat [https://github.com/gohugoio/hugo/releases](https://github.com/gohugoio/hugo/releases)
 dan cari pada bagian Windows dan unduh sesuai arsitektur kalian.
 
 ![github-hugo-windows](/mari-install-hugo/img/github-hugo-windows.webp)
 
-Extract filenya dan masukkan kedalam {{<dir "C:\Hugo\bin ">}}
+Extract filenya dan masukkan kedalam ``C:\Hugo\bin ``
 
 ![hugo-bin](/mari-install-hugo/img/hugo-bin.webp)
 
-Lalu tambahkan {{<dir "C:\Hugo\bin">}} ke dalam PATH.
+Lalu tambahkan ``C:\Hugo\bin`` ke dalam PATH.
 
 Kalian bisa cek melalui CMD apakah hugo sudah terinstall atau belum.
 
@@ -59,11 +56,15 @@ Kalian juga bisa menginstall Hugo dengan [chocolatey](/chocolatey-package-manage
 
 Cukup ketikan perintah ini di Powershell (Run as Administrator ).
 
-{{<scCode "Powershell">}}choco install hugo -confirm{{</scCode>}}
+```Powershell 
+choco install hugo -confirm
+```
 
 Jika kalian ingin mendapatkan fitur Sass/SCSS, jalankan perintah di bawah ini.
 
-{{<scCode "Powershell">}}choco install hugo-extended -confirm{{</scCode>}}
+```Powershell 
+choco install hugo-extended -confirm
+```
 
 
 ## Instalasi di Linux
@@ -74,21 +75,27 @@ Lebih baik untuk mengunduh binary nya langsung dari [github](https://github.com/
 
 Kalian bisa menggunakan snap untuk menginstallnya.
 
-{{<scCode "Shell">}}snap install hugo --channel=extended{{</scCode>}}
+```Shell {user="$"}
+snap install hugo --channel=extended
+```
 
 Untuk Arch Linux, bisa langsung melalui pacman.
 
-{{<scCode "Shell">}}sudo pacman -S hugo{{</scCode>}}
+```Shell {user="$"}
+sudo pacman -S hugo
+```
 
 ## Konfigurasi 
 
 Walaupun hugo sudah terinstall, rasanya tidak seru jika websitenya belum terlihat hasilnya.
 
-Kita akan membuat sebuah website baru bernama {{<dir "coba-coba">}}.
+Kita akan membuat sebuah website baru bernama ``coba-coba``.
 
 ### Membuat Website
 
-{{<fileCode "Shell" "Terminal">}}hugo new site coba-coba{{</fileCode>}}
+```Shell {file"Terminal"}
+hugo new site coba-coba
+```
 
 ![coba-coba](/mari-install-hugo/img/new-site.webp)
 
@@ -96,26 +103,30 @@ Kita akan membuat sebuah website baru bernama {{<dir "coba-coba">}}.
 
 Saya menyarankan untuk menggunakan git supaya lebih cepat. Cukup jalankan perintah dibawah.
 
-{{<fileCode "Bash" "Terminal">}}cd coba-coba
+```Shell {user="$"}
+cd coba-coba
 git init
-git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke{{</fileCode>}}
+git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
+```
 
 Jika kalian tidak menggunakan git:
 
 + Pertama, unduh temanya dari [sini](https://github.com/theNewDynamic/gohugo-theme-ananke/archive/master.zip)
 + Extract File .zip nya
-+ Ubah nama folder menjadi {{<dir "ananke">}} lalu pindahkan ke dalam folder themes
-+ Edit {{<dir "config.toml">}} dan tambahkan {{<dir "theme = \"ananke\"">}}
++ Ubah nama folder menjadi ``ananke`` lalu pindahkan ke dalam folder themes
++ Edit ``config.toml">}} dan tambahkan ``theme = \"ananke\"``
 	![toml](/mari-install-hugo/img/toml.webp)
 
 ### Membuat Konten Pertama
 
-Kalian bisa menambahkan konten kalian di {{<dir "content/">}} tapi lebih baik menggunakan terminal karena lebih cepat⚡
+Kalian bisa menambahkan konten kalian di ``content/`` tapi lebih baik menggunakan terminal karena lebih cepat⚡
 
-{{<fileCode "Bash" "Terminal">}}hugo new post/konten-pertama.md{{</fileCode>}}
+```Bash {file"Terminal"}
+hugo new post/konten-pertama.md
+```
 
-Buka {{<dir "konten-pertama.md">}} dan ubah pada bagian draft menjadi {{<dir "draft: false">}}
-Kalian juga bisa menambahkan tulisan kalian di bawah garis {{<dir "---">}}
+Buka ``konten-pertama.md`` dan ubah pada bagian draft menjadi ``draft: false``
+Kalian juga bisa menambahkan tulisan kalian di bawah garis ``---``
 
 ![konten-pertama](/mari-install-hugo/img/konten-pertama.webp)
 
@@ -123,7 +134,9 @@ Kalian juga bisa menambahkan tulisan kalian di bawah garis {{<dir "---">}}
 
 Saatnya menjalankan server Hugo.
 
-{{<fileCode "Bash" "Terminal">}}hugo server -D{{</fileCode>}}
+```Bash {file"Terminal"}
+hugo server -D
+```
 
 ![hugo-server](/mari-install-hugo/img/hugo-server.webp)
 

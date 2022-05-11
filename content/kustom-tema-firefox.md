@@ -9,12 +9,9 @@ kategori: [Tips]
 tags: [firefox, browser, tips, kustom]
 type: post
 thumbnail: /img/thumbnail/kustom-tema-firefox.webp
-description: "Kustom Tema Firefox"
+description: "Beragam tema Firefox yang bisa kalian pakai"
+summary: "Beragam tema Firefox yang bisa kalian pakai"
 ---
-
-Kustom firefox dengan tema-tema dari github
-
-<!--more-->
 
 ![kustom-tema-firefox](/img/thumbnail/kustom-tema-firefox.webp)
 
@@ -37,7 +34,7 @@ Berikut tema-tema firefox yang sudah saya coba.
 
 ## Tema Firefox
 
-Semua tema firefox bisa kalian pakai dengan memasukkan semua tema tersebut ke folder chrome profile kalian. Cukup ketikan {{<dir "about:profiles">}} lalu klik
+Semua tema firefox bisa kalian pakai dengan memasukkan semua tema tersebut ke folder chrome profile kalian. Cukup ketikan ``about:profiles`` lalu klik
 pada bagian root direktory.
 
 ### Firefox-Gnome-Theme
@@ -48,7 +45,7 @@ Tema ini bisa kalian pakai mulai dari Firefox 85.
 
 Hal yang saya suka dari tema ini adalah tabbar yang panjangnya menyesuaikan. Posisi {{<scIcon class="fa fa-plus-square">}} new tab dari tema ini tidak akan berubah.
 
-Tema ini bisa kalian dapatkan {{<linkBlank "disini" "https://github.com/rafaelmardojai/firefox-gnome-theme">}} 
+Tema ini bisa kalian dapatkan [disini"](https://github.com/rafaelmardojai/firefox-gnome-theme "blank")
 
 ### Firefox-Sweet-Theme
 
@@ -61,7 +58,7 @@ Namun yang berbeda adalah ketimbang menggunakan Adwaita yang merupakan default d
 Sweet theme sendiri merupakan tema yang cukup populer sebagai GTK+ theme dan bisa mengintegrasikan tema tersebut dengan firefox akan membuat
 tampilan menjadi lebih menyatu.
 
-Kalian bisa dapatkan Firefox-Sweet-Theme {{<linkBlank "disini" "https://github.com/EliverLara/firefox-sweet-theme">}}
+Kalian bisa dapatkan Firefox-Sweet-Theme [disini](https://github.com/EliverLara/firefox-sweet-theme)
 
 ### Blurredfox
 
@@ -69,7 +66,7 @@ Tema ini sedikit berbeda dengan dua tema diatas karena posisi tabbar dan urlbar 
 
 Walaupun tema ini punya kata blur di dalam namanya, tapi sama sekali tidak ada yang diblur di dalam tema ini. Jadi ya agak menipu aja sih. :smile:
 
-Kalian bisa mencoba temanya {{<linkBlank "disini" "https://github.com/manilarome/blurredfox">}}
+Kalian bisa mencoba temanya [disini](https://github.com/manilarome/blurredfox "blank")
 
 ### Firefox-mod-blur
 
@@ -77,7 +74,7 @@ Mungkin cuman tema ini yang menjanjikan bisa dipasang di Windows dan Linux.
 
 Tema ini menyediakan banyak template, mulai dari mode blur, mode one-liner, dll.
 
-Kalian bisa mencobanya {{<linkBlank "disini" "https://github.com/datguypiko/Firefox-Mod-Blur">}}
+Kalian bisa mencobanya [disini](https://github.com/datguypiko/Firefox-Mod-Blur "blank")
 
 ## Penutup
 

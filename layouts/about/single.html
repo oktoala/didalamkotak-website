@@ -1,33 +1,31 @@
 {{ define "main" }}
-<main class="main-single" role="main">
-	<article class="post">
+<main id="main" class="" role="main">
+	<article class="content">
 		<header class="post__header">
 			{{- with .Params.lead }}
 			<p class="post__lead">{{ . }}</p>
 			{{- end }}
 			<br>
-			<h1 style="text-decoration:underline;" class="post__title">{{ .Title }}</h1>
+			<h1 id="title" style="text-decoration:underline;" class="post__title">{{ .Title }}</h1>
 			<br>
 		</header>
-		{{- if .Params.thumbnail }}
-		{{- end }}
-		<div class="content clearfix">
+		<div id="post" class="block text-dk-text overflow-auto overflow-x-hidden content-center">
 			{{ .Content | emojify }}
 		</div>
-		{{- if .Params.tags }}
-		<footer class="post__footer">
-			{{ partial "post_tags.html" . }}
-		</footer>
-		{{- end }}
 	</article>
 </main>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/powershell.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/languages/dart.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/languages/shell.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/powershell.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/dart.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/shell.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
 <script>
 	new ClipboardJS('.fa-copy');
-	hljs.initHighlightingOnLoad();
+	hljs.highlightAll();
+</script>
+<script>
+	// document.querySelectorAll("code").forEach(function (element) {
+	// 	element.innerHTML = element.innerHTML.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+	// });
 </script>
 {{ end }}

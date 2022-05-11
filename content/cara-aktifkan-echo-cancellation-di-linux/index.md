@@ -5,7 +5,7 @@ comments: true
 draft: false
 author: "Yoga"
 toc: true
-sidebar: false
+sidebar: true 
 kategori: [Linux]
 topik: [short, linux, echo, mic]
 type: post
@@ -18,22 +18,24 @@ Kalian pasti tidak ingin suara bising di luar mengganggu suara di microphone kal
 
 ## Mengaktifkan Module
 
-
 Cek apakah module sudah ada atau belum dengan perintah `pacmd` lalu ketik `list-modules`. Lalu cari baris yang memiliki nama `<module-echo-cancel>`.
 
 Jika tidak ada, tambahkan teks di bawah ke dalam file `/etc/pulse/default.pa.d/noice-cancellation.pa`
 
-{{<fileCode "Bash" "noice-cancellation.pa">}}### Enable Echo/Noise-Cancellation
+```Bash {file="noice-cancelltaion.pa"}
+### Enable Echo/Noise-Cancellation
 load-module module-echo-cancel use_master_format=1 aec_method=webrtc aec_args="analog_gain_control=0\ digital_gain_control=1" source_name=echoCancel_source sink_name=echoCancel_sink
 set-default-source echoCancel_source
-set-default-sink echoCancel_sink{{</fileCode>}}
+set-default-sink echoCancel_sink
+```
 
 Jika sudah, restart Pulseaudio.
 
-{{<shell "$">}}pulseaudio -k
-pulseaudio --start{{</shell>}}
+```Shell {user="$"}
+pulseaudio -k
+pulseaudio --start
+```
 
 Seharusnya input dari mic kalian terlihat kurang lebih seperti ini.
 
 ![echo](/cara-aktifkan-echo-cancellation-di-linux/img/echo.png)
-

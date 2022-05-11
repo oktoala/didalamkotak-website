@@ -18,13 +18,10 @@ tags:
     - excel
     - wine
     - playonlinux
-description: "Ini adalah cara menginstall MS Office di Arch Linux menggunakan PlayOnLinux"
+description: "Cara menginstall MS Office di Arch Linux"
+summary: "Cara menginstall MS Office di Arch Linux"
 thumbnail: /img/thumbnail/ms-office-di-linux.jpg
 ---
-
-Kali ini akan membahasa cara install Microsoft Office di Linux
-
-<!--more-->
 
 ![ms-office-di-linux](/img/thumbnail/ms-office-di-linux.jpg)
 
@@ -62,11 +59,15 @@ Libre -> MS Office ❌
 
 Kita akan menggunakan PlayOnLinux, sebuah aplikasi GUI untuk Wine. Jadi, sebenarnya ini adalah Wine tapi ada GUI.
 
-{{<scCode "Shell">}}sudo pacman -S wine playonlinux{{</scCode>}}
+```Shell {user="$"}
+sudo pacman -S wine playonlinux
+```
 
 Kalian mungkin juga butuh beberapa hal ini untuk diinstall.
 
-{{<scCode "Shell">}}sudo pacman -S winetrick zenity{{</scCode>}}
+```Shell {user="$"}
+sudo pacman -S winetrick zenity
+```
 
 Jika sudah terinstall, 
 
@@ -95,7 +96,9 @@ Jika sudah kalian akan diminta untuk mencari aplikasi yang diinstall. Klik _brow
 
 Jalankan perintah di bawah ini dengan mengganti `namaFolder` dengan nama winebottle yang kalian masukkan di point no. 3
 
-{{<scCode "Shell">}}WINEPREFIX=~/.PlayOnLinux/wineprefix/namaFolder winetricks{{</scCode>}}
+```Shell {user="$"}
+WINEPREFIX=~/.PlayOnLinux/wineprefix/namaFolder winetricks
+```
 
 Jika sudah, maka akan muncul window baru. Lalu klik **Select the default prefix** -> **Install a Windows DDL or component** ->
 pilih **dotnet20** dan **msxml6**. Lalu klik OK.
@@ -115,95 +118,6 @@ Jika sudah, seharusnya kalian sudah bisa membuka Powerpoint.
 Jalankan winetricks lagi, lalu pilih **Install a font** > **corefont**.
 
 {{<webm "/webm/winetricks-font.webm">}}
-
-<!-- Untuk mengatasi masalah font yang kurang smooth, copy script di bawah ini
-ke sebuah file.sh, beri saja namanya `smooth.sh`
-
-{{<scCode "Bash">}}WINE=${WINE:-wine}
-WINEPREFIX=${WINEPREFIX:-$1}
-DIALOG=whiptail
-
-if [ ! -x "`which "$WINE"`" ]
-then
-    echo "Wine was not found. Is it really installed? ($WINE)"
-    exit 1
-fi
-
-if [ ! -x "`which "$DIALOG"`" ]
-then
-    DIALOG=dialog
-fi
-
-TMPFILE=`mktemp` || exit 1
-
-$DIALOG --menu \
-    "Please select font smoothing mode for wine programs:" 13 51\
-    4\
-        1 "Smoothing disabled"\
-        2 "Grayscale smoothing"\
-        3 "Subpixel smoothing (ClearType) RGB"\
-        4 "Subpixel smoothing (ClearType) BGR" 2> $TMPFILE
-
-STATUS=$?
-ANSWER=`cat $TMPFILE`
-
-if [ $STATUS != 0 ]
-then 
-    rm -f $TMPFILE
-    exit 1
-fi
-
-MODE=0 # 0 = disabled; 2 = enabled
-TYPE=0 # 1 = regular;  2 = subpixel
-ORIENTATION=1 # 0 = BGR; 1 = RGB
-
-case $ANSWER in
-    1) # disable
-        ;;
-    2) # enable
-        MODE=2
-        TYPE=1
-        ;;
-    3) # enable cleartype rgb
-        MODE=2
-        TYPE=2
-        ;;
-    4) # enable cleartype bgr
-        MODE=2
-        TYPE=2
-        ORIENTATION=0
-        ;;
-    *)
-        rm -f $TMPFILE
-        echo Unexpected option: $ANSWER
-        exit 1
-        ;;
-esac
-
-echo "REGEDIT4
-
-[HKEY_CURRENT_USER\Control Panel\Desktop]
-\"FontSmoothing\"=\"$MODE\"
-\"FontSmoothingOrientation\"=dword:0000000$ORIENTATION
-\"FontSmoothingType\"=dword:0000000$TYPE
-\"FontSmoothingGamma\"=dword:00000578" > $TMPFILE
-
-echo "Configuring on $WINEPREFIX"
-echo -n "Updating configuration... "
-
-$WINE regedit $TMPFILE 2> /dev/null
-
-rm -f $TMPFILE
-
-echo ok{{</scCode>}}
-
-Lalu jalankan file `smooth.sh` tadi dengan argumen winebottle kalian.
-
-{{<scCode "Shell">}}./smooth.sh ~/.PlayOnLinux/wineprefix/namaWineBottle{{</scCode>}}
-
-{{<webm "/webm/font-smooth.webm">}}
-
-Script di atas bisa kalian baca lebih lanjut {{<linkBlank "disini" "https://askubuntu.com/questions/219791/improve-gui-appearance-of-wine-applications">}} -->
 
 ## Penutup
 

@@ -15,7 +15,7 @@ summary: Konfigurasi Processing menggunakan Visual Studio Code
 
 ![pemrograman-processing-tapi-di-vs-code](/pemrograman-processing-di-vs-code/img/thumbnail.webp)
 
-Singkat cerita saya punya mata kuliah yang harus menggunakan {{<linkBlank "Processing" "https://processing.org/">}}.
+Singkat cerita saya punya mata kuliah yang harus menggunakan [Processing](https://processing.org/ "blank")
 
 Jadi saya install dan tampilannya agak sedikit mengganggu.
 
@@ -46,7 +46,8 @@ Jika sudah, buat sebuah file baru dengan nama `Processing.pde`.
 
 Lalu coba tambahakan text di bawah ke dalam file tersebut.
 
-{{<fileCode "Arduino" "Processing.pde">}}int u = 60;
+```Arduino {file="Processing.pde"}
+int u = 60;
 boolean showGrid = true;
 
 void setup() {
@@ -80,7 +81,8 @@ void drawGrid() {
     for (int row = 0; row < 9; ++row) {
         line(0, row* u, 8*u, row*u);
     }
-}{{</fileCode>}}
+}
+```
 
 Jika sudah, kalian harus membuat sebuah task file.
 

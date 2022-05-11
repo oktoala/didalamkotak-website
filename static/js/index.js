@@ -54,8 +54,8 @@ function asyncPage(newUrl, id) {
 }
 
 let nextpage = 2
-const asyncButton = document.querySelector(".asyncButton");
-const buttonAsync = document.getElementById("loadmore");
+const asyncButton = document.querySelector("#async-btn");
+const buttonAsync = document.querySelector("#loadmore");
 
 function asyncButtonFunc(TotalPage) {
 	buttonAsync.classList.add("button-loading");
@@ -82,7 +82,7 @@ function asyncButtonFunc(TotalPage) {
 		});
 		nextpage += 1;
 		if (nextpage > TotalPage) {
-			asyncButton.classList.add("disable");
+			asyncButton.classList.add("hidden");
 		}
 		buttonAsync.classList.remove("button-loading");
 	}

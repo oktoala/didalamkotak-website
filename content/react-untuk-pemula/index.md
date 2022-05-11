@@ -29,7 +29,7 @@ React memiliki istilah yang bernama **component**.
 
 Component hanyalah sebuah function javascript yang memiliki nilai kembalian sebuah HTML.
 
-```Javascript 
+```Javascript
 function Item() {
   return <p>Goodbye World!</p>
 }
@@ -58,6 +58,7 @@ function Item() {
 
 <Item/>
 ```
+
 
 ## Props & Children
 
@@ -102,7 +103,7 @@ function Item(props) {
   return <p className={props.myClass}>Goodbye World!</p>
 }
 
-<Item/>
+<Item />
 ```
 
 Hmm, dari mana datangnya `props.myClass`? 
@@ -143,13 +144,13 @@ function Item(props) {
 
 Oke, kita sudah belajar core dari React, lalu gimana cara mulainya? _I'm glad you asked, again._
 
-Pertama, install {{<linkBlank "Node" "https://nodejs.org/en/download/">}} dulu. Download yang LTS.
+Pertama, install [Node](https://nodejs.org/en/download/ "blank") dulu. Download yang LTS.
 
 Jika sudah, pastikan `npm` sudah ada di PATH. Jalankan `npm --version` di terminal atau CMD kalian.
 
 Saya tidak akan pakai cara yang biasa dipakai banyak orang menggunakan `npx`, _cuz, it's too mainstream_ 😎.
 
-Sebagai gantinya, kita akan menggunakan {{<linkBlank "Vite" "https://vitejs.dev/">}}. Apa ini? Itu tidak penting, untuk sekarang.
+Sebagai gantinya, kita akan menggunakan [Vite](https://vitejs.dev/ "blank"). Apa ini? Itu tidak penting, untuk sekarang.
 
 Jalankan perintah di bawah ini.
 
@@ -185,7 +186,7 @@ Jika sudah maka akan muncul tampilan seperti ini.
 
 ![vite-run](/react-untuk-pemula/img/vite-run.webp)
 
-Buka {{<linkBlank "http://localhost:3000" "http://localhost:3000">}} dan kalian akan melihat hasilnya.
+Buka [http://localhost:3000](http://localhost:3000 "blank") dan kalian akan melihat hasilnya.
 
 ![run-localhost](/react-untuk-pemula/img/run-localhost.webp)
 
@@ -201,16 +202,16 @@ React tidak memiliki fitur routing, state management, animation, dsb. Tapi kenap
 
 Akan selalu ada components yang dibuat oleh orang-orang diluar sana sehingga kalian tidak perlu membuat components dari awal.
 
-Kalian butuh _static site_? Ada {{<linkBlank "Gatsby" "https://www.gatsbyjs.com/">}}
+Kalian butuh _static site_? Ada [Gatsby](https://www.gatsbyjs.com/ "blank")
 
-Kalian butuh _server side rendering_? Ada {{<linkBlank "Next.js" "https://nextjs.org/">}}
+Kalian butuh _server side rendering_? Ada [Next.js](https://nextjs.org/ "blank")
 
-Butuh animasi? Ada {{<linkBlank "Spring" "https://react-spring.io/">}}
+Butuh animasi? Ada [Spring](https://react-spring.io/)
 
-Mau buat form? Ada {{<linkBlank "Formic" "https://formik.org/">}} 
+Mau buat form? Ada [Formic](https://formik.org/ "blank")
 
-Butuh state management? Noh => {{<linkBlank "Redux" "https://react-redux.js.org/">}}, {{<linkBlank "Mobx" "https://mobx.js.org/README.html">}} {{<linkBlank "Recoil" "https://recoiljs.org/">}}.
+Butuh state management? Noh => [Redux](https://react-redux.js.org/ "blank" ), [Mobx](https://mobx.js.org/README.html "blank"), [Recoil](https://recoiljs.org/ "blank")
 
-Sebagai tambahan kalau kalian bosen di Web, kalian bisa membuat aplikasi mobile menggunakan {{<linkBlank "React Native" "https://reactnative.dev/">}}.
+Sebagai tambahan kalau kalian bosen di Web, kalian bisa membuat aplikasi mobile menggunakan [React Native](https://reactnative.dev/ "blank")
 
 Okee, itu aja, **_adios_**.

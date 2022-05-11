@@ -1,25 +1,32 @@
 {{ define "main" }}
-<main class="main-single" role="main">
-	<article class="post">
+<main id="main" class="" role="main">
+	<article class="content">
 		<header class="post__header">
 			{{- with .Params.lead }}
 			<p class="post__lead">{{ . }}</p>
 			{{- end }}
-			<ul class="breadcrumb">
-				<li><a href="{{ .Sites.First.Home.RelPermalink }}">Home</a></li>
-				<li class="is-active">{{ .Title }}</li>
+			<ul class="mb-8 py-2 pl-5 list-none mt-5 bg-dk-primary-800 rounded-xl">
+				<li class="inline items-center text-base font-extrabold">
+					<a class="text-dk-hl-400 hover:underline" href="{{ .Sites.First.Home.RelPermalink }}">Home</a>
+				</li>
+				<li
+					class="inline items-center text-base font-extrabold before:content-['>'] before:text-dk-hl-400 before:p-2 text-dk-text-alpha-500">
+					{{ .Title }}</li>
 			</ul>
-			<h1 class="post__title">{{ .Title }}</h1>
+			<h1 id="title" class="">{{ .Title }}</h1>
 			{{ with partial "post_meta.html" . -}}
-			<div class="post__meta meta">{{ . }}</div>
+			<div class="py-3 px-0 mb-5 text-dk-text-alpha-500 text-sm align-baseline">{{ . }}</div>
 			{{- end }}
 		</header>
-		<div class="content clearfix">
+		<div id="post" class="block text-dk-text overflow-auto overflow-x-hidden content-center">
 			{{ .Content | emojify }}
 		</div>
 	</article>
 </main>
-<buttton class="fas fa-arrow-circle-up top-button" title="Ke Atas"></buttton>
+<buttton onclick='document.querySelector("body").scrollIntoView(true)'
+	class="fas fa-arrow-circle-up block fixed right-8 z-40 text-dk-text cursor-pointer text-2xl bottom-3 hover:text-dk-blue-500 top-button"
+	title="Ke Atas"></buttton>
+
 {{ partial "authorbox.html" . }}
 {{ partial "comments.html" . }}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
@@ -32,15 +39,7 @@
 <script async defer src='{{ "js/single.js" | relURL }}'></script>
 <script async defer src='{{ "js/disqusLoader.js" | relURL }}'></script>
 <script>
-	new ClipboardJS('.fa-copy');
+	new ClipboardJS('.fa-clipboard');
 </script>
 <script>hljs.highlightAll();</script>
-<script>
-	document.querySelectorAll(".bC.language-XML").forEach(function (element) {
-		element.innerHTML = element.innerHTML.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
-	});
-	// document.querySelectorAll(".bC.language-Typescript").forEach(function (element) {
-	// 	element.innerHTML = element.innerHTML.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
-	// });
-</script>
 {{ end }}

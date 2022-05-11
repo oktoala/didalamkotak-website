@@ -1,0 +1,160 @@
+/* assets */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :target {
+    @apply scroll-mt-16;
+  }
+
+  b,
+  strong {
+    @apply font-bold;
+  }
+
+  ol,
+  li {
+    @apply p-0 m-0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply mb-[30px] mt-0 mx-0 leading-5 tracking-wide font-dk-sans text-dk-blue-500 
+  }
+
+  pre,
+  code,
+  kbd,
+  smp {
+    @apply font-dk-mono;
+  }
+
+  blockquote p {
+    @apply m-0 text-neutral-500;
+  }
+
+  blockquote {
+    @apply bg-slate-700 block py-[5px] pl-[15px] mt-[30px] border-l-8 border-l-slate-500
+  }
+
+  a {
+    @apply text-dk-text no-underline;
+  }
+
+  img {
+    @apply max-w-full h-auto align-bottom;
+  }
+
+  input {
+    @apply pt-0 pr-0 pb-1 pl-4 text-dk-text text-base border-none;
+  }
+
+  p {
+    @apply mt-[30px] mb-0 mx-0 text-dk-text text-base leading-7
+  }
+
+  h1 {
+    @apply text-4xl;
+  }
+
+  h2 {
+    @apply mt-12 text-3xl font-bold;
+  }
+
+  h3 {
+    @apply mt-10 text-2xl font-semibold text-gray-200
+  }
+
+  h5 {
+    @apply text-base font-bold;
+  }
+
+  article,
+  aside,
+  dialog,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  main,
+  nav,
+  section {
+    @apply block;
+  }
+}
+
+@layer components {
+  /*! Single */
+  #post a  {
+    @apply font-bold text-dk-hl-500 hover:text-dk-hl-400 hover:underline 
+  }
+
+  #post ul, #post ol {
+    @apply my-5 ml-5 list-disc list-outside list-item
+  }
+
+  #post li {
+    @apply mb-7 
+  }
+
+  #main {
+    @apply bg-dk-primary-900 my-7 mx-0 rounded-xl pt-4 px-5 pb-6;
+  }
+
+  #title {
+    @apply text-dk-text pt-3 m-0 font-extrabold;
+  }
+
+  code {
+    @apply text-dk-text bg-gray-700 rounded-md p-[3px];
+  }
+
+  /*? h2 */
+  #TableOfContents ol li a {
+    @apply text-sm text-dk-text-alpha-500 hover:text-dk-hl-500 active:text-dk-hl-400;
+  }
+
+  
+  /*? h3 */
+  #TableOfContents ol > li > ol > li > a {
+    @apply ml-3;
+  }
+  
+  #TableOfContents ol li a.is-active-link {
+    @apply text-dk-blue-500 font-bold hover:text-dk-hl-500 active:text-dk-hl-400 before:content-['{'] before:inline-block before:absolute before:left-2 before:mt-[3px]
+  }
+
+  #TableOfContents .is-collapsed {
+    @apply max-h-0
+  }
+}
+  
+  
+
+/* Search */
+.results {
+  @apply mb-6;
+}
+
+.mark {
+  @apply p-1 rounded-full text-dk-hl-200 bg-dk-hl-700;
+}
+
+.result-h {
+  @apply mb-3;
+}
+
+.result-a {
+  @apply font-bold text-dk-text hover:text-dk-hl-200 mb-1;
+}
+
+.summary {
+  @apply mt-3;
+}
+

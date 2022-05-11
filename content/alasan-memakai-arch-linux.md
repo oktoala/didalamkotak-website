@@ -10,12 +10,10 @@ kategori: [Linux]
 topik: [linux, arch, aur]
 type: post
 thumbnail: /img/thumbnail/alasan-memakai-arch-linux.webp
-description: "Alasan Memakai Arch Linux"
+description: "I used Arch, btw"
+summary: "I used Arch, btw"
 ---
 
-Kali ini saya akan membahas alasan kenapa memilih distro Arch Linux.
-
-<!--more-->
 
 ![alasan-memakai-arch-linux](/img/thumbnail/alasan-memakai-arch-linux.webp)
 
@@ -37,7 +35,7 @@ Arch Linux juga memiliki beberapa prinsip seperti berikut:
 - _User\_Centarlity_: Ketimbang _user-friendly_, Arch Linux lebih ke arah _user centric_,
 - _Versatility_     : Arch linux sangat fleksibel.
 
-Untuk lebih lanjutnya bisa kalian baca {{<linkBlank "disini" "https://wiki.archlinux.org/title/Arch_Linux">}}
+Untuk lebih lanjutnya bisa kalian baca [disini](https://wiki.archlinux.org/title/Arch_Linux "blank")
 
 Oke, tidak perlu berlama-lama, ini adalah alasan kenapa saya memakai Arch Linux.
 

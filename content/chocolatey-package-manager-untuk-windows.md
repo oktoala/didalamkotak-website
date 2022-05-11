@@ -10,11 +10,8 @@ topik: [chocolatey, windows, pacman]
 toc: true
 type: post
 description: "Cara menggunakan package manager dengan menggunakan chocolatey"
+summary: "Cara menggunakan package manager dengan menggunakan chocolatey"
 ---
-
-Kali ini saya akan membahas tentang Chocolatey, package manager untuk Windows.
-
-<!--more-->
 
 ![chocolatey](/img/thumbnail/choco.jpg)
 
@@ -43,7 +40,9 @@ Jika Windows kalian memenuhi syarat diatas, maka kalian bisa mengikuti cara beri
 + Lalu pilih **Windows Poweshell (Admin)**
 + Copy perintah di bawah ini
 
-{{< scCode "Powershell" >}}Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1')){{< /scCode >}}
+```Powershell
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+```
 
 + Paste ke Poweshell kalian.
 + Tunggu sampai selesai.
@@ -53,7 +52,9 @@ Jika Windows kalian memenuhi syarat diatas, maka kalian bisa mengikuti cara beri
 
 Jika kalian bingung mau ngapain, ketikan perintah ini:
 
-{{< scCode "Powershell" >}}choco -?{{< /scCode >}}
+```Powershell 
+choco -?
+```
 
 ### 1. Install Package
 
@@ -61,12 +62,17 @@ Jika kalian bingung mau ngapain, ketikan perintah ini:
 
 Misal saya ingin install spotify.
 
-{{< scCode "Powershell" >}}choco install spotify{{< /scCode >}}
+```Powershell 
+choco install spotify
+```
 
 Kalian juga menginstall banyak package sekaligus.
-{{< scCode "Powershell" >}}choco install spotify openshell notepadplusplus{{< /scCode >}}
 
-Kalian bisa melihat nama-nama packagenya di  {{< linkBlank "https://chocolatey.org/packages" "https://chocolatey.org/packages">}}
+```Powershell 
+choco install spotify openshell notepadplusplus
+```
+
+Kalian bisa melihat nama-nama packagenya di  [https://chocolatey.org/packages](https://chocolatey.org/packages "blank")
 
 Untuk yang bertanya-tanya kenapa disebut _package_ bukan aplikasi, karena sebuah package manager akan menginstall semua kebutuhan untuk aplikasi tersebut.
 
@@ -79,16 +85,22 @@ Jadi kalian gak perlu mencari semua kebutuhan aplikasi tersebut.
  Ketikan perintah `choco uninstall <nama package>` untuk mengapus sebuah package.
 
 Misal saya ingin uninstall spotify.
-{{< scCode Powershell >}}choco uninstall spotify{{< /scCode >}}
+```Powershell 
+choco uninstall spotify
+```
 
 Kalian juga bisa uninstall banyak package sekaligus
-{{< scCode Powershell>}}choco install spotify openshell notepadplusplus{{< /scCode >}}
+```Powershell 
+choco install spotify openshell notepadplusplus
+```
 
 ### 3. Update Package
 
 Kalian bisa update semua package kalian dengan satu perintah.
 
-{{< scCode Powershell>}}choco update{{< /scCode >}}
+```Powershell 
+choco update
+```
 
 ### 4. Chocolatey GUI
 
@@ -97,7 +109,9 @@ Semua cara di atas mengharuskan kita untuk mengetik perintah di Powershell.
 Bagaimana cara mengatur semua aplikasi tersebut tanpa harus mengetikan perintah? Tenang, Chocolatey memiliki GUI untuk itu.
 
 Ketikan perintah ini ke Powershell.
-{{< scCode Powershell>}}choco install chocolateygui{{< /scCode >}}
+```Powershell 
+choco install chocolateygui
+```
 
 ## Penutup
 Dengan adanya chocolatey, kita bisa mengatur aplikasi kita dalam satu tempat.
@@ -106,10 +120,3 @@ Dan juga kalian tidak harus memakai terminal karena sudah ada GUI-nya.
 
 Jadi, sudahkah kalian mencoba chocolatey?
 
-
-
-
-<!--
-Id : 851 8961 4230
-pass: 12345
--->

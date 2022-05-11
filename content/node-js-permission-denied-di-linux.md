@@ -8,24 +8,23 @@ toc: true
 sidebar: false
 kategori: ['Programming']
 topik: [nodejs, npm, programming]
-description: "Ini adalah cara saya untuk mengatasi NPM EACCSES Permission Denied"
 type: post
 thumbnail: /img/thumbnail/node-js-permission-denied-di-linux.jpg
+description: "Cara mengatasi NPM EACCES Permission Denied"
+summary: "Cara mengatasi NPM EACCES Permission Denied"
 ---
-
-Kali ini kita akan membahas bagaimana caranyan mengatasi npm EACCSES permission denied di linux.
-
-<!--more-->
 
 ![node-js-permission-denied-di-linux](/img/thumbnail/node-js-permission-denied-di-linux.jpg)
 
-Jika kalian mendapat {{<dir "EACCES">}} saat ingin menginstall sebuah package secara global menggunakan npm kalian bisa mengatasinya dengan beberapa cara.
+Jika kalian mendapat `EACCES` saat ingin menginstall sebuah package secara global menggunakan npm kalian bisa mengatasinya dengan beberapa cara.
 
 ## Reinstall Node js
 
 Kalian bisa menginstall ulang node js dengan cara mengunduh langsung dari websitenya atau menggunakan package manager kalian.
 
-{{<scCode "Shell">}}sudo pacman -S nodejs{{</scCode>}}
+```Shell {user="$"}
+sudo pacman -S nodejs
+```
 
 Sebenarnya cara ini tidak pernah saya coba karena saya memakai cara kedua.
 
@@ -33,31 +32,41 @@ Sebenarnya cara ini tidak pernah saya coba karena saya memakai cara kedua.
 
 Cara ini lebih aman daripada harus menggunakan sudo saat menginstall packagenya. Karena saya sebelumnya menggunakan sudo :smile:
 
-+ Buatlah folder bernama {{<dir ".node-global">}} di home kalian.
++ Buatlah folder bernama `.node-global` di home kalian.
 
-    {{<scCode "Shell">}}mkdir ~/.node-global{{</scCode>}}
+    ```Shell {user="$"}
+    mkdir ~/.node-global
+    ```
 
 + Mengatur direktori bawaan npm
 
-    {{<scCode "Shell">}}npm config set prefix '~/.npm-global'{{</scCode>}}
+    ```Shell {user="$"}
+    npm config set prefix '~/.npm-global'
+    ```
 
 + Menambahkan direktori ke PATH
 
-    Tambahkan teks dibawah ke {{<dir ".bashrc">}} atau {{<dir ".zshrc">}} kalian.
+    Tambahkan teks dibawah ke `.bashrc` atau `.zshrc` kalian.
 
-    {{<scCode "Shell">}}export PATH=~/.npm-global/bin:$PATH{{</scCode>}}
+    ```Shell {user="$"}
+    export PATH=~/.npm-global/bin:$PATH
+    ```
 
     Lalu restart terminal kalian.
 
 + Cek npm default directori
 
-    {{<scCode "Shell">}}npm config get prefix{{</scCode>}}
+    ```Shell {user="$"}
+    npm config get prefix
+    ```
 
 + Cobalah untuk menginstall package
 
     Saya akan mencoba untuk menginstall firebase-tools
 
-    {{<scCode "Shell">}}npm i -g firebase-tools{{</scCode>}}
+    ```Shell {user="$"}
+    npm i -g firebase-tools
+    ```
 
     Jika kalian bisa menjalankan `firebase` secara global di terminal kalian, itu berarti konfigurasinya berhasil.
 

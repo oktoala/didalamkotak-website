@@ -9,12 +9,9 @@ kategori: [Programming]
 topik: [programming, vscode, linux, windows]
 type: post
 thumbnail: "/konfigurasi-c++-di-vs-code/img/thumbnail.webp"
-description: "Konfigurasi C++ Di vs Code"
+description: "Konfigurasi C++ Di vs Code dengan cara paling gampang"
+summary: "Karena VS Code is the best"
 ---
-
-Kali ini kita akan membahas cara konfigurasi lingkungan pemrograman C++ di Visual Studio Code.
-
-<!--more-->
 
 ![konfigurasi-c++-di-vs-code](/konfigurasi-c++-di-vs-code/img/thumbnail.webp)
 
@@ -36,11 +33,15 @@ Untuk linux, install `gcc` dan `gdb`.
 
 **Untuk Ubuntu**
 
-{{<scCode "Shell">}}sudo apt install gcc gdb{{</scCode>}}
+```Shell {user="$"}
+sudo apt install gcc gdb
+```
 
 **Untuk Arch**
 
-{{<scCode "Shell">}}sudo pacman -S gcc gdb{{</scCode>}}
+```Shell {user="$"}
+sudo pacman -S gcc gdb
+```
 
 ## Install Extension
 
@@ -62,7 +63,9 @@ Di dalam folder `src` akan berisi file `.cpp` dan hasil compilenya akan ditaruh 
 
 Program yang sudah kita buat sebenarnya sudah dapat dijalankan dengan perintah di bawah.
 
-{{<scCode "Shell">}}g++ src/main.cpp -o main && ./main{{</scCode>}}
+```Shell {user="$"}
+g++ src/main.cpp -o main && ./main
+```
 
 ![compile](/konfigurasi-c++-di-vs-code/img/compile.webp)
 
@@ -80,7 +83,8 @@ Maka akan muncul folder baru bernama `.vscode` dengan file `tasks.json` di dalam
 
 Ganti saja semua teks di dalam `tasks.json` menjadi teks di bawah ini.
 
-{{<fileCode "JSON" "tasks.json">}}{
+```JSON {file="tasks.json"}
+{
     "version": "2.0.0",
     "tasks": [
         {
@@ -104,8 +108,8 @@ Ganti saja semua teks di dalam `tasks.json` menjadi teks di bawah ini.
             }
         }
     ]
-}{{</fileCode>}}
-
+}
+```
 
 Perbedaan untuk di Windows mungkin hanya pada path seperator yang menjadi `\` dan `${fileBasenameNoExtension}.exe`.
 

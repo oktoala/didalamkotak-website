@@ -9,11 +9,9 @@ kategori: [Windows]
 tags: [wsl, windows, linux]
 type: post
 thumbnail: "/img/thumbnail/mari-konfigurasi-windows-subsystem-for-linux.webp"
-description: "Mari Konfigurasi Windows Subsystem for Linux"
+description: "Gunakan Linux di Windows dengan WSL2"
+summary: "Gunakan Linux di Windows dengan WSL2"
 ---
-
-Kita akan membahas cara install dan konfigurasi Windows Subsystem for Linux (WSL).
-<!--more-->
 
 ![mari-konfigurasi-windows-subsystem-for-linux](/img/thumbnail/mari-konfigurasi-windows-subsystem-for-linux.webp)
 
@@ -36,13 +34,17 @@ WSL tidak terinstall secara default kecuali pada Windows edisi Insiders. Jadi ki
 
 Jalankan Powershell sebagai administrator dan jalankan perintah di bawah ini.
 
-{{<scCode "Powershell">}}dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart{{</scCode>}}
+```Powershell 
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+```
 
 ### Mengaktifkan Virtual Machine
 
 Masih di dalam Powershell dan jalankan perintah di bawah ini.
 
-{{<scCode "Powershell">}}dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart{{</scCode>}}
+```Powershell 
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+```
 
 Jika sudah, restart Windows kalian untuk menginstall WSL dan mengupdate-nya ke WSL2.
 
@@ -74,21 +76,29 @@ Jika tidak muncul-muncul apapun, cukup restart Windows kalian.
 
 Jalankan perintah ini di Powershell(Administrator) untuk menampilkan list distro.
 
-{{<scCode "Powershell">}}wsl --list --verbose{{</scCode>}}
+```Powershell 
+wsl --list --verbose
+```
 
 Jalankan perintah ini untuk mengubah versi untuk satu distro.
 
-{{<scCode "Powershell">}}wsl --set-version (distribution name) (versionNumber) {{</scCode>}}
+```Powershell 
+wsl --set-version (distribution name) (versionNumber) 
+```
 
 Jadi, jika kalian menginstall Ubuntu, jalankan perintah ini.
 
-{{<scCode "Powershell">}}wsl --set-version Ubuntu 2{{</scCode>}}
+```Powershell 
+wsl --set-version Ubuntu 2
+```
 
 ![Ubuntu-wsl2](/img/Ubuntu-wsl2.webp)
 
 Jalankan perintah ini untuk mengubah versi secara global.
 
-{{<scCode "Powershell">}}wsl --set-default-version 2{{</scCode>}}
+```Powershell 
+wsl --set-default-version 2
+```
 
 >> Note*
 >
@@ -114,8 +124,10 @@ Zsh adalah shell selain bash dengan fitur yang lebih baik dari bash.
 
 Jalankan perintah dibawah ini untuk update dan menginstall Zsh.
 
-{{<fileCode "Bash" "WSL">}}sudo apt update
-sudo apt install zsh{{</fileCode>}}
+```Bash {file="WSL"}
+sudo apt update
+sudo apt install zsh
+```
 
 ### Install Oh My Zsh
 
@@ -123,7 +135,9 @@ Singkatnya, Oh My Zsh adalah sebuah proyek untuk memanajemen Zsh.
 
 Jalankan perintah di bawah ini untuk menginstall Oh My Zsh.
 
-{{<fileCode "Bash" "WSL">}}sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"{{</fileCode>}}
+```Bash {file"WSL"}
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
 
 Cukup tekan enter saja jika muncul sebuah prompt.
 
@@ -146,26 +160,29 @@ Lalu, buka Windows terminal {{<scIcon class="fa fa-arrow-right">}} Settings {{<s
 
 Cari tulisan `profiles` dan ubah tulisan yang didalam kurung menjadi teks di bawah ini.
 
-{{<fileCode "JSON" "setting.json">}}"profiles": 
+```JSON {file="setting.json"}
+"profiles": 
     {
         "defaults": {
 		"fontFace": "MesloLGS NF",
 		"fontSize": 12
-},{{</fileCode>}}
+},
+```
 
 Jika sudah, jalankan perintah di bawah untuk menginstall Powerlevel10k.
 
-{{<fileCode "Bash" "WSL">}}git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-{{</fileCode>}}
+```Bash {file="WSL"}
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+```
 
-Pergi ke home kalian dengan perintah ``cd`` atau ``cd ~/``. Lalu edit {{<dir ".zshrc">}} lalu cari teks {{<dir "ZSH_THEME='blablabla'">}} dan 
-ubah menjadi {{<dir "ZSH_THEME='powerlevel10k/powelevel10k'">}}
+Pergi ke home kalian dengan perintah ``cd`` atau ``cd ~/``. Lalu edit ``.zshrc`` lalu cari teks ``ZSH_THEME='blablabla'`` dan 
+ubah menjadi ``ZSH_THEME='powerlevel10k/powelevel10k'``
 
 Jika sudah, keluar lalu masuk lagi ke WSL dan maka akan muncul prompt seperti ini.
 
 ![pk10-prompt](/img/pk10-prompt.png)
 
-Jika tidak ada, cukup jalankan {{<dir "p10k configure">}}. Dan hasilnya akan seperti ini 🙌
+Jika tidak ada, cukup jalankan ``p10k configure``. Dan hasilnya akan seperti ini 🙌
 
 ![wsl-new-look](/img/wsl-new-look.png)
 

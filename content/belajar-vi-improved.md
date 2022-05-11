@@ -9,12 +9,10 @@ kategori: [Belajar]
 topik: [vim, editor, tips]
 type: post
 thumbnail: /img/thumbnail/belajar-vi-improved.jpg
-description: "Belajar perintah-perintah dalam teks editor vim"
+description: "Menjadi over powered dengan menggunakan VIM  "
+summary: "Menjadi over powered dengan menggunakan VIM  "
 
 ---
-
-Kita akan belajar tentang vim.
-<!--more-->
 
 ![belajar-vi-improved](/img/thumbnail/belajar-vi-improved.jpg)
 

@@ -1,26 +1,27 @@
 {{- $sidebar := false }}
 {{- if eq .Kind "home" -}}
-	{{ $sidebar = (default .Site.Params.sidebar.home .Params.sidebar) }}
+{{ $sidebar = (default .Site.Params.sidebar.home .Params.sidebar) }}
 {{- else if eq .Kind "page" -}}
-	{{ $sidebar = (default .Site.Params.sidebar.single .Params.sidebar) }}
+{{ $sidebar = (default .Site.Params.sidebar.single .Params.sidebar) }}
 {{- else -}}
-	{{ $sidebar = (default .Site.Params.sidebar.list .Params.sidebar) }}
+{{ $sidebar = (default .Site.Params.sidebar.list .Params.sidebar) }}
 {{ end }}
 
 {{- if $sidebar -}}
-	<aside class="sidebar{{ if eq $sidebar "left" }} sidebar--left{{ end }}">
+<aside class="grow shrink-0 basis-[31.66%] order-2 min-w-0 transition-all ease-linear">
 	{{- $root := . }}
-	{{- if eq .Kind "page" -}}
-		{{- partial "post_toc.html" . -}}
+	{{- if eq .Type "post" -}}
+	{{- partial "post_toc.html" . -}}
 	{{- else }}
-		{{- if eq .Kind "home"}}
-			{{- with (default .Site.Params.sidebar.widgets .Params.widgets) -}}
-				{{- range $widget := . }}
-					{{- $p := printf "widgets/%s.html" $widget }}
-					{{- partial $p $root }}
-				{{- end }}
-		{{- end}}
+	{{- if eq .Kind "home"}}
+	{{- with (default .Site.Params.sidebar.widgets .Params.widgets) -}}
+	{{- range $widget := . }}
+	{{- $p := printf "widgets/%s.html" $widget }}
+	{{- partial $p $root }}
 	{{- end }}
-	</aside>
+	{{- end}}
 	{{- end }}
+</aside>
+
+{{- end }}
 {{ end }}

@@ -1,4 +1,4 @@
-baseURL: 'https://dalamkotak.onrender.com'
+baseURL: 'https://dalamkotak.com'
 languageCode: en-us
 title: DalamKotak
 images: img/codoala.png
@@ -31,7 +31,7 @@ markup:
       autoHeadingID: true
       autoHeadingIDType: github
     renderer:
-      hardWraps: true
+      hardWraps: false
       unsafe: true
       xhtml: true
 Author:
@@ -43,7 +43,7 @@ Params:
   images: 
     - img/dalamkotak-show.png
   subtitle: ''
-  copyright: Dibuat menggunakan
+  copyright: Made with
   opengraph: true
   readmore: false
   authorbox: true
@@ -70,3 +70,12 @@ Params:
   widgets:
     recent_num: 5
     tags_counter: true
+  footer:
+    - name: 'Home'
+      link: '/'
+    - name: 'About'
+      link: '/about'
+    - name: 'Kategori'
+      link: '/kategori'
+    - name: 'Topik'
+      link: '/topik'

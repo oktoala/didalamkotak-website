@@ -31,11 +31,15 @@ Template **default** pada Hugo sebernarnya tidak berbentuk folder tapi berbentuk
 
 Jika ingin membuat content dengan template **default**, perintah yang dijalankan adalah seperti berikut.
 
-{{<scCode "Shell">}}hugo new judul-content{{</scCode>}}
+```Shell {user="$"}
+hugo new judul-content
+```
 
 Jika ingin membuat content dengan template **about**, perintah yang dijalankan adalah sebagai berikut. 
 
-{{<scCode "Shell">}}hugo new about/judul-content.md{{</scCode>}}
+```Shell {user="$"}
+hugo new about/judul-content.md
+```
 
 Untuk **post** sama seperti **about**, cukup ganti about menjadi post.
 

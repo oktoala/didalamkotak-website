@@ -17,7 +17,8 @@ summary: Ini adalah artikel tentang cara install dan konfigurasi XAMPP di Arch L
 
 Untuk memulai pemrograman PHP di Linux sebenarnya ada beberapa cara. 
 
-Kalian bisa menginstall semuanya secara terpisah yang akan membuat kalian kelihatan lebih keren 😎 atau kalian bisa
+Kalian bisa menginstall semuanya secara terpisah yang akan membuat kalian 
+kelihatan lebih keren 😎 atau kalian bisa
 menggunakan cara yang lebih gampang yaitu dengan XAMPP.
 
 XAMPP adalah sebuah package yang di dalamnya sudah terdapat Apache, MariaDB, PHP, dan Perl. Jadi kalian tidak perlu untuk menginstall semua hal tadi.
@@ -26,14 +27,18 @@ XAMPP adalah sebuah package yang di dalamnya sudah terdapat Apache, MariaDB, PHP
 
 Kalian bisa menginstallnya menggunakan AUR helper.
 
-{{<shell"$">}}yay -S xampp{{</shell>}}
+```Shell {user="$"}
+yay -S xampp
+```
 
-Untuk cara manual, unduh dulu [xampp](https://www.apachefriends.org/index.html).
+Untuk cara manual, unduh dulu [xampp.](https://www.apachefriends.org/index.html)
 
 Lalu buat agar dapat dieksekusi dan jalankan.
 
-{{<shell "$">}}sudo chmod +x xampp-linux-version-installer.run
-sudo ./xampp-linux-version-installer.run{{</shell>}}
+```Shell {user="$"}
+sudo chmod +x xampp-linux-version-installer.run
+sudo ./xampp-linux-version-installer.run
+```
 
 Cukup tekan next saja.
 
@@ -43,7 +48,9 @@ Jika kalian menginstallnya dari menggunakan AUR helper, seharusnya ada shortcut 
 
 Tapi kalian bisa menjalankannya dengan menggunakan perintah di bawah ini.
 
-{{<shell "$">}}sudo /opt/lampp/lampp start{{</shell>}}
+```Shell {user="$"}
+sudo /opt/lampp/lampp start
+```
 
 Lalu cobalah buka [localhost](http://localhost) kalian.
 
@@ -51,15 +58,21 @@ Lalu cobalah buka [localhost](http://localhost) kalian.
 
 Jangan lupa untuk menghentikan service XAMPP kalian
 
-{{<shell "$">}}sudo /opt/lampp/lampp stop{{</shell>}}
+```Shell {user="$"}
+sudo /opt/lampp/lampp stop
+```
 
 Jika kalian install menggunakan AUR helper maka hapus menggunakan AUR helper juga.
 
-{{<shell "$">}}yay -Ru xampp{{</shell>}}
+```Shell {user="$"}
+yay -Ru xampp
+```
 
 Dan jika kalian menginstallnya dengan cara manual, maka kalian harus menghapus semua foldernya. Biasanya ada di `/opt/lampp`
 
-{{<shell "$">}}sudo rm -rf /opt/lampp{{</shell>}}
+```Shell {user="$"}
+sudo rm -rf /opt/lampp
+```
 
 ## Konfigurasi
 
@@ -72,12 +85,14 @@ Untuk hosting file di tempat lain, kalian bisa mengaturnya dengan mengikuti lang
 + Buka `opt/lampp/etc/httpd.conf` dan edit dengan editor favorit kalian.
 + Cari `DocumentRoot`, dan kalian akan melihat yang seperti ini.
 
-{{<fileCode "XML" "httpd.conf">}}DocumentRoot "/opt/lampp/htdocs"
-&lt;Directory "/opt/lampp/htdocs">
+```XML {file="httpd.conf"}
+DocumentRoot "/opt/lampp/htdocs"
+<Directory "/opt/lampp/htdocs">
     ...    
     ...
 
-&lt;/Directory>{{</fileCode>}}
+</Directory>
+```
 
 Ubah menjadi seperti gambar di bawah ini.
 

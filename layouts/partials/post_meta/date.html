@@ -1,6 +1,6 @@
 {{- if not .Date.IsZero }}
-<div class="meta__item-datetime meta__item">
-	{{ partial "svg/time.svg" (dict "class" "meta__icon") -}}
+<div class="first:ml-0 inline ml-4">
+	{{ partial "svg/time.svg" (dict "class" "inline mr-5 align-center fill-dk-text-alpha-500") -}}
 	<time class="meta__text" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
 		{{- .Date.Format (.Site.Params.dateformat | default "January 02, 2006") -}}
 	</time>

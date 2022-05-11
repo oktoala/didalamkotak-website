@@ -1,0 +1,23 @@
+{{ define "main" }}
+
+<main class="main list" role="main" id="main-aja">
+	{{ with .Title }}
+	<div class="header-taxo">
+		<header class="main__header">
+			<!-- <h1 class="main__title">{{ . }}</h1> -->
+			<h2 class="mt-5 text-dk-text">{{ . }}</h2>
+		</header>
+		{{- end }}
+		{{- $root := . }}
+		{{- $r := printf "widgets/taglist.html" }}
+		{{- partial $r $root }}
+	</div>
+	<div id="main-page"
+		class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1  mt-6 gap-y-4 gap-x-4 place-items-center md:justify-between pb-6">
+		{{- range .Paginator.Pages }}
+		{{- .Render "taxo" }}
+		{{- end }}
+	</div>
+</main>
+{{ partial "pagination.html" . }}
+{{ end }}

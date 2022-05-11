@@ -10,6 +10,7 @@ tags: [git, programming, github]
 type: post
 thumbnail: /img/thumbnail/konfigurasi-git.webp
 description: "Konfigurasi Git"
+summary: "Konfigurasi Git"
 ---
 
 Kita akan membahas cara konfigurasi Git untuk kali ini.
@@ -28,22 +29,28 @@ Seharusnya git sudah terinstall secara default, tapi untuk jaga-jaga mari kita c
 
 **Untuk Ubuntu**
 
-{{<scCode "Shell">}}sudo apt install git{{</scCode>}}
+```Shell {user="$"}
+sudo apt install git
+```
 
 **Untuk Arch**
 
-{{<scCode "Shell">}}sudo pacman -S git{{</scCode>}}
+```Shell {user="$"}
+sudo pacman -S git
+```
 
 ## Konfigurasi
 
 Jika sudah terinstall, jalankan perintah dibawah ini.
 
-{{<scCode "Shell">}}git config --global user.name "namaKalian"
-git config --global user.email "email.kalian@gmail.com"{{</scCode>}}
+```Shell {user="$"}
+git config --global user.name "namaKalian"
+git config --global user.email "email.kalian@gmail.com"
+```
 
 Tuliskan `git config --list` untuk melihat konfigurasi kalian.
 
-{{<figure "/img/ss-git-config.webp" "">}}
+[gambar](/img/ss-git-config.webp)
 
 ## Akhir kata...
 
