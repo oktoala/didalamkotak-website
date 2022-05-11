@@ -1,4 +1,4 @@
-{{- if .Param "authorbox" }}
+{{- if .Params.author }}
 {{ $author := (index .Site.Data.author .Params.author) }}
 <div
 	class="p-6 my-6 mx-0 leading-6 text-dk-text bg-dk-primary-900 rounded-xl flex justify-start overflow-auto overflow-x-hidden content-center">

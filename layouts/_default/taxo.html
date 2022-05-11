@@ -1,37 +1,25 @@
 {{- if .Params.thumbnail }}
-<article class="list__item">
-	<div class="flex-box">
-		<figure class="list__thumbnail">
-			<a href="{{ .Permalink }}">
-				<img src="{{ .Params.thumbnail | relURL }}" alt="{{ .Title }}" />
+<article class="list__item border-none rounded-xl bg-dk-primary-900 transition-all duration-100 ease-in min-h-[320px] h-full max-w-[365px] pt-5 px-5 pb-3">
+	<div class="shadow-none flex flex-col h-full">
+		<figure class="m-0 relative text-center self-center border-0 hover:brightness-110">
+			<a href="{{ .RelPermalink }}">
+				<img class="w-full self-center rounded-md " loading="lazy" src="{{ .Params.thumbnail | relURL }}" alt="/img/placeholder.png" />
 			</a>
 		</figure>
-		<div class="summary_content">
-			<header class="list__header">
-				<h5 class="list__title post__title ">
-					<a href="{{ .RelPermalink }}" rel="bookmark">
+		<div class="flex flex-col items-center h-full">
+			<header class="text-center mb-1 w-full">
+				<h5 class="text-dk-text pt-3 m-0 text-base hover:underline ">
+					<a href="{{ .RelPermalink }}" target="_blank" rel="bookmark">
 						{{ .Title }}
 					</a>
 				</h5>
 				{{- with .Params.lead }}
 				<p class="list__lead post__lead">{{ . }}</p>
 				{{- end }}
-				<!-- {{ with partial "post_meta.html" . -}}
-					<div class="list__meta meta">{{ . }}</div>
-					{{- end }} -->
-				</header>
-				<div class="content list__excerpt post__content clearfix">
-					{{ .Summary }}
+			</header>
+			<div class="text-dk-text-alpha-500 text-xs w-full text-ellipsis overflow-hidden text-center m-0 ">
+				{{ .Summary }}
 			</div>
-			{{- if .Site.Params.readmore }}
-			{{- if .Truncated }}
-			<div class="list__footer clearfix">
-				<a class="list__footer-readmore btn" href="{{ .RelPermalink }}">{{ T "read_more" }}</a>
-			</div>
-			{{- end }}
-			{{- end }}
 		</div>
-	</div>
-</article>
+	</article>
 {{- end }}
-

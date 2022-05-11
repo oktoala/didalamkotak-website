@@ -5,9 +5,11 @@
 		<ul class="widget__list">
 			{{- range $name, $taxonomy := $categories }}
 			{{- with $.Site.GetPage (printf "/kategori/%s" $name) }}
-			<li class="widget__item">
-				<a class="widget__link taxo" onclick="loadPage({{ .RelPermalink }})">
-					<span id={{ .RelPermalink }} class="taxo_text"> {{ .Title }} </span><span class="taxo_num">{{ len
+			<li class="relative text-sm list-none inline-block mr-3 mb-4">
+				<a class="cursor-pointer  flex justify-evenly items-center   "
+					onclick="loadPage({{ .RelPermalink }})">
+					<span id={{ .RelPermalink }} class="taxo_text rounded-tl-lg px-2 rounded-bl-lg border-r-0 mr-0 border-gray-300  border-2"> {{ .Title }} </span><span
+						class="taxo_num rounded-tr-lg rounded-br-lg border-l-0 border-gray-300 border-2 bg-dk-blue-700 w-full px-2">{{ len
 						$taxonomy }}</span>
 				</a>
 			</li>

@@ -23,7 +23,8 @@
 		</div>
 	</article>
 </main>
-<buttton class="fas fa-arrow-circle-up block fixed right-8 z-40 text-dk-text cursor-pointer text-2xl bottom-3 hover:text-dk-blue-500 top-button" title="Ke Atas"></buttton>
+<buttton onclick='document.querySelector("body").scrollIntoView(true)' class="fas fa-arrow-circle-up block fixed right-8 z-40 text-dk-text cursor-pointer text-2xl bottom-3 hover:text-dk-blue-500 top-button" title="Ke Atas"></buttton>
+		
 {{ partial "authorbox.html" . }}
 {{ partial "comments.html" . }}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
