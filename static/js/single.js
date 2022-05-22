@@ -35,25 +35,9 @@ function outFunc(ids) {
 	tooltip.innerHTML = "Copy ke clipboard";
 }
 
-// ! Go to the Top Button
-const top_button = document.querySelector(".top-button");
-window.onscroll = () => {
-	try {
-		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-			top_button.classList.add("show");
-		} else {
-			top_button.classList.remove("show");
-		}
-	} catch (error) {
-
-	}
-}
-
 document.onkeydown = function(evt) {
     evt = evt || window.event;
     if (evt.key == 27) {
         alert('Esc key pressed.');
     }
 };
-
-top_button.addEventListener("click", () => document.querySelector(".container").scrollIntoView(true));

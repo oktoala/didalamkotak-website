@@ -103,7 +103,7 @@
     @apply mb-7 
   }
 
-  #main {
+  #content {
     @apply bg-dk-primary-900 my-7 mx-0 rounded-xl pt-4 px-5 pb-6;
   }
 

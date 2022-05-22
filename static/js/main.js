@@ -27,3 +27,5 @@ function loadPage(newUrl) {
 	document.getElementById(newUrl).classList.toggle("current");
 	current_taxo = document.getElementById(newUrl);
 }
+
+
