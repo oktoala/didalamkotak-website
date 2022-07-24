@@ -96,7 +96,15 @@
   }
 
   #post ul, #post ol {
-    @apply my-5 ml-5 list-disc list-outside list-item
+    @apply my-5 ml-5  list-outside 
+  }
+
+  #post ul {
+    @apply list-disc
+  }
+
+  #post ol {
+    @apply list-decimal
   }
 
   #post li {

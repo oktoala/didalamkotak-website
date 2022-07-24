@@ -41,19 +41,19 @@ Kita tidak akan menginstall semua package Python di system, tapi kita akan mengg
 
 1. Jalankan perintah di bawah jika kalian belum memiliki `virtualenv`.
 
-```Bash
-pip install virtualenv
-```
+    ```Bash
+    pip install virtualenv
+    ```
 
 2. Jika sudah, buat virtual environment nya.
 
-```Bash
-virtualenv --python=python3 ~/hacking
-```
+    ```Bash
+    virtualenv --python=python3 ~/hacking
+    ```
 3. Aktifkan sourcenya
 
-```Bash
-source ~/hacking/bin/activate
-```
+    ```Bash
+    source ~/hacking/bin/activate
+    ```
 
 
