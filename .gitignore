@@ -3,3 +3,4 @@ gitPush.sh
 /public
 firebase-debug.log
 node_modules/
+/assets/css/styles.css
