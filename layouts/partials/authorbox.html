@@ -8,10 +8,7 @@
 	</p>
 	{{- end }}
 	{{- with $author.avatar }}
-	<div  class="mr-8 rounded-full border-dk-text border-2 bg-dk-primary-800 ">
-		<img loading="lazy" alt="{{ $author.name }} avatar" src="{{ $author.avatar | relURL }}" class="avatar rounded-full" height="140"
-			width="140">
-	</div>
+	<img loading="lazy" alt="{{ $author.name }} avatar" src="{{ $author.avatar | relURL }}" class="w-28 mr-5">
 	{{- end }}
 	{{- with $author.name }}
 	<div class="flex flex-col justify-between h-auto relative">

@@ -37,7 +37,7 @@
 	},
 
 	"Code": {
-		"prefix": "code",
+		"prefix": "code default",
 		"body": [
 			"```${1:Bahasa Pemrograman}",
 			"${2:...Kodingan}",
@@ -47,7 +47,7 @@
 	},
 
 	"Code File": {
-		"prefix": "cf",
+		"prefix": "code file",
 		"body": [
 			"```${1:Bahasa Pemrograman} {file=\"${2:Nama File}\"}",
 			"${3:...Kodingan}",
@@ -57,13 +57,13 @@
 	},
 
 	"Code Regular": {
-		"prefix": "cr",
+		"prefix": "code regular",
 		"body": [
 			"```${1:Bahasa Pemrograman} {noheader=true}",
 			"${2:...Kodingan}",
 			"```"
 		],
-		"description": "Codingan dengan file"
+		"description": "Codingan Tanpa Header"
 	},
 
 	"Terminal ": {

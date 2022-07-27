@@ -5,8 +5,8 @@ comments: true
 draft: true
 author: "Yoga"
 toc: true
-kategori: ""
-topik: []
+kategori: "Tips"
+topik: ["hacking", "frida", "objection", "mitm"]
 type: post
 thumbnail: "/lewati-ssl-pinning-dengan-objection-dan-frida/img/thumbnail.webp"
 description: "Cara mendapatkan Private API yang tidak bisa diakses karena SSL Pinning"
@@ -31,7 +31,7 @@ Pada artikel ini, kita akan mempelajarai cara melewati SSL Pinning
 
 Pastikan kalian menyiapkan hal-hal di bawah ini:
 
-+ Smartphone yang sudah di root/jailbreaking atau bisa juga pakai Emulator.
++ Smartphone yang sudah di root atau bisa juga pakai Emulator.
 + adb
 + Python 3.x dan pip
 
@@ -56,4 +56,39 @@ Kita tidak akan menginstall semua package Python di system, tapi kita akan mengg
     source ~/hacking/bin/activate
     ```
 
+    Pilih `activate.ps1` jika kalian di Windows.
 
+4. Install **Frida** dan **Objection** melalui pip.
+
+    ```Bash
+    pip install frida objection
+    ```
+
+## Setup Frida
+
+Download [Frida Server](https://github.com/frida/frida/releases "blank") sesuai dengan sistem operasi dan arsitektur perangkat kalian.
+
+Untuk kali ini kita akan unduh yang versi android-arm64.
+
+![frida-server](/lewati-ssl-pinning-dengan-objection-dan-frida/img/frida-server.webp)
+
+Extract isi filenya dan taruh di folder `~/hacking`. Rename menjadi `frida-server` biar lebih singkat.
+
+Hubungkan Android kalian ke PC menggunakan USB.
+
+Lalu jalankan perintah di bawah untuk memindahkan file `frida-server` ke Android kalian, mengganti permissionnya,
+dan menjalankannya.
+
+```Bash
+adb push frida-server /data/local/tmp
+adb shell chmod 777 /data/local/tmp/frida-server
+adb shell /data/local/tmp/frida-server &
+```
+
+## Testing Frida
+
+## Saatnya Hacking
+
+```Bash
+frida -U -f com.shoppe.id -l sslpinning.js
+```
