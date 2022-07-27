@@ -1,4 +1,4 @@
-<div class="chroma group mt-[30px]">
+<div class="chroma group mt-[30px] ">
 	<div class="{{ if .Attributes.noheader }} hidden {{ end }} h-[30px] bg-black border-none flex justify-between items-center rounded-tl-[10px] rounded-tr-[10px] px-[15px] code-header {{.Type}}">
 		<span class="code-title text-dk-text whitespace-nowrap font-semibold">{{ .Attributes.file | default .Type}}</span>
 		<div class="tooltip flex justify-between items-center">
@@ -8,5 +8,5 @@
 			</span>
 		</div>
 	</div>
-	<pre class="bC {{.Type}}"><code class="bC language-{{.Type}} rounded-none" data-lang="{{.Type}}">{{ with .Attributes.user }}{{ . }}{{- " " -}} {{ end}}{{ .Inner }}</code></pre>
+	<pre class="bC {{.Type}}"><code class="bC language-{{.Type}}  rounded-none max-h-80 overflow-auto" data-lang="{{.Type}}">{{ with .Attributes.user }}{{ . }}{{- " " -}} {{ end}}{{ .Inner }}</code></pre>
 </div>
