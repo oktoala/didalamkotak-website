@@ -149,5 +149,5 @@ setTimeout(function(){
 ## Saatnya Hacking
 
 ```Bash
-frida -U -f com.shoppe.id -l sslpinning.js
+frida -U -f com.shoppe.id -l sslpinning.js --no-paus
 ```
